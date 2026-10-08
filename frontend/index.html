@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DS08 Operational — NASA FIRMS Thermal-Source Attribution Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <!-- Top Bar: Exactly 5 compact operational elements + technical modal link -->
+  <header class="top-bar">
+    <div class="top-item top-title">
+      <div class="system-mark">DS08</div>
+      <h1>DS08 THERMAL SOURCE MONITOR</h1>
+    </div>
+
+    <div class="top-item top-mode" id="mode-badge" title="Operational near-real-time satellite ingestion status">
+      <span class="status-dot green pulse" id="live-dot"></span>
+      <span class="mode-text" id="live-mode-text">LIVE NRT</span>
+    </div>
+
+    <div class="top-item top-firms" id="firms-status">
+      <span class="firms-label">FIRMS:</span>
+      <span class="firms-val connected" id="firms-conn-text">Connected</span>
+      <span class="poll-time" id="last-poll-time">(Ready)</span>
+    </div>
+
+    <div class="top-item top-counts" id="event-counts">
+      <span class="count-unit">Active Events: <strong id="stat-active-events">0</strong></span>
+      <span class="count-divider">|</span>
+      <span class="count-unit">Classified: <strong id="stat-classified-events">0</strong></span>
+    </div>
+
+    <div class="top-item top-actions">
+      <button class="btn btn-poll" id="btn-poll-now" title="Trigger immediate NASA FIRMS NRT acquisition query">
+        <span class="btn-icon">⚡</span> Poll Now
+      </button>
+      <button class="btn btn-tech" id="btn-tech-modal" title="System Architecture, Frozen Benchmark & API Reference">
+        Technical Details
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Operational Layout: Dominant Map (~70%) + Sidebar (~30%) -->
+  <main class="main-layout">
+    <!-- 1. Map Panel (Dominant Left) -->
+    <section class="map-panel" id="map-panel">
+      <div id="map"></div>
+
+      <!-- Compact Map Legend -->
+      <div class="map-legend" id="map-legend">
+        <div class="legend-title">Thermal Attribution</div>
+        <div class="legend-row">
+          <span class="legend-color" style="background: #ef4444;"></span>
+          <span class="legend-label">Industrial Fire</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-color" style="background: #10b981;"></span>
+          <span class="legend-label">Forest Fire</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-color" style="background: #f59e0b;"></span>
+          <span class="legend-label">Agricultural Fire</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-color" style="background: #8b5cf6;"></span>
+          <span class="legend-label">Persistent / Other</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Selected Event Panel / Live Feed (Right Sidebar) -->
+    <aside class="sidebar-panel" id="sidebar-panel">
+      <!-- VIEW A: Live Feed (when no event is selected) -->
+      <div class="panel-view" id="view-feed">
+        <div class="panel-header">
+          <div class="panel-title-wrap">
+            <h2>Live Events Feed</h2>
+            <span class="badge-count" id="feed-count-badge">0</span>
+          </div>
+          <div class="feed-filter-bar">
+            <select id="feed-class-filter" class="form-select" title="Filter by attributed class">
+              <option value="">All Source Classes</option>
+              <option value="Industrial Fire">Industrial Fire</option>
+              <option value="Forest Fire">Forest Fire</option>
+              <option value="Agricultural Fire">Agricultural Fire</option>
+              <option value="Other / Persistent Thermal Source">Persistent / Other</option>
+            </select>
+            <input type="text" id="feed-search-input" class="form-input" placeholder="Search ID or site...">
+          </div>
+        </div>
+
+        <div class="feed-content" id="feed-list-container">
+          <table class="feed-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">TIME</th>
+                <th style="width: 32%;">CLASS</th>
+                <th style="width: 18%;">CONF</th>
+                <th style="width: 28%;">LOCATION</th>
+              </tr>
+            </thead>
+            <tbody id="feed-table-body">
+              <tr>
+                <td colspan="4" class="feed-empty-cell">Waiting for satellite soundings...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- VIEW B: Selected Event Details (when an event is selected) -->
+      <div class="panel-view" id="view-detail" style="display: none;">
+        <div class="panel-header detail-header">
+          <button class="btn-back" id="btn-back-to-feed" title="Return to live events feed">
+            &larr; Back to Live Feed
+          </button>
+          <div class="detail-badge-wrap">
+            <span class="class-badge" id="detail-class-badge">Industrial Fire</span>
+            <span class="conf-badge" id="detail-conf-badge">98.5%</span>
+          </div>
+        </div>
+
+        <div class="detail-content" id="detail-scroll-area">
+          <!-- Event ID & Timestamps -->
+          <div class="detail-card meta-card">
+            <div class="card-title">Thermal Event Observation</div>
+            <div class="meta-row">
+              <span class="meta-label">Event ID</span>
+              <span class="meta-val mono" id="detail-event-id">-</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Centroid</span>
+              <span class="meta-val mono" id="detail-coords">-</span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-label">Acquired UTC</span>
+              <span class="meta-val mono" id="detail-time">-</span>
+            </div>
+            <div class="meta-grid">
+              <div class="meta-tile">
+                <span class="tile-label">Soundings</span>
+                <span class="tile-val" id="detail-soundings">1</span>
+              </div>
+              <div class="meta-tile">
+                <span class="tile-label">Max FRP</span>
+                <span class="tile-val" id="detail-frp">- MW</span>
+              </div>
+              <div class="meta-tile">
+                <span class="tile-label">TI4 Brightness</span>
+                <span class="tile-val" id="detail-ti4">- K</span>
+              </div>
+              <div class="meta-tile">
+                <span class="tile-label">Persistence</span>
+                <span class="tile-val" id="detail-persistence">Low</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Nearest Infrastructure & Settlement Card (Geoapify GIS) -->
+          <div class="detail-card proximity-card">
+            <div class="card-header-with-status">
+              <span class="card-title">Nearest Infrastructure & Settlements</span>
+              <span class="gis-badge" id="detail-gis-status">Geoapify GIS</span>
+            </div>
+            <div class="prox-item" id="prox-industry-row">
+              <div class="prox-icon-type ind">🏭</div>
+              <div class="prox-info">
+                <div class="prox-name" id="prox-industry-name">-</div>
+                <div class="prox-dist-wrap">
+                  <span class="prox-tag">Industrial Facility:</span>
+                  <span class="prox-dist" id="prox-industry-dist">-</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="prox-item" id="prox-school-row">
+              <div class="prox-icon-type sch">🏫</div>
+              <div class="prox-info">
+                <div class="prox-name" id="prox-school-name">-</div>
+                <div class="prox-dist-wrap">
+                  <span class="prox-tag">School:</span>
+                  <span class="prox-dist" id="prox-school-dist">-</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="prox-item" id="prox-hospital-row">
+              <div class="prox-icon-type hos">🏥</div>
+              <div class="prox-info">
+                <div class="prox-name" id="prox-hospital-name">-</div>
+                <div class="prox-dist-wrap">
+                  <span class="prox-tag">Hospital:</span>
+                  <span class="prox-dist" id="prox-hospital-dist">-</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="prox-item" id="prox-village-row">
+              <div class="prox-icon-type vil">🏘️</div>
+              <div class="prox-info">
+                <div class="prox-name" id="prox-village-name">-</div>
+                <div class="prox-dist-wrap">
+                  <span class="prox-tag">Village / Town:</span>
+                  <span class="prox-dist" id="prox-village-dist">-</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attribution Breakdown (4-class probabilities) -->
+          <div class="detail-card prob-card">
+            <div class="card-title">Attribution Breakdown (Frozen Static MLP)</div>
+            <div class="prob-row">
+              <div class="prob-header">
+                <span class="prob-name" style="color: #ef4444;">Industrial Fire</span>
+                <span class="prob-pct mono" id="detail-p-ind">0.0%</span>
+              </div>
+              <div class="prob-bar-track">
+                <div class="prob-bar-fill" id="detail-bar-ind" style="width: 0%; background: #ef4444;"></div>
+              </div>
+            </div>
+
+            <div class="prob-row">
+              <div class="prob-header">
+                <span class="prob-name" style="color: #10b981;">Forest Fire</span>
+                <span class="prob-pct mono" id="detail-p-for">0.0%</span>
+              </div>
+              <div class="prob-bar-track">
+                <div class="prob-bar-fill" id="detail-bar-for" style="width: 0%; background: #10b981;"></div>
+              </div>
+            </div>
+
+            <div class="prob-row">
+              <div class="prob-header">
+                <span class="prob-name" style="color: #f59e0b;">Agricultural Fire</span>
+                <span class="prob-pct mono" id="detail-p-agr">0.0%</span>
+              </div>
+              <div class="prob-bar-track">
+                <div class="prob-bar-fill" id="detail-bar-agr" style="width: 0%; background: #f59e0b;"></div>
+              </div>
+            </div>
+
+            <div class="prob-row">
+              <div class="prob-header">
+                <span class="prob-name" style="color: #8b5cf6;">Persistent / Other</span>
+                <span class="prob-pct mono" id="detail-p-per">0.0%</span>
+              </div>
+              <div class="prob-bar-track">
+                <div class="prob-bar-fill" id="detail-bar-per" style="width: 0%; background: #8b5cf6;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Explanation / Causal Context -->
+          <div class="detail-card context-card" id="detail-context-card">
+            <div class="card-title">Causal Attribution Context</div>
+            <p class="context-desc" id="detail-context-text">
+              Classification strictly driven by 41 causal features (thermal persistence, ecoregion, biome, diurnal ratio). Infrastructure proximity is post-attribution context.
+            </p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Technical Details & Benchmark Modal (hidden by default) -->
+  <div class="modal-overlay" id="tech-modal" style="display: none;">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h2>DS08 System Architecture & Frozen Benchmark</h2>
+          <span class="modal-sub">Scientific Verification & Reviewer Reference</span>
+        </div>
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-nav">
+        <button class="modal-tab-btn active" data-tab="tab-model">Frozen Model & Benchmark</button>
+        <button class="modal-tab-btn" data-tab="tab-safeguards">Scientific Safeguards</button>
+        <button class="modal-tab-btn" data-tab="tab-scenarios">Reviewer Scenarios</button>
+        <button class="modal-tab-btn" data-tab="tab-api">API & Health</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- TAB 1: MODEL & BENCHMARK -->
+        <div class="modal-tab-content active" id="tab-model">
+          <div class="info-grid">
+            <div class="info-block">
+              <h3>Frozen Neural Model</h3>
+              <table class="info-table">
+                <tr><td>Model Architecture</td><td><strong>Architecture1_StaticMLP</strong> (Pure PyTorch)</td></tr>
+                <tr><td>Input Features</td><td><strong>41 strictly causal features</strong> (No GIS leakage)</td></tr>
+                <tr><td>Model Hash (SHA-256)</td><td class="mono">5bdbfbd503a3c0acbd50caefd2b1c88b5e0190a7176d70a517165814722bcff2</td></tr>
+                <tr><td>Model Status</td><td><span class="tag-frozen">PERMANENTLY FROZEN (Stage 8.36)</span></td></tr>
+              </table>
+            </div>
+
+            <div class="info-block">
+              <h3>Official 2026 Blind Benchmark (N=28)</h3>
+              <table class="info-table">
+                <tr><td>Overall Accuracy</td><td><strong>78.57%</strong> (22 / 28 Correct)</td></tr>
+                <tr><td>Macro-F1 Score</td><td><strong>0.8021</strong></td></tr>
+                <tr><td>Balanced Accuracy</td><td><strong>81.67%</strong></td></tr>
+                <tr><td>Industrial Recall</td><td><strong>100.0%</strong> (6/6)</td></tr>
+                <tr><td>Forest Fire Recall</td><td><strong>83.3%</strong> (5/6)</td></tr>
+                <tr><td>Agricultural Recall</td><td><strong>83.3%</strong> (5/6)</td></tr>
+                <tr><td>Persistent / Other Recall</td><td><strong>60.0%</strong> (6/10)</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: SAFEGUARDS -->
+        <div class="modal-tab-content" id="tab-safeguards">
+          <div class="safeguards-box">
+            <h3>Architectural & Scientific Principles</h3>
+            <ul class="safeguards-list">
+              <li><strong>Zero Retraining / Zero Weights Modification:</strong> Frozen checkpoint hash verified on every cold start.</li>
+              <li><strong>Strict Isolation:</strong> The 41 causal model features DO NOT include proximity to schools, hospitals, or villages. GIS proximity is strictly post-attribution context.</li>
+              <li><strong>WGS84 Geodesic Distances:</strong> All spatial metrics calculated using standard ellipsoidal geodesic formulas (sub-millimeter precision).</li>
+              <li><strong>Zero CARTO:</strong> Zero legacy CARTO map tile endpoints in the codebase; 100% Geoapify Places API and vector tiles.</li>
+              <li><strong>Safe Single-Process Scheduler:</strong> Automatic 10-minute FIRMS poller uses an async concurrency lock preventing race conditions.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- TAB 3: REVIEWER SCENARIOS -->
+        <div class="modal-tab-content" id="tab-scenarios">
+          <div class="scenarios-container">
+            <p class="scenarios-intro">Select a verified ground-truth scenario to load into the dashboard:</p>
+            <div class="scenarios-grid">
+              <div class="scenario-card" onclick="loadScenarioEvent('EVT_JAMNAGAR_REF_01', 22.421, 69.865)">
+                <div class="sc-title">1. Jamnagar Refinery Complex</div>
+                <div class="sc-badge ind">Industrial Fire</div>
+                <p>Intense continuous flaring and petrochemical flare stacks. High FRP, near industrial footprint.</p>
+                <button class="btn btn-sm btn-outline">Load Scenario</button>
+              </div>
+
+              <div class="scenario-card" onclick="loadScenarioEvent('EVT_SIMILIPAL_FOR_01', 21.850, 86.350)">
+                <div class="sc-title">2. Similipal Biosphere Reserve</div>
+                <div class="sc-badge for">Forest Fire</div>
+                <p>Dense canopy wilderness wildland fire. Dense forest biome, zero industrial infrastructure nearby.</p>
+                <button class="btn btn-sm btn-outline">Load Scenario</button>
+              </div>
+
+              <div class="scenario-card" onclick="loadScenarioEvent('EVT_PUNJAB_AGR_01', 30.820, 75.150)">
+                <div class="sc-title">3. Punjab Stubble Burning</div>
+                <div class="sc-badge agr">Agricultural Fire</div>
+                <p>Seasonal post-harvest crop residue burning. Intense diurnal single-day pulse in agricultural heartland.</p>
+                <button class="btn btn-sm btn-outline">Load Scenario</button>
+              </div>
+
+              <div class="scenario-card" onclick="loadScenarioEvent('EVT_825_PER_PER_SRC_05', 21.125, 72.695)">
+                <div class="sc-title">4. Jharia Coal / Persistent</div>
+                <div class="sc-badge per">Persistent Source</div>
+                <p>Sub-surface coalfield combustion and recurrent flaring. Year-round active thermal soundings.</p>
+                <button class="btn btn-sm btn-outline">Load Scenario</button>
+              </div>
+            </div>
+
+            <div class="demo-actions-row">
+              <button class="btn btn-secondary" id="btn-load-demo-cohort">⚡ Load Full Demo Cohort (619 Detections)</button>
+              <button class="btn btn-danger-sm" id="btn-clear-db">Clear Database</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: API & HEALTH -->
+        <div class="modal-tab-content" id="tab-api">
+          <div class="api-health-box">
+            <h3>Operational Health & Endpoints</h3>
+            <div id="modal-health-status" class="health-indicator">Checking operational health...</div>
+            <ul class="api-links">
+              <li><a href="/live/status" target="_blank"><code>GET /live/status</code></a> - Real-time pipeline state & poller telemetry</li>
+              <li><a href="/live/health" target="_blank"><code>GET /live/health</code></a> - Subsystem connectivity (FIRMS, Geoapify, DB, Model)</li>
+              <li><a href="/api/geojson" target="_blank"><code>GET /api/geojson</code></a> - Differential GeoJSON FeatureCollection</li>
+              <li><a href="/docs" target="_blank"><code>GET /docs</code></a> - Interactive OpenAPI Swagger UI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

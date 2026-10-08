@@ -1,0 +1,298 @@
+{
+  "manifest_name": "ds08_stage8_21_replacements_processed",
+  "stage": "8.21",
+  "version": "1.0.0",
+  "created_at_utc": "2026-10-03T08:47:12.037891+00:00",
+  "total_chips": 2,
+  "status_distribution": {
+    "PASS": 2,
+    "CONDITIONAL": 0,
+    "REJECT": 0
+  },
+  "records": [
+    {
+      "sample_id": "S8_001",
+      "replaces_sample_id": "DS08_EXP_S1_002",
+      "v4_candidate_id": "DS08_EXP_S1_005",
+      "source_product": "S2C_MSIL2A_20251114T053111_N0511_R105_T43RFQ_20251114T092011.SAFE",
+      "cdse_uuid": "562c70a9-f17a-400c-8631-43002dc27ab9",
+      "mgrs_tile": "T43RFQ",
+      "assigned_fold": "Fold 4",
+      "acquisition_datetime": "2025-11-14T05:31:11Z",
+      "crs": "EPSG:32643",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": 0.0,
+      "cloud_scl_pct": 0.0,
+      "shadow_scl_pct": 0.0,
+      "central_1km_contamination_pct": 0.0,
+      "quality_status": "PASS",
+      "human_confirmed_label": null,
+      "expected_target_class": "Industrial Fire",
+      "candidate_stratum_id": "STR-1",
+      "facility_name": "Pharmaceutical Formulation and Packaging Unit, Baddi Industrial Area",
+      "candidate_lat": 30.9578,
+      "candidate_lon": 76.7912,
+      "projected_x": 671087.2834181541,
+      "projected_y": 3426301.0835240753,
+      "chip_pixel_col": 255.728,
+      "chip_pixel_row": 255.892,
+      "chip_bounds_utm": {
+        "x_min": 668530.0,
+        "x_max": 673650.0,
+        "y_min": 3423740.0,
+        "y_max": 3428860.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 0,
+        "shadow_pixels": 0,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 0,
+        "clean_pixels": 262144,
+        "aoi_contamination_pct": 0.0,
+        "aoi_cloud_pct": 0.0,
+        "aoi_shadow_pct": 0.0,
+        "aoi_clean_pct": 100.0,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 0,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 0,
+        "central_1km_clean_pixels": 10000,
+        "central_1km_contamination_pct": 0.0,
+        "central_1km_cloud_pct": 0.0,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 100.0
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 1009,
+          "max": 6640,
+          "mean": 1680.07,
+          "std": 341.68,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 1150,
+          "max": 6148,
+          "mean": 1935.38,
+          "std": 366.52,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 1098,
+          "max": 6480,
+          "mean": 2120.4,
+          "std": 487.43,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 1492,
+          "max": 5969,
+          "mean": 3139.59,
+          "std": 401.65,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 1344,
+          "max": 6278,
+          "mean": 2742.31,
+          "std": 533.76,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_21_replacements/pilot/S8_001/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_21_replacements/pilot/S8_001/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_21_replacements/pilot/S8_001/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_21_replacements/pilot/S8_001/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_21_replacements/previews/S8_001/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_21_replacements/previews/S8_001/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_21_replacements/previews/S8_001/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_21_replacements/previews/S8_001/candidate_overlay.png"
+      }
+    },
+    {
+      "sample_id": "S8_002",
+      "replaces_sample_id": "DS08_EXP_S1_004",
+      "v4_candidate_id": "DS08_EXP_S1_007",
+      "source_product": "S2A_MSIL2A_20250101T054231_N0511_R005_T43QBA_20250101T085751.SAFE",
+      "cdse_uuid": "39d0a2cc-a758-442a-948b-4df150e25516",
+      "mgrs_tile": "T43QBA",
+      "assigned_fold": "Fold 1",
+      "acquisition_datetime": "2025-01-01T05:42:31Z",
+      "crs": "EPSG:32643",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": 0.0,
+      "cloud_scl_pct": 0.0,
+      "shadow_scl_pct": 0.0,
+      "central_1km_contamination_pct": 0.0,
+      "quality_status": "PASS",
+      "human_confirmed_label": null,
+      "expected_target_class": "Industrial Fire",
+      "candidate_stratum_id": "STR-1",
+      "facility_name": "Heubach Colorants India Ltd Plant Fire, Dhatav MIDC, Roha",
+      "candidate_lat": 18.4208,
+      "candidate_lon": 73.1577,
+      "projected_x": 305410.09592560277,
+      "projected_y": 2037731.0453726077,
+      "chip_pixel_col": 256.01,
+      "chip_pixel_row": 255.895,
+      "chip_bounds_utm": {
+        "x_min": 302850.0,
+        "x_max": 307970.0,
+        "y_min": 2035170.0,
+        "y_max": 2040290.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 0,
+        "shadow_pixels": 0,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 0,
+        "clean_pixels": 262144,
+        "aoi_contamination_pct": 0.0,
+        "aoi_cloud_pct": 0.0,
+        "aoi_shadow_pct": 0.0,
+        "aoi_clean_pct": 100.0,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 0,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 0,
+        "central_1km_clean_pixels": 10000,
+        "central_1km_contamination_pct": 0.0,
+        "central_1km_cloud_pct": 0.0,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 100.0
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 1174,
+          "max": 4432,
+          "mean": 1508.54,
+          "std": 124.28,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 1328,
+          "max": 5388,
+          "mean": 1678.42,
+          "std": 138.93,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 1236,
+          "max": 5972,
+          "mean": 1698.03,
+          "std": 231.55,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 1199,
+          "max": 6278,
+          "mean": 2772.97,
+          "std": 435.06,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 1122,
+          "max": 6167,
+          "mean": 2140.06,
+          "std": 365.28,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_21_replacements/pilot/S8_002/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_21_replacements/pilot/S8_002/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_21_replacements/pilot/S8_002/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_21_replacements/pilot/S8_002/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_21_replacements/previews/S8_002/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_21_replacements/previews/S8_002/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_21_replacements/previews/S8_002/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_21_replacements/previews/S8_002/candidate_overlay.png"
+      }
+    }
+  ]
+}

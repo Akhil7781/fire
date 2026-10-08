@@ -1,0 +1,57 @@
+{
+  "stage": "STAGE_8.13",
+  "title": "DS08 Genuine Human Double Annotation Execution Report",
+  "status": "AWAITING_GENUINE_HUMAN_ANNOTATION_INPUT",
+  "timestamp_utc": "2026-09-29T22:55:00+00:00",
+  "protocol": "data/reference/ds08/annotations/guidelines/DS08_ANNOTATION_GUIDELINES_v1.md",
+  "chips_evaluated": [
+    "PILOT_02_NORTH",
+    "PILOT_03_NORTH",
+    "PILOT_06_CENTRAL",
+    "PILOT_07_CENTRAL",
+    "PILOT_08_CENTRAL",
+    "PILOT_10_SOUTH",
+    "PILOT_11_SOUTH",
+    "PILOT_12_SOUTH",
+    "PILOT_14_EAST",
+    "PILOT_15_EAST",
+    "PILOT_16_EAST",
+    "PILOT_18_WEST",
+    "PILOT_19_WEST",
+    "PILOT_20_WEST",
+    "PILOT_04_NORTH_REPLACEMENT"
+  ],
+  "annotator_1_status": {
+    "total_chips": 15,
+    "completed_chips_count": 0,
+    "pending_chips_count": 15,
+    "task_status": "PENDING_MANUAL_INPUT",
+    "human_verified_count": 0,
+    "annotator_workspace": "data/reference/ds08/annotations/manual/annotator_1/"
+  },
+  "annotator_2_status": {
+    "total_chips": 15,
+    "completed_chips_count": 0,
+    "pending_chips_count": 15,
+    "task_status": "PENDING_MANUAL_INPUT",
+    "human_verified_count": 0,
+    "annotator_workspace": "data/reference/ds08/annotations/manual/annotator_2/"
+  },
+  "synthetic_or_fabricated_input_detected": false,
+  "quarantine_isolation_verified": true,
+  "quarantine_location": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/",
+  "frozen_predecessor_integrity": {
+    "models/tcn/best_tcn.pt": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+    "models/deep_sad/best_deep_sad.pt": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+    "models/yolo/infrastructure/best_infrastructure.pt": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+    "models/yolo/fire_smoke/best_fire_smoke.pt": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+    "data/embeddings/fusion/india_2025_tcn_sad_aligned.parquet": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+    "all_hashes_matched": true
+  },
+  "ui_launch_instructions": {
+    "annotator_1": "python scripts/ds08_annotation_tool.py --ui --annotator annotator_1 --port 8090",
+    "annotator_2": "python scripts/ds08_annotation_tool.py --ui --annotator annotator_2 --port 8091",
+    "note": "Default ports 8080/8081 are occupied by system services ApplicationWebServer and Oracle TNSLSNR; free ports 8090/8091 recommended."
+  },
+  "stop_condition": "STOP_ENFORCED_NO_FABRICATION"
+}

@@ -1,0 +1,89 @@
+{
+  "1_dataset_version_source": "FASDD_RS (Flame and Smoke Detection Dataset for Remote Sensing, Science Data Bank 2023, Wuhan University)",
+  "2_number_of_images": 120,
+  "3_number_of_scenes_groups": 24,
+  "4_number_of_annotations": 377,
+  "5_class_distribution": {
+    "Flame": 209,
+    "Smoke": 168
+  },
+  "6_bounding_box_statistics": {
+    "total_boxes": 377,
+    "flames": 209,
+    "smokes": 168,
+    "min_width_px": 25.82,
+    "max_width_px": 319.7536,
+    "mean_width_px": 133.71360848806367,
+    "min_height_px": 21.2944,
+    "max_height_px": 257.5936,
+    "mean_height_px": 104.47378885941644
+  },
+  "7_invalid_or_corrupt_records": 0,
+  "8_duplicate_near_duplicate_findings": {
+    "exact_duplicates": 0,
+    "near_duplicates": 0,
+    "status": "PASSED_ZERO_DUPLICATES"
+  },
+  "9_train_val_test_counts": {
+    "train": {
+      "num_scenes": 16,
+      "num_images": 80,
+      "num_boxes": 255,
+      "num_flames": 141,
+      "num_smokes": 114
+    },
+    "val": {
+      "num_scenes": 4,
+      "num_images": 20,
+      "num_boxes": 63,
+      "num_flames": 38,
+      "num_smokes": 25
+    },
+    "test": {
+      "num_scenes": 4,
+      "num_images": 20,
+      "num_boxes": 59,
+      "num_flames": 30,
+      "num_smokes": 29
+    }
+  },
+  "10_leakage_checks": {
+    "scene_level_isolation": "PASSED_STRICT_SCENE_ISOLATION",
+    "train_scenes": 16,
+    "val_scenes": 4,
+    "test_scenes": 4
+  },
+  "11_license_and_access_terms": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+  "12_storage_footprint": {
+    "manifest_parquet_bytes": 25510,
+    "boxes_parquet_bytes": 34111,
+    "total_reference_bytes": 163769973
+  },
+  "13_exact_preprocessing_performed": "Filtered FASDD_RS to flame and smoke plume classes. Validated normalized coordinates [class_id xc yc w h] in [0, 1]. Grouped by satellite acquisition scene to prevent cross-split leakage. Materialized reproducible optical chips (800x800x3 PNG) with exact SHA256 hashes.",
+  "14_original_to_internal_class_mapping": {
+    "flame": 0,
+    "fire": 0,
+    "flame_front": 0,
+    "smoke": 1,
+    "smoke_plume": 1,
+    "plume": 1
+  },
+  "semantic_warning": "CRITICAL: Flame/smoke detection != fire-source class. Plume detection is combustion evidence, not sector attribution.",
+  "materialization_verification": {
+    "metadata_records": 120,
+    "actual_image_files": 120,
+    "readable_image_files": 120,
+    "annotated_images": 120,
+    "images_with_zero_target_objects": 0,
+    "image_format": "PNG",
+    "image_dimensions": [
+      800,
+      800
+    ],
+    "channel_count": 3,
+    "annotation_to_image_mapping": "1:1_EXACT_MATCH",
+    "orphan_images": 0,
+    "orphan_annotations": 0,
+    "denormalization_validation": "PASSED_ALL_BOUNDS_IN_IMAGE"
+  }
+}

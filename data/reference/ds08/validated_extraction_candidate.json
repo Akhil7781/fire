@@ -1,0 +1,47 @@
+{
+  "status": "VALIDATED_FOR_EXTRACTION",
+  "audit_timestamp_utc": "2026-09-27T18:17:21.236534+00:00",
+  "criteria_enforced": {
+    "product": "sentinel-2-l2a",
+    "spatial_coverage": true,
+    "max_temporal_gap_hours": 48.0,
+    "max_cloud_cover_pct": 10.0,
+    "required_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ]
+  },
+  "firms_detection": {
+    "detection_id": "b18ce007dc003134da73556195ff1c84b9cecc89cf80a03cc3421eae8ce91624",
+    "latitude": 21.63424,
+    "longitude": 76.66431,
+    "acq_datetime_utc": "2025-03-11T08:10:00Z",
+    "frp": 20.85,
+    "partition": "train"
+  },
+  "sentinel2_scene": {
+    "item_id": "S2B_MSIL2A_20250311T051649_N0511_R062_T43QFD_20250311T075623.SAFE",
+    "platform": "sentinel-2b",
+    "datetime_utc": "2025-03-11T05:33:09.634Z",
+    "cloud_cover_pct": 0.0,
+    "bbox": [
+      76.02160561320612,
+      20.699554043243875,
+      77.02785138572654,
+      21.698682324533273
+    ],
+    "exact_time_gap_hours": 2.613991,
+    "match_category": "CLOSE_MATCH_6H",
+    "spatially_covers_firms_point": true,
+    "bands_available": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ]
+  }
+}

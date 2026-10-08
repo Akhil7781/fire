@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "plan_name": "ds08_expansion_sampling_plan_v2",
+  "version": "2.0.0",
+  "stage": "STAGE_8_18A",
+  "created_at_utc": "2026-10-02T12:45:00Z",
+  "target_total_chips": 250,
+  "pilot_benchmark_chips": 15,
+  "expansion_target_chips": 235,
+  "strata": [
+    {
+      "stratum_id": "STR-1",
+      "stratum_name": "Confirmed Acute Industrial Fires",
+      "target_class": "Industrial Fire",
+      "class_id": 1,
+      "allocated_chips": 15,
+      "minimum_required_chips": 10,
+      "primary_sampling_unit": "Unique Physical Ground Incident (incident_id)",
+      "description": "Acute destructive industrial fire disasters with independent official/incident reports in 2025. Exactly one primary chip per incident.",
+      "primary_data_source": "data/reference/industrial/india_industrial_incidents_2025_normalized.parquet",
+      "contingency_rule": "If clear Sentinel-2 scenes in 2025 are < 15, expand temporal window to 2024 or allocate shortfall to STR-2 (Other Thermal Source)."
+    },
+    {
+      "stratum_id": "STR-2",
+      "stratum_name": "Persistent Non-Biomass Thermal Sources",
+      "target_class": "Other Thermal Source",
+      "class_id": 4,
+      "allocated_chips": 30,
+      "minimum_required_chips": 20,
+      "primary_sampling_unit": "Facility or Cluster Coordinate Center",
+      "description": "Continuous industrial gas flaring, active coal seam smoldering, operational brick kiln clusters, thermal power stations.",
+      "primary_data_source": "data/reference/other_thermal/india_other_thermal_sources_2025_normalized.parquet",
+      "contingency_rule": "Scale from known registries (World Bank GGFR, SentinelKilnDB, Coal India, CEA)."
+    },
+    {
+      "stratum_id": "STR-3",
+      "stratum_name": "Active Forest Wildfires",
+      "target_class": "Forest Fire",
+      "class_id": 2,
+      "allocated_chips": 55,
+      "minimum_required_chips": 45,
+      "primary_sampling_unit": "Wildfire Event Perimeter / Cluster Centroid",
+      "description": "Wildland forest and woodland fires across diverse Indian ecological biomes.",
+      "primary_data_source": "data/reference/forest/fsi_van_agni_lff_2025_normalized.parquet",
+      "contingency_rule": "Stratify across Central (MP/CG), Northeast (Assam/Meghalaya), Western Ghats, and Himalayan foothills."
+    },
+    {
+      "stratum_id": "STR-4",
+      "stratum_name": "Agricultural Crop Residue Burns",
+      "target_class": "Agricultural Fire",
+      "class_id": 3,
+      "allocated_chips": 55,
+      "minimum_required_chips": 45,
+      "primary_sampling_unit": "Agricultural Field Parcel / Hotspot Centroid",
+      "description": "Crop residue and field burning across Rabi (spring) and Kharif (autumn) harvest windows.",
+      "primary_data_source": "data/reference/agriculture/icar_iari_creams_2025_normalized.parquet",
+      "contingency_rule": "Sample across Punjab, Haryana, Uttar Pradesh, and Madhya Pradesh intensive agricultural parcels."
+    },
+    {
+      "stratum_id": "STR-5",
+      "stratum_name": "Industrial Negative Controls",
+      "target_class": "NO_VISIBLE_TARGET",
+      "class_id": 0,
+      "allocated_chips": 40,
+      "minimum_required_chips": 30,
+      "primary_sampling_unit": "Industrial Facility Polygon Centroid",
+      "description": "Refineries, chemical zones, and power plants under normal, clear, non-burning operation.",
+      "primary_data_source": "OpenStreetMap industrial polygons, Central Electricity Authority registry",
+      "contingency_rule": "Essential for training false-positive rejection of complex industrial infrastructure."
+    },
+    {
+      "stratum_id": "STR-6",
+      "stratum_name": "Natural & Agricultural Negative Controls",
+      "target_class": "NO_VISIBLE_TARGET",
+      "class_id": 0,
+      "allocated_chips": 40,
+      "minimum_required_chips": 30,
+      "primary_sampling_unit": "Background Tile Centroid",
+      "description": "Unburnt natural forest, harvested agricultural soil, and cloud-shadow edge cases.",
+      "primary_data_source": "Low-confidence FIRMS detections and clear-sky background land-cover tiles",
+      "contingency_rule": "Provides hard negative background diversity across terrain types."
+    },
+    {
+      "stratum_id": "STR-7",
+      "stratum_name": "Pilot Benchmark Calibration Cohort",
+      "target_class": "Mixed (6 Positive, 9 Negative)",
+      "class_id": -1,
+      "allocated_chips": 15,
+      "minimum_required_chips": 15,
+      "primary_sampling_unit": "Immutable Historical Pilot Chip",
+      "description": "The audited 15-chip pilot dataset (ds08_pilot_v1) held out permanently as an immutable benchmark.",
+      "primary_data_source": "data/reference/ds08/packages/ds08_pilot_v1/manifest.json",
+      "contingency_rule": "Invariant: Must never be partitioned into training or validation folds."
+    }
+  ],
+  "geographic_allocation": {
+    "NORTH": {
+      "allocated_chips": 55,
+      "percentage": 22.0,
+      "coordinate_bounds": "latitude >= 28.0 N and longitude < 84.0 E",
+      "administrative_domain": "Punjab, Haryana, HP, J&K, Ladakh, Uttarakhand, Delhi, Chandigarh, Western UP",
+      "key_landscapes": "Indo-Gangetic stubble burning, Himalayan pine forests, NCR brick kilns"
+    },
+    "CENTRAL": {
+      "allocated_chips": 60,
+      "percentage": 24.0,
+      "coordinate_bounds": "16.0 <= latitude < 28.0 N and 76.0 <= longitude < 84.0 E",
+      "administrative_domain": "Madhya Pradesh, Chhattisgarh",
+      "key_landscapes": "Dry deciduous forest fires, Singrauli-Korba coal/thermal industrial belt"
+    },
+    "SOUTH": {
+      "allocated_chips": 45,
+      "percentage": 18.0,
+      "coordinate_bounds": "latitude < 16.0 N and longitude < 84.0 E",
+      "administrative_domain": "Andhra Pradesh, Telangana, Karnataka, Tamil Nadu, Kerala, Puducherry, Lakshadweep",
+      "key_landscapes": "Western Ghats evergreen forests, Deccan plateau agriculture, coastal refineries"
+    },
+    "EAST": {
+      "allocated_chips": 50,
+      "percentage": 20.0,
+      "coordinate_bounds": "longitude >= 84.0 E (all latitudes)",
+      "administrative_domain": "Bihar, Jharkhand, West Bengal, Odisha, Sikkim, Assam, Northeast states, Andaman & Nicobar",
+      "key_landscapes": "Jharia/Raniganj coal seam fires, Northeast shifting cultivation (jhum), tea gardens"
+    },
+    "WEST": {
+      "allocated_chips": 40,
+      "percentage": 16.0,
+      "coordinate_bounds": "16.0 <= latitude < 28.0 N and longitude < 76.0 E",
+      "administrative_domain": "Rajasthan, Gujarat, Maharashtra, Goa, Dadra & Nagar Haveli, Daman & Diu",
+      "key_landscapes": "Gujarat petrochemical corridor (Hazira, Jamnagar, Dahej), arid scrub fires, ports"
+    }
+  },
+  "temporal_matching_tiers": [
+    {
+      "tier": "Tier 1: Coincident",
+      "gap_hours_max": 1.0,
+      "physical_phase": "ACTIVE_COMBUSTION",
+      "target_share_pct": 25.0,
+      "expected_signature": "Active flaming combustion front, high SWIR saturation, localized smoke plume",
+      "permissible_evidence": ["DIRECT_FIRE_VISIBLE", "SMOKE_PLUME_PRESENT", "SWIR_ANOMALY_PRESENT"]
+    },
+    {
+      "tier": "Tier 2: Near-Coincident",
+      "gap_hours_max": 6.0,
+      "physical_phase": "ACTIVE_COMBUSTION",
+      "target_share_pct": 40.0,
+      "expected_signature": "Ignition or early burnout stage, dispersing smoke, developing burn scar",
+      "permissible_evidence": ["DIRECT_FIRE_VISIBLE", "SMOKE_PLUME_PRESENT", "SWIR_ANOMALY_PRESENT"]
+    },
+    {
+      "tier": "Tier 3: Same-Day Post",
+      "gap_hours_max": 24.0,
+      "physical_phase": "POST_COMBUSTION_SCAR",
+      "target_share_pct": 25.0,
+      "expected_signature": "High-contrast post-fire burn scar, ash deposit, residual cooling embers",
+      "permissible_evidence": ["BURN_SCAR_PRESENT", "DESTRUCTION_DEBRIS_VISIBLE", "SWIR_ANOMALY_PRESENT"],
+      "prohibited_evidence": ["DIRECT_FIRE_VISIBLE", "SMOKE_PLUME_PRESENT"]
+    },
+    {
+      "tier": "Tier 4: Next-Day Post",
+      "gap_hours_max": 48.0,
+      "physical_phase": "POST_COMBUSTION_SCAR",
+      "target_share_pct": 10.0,
+      "expected_signature": "Post-fire scar validation and environmental damage assessment",
+      "permissible_evidence": ["BURN_SCAR_PRESENT", "DESTRUCTION_DEBRIS_VISIBLE"],
+      "prohibited_evidence": ["DIRECT_FIRE_VISIBLE", "SMOKE_PLUME_PRESENT"]
+    }
+  ],
+  "spatial_partition_rules": {
+    "blocking_standard": "Sentinel-2 MGRS 100km x 100km Tile Grid",
+    "buffer_radius_km": 50.0,
+    "max_buffer_allowed_km": 50.0,
+    "banned_buffer_km": 150.0,
+    "cross_validation_folds": 5,
+    "chips_per_fold": 50,
+    "pilot_handling": "Permanently held out as independent calibration benchmark"
+  }
+}

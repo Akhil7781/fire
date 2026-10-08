@@ -1,0 +1,94 @@
+{
+  "training_mode": "SELF_SUPERVISED_REPRESENTATION_LEARNING",
+  "objective": "NT-Xent Contrastive Loss",
+  "random_seed": 42,
+  "epochs": 10,
+  "best_epoch": 10,
+  "best_val_loss": 1.386290192604065,
+  "embedding_dim": 128,
+  "backbone": "efficientnet_b0_5channel",
+  "input_shape": [
+    5,
+    512,
+    512
+  ],
+  "channel_names": [
+    "B02",
+    "B03",
+    "B04",
+    "B11",
+    "B12"
+  ],
+  "total_chips": 8,
+  "train_chips": [
+    "DS08_EXP_S1_003",
+    "DS08_EXP_S2_001",
+    "DS08_EXP_S3_001",
+    "DS08_EXP_S5_001",
+    "DS08_EXP_S6_001",
+    "S8_001"
+  ],
+  "val_chips": [
+    "DS08_EXP_S4_001",
+    "S8_002"
+  ],
+  "class_counts": {
+    "Industrial Fire": 3,
+    "Uncertain": 2,
+    "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1,
+    "Forest Fire": 1,
+    "Agricultural Fire": 1
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.8321138223012289,
+      "val_loss": 1.3862943649291992
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.7677441040674845,
+      "val_loss": 1.3862943649291992
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.7532283067703247,
+      "val_loss": 1.3862943649291992
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.8855022589365641,
+      "val_loss": 1.3862943649291992
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.4960683186848958,
+      "val_loss": 1.3862943649291992
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.7421788374582926,
+      "val_loss": 1.3862943649291992
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1.4894879857699077,
+      "val_loss": 1.3862943649291992
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.7406815886497498,
+      "val_loss": 1.3862943649291992
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.7430025339126587,
+      "val_loss": 1.3862942457199097
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.7451021671295166,
+      "val_loss": 1.386290192604065
+    }
+  ]
+}

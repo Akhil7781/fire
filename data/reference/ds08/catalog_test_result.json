@@ -1,0 +1,108 @@
+{
+  "firms_detection_id": "9b557f8145b3657fa117887b5558b87e40bf7c132372b041e7f5a992ad81365c",
+  "firms_latitude": 21.24256,
+  "firms_longitude": 76.81844,
+  "firms_acquisition_datetime": "2025-03-15T08:35:00Z",
+  "firms_frp_mw": 98.65,
+  "firms_partition": "train",
+  "search_bbox": [
+    76.76844,
+    21.19256,
+    76.86844,
+    21.29256
+  ],
+  "search_datetime_interval": "2025-03-10T00:00:00Z/2025-03-20T23:59:59Z",
+  "sentinel2_collection": "sentinel-2-l2a",
+  "returned_item_count": 2,
+  "returned_item_metadata": [
+    {
+      "item_id": "S2C_MSIL2A_20250316T051711_N0511_R062_T43QFD_20250316T103215.SAFE",
+      "platform": "sentinel-2c",
+      "acquisition_datetime_utc": "2025-03-16T05:33:30.884Z",
+      "cloud_cover_pct": 17.48,
+      "epsg": 32643,
+      "gsd_m": 10,
+      "assets": {
+        "data": {
+          "title": "s3",
+          "type": "inode/directory",
+          "href": "s3://eodata/Sentinel-2/MSI/L2A/2025/03/16/S2C_MSIL2A_20250316T051711_N0511_R062_T43QFD_20250316T103215.SAFE"
+        }
+      },
+      "geometry_type": "MultiPolygon",
+      "bbox": [
+        76.02189370841138,
+        20.699554043243875,
+        77.02785138572654,
+        21.698678674691127
+      ]
+    },
+    {
+      "item_id": "S2B_MSIL2A_20250311T051649_N0511_R062_T43QFD_20250311T075623.SAFE",
+      "platform": "sentinel-2b",
+      "acquisition_datetime_utc": "2025-03-11T05:33:09.634Z",
+      "cloud_cover_pct": 0.0,
+      "epsg": 32643,
+      "gsd_m": 10,
+      "assets": {
+        "data": {
+          "title": "s3",
+          "type": "inode/directory",
+          "href": "s3://eodata/Sentinel-2/MSI/L2A/2025/03/11/S2B_MSIL2A_20250311T051649_N0511_R062_T43QFD_20250311T075623.SAFE"
+        }
+      },
+      "geometry_type": "MultiPolygon",
+      "bbox": [
+        76.02160561320612,
+        20.699554043243875,
+        77.02785138572654,
+        21.698682324533273
+      ]
+    }
+  ],
+  "selected_item_id": "S2B_MSIL2A_20250311T051649_N0511_R062_T43QFD_20250311T075623.SAFE",
+  "selected_acquisition_datetime": "2025-03-11T05:33:09.634Z",
+  "selected_cloud_cover_pct": 0.0,
+  "required_bands_verification": {
+    "B02": {
+      "available": true,
+      "common_name": "blue",
+      "center_wavelength_um": 0.4924,
+      "fwhm_um": 0.066
+    },
+    "B03": {
+      "available": true,
+      "common_name": "green",
+      "center_wavelength_um": 0.5598,
+      "fwhm_um": 0.036
+    },
+    "B04": {
+      "available": true,
+      "common_name": "red",
+      "center_wavelength_um": 0.6646,
+      "fwhm_um": 0.031
+    },
+    "B11": {
+      "available": true,
+      "common_name": "swir16",
+      "center_wavelength_um": 1.6137,
+      "fwhm_um": 0.091
+    },
+    "B12": {
+      "available": true,
+      "common_name": "swir22",
+      "center_wavelength_um": 2.2024,
+      "fwhm_um": 0.175
+    }
+  },
+  "suitability_decision": {
+    "is_sentinel2_l2a": true,
+    "is_geographically_relevant": true,
+    "is_within_temporal_window": true,
+    "is_cloud_acceptable": true,
+    "are_all_required_bands_accessible": true,
+    "overall_suitability_for_extraction": true,
+    "rationale": "Scene S2B_MSIL2A_20250311T051649_N0511_R062_T43QFD_20250311T075623.SAFE is a valid Level-2A product covering the FIRMS ROI with 0.0% cloud cover (threshold <= 10.0%) and all 5 required bands (B02, B03, B04, B11, B12) confirmed."
+  },
+  "scientific_disclaimer": "Association between FIRMS thermal detection and Sentinel-2 L2A optical scene is purely spatial-temporal candidate discovery. Optical scene acquisition does NOT prove or establish fire source class (Industrial, Forest, Agricultural, Other). Downstream classification is governed strictly by multimodal decision fusion."
+}

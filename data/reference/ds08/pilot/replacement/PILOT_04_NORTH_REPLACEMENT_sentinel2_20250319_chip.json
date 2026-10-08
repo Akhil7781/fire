@@ -1,0 +1,150 @@
+{
+  "status": "VALIDATED_PILOT_CHIP_EXTRACTION",
+  "candidate_id": "PILOT_04_NORTH_REPLACEMENT",
+  "role": "REPLACEMENT_FOR_PILOT_04_NORTH",
+  "original_candidate_id": "PILOT_04_NORTH",
+  "replacement_rationale": "Original PILOT_04_NORTH was rejected due to 51.20% orbital swath-edge truncation. Replacement chip provides complete, untruncated 512x512 coverage (zero-fill 0.0%) over a high-quality North India FIRMS detection (Lat: 29.76735, Lon: 77.66902, scene cloud 0.23%, temporal gap 1.68h).",
+  "label_status": "UNLABELED",
+  "pilot_phase": "STAGE_8.8_QUALITY_RESOLUTION",
+  "firms_metadata": {
+    "detection_id": "42b541f95919c538f0ae679757216b76120210f5a3264e33c6e5dabc1727d66a",
+    "latitude": 29.76735,
+    "longitude": 77.66902,
+    "acquisition_datetime_utc": "2025-03-19T07:22:00Z",
+    "frp": 3.05,
+    "association_status": "candidate_context_only",
+    "geographic_region": "NORTH"
+  },
+  "sentinel2_scene": {
+    "product_id": "S2C_MSIL2A_20250319T052711_N0511_R105_T43RGP_20250319T104817.SAFE",
+    "platform": "sentinel-2c",
+    "acquisition_datetime_utc": "2025-03-19T05:40:58.075Z",
+    "temporal_gap_hours": 1.683868,
+    "cloud_cover_pct": 0.23,
+    "collection": "sentinel-2-l2a",
+    "tile_id": "T43RGP"
+  },
+  "extraction": {
+    "processing_api_endpoint": "https://sh.dataspace.copernicus.eu/process/v1",
+    "aoi_geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            760626.79,
+            3293431.9
+          ],
+          [
+            760626.79,
+            3298551.9
+          ],
+          [
+            755506.79,
+            3298551.9
+          ],
+          [
+            755506.79,
+            3293431.9
+          ],
+          [
+            760626.79,
+            3293431.9
+          ]
+        ]
+      ]
+    },
+    "aoi_bbox_utm": [
+      755506.79,
+      3293431.9,
+      760626.79,
+      3298551.9
+    ],
+    "aoi_bbox_wgs84": [
+      77.641961,
+      29.744802,
+      77.696091,
+      29.789891
+    ],
+    "projected_crs": "EPSG:32643",
+    "output_crs": "EPSG:32643",
+    "output_width_pixels": 512,
+    "output_height_pixels": 512,
+    "output_resolution_meters": 10.0,
+    "band_order": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "input_units": "REFLECTANCE",
+    "resampling_method": "BILINEAR (native 20m B11/B12 resampled to 10m common grid)",
+    "output_dtype": "FLOAT32",
+    "extraction_timestamp_utc": "2026-09-29T14:11:29.063321+00:00",
+    "file_size_bytes": 2754440,
+    "sha256_checksum": "ee895491e936fb90f9be3bb14369b366a612f690842b492d6b89e3e3c1a4caaf",
+    "zero_fill_pixel_count": 0,
+    "zero_fill_pct": 0.0,
+    "previews": {
+      "rgb_preview": "D:\\DATA PREPROCESSING\\data\\reference\\ds08\\pilot\\replacement\\PILOT_04_NORTH_REPLACEMENT_sentinel2_20250319_chip_rgb_preview.png",
+      "swir_preview": "D:\\DATA PREPROCESSING\\data\\reference\\ds08\\pilot\\replacement\\PILOT_04_NORTH_REPLACEMENT_sentinel2_20250319_chip_swir_preview.png"
+    },
+    "band_statistics": {
+      "B02": {
+        "band_index": 1,
+        "band_name": "B02",
+        "min": 0.0057,
+        "max": 0.2961,
+        "mean": 0.05398,
+        "std": 0.026716,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B03": {
+        "band_index": 2,
+        "band_name": "B03",
+        "min": 0.0184,
+        "max": 0.3105,
+        "mean": 0.082659,
+        "std": 0.032117,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B04": {
+        "band_index": 3,
+        "band_name": "B04",
+        "min": 0.0093,
+        "max": 0.3339,
+        "mean": 0.086371,
+        "std": 0.048919,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B11": {
+        "band_index": 4,
+        "band_name": "B11",
+        "min": 0.0253,
+        "max": 0.4641,
+        "mean": 0.210619,
+        "std": 0.058396,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B12": {
+        "band_index": 5,
+        "band_name": "B12",
+        "min": 0.0189,
+        "max": 0.7196,
+        "mean": 0.152268,
+        "std": 0.063787,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      }
+    }
+  }
+}

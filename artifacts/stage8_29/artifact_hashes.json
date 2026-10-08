@@ -1,0 +1,82 @@
+{
+  "data/reference/ds08/manifests/stage8_25/independent_test_manifest.json": {
+    "exists": true,
+    "sha256": "5686345a1300282407d303c943e190867b63c0c5d5ea536973d4859cd8a95d6c",
+    "size_bytes": 11494
+  },
+  "data/reference/ds08/manifests/stage8_25/persistent_source_manifest.json": {
+    "exists": true,
+    "sha256": "bb2404d9e8b3fce8d2045333003f966c9613d676de7f44aef334c6a309e4880e",
+    "size_bytes": 32042
+  },
+  "data/reference/ds08/manifests/stage8_25/industrial_facility_database.json": {
+    "exists": true,
+    "sha256": "fc72086efeac7c8ea0e432acd01de49da5658d44d5186607cef6b4280a2a8696",
+    "size_bytes": 10385
+  },
+  "models/stage8_28/causal_temporal_encoder.pt": {
+    "exists": true,
+    "sha256": "fb650d33d5554cedfd38d469fc1d74b7fcc326dcccdab133b3b43e7af646f58f",
+    "size_bytes": 244795
+  },
+  "models/stage8_28/causal_classifier.pt": {
+    "exists": true,
+    "sha256": "ed7300a375a85cc9f7502d907ea17a9089ffd714826f876db3b2f676f3c5db35",
+    "size_bytes": 50205
+  },
+  "models/stage8_28/scaler.json": {
+    "exists": true,
+    "sha256": "ba3a529214e44d6a555fd45e9f2592782e7cf2c7065ba2ddeb3ace2b6f465b98",
+    "size_bytes": 1502
+  },
+  "models/stage8_28/metadata.json": {
+    "exists": true,
+    "sha256": "c0184aa641c56a6b964d33eb4fed3e6d148d44b9f8cb51623c1dba28ebc6ecf1",
+    "size_bytes": 564
+  },
+  "artifacts/stage8_28/stage8_28_summary.json": {
+    "exists": true,
+    "sha256": "c3eec02ea98d278689af69129e9c0545070930f9da5c5618fc4d1fc48e98833c",
+    "size_bytes": 17668
+  },
+  "artifacts/stage8_28/stage8_28_final_report.md": {
+    "exists": true,
+    "sha256": "e7b0cf3f2071be6f437f82053614e3bb206dd69f66128aeeef2619dd1fb60f71",
+    "size_bytes": 22426
+  },
+  "src/stage8_29/experiments.py": {
+    "exists": true,
+    "sha256": "ce317a769d7779f977875a43c65a99da32084e357ec2d387980c53a219fd03a0",
+    "size_bytes": 32173
+  },
+  "artifacts/stage8_29/persistent_registry_provenance.md": {
+    "exists": true,
+    "sha256": "6b2b7787a7b2ffe58c272ac8faebb144f0ae415bc99f0abcc005fa58ae68e2d3",
+    "size_bytes": 10664
+  },
+  "artifacts/stage8_29/registry_target_proxy_audit.csv": {
+    "exists": true,
+    "sha256": "058de3c490c1303e1d32f0d88b98d5f1c30759213d2b5a14f094e8ff6ac515fb",
+    "size_bytes": 4495
+  },
+  "artifacts/stage8_29/temporal_loss_audit.csv": {
+    "exists": true,
+    "sha256": "64b213c866af1ea0a96c82289619779bdfa3e21368170d97a7fcb429bd75de25",
+    "size_bytes": 554
+  },
+  "artifacts/stage8_29/no_registry_horizon_results.csv": {
+    "exists": true,
+    "sha256": "5e3da6cc1a8d29421da5a9c09bee62fea7ba038fc421f57fa65d2549d0970959",
+    "size_bytes": 2169
+  },
+  "artifacts/stage8_29/prediction_flip_analysis.csv": {
+    "exists": true,
+    "sha256": "c0f7559e7cd10a2bbb3f67f13f1453e2c332686e3985823efc76fa81c7bd296b",
+    "size_bytes": 10033
+  },
+  "artifacts/stage8_29/stage8_29_summary.json": {
+    "exists": true,
+    "sha256": "7a8aa7a14d1dd833f65446c671d7fcb8ecce5eafea333b590df1631211ab8cf4",
+    "size_bytes": 12829
+  }
+}

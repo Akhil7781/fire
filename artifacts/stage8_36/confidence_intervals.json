@@ -1,0 +1,24 @@
+{
+  "n_samples": 28,
+  "n_correct": 22,
+  "points_per_event": 3.5714285714285716,
+  "accuracy": 0.7857,
+  "accuracy_wilson_95_ci": [
+    0.6046,
+    1
+  ],
+  "accuracy_bootstrap_95_ci": [
+    0.6071,
+    0.9286
+  ],
+  "macro_f1": 0.8021,
+  "macro_f1_bootstrap_95_ci": [
+    0.6369,
+    0.9226
+  ],
+  "balanced_accuracy": 0.8167,
+  "balanced_accuracy_bootstrap_95_ci": [
+    0.6583,
+    0.9375
+  ]
+}

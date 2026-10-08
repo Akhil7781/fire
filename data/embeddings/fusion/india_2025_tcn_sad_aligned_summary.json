@@ -1,0 +1,24 @@
+{
+  "status": "COMPLETED",
+  "artifact_path": "D:\\DATA PREPROCESSING\\data\\embeddings\\fusion\\india_2025_tcn_sad_aligned.parquet",
+  "file_size_mb": 423.01,
+  "total_rows": 1024996,
+  "total_columns": 102,
+  "metadata_columns": 6,
+  "z_tcn_dimensions": 64,
+  "z_sad_dimensions": 32,
+  "partition_counts": {
+    "train": 578465,
+    "train_heldout_spatial": 277395,
+    "test_seen_spatial": 91846,
+    "test": 47881,
+    "val": 29409
+  },
+  "nan_inf_count": 0,
+  "duplicate_detection_ids": 0,
+  "partition_mismatches": 0,
+  "tcn_value_drift_max": 0.0,
+  "sad_value_drift_max": 0.0,
+  "operational_cohort_only": true,
+  "context_burn_in_excluded": true
+}

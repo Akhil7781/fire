@@ -1,0 +1,15 @@
+{
+  "in_features": 27,
+  "latent_dim": 32,
+  "leaky_relu_slope": 0.1,
+  "batch_size": 1024,
+  "learning_rate": 0.001,
+  "weight_decay": 1e-06,
+  "gamma": 0.1,
+  "eta": 1.0,
+  "epsilon": 1e-06,
+  "n_init": 20000,
+  "max_epochs": 20,
+  "patience": 8,
+  "seed": 42
+}

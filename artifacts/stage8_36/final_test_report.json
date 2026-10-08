@@ -1,0 +1,274 @@
+{
+  "status": "COMPLETED",
+  "stage": "8.36",
+  "evaluation_count": 1,
+  "cohort_size": 28,
+  "correct_predictions": 22,
+  "manifest_sha256": "5686345a1300282407d303c943e190867b63c0c5d5ea536973d4859cd8a95d6c",
+  "checkpoint_sha256": "5bdbfbd503a3c0acbd50caefd2b1c88b5e0190a7176d70a517165814722bcff2",
+  "metrics": {
+    "accuracy": 0.7857,
+    "macro_f1": 0.8021,
+    "weighted_f1": 0.7946,
+    "balanced_accuracy": 0.8167
+  },
+  "per_class": {
+    "Industrial Fire": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "support": 6
+    },
+    "Forest Fire": {
+      "precision": 0.8333,
+      "recall": 0.8333,
+      "f1": 0.8333,
+      "support": 6
+    },
+    "Agricultural Fire": {
+      "precision": 0.5,
+      "recall": 0.8333,
+      "f1": 0.625,
+      "support": 6
+    },
+    "Other / Persistent Thermal Source": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75,
+      "support": 10
+    }
+  },
+  "confusion_matrix": {
+    "columns": [
+      "Industrial",
+      "Forest",
+      "Agricultural",
+      "Persistent"
+    ],
+    "rows": [
+      "Industrial",
+      "Forest",
+      "Agricultural",
+      "Persistent"
+    ],
+    "matrix": [
+      [
+        6,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        6
+      ]
+    ]
+  },
+  "uncertainty": {
+    "n_samples": 28,
+    "n_correct": 22,
+    "points_per_event": 3.5714285714285716,
+    "accuracy": 0.7857,
+    "accuracy_wilson_95_ci": [
+      0.6046,
+      1
+    ],
+    "accuracy_bootstrap_95_ci": [
+      0.6071,
+      0.9286
+    ],
+    "macro_f1": 0.8021,
+    "macro_f1_bootstrap_95_ci": [
+      0.6369,
+      0.9226
+    ],
+    "balanced_accuracy": 0.8167,
+    "balanced_accuracy_bootstrap_95_ci": [
+      0.6583,
+      0.9375
+    ]
+  },
+  "targets": {
+    "TARGET_ACCURACY_85": false,
+    "TARGET_MACRO_F1_85": false,
+    "TARGET_BALANCED_ACCURACY_85": false
+  },
+  "historical_comparison": {
+    "Stage_8_31_Historical": {
+      "model_type": "Static MLP + Random Forest Ensemble (Hybrid)",
+      "accuracy": 0.8571,
+      "macro_f1": 0.8231,
+      "balanced_accuracy": 0.8333,
+      "note": "PRIOR RESULT: Permitted classical Random Forest ensemble component"
+    },
+    "Stage_8_32_Historical": {
+      "model_type": "GroupedCausalThermalClassifier (Deep Learning Only)",
+      "accuracy": 0.7857,
+      "macro_f1": 0.78,
+      "balanced_accuracy": 0.8,
+      "note": "PRIOR RESULT: Strict Deep Learning Only on unexpanded N=131 development cohort"
+    },
+    "Stage_8_36_Final": {
+      "model_type": "Architecture1_StaticMLP (Pure PyTorch Deep Learning)",
+      "accuracy": 0.7857,
+      "macro_f1": 0.8021,
+      "balanced_accuracy": 0.8167,
+      "weighted_f1": 0.7946,
+      "note": "OFFICIAL FINAL BENCHMARK: Evaluated exactly once on frozen cohort"
+    }
+  },
+  "misclassifications": [
+    {
+      "event_id": "EVT_825_FOR_FOR_EVT_2026_OD_KOTGARH",
+      "true_class_id": 1,
+      "true_class": "Forest Fire",
+      "predicted_class_id": 2,
+      "predicted_class": "Agricultural Fire",
+      "confidence": 0.37389999628067017,
+      "probabilities": {
+        "industrial": 0.11559999734163284,
+        "forest": 0.3582000136375427,
+        "agricultural": 0.37389999628067017,
+        "persistent": 0.15230000019073486
+      },
+      "salient_features": {
+        "dist_to_fac_km": 253.4296555920452,
+        "within_1km_fac": 0.0,
+        "forest_biome_score": 1.0,
+        "agri_heartland_score": 0.0,
+        "hist_count_full": 0.0,
+        "hist_distinct_calendar_months": 0.0,
+        "current_frp": 3.46
+      }
+    },
+    {
+      "event_id": "EVT_825_AGR_AGR_EVT_2026_RJ_KOTA_RABI",
+      "true_class_id": 2,
+      "true_class": "Agricultural Fire",
+      "predicted_class_id": 1,
+      "predicted_class": "Forest Fire",
+      "confidence": 0.41359999775886536,
+      "probabilities": {
+        "industrial": 0.13109999895095825,
+        "forest": 0.41359999775886536,
+        "agricultural": 0.3626999855041504,
+        "persistent": 0.09260000288486481
+      },
+      "salient_features": {
+        "dist_to_fac_km": 307.5273194650594,
+        "within_1km_fac": 0.0,
+        "forest_biome_score": 0.0,
+        "agri_heartland_score": 1.0,
+        "hist_count_full": 0.0,
+        "hist_distinct_calendar_months": 0.0,
+        "current_frp": 24.837544982369057
+      }
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_03",
+      "true_class_id": 3,
+      "true_class": "Other / Persistent Thermal Source",
+      "predicted_class_id": 2,
+      "predicted_class": "Agricultural Fire",
+      "confidence": 0.3589000105857849,
+      "probabilities": {
+        "industrial": 0.1152999997138977,
+        "forest": 0.17970000207424164,
+        "agricultural": 0.3589000105857849,
+        "persistent": 0.34619998931884766
+      },
+      "salient_features": {
+        "dist_to_fac_km": 158.13672391367464,
+        "within_1km_fac": 0.0,
+        "forest_biome_score": 0.0,
+        "agri_heartland_score": 0.0,
+        "hist_count_full": 5.0,
+        "hist_distinct_calendar_months": 1.0,
+        "current_frp": 7.746106762846649
+      }
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_06",
+      "true_class_id": 3,
+      "true_class": "Other / Persistent Thermal Source",
+      "predicted_class_id": 2,
+      "predicted_class": "Agricultural Fire",
+      "confidence": 0.3928999900817871,
+      "probabilities": {
+        "industrial": 0.10729999840259552,
+        "forest": 0.1469999998807907,
+        "agricultural": 0.3928999900817871,
+        "persistent": 0.3528999984264374
+      },
+      "salient_features": {
+        "dist_to_fac_km": 111.76929643613111,
+        "within_1km_fac": 0.0,
+        "forest_biome_score": 0.0,
+        "agri_heartland_score": 1.0,
+        "hist_count_full": 5.0,
+        "hist_distinct_calendar_months": 1.0,
+        "current_frp": 4.904028016162385
+      }
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_49",
+      "true_class_id": 3,
+      "true_class": "Other / Persistent Thermal Source",
+      "predicted_class_id": 2,
+      "predicted_class": "Agricultural Fire",
+      "confidence": 0.367000013589859,
+      "probabilities": {
+        "industrial": 0.1128000020980835,
+        "forest": 0.16869999468326569,
+        "agricultural": 0.367000013589859,
+        "persistent": 0.351500004529953
+      },
+      "salient_features": {
+        "dist_to_fac_km": 53.18030149479185,
+        "within_1km_fac": 0.0,
+        "forest_biome_score": 0.0,
+        "agri_heartland_score": 0.0,
+        "hist_count_full": 5.0,
+        "hist_distinct_calendar_months": 1.0,
+        "current_frp": 7.3602306547403025
+      }
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_52",
+      "true_class_id": 3,
+      "true_class": "Other / Persistent Thermal Source",
+      "predicted_class_id": 2,
+      "predicted_class": "Agricultural Fire",
+      "confidence": 0.390500009059906,
+      "probabilities": {
+        "industrial": 0.11829999834299088,
+        "forest": 0.13539999723434448,
+        "agricultural": 0.390500009059906,
+        "persistent": 0.35580000281333923
+      },
+      "salient_features": {
+        "dist_to_fac_km": 113.82679992196319,
+        "within_1km_fac": 0.0,
+        "forest_biome_score": 0.0,
+        "agri_heartland_score": 1.0,
+        "hist_count_full": 5.0,
+        "hist_distinct_calendar_months": 1.0,
+        "current_frp": 7.661045850870565
+      }
+    }
+  ]
+}

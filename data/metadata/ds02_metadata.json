@@ -1,0 +1,293 @@
+{
+  "dataset_id": "DS_02_DERIVED_VIIRS_EVENT_SEQUENCES",
+  "dataset_name": "Derived FIRMS Temporal Sequence Dataset for 1D TCN Pretraining (VIIRS Active-Fire Archive + NIFC/MTBS + GFA + FSI)",
+  "schema_version": "1.0_DS02_STAGE4",
+  "last_updated": "2026-09-24T20:42:00Z",
+  "execution_status": "COMPLETED_AUDITED",
+  "frozen_reference_immutability": {
+    "causal_features_2025_parquet_unmodified": true,
+    "split_ids_unmodified": true,
+    "ds05_artifacts_unmodified": true,
+    "ds03_artifacts_unmodified": true,
+    "ds04_artifacts_unmodified": true
+  },
+  "tcn_sequence_specification": {
+    "tensor_shape": [
+      481,
+      16,
+      8
+    ],
+    "mask_shape": [
+      481,
+      16
+    ],
+    "sequence_length_T": 16,
+    "num_channels_C": 8,
+    "channels": [
+      {
+        "channel_index": 0,
+        "channel_name": "elapsed_time_hours",
+        "dtype": "float32",
+        "description": "Elapsed hours since beginning of sequence window (non-negative, monotonically non-decreasing)"
+      },
+      {
+        "channel_index": 1,
+        "channel_name": "geodesic_distance_km",
+        "dtype": "float32",
+        "description": "Great-circle Haversine geodesic distance from observation to event origin/centroid"
+      },
+      {
+        "channel_index": 2,
+        "channel_name": "thermal_contrast_k",
+        "dtype": "float32",
+        "description": "Thermal contrast Delta T (bright_ti4 - bright_ti5) in Kelvin"
+      },
+      {
+        "channel_index": 3,
+        "channel_name": "frp_mw",
+        "dtype": "float32",
+        "description": "Fire Radiative Power in Megawatts"
+      },
+      {
+        "channel_index": 4,
+        "channel_name": "log1p_frp",
+        "dtype": "float32",
+        "description": "Logarithmic transform of FRP: log(1 + frp_mw)"
+      },
+      {
+        "channel_index": 5,
+        "channel_name": "pixel_footprint_km2",
+        "dtype": "float32",
+        "description": "Pixel surface area footprint: scan * track in km2"
+      },
+      {
+        "channel_index": 6,
+        "channel_name": "solar_zenith_deg",
+        "dtype": "float32",
+        "description": "NOAA solar zenith angle in degrees [0, 180]"
+      },
+      {
+        "channel_index": 7,
+        "channel_name": "daynight_flag",
+        "dtype": "int8",
+        "description": "Binary diurnal flag: 1 for Day (solar zenith < 85 deg), 0 for Night"
+      }
+    ],
+    "causal_invariants": {
+      "strict_causality": "For all target observations i and historical timesteps j: t_j < t_i strictly.",
+      "snapshot_exclusion": "Excludes co-detections within 15 minutes: t_i - t_j >= 900 seconds.",
+      "lookback_horizon": "Bounded to 90 days lookback: t_i - t_j <= 7,776,000 seconds.",
+      "padding_strategy": "Left-padded with zeros (is_padding = 1) for historical sequences with K < 16 active observations."
+    },
+    "self_supervised_pretraining": {
+      "task": "Masked sequence autoencoding",
+      "masking_ratio": 0.15,
+      "reconstruction_targets": [
+        "frp_mw",
+        "thermal_contrast_k"
+      ],
+      "loss_function": "Smooth L1 (Huber) loss",
+      "latent_dimension": 64
+    }
+  },
+  "summary_metrics": {
+    "1_total_source_observations": 501,
+    "2_total_event_count": 20,
+    "3_india_event_count": 15,
+    "4_valid_event_geometries": 20,
+    "5_valid_timestamps": 20,
+    "6_events_with_usable_16step_histories": 17,
+    "7_num_generated_sequences": 481,
+    "8_sequence_length_distribution": {
+      "min": 1,
+      "max": 16,
+      "mean": 10.14,
+      "median": 10.0
+    },
+    "9_time_gap_distribution": {
+      "min_hours": 0.6,
+      "max_hours": 1116.06,
+      "mean_hours": 35.77,
+      "median_hours": 6.93
+    },
+    "10_per_channel_missingness": {
+      "elapsed_time_hours": 0,
+      "geodesic_distance_km": 0,
+      "thermal_contrast_k": 0,
+      "frp_mw": 0,
+      "log1p_frp": 0,
+      "pixel_footprint_km2": 0,
+      "solar_zenith_deg": 0,
+      "daynight_flag": 0
+    },
+    "11_per_channel_numerical_range": {
+      "elapsed_time_hours": {
+        "min": 0.0,
+        "max": 2086.5086,
+        "mean": 144.9999
+      },
+      "geodesic_distance_km": {
+        "min": 0.0503,
+        "max": 5.126,
+        "mean": 0.7277
+      },
+      "thermal_contrast_k": {
+        "min": 8.9989,
+        "max": 35.5983,
+        "mean": 22.0129
+      },
+      "frp_mw": {
+        "min": 2.5,
+        "max": 94.7799,
+        "mean": 36.6866
+      },
+      "log1p_frp": {
+        "min": 1.2528,
+        "max": 4.5621,
+        "mean": 3.3677
+      },
+      "pixel_footprint_km2": {
+        "min": 0.1181,
+        "max": 0.2755,
+        "mean": 0.1844
+      },
+      "solar_zenith_deg": {
+        "min": 7.2156,
+        "max": 177.1565,
+        "mean": 85.2522
+      },
+      "daynight_flag": {
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.4887
+      }
+    },
+    "12_events_per_partition": {
+      "derived_ds02_test": 3,
+      "derived_ds02_train": 14,
+      "derived_ds02_val": 3
+    },
+    "13_sequences_per_partition": {
+      "derived_ds02_train": 339,
+      "derived_ds02_val": 71,
+      "derived_ds02_test": 71
+    },
+    "14_event_leakage_check": "PASSED_ZERO_EVENT_LEAKAGE",
+    "15_future_information_leakage_check": "PASSED_ZERO_FUTURE_LEAKAGE",
+    "16_causal_feature_invariants_comparison": {
+      "snapshot_15min_excluded": true,
+      "lookback_90d_bounded": true,
+      "strictly_causal_t_hist_less_than_t_target": true,
+      "zero_overlap_with_future": true
+    },
+    "17_storage_size": {
+      "temporal_events_parquet_bytes": 14528,
+      "temporal_sequences_parquet_bytes": 144298,
+      "temporal_event_manifest_parquet_bytes": 73547,
+      "sequences_tensor_npy_bytes": 246400,
+      "padding_mask_npy_bytes": 7824,
+      "total_ds02_footprint_bytes": 486597
+    },
+    "18_source_provenance_licensing": {
+      "NASA_VIIRS": "NASA Earth Science Data Systems (ESDS) Open Data Policy (Public Domain)",
+      "USGS_MTBS": "USGS / USDA Forest Service MTBS Open Data (Public Domain)",
+      "FSI_VAN_AGNI": "Forest Survey of India, MoEFCC, Government of India Open Data",
+      "ICAR_IARI_CREAMS": "Indian Agricultural Research Institute Open Bulletins",
+      "WORLD_BANK_GGFR": "World Bank Global Gas Flaring Reduction Partnership Open Data"
+    },
+    "pretraining_isolation_audit": {
+      "training_event_count": 14,
+      "training_sequence_count": 339,
+      "validation_event_count": 3,
+      "validation_sequence_count": 71,
+      "test_event_count": 3,
+      "test_sequence_count": 71,
+      "train_event_ids": [
+        "EVT_2025_AGRI_HR_KAITHAL_KHARIF_006",
+        "EVT_2025_AGRI_HR_KARNAL_RABI_002",
+        "EVT_2025_AGRI_MP_SEHORE_RABI_003",
+        "EVT_2025_AGRI_PB_PATIALA_KHARIF_005",
+        "EVT_2025_AGRI_PB_PATIALA_RABI_004",
+        "EVT_2025_IND_CG_BASTAR_007",
+        "EVT_2025_IND_GJ_JAMNAGAR_FLARE",
+        "EVT_2025_IND_JH_JHARIA_COALFIRE",
+        "EVT_2025_IND_MH_MELGHAT_005",
+        "EVT_2025_IND_MP_BANDHAVGARH_004",
+        "EVT_2025_IND_TN_MUDUMALAI_006",
+        "EVT_MTBS_2024_CA_PARK_FIRE",
+        "EVT_MTBS_2024_NM_SOUTH_FORK",
+        "EVT_MTBS_2024_OR_DURKEE_FIRE"
+      ],
+      "val_event_ids": [
+        "EVT_2025_IND_AN_BARREN_ISLAND",
+        "EVT_2025_IND_OD_SIMILIPAL_003",
+        "EVT_MTBS_2023_WA_GRAY_FIRE"
+      ],
+      "test_event_ids": [
+        "EVT_2025_AGRI_PB_SANGRUR_RABI_001",
+        "EVT_2025_IND_UK_NAINITAL_001",
+        "EVT_MTBS_2023_CA_SMITH_RIVER"
+      ],
+      "test_event_isolation_verified": true,
+      "dataloader_isolation_rule": "Only derived_ds02_train sequences may enter the training DataLoader. Validation and test sequences are strictly excluded from parameter optimization.",
+      "scaler_fitting_rule": "All feature scalers, normalizers, and empirical baselines are fitted strictly on derived_ds02_train active timesteps. Validation and test are transformed only.",
+      "learned_preprocessing_isolation": "No masking statistics, augmentation parameters, or learned preprocessing parameters utilize validation or test observations."
+    },
+    "window_overlap_audit": {
+      "windows_overlap_within_event": true,
+      "overlapping_windows_allowed_for_self_supervised_training": true,
+      "cross_partition_window_overlap": false,
+      "step_size": 1,
+      "methodological_justification": "Sliding lookback windows anchored to successive target timestamps (step size 1) provide essential multi-phase trajectory augmentation (ignition, expansion, peak, decay). Because train/val/test splitting is strictly partitioned by fire_event_id, all overlapping windows of a physical fire reside exclusively within the same partition. Zero cross-partition window overlap exists."
+    },
+    "elapsed_time_consecutive_gap_relationship": {
+      "mathematical_relationship": "For consecutive active timesteps k and k+1 within a sequence window: elapsed_time_hours[k+1] - elapsed_time_hours[k] == (t_{k+1} - t_k) in hours. elapsed_time_hours[0] == 0.0 (relative to first active observation in window). elapsed_time_hours represents cumulative elapsed time from sequence window onset.",
+      "is_strictly_monotonic_non_decreasing": true,
+      "guarantees_no_negative_elapsed_time": true
+    },
+    "source_composition_20_events": {
+      "total_events": 20,
+      "composition_breakdown": {
+        "NIFC_MTBS_BENCHMARK_WILDFIRE": 5,
+        "FSI_FAST_DS03_FOREST_FIRE": 6,
+        "ICAR_IARI_DS04_AGRI_BURN": 6,
+        "PERSISTENT_THERMAL_DS05_CONFOUNDER": 3
+      },
+      "reuse_and_independence_statement": "Events borrowed from DS_03, DS_04, and DS_05 are utilized solely as physical temporal trajectory sources for self-supervised sequence pretraining. Each borrowed event is assigned to exactly one DS_02 derived partition at the event level. Event boundaries are strictly preserved without leakage across the DS_02 event partitions."
+    }
+  },
+  "artifacts": [
+    {
+      "path": "data/reference/ds02/temporal_events.parquet",
+      "description": "20 authoritative reference fire events (5 NIFC/MTBS, 6 Forest, 6 Agri, 3 Persistent)"
+    },
+    {
+      "path": "data/reference/ds02/temporal_events.json",
+      "description": "JSON mirror of 20 reference fire events"
+    },
+    {
+      "path": "data/labeling/ds02/temporal_sequences.parquet",
+      "description": "Timestep-level sequence table (7,696 timesteps = 481 sequences * 16 steps) with all 8 channels"
+    },
+    {
+      "path": "data/labeling/ds02/temporal_event_manifest.parquet",
+      "description": "Manifest of 481 historical sequences with event metadata, targets, and partitions"
+    },
+    {
+      "path": "data/labeling/ds02/temporal_event_manifest.json",
+      "description": "JSON mirror of temporal event manifest"
+    },
+    {
+      "path": "data/labeling/ds02/sequences_tensor.npy",
+      "description": "Direct numpy float32 array of shape (481, 16, 8) ready for 1D TCN pretraining"
+    },
+    {
+      "path": "data/labeling/ds02/padding_mask.npy",
+      "description": "Boolean mask array of shape (481, 16) where True indicates valid active timesteps"
+    },
+    {
+      "path": "data/labeling/ds02/ds02_audit.json",
+      "description": "Complete 18-metric audit report and quality invariant checks"
+    }
+  ]
+}

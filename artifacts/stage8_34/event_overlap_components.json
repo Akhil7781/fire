@@ -1,0 +1,1697 @@
+[
+  {
+    "component_id": 1,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2016_DOMBIVLI_AMUDAN",
+      "EVT_825_IND_IND_INC_2024_AMUDAN_DOMBIVLI"
+    ],
+    "classes": {
+      "Industrial Fire": 2
+    },
+    "years": [
+      2016,
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 2,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2017_NTPC_UNCHAHAR"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2017
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 3,
+    "size": 3,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2018_BPCL_MAHUL",
+      "EVT_825_PER_PER_SRC_19",
+      "EVT_825_PER_PER_SRC_18"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 2,
+      "Industrial Fire": 1
+    },
+    "years": [
+      2018,
+      2024,
+      2025
+    ],
+    "is_multi_class": true,
+    "is_singleton": false
+  },
+  {
+    "component_id": 4,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2018_HIL_RASAYANI"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2018
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 5,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2019_ONGC_URAN"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2019
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 6,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2019_AARTI_JHAGADIA",
+      "EVT_825_IND_IND_INC_2021_UPL_JHAGADIA"
+    ],
+    "classes": {
+      "Industrial Fire": 2
+    },
+    "years": [
+      2019,
+      2021
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 7,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2019_HALDIA_PETRO",
+      "EVT_825_PER_PER_SRC_27"
+    ],
+    "classes": {
+      "Industrial Fire": 1,
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2019,
+      2024
+    ],
+    "is_multi_class": true,
+    "is_singleton": false
+  },
+  {
+    "component_id": 8,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2020_TARAPUR_CHEM",
+      "EVT_825_IND_IND_INC_2024_INDO_AMINES_TARAPUR"
+    ],
+    "classes": {
+      "Industrial Fire": 2
+    },
+    "years": [
+      2020,
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 9,
+    "size": 3,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2020_YASHASHVI_DAHEJ",
+      "EVT_825_IND_IND_INC_2022_BHARAT_RASAYAN",
+      "EVT_825_PER_PER_SRC_28"
+    ],
+    "classes": {
+      "Industrial Fire": 2,
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2020,
+      2022,
+      2024
+    ],
+    "is_multi_class": true,
+    "is_singleton": false
+  },
+  {
+    "component_id": 10,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2020_BAGHJAN_OIL"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2020
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 11,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2020_ASIAN_PAINTS"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2020
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 12,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2020_IOCL_PARADIP"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2020
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 13,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2021_SERUM_MANJARI"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2021
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 14,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2021_SIVAKASI_RAMBAN"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2021
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 15,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2021_SOVEREIGN_DAMAN"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2021
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 16,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2021_IOCL_BARAUNI",
+      "EVT_825_PER_PER_SRC_16"
+    ],
+    "classes": {
+      "Industrial Fire": 1,
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2021,
+      2024
+    ],
+    "is_multi_class": true,
+    "is_singleton": false
+  },
+  {
+    "component_id": 17,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2022_DEEPAK_NITRITE"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2022
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 18,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2022_SUDARSHAN_ROHA"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2022
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 19,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2022_RAYALASEEMA_KURNOOL"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2022
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 20,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2023_JINDAL_IGATPURI"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 21,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2023_SAHITI_ATCHUTAPURAM",
+      "EVT_825_IND_IND_INC_2024_ESCIENTIA_ATCHUTAPURAM"
+    ],
+    "classes": {
+      "Industrial Fire": 2
+    },
+    "years": [
+      2023,
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 22,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2023_AETHER_SURAT"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 23,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2023_CENTURY_SHAHAD"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 24,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2023_GODREJ_VALIA"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 25,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2024_BADDI_AROMA",
+      "EVT_825_IND_IND_INC_2025_BADDI_PHARMA_S8"
+    ],
+    "classes": {
+      "Industrial Fire": 2
+    },
+    "years": [
+      2024,
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 26,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2024_IOCL_MATHURA",
+      "EVT_825_PER_PER_SRC_14"
+    ],
+    "classes": {
+      "Industrial Fire": 1,
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": true,
+    "is_singleton": false
+  },
+  {
+    "component_id": 27,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2025_MANALI_PETRO",
+      "EVT_825_PER_PER_SRC_24"
+    ],
+    "classes": {
+      "Industrial Fire": 1,
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024,
+      2025
+    ],
+    "is_multi_class": true,
+    "is_singleton": false
+  },
+  {
+    "component_id": 28,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2025_PANIPAT_TEXTILE"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 29,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2025_ROHA_MIDC_S8"
+    ],
+    "classes": {
+      "Industrial Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 30,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2016_UK_ALMORA"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2016
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 31,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2016_HP_SHIMLA"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2016
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 32,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2018_TN_KURANGANI"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2018
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 33,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2019_KA_BANDIPUR"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2019
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 34,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2019_OD_SIMILIPAL",
+      "EVT_825_FOR_FOR_EVT_2025_OD_SIMILIPAL_003"
+    ],
+    "classes": {
+      "Forest Fire": 2
+    },
+    "years": [
+      2019,
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 35,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2020_CG_BASTAR"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2020
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 36,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2020_MP_KANHA"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2020
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 37,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2021_OD_SIMILIPAL_MEGA"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2021
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 38,
+    "size": 3,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2021_UK_NAINITAL",
+      "EVT_825_FOR_FOR_EVT_2024_UK_NAINITAL_LFF",
+      "EVT_825_FOR_FOR_EVT_2025_UK_NAINITAL_001"
+    ],
+    "classes": {
+      "Forest Fire": 3
+    },
+    "years": [
+      2021,
+      2024,
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 39,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2021_RJ_SARISKA"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2021
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 40,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2022_UK_GARHWAL"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2022
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 41,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2022_MH_MELGHAT"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2022
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 42,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2022_MP_BANDHAVGARH",
+      "EVT_825_FOR_FOR_EVT_2025_MP_BANDHAVGARH_004"
+    ],
+    "classes": {
+      "Forest Fire": 2
+    },
+    "years": [
+      2022,
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 43,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2023_MZ_AIZAWL"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 44,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2023_OD_KORAPUT"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 45,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2023_TG_AMRABAD"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 46,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2024_HP_SOLAN"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 47,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2024_AP_SESHACHALAM"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 48,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2024_JH_BETLA"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 49,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2025_MH_MELGHAT_005"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 50,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2025_TN_MUDUMALAI_006"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 51,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2025_CG_BASTAR_007"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 52,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_FOR_FOR_EVT_2025_S2_CHIP_S3_001"
+    ],
+    "classes": {
+      "Forest Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 53,
+    "size": 3,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2016_PB_SANGRUR_KHARIF",
+      "EVT_825_AGR_AGR_EVT_2025_S2_CHIP_S4_001",
+      "EVT_825_AGR_AGR_EVT_2025_PB_SANGRUR_RABI_001"
+    ],
+    "classes": {
+      "Agricultural Fire": 3
+    },
+    "years": [
+      2016,
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 54,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2017_HR_KARNAL_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2017
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 55,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2018_PB_TARN_TARAN_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2018
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 56,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2019_MP_SEHORE_RABI"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2019
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 57,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2019_PB_FIROZPUR_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2019
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 58,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2020_HR_KAITHAL_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2020
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 59,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2020_UP_PILIBHIT_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2020
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 60,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2021_PB_LUDHIANA_RABI"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2021
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 61,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2021_PB_BATHINDA_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2021
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 62,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2021_MP_HOSHANGABAD_RABI"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2021
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 63,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2022_PB_MANSA_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2022
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 64,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2022_HR_FATEHABAD_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2022
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 65,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2022_RJ_HANUMANGARH_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2022
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 66,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2023_PB_PATIALA_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 67,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2023_HR_KURUKSHETRA_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 68,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2023_UP_SHAHJAHANPUR_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2023
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 69,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2024_PB_MOGA_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 70,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2024_HR_JIND_KHARIF"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 71,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2024_MP_RAISEN_RABI"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 72,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2024_UP_MATHURA_RABI"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 73,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2025_HR_KARNAL_RABI_002"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 74,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2025_MP_SEHORE_RABI_003"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 75,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2025_PB_PATIALA_RABI_004"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 76,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2025_PB_PATIALA_KHARIF_005"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 77,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_AGR_AGR_EVT_2025_HR_KAITHAL_KHARIF_006"
+    ],
+    "classes": {
+      "Agricultural Fire": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 78,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_04"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 79,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_05",
+      "EVT_825_PER_PER_SRC_41"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 2
+    },
+    "years": [
+      2024,
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 80,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_07"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 81,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_08"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 82,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_09"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 83,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_10"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 84,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_11"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 85,
+    "size": 2,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_12",
+      "EVT_825_PER_PER_SRC_42"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 2
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": false
+  },
+  {
+    "component_id": 86,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_13"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 87,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_15"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 88,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_17"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 89,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_20"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 90,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_22"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 91,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_23"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 92,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_29"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 93,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_30"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 94,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_31"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2025
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 95,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_32"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 96,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_33"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 97,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_34"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 98,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_35"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 99,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_36"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 100,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_37"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 101,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_38"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 102,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_39"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 103,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_40"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 104,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_43"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 105,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_44"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 106,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_45"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 107,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_46"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 108,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_48"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 109,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_50"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  },
+  {
+    "component_id": 110,
+    "size": 1,
+    "event_ids": [
+      "EVT_825_PER_PER_SRC_51"
+    ],
+    "classes": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 1
+    },
+    "years": [
+      2024
+    ],
+    "is_multi_class": false,
+    "is_singleton": true
+  }
+]

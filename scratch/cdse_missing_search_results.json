@@ -1,0 +1,77 @@
+{
+  "DS08_EXP_S2_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S2_001",
+      "stratum": "STR-2",
+      "class": "Other Thermal Source",
+      "lat": 32.76166,
+      "lon": 72.62834,
+      "tile": "T43TBB",
+      "nominal_date": "2025-06-11",
+      "date_min": "2025-06-01",
+      "date_max": "2025-06-20"
+    },
+    "count": 0,
+    "products": []
+  },
+  "DS08_EXP_S3_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S3_001",
+      "stratum": "STR-3",
+      "class": "Forest Fire",
+      "lat": 30.30482,
+      "lon": 74.48767,
+      "tile": "T43SEM",
+      "nominal_date": "2025-05-16",
+      "date_min": "2025-05-10",
+      "date_max": "2025-05-22"
+    },
+    "count": 0,
+    "products": []
+  },
+  "DS08_EXP_S4_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S4_001",
+      "stratum": "STR-4",
+      "class": "Agricultural Fire",
+      "lat": 30.57704,
+      "lon": 76.33285,
+      "tile": "T43SIN",
+      "nominal_date": "2024-10-23",
+      "date_min": "2024-10-18",
+      "date_max": "2024-10-28"
+    },
+    "count": 0,
+    "products": []
+  },
+  "DS08_EXP_S5_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S5_001",
+      "stratum": "STR-5",
+      "class": "NO_VISIBLE_TARGET",
+      "lat": 28.38,
+      "lon": 77.24,
+      "tile": "T43SKI",
+      "nominal_date": "2025-01-15",
+      "date_min": "2025-01-10",
+      "date_max": "2025-01-20"
+    },
+    "count": 0,
+    "products": []
+  },
+  "DS08_EXP_S6_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S6_001",
+      "stratum": "STR-6",
+      "class": "NO_VISIBLE_TARGET",
+      "lat": 28.25,
+      "lon": 78.35,
+      "tile": "T44SAI",
+      "nominal_date": "2025-02-12",
+      "date_min": "2025-02-05",
+      "date_max": "2025-02-18"
+    },
+    "count": 0,
+    "products": []
+  }
+}

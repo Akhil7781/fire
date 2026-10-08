@@ -1,0 +1,28 @@
+{
+  "input_shape": [
+    1175795,
+    13
+  ],
+  "target_sequences_generated": 1175795,
+  "embeddings_generated": 1175795,
+  "unique_detection_ids": 1175795,
+  "partition_counts": {
+    "train": 578465,
+    "train_heldout_spatial": 277395,
+    "context_burn_in": 150799,
+    "test_seen_spatial": 91846,
+    "test": 47881,
+    "val": 29409
+  },
+  "sequence_length": 16,
+  "num_channels": 8,
+  "embedding_dim": 64,
+  "model_parameters": 122498,
+  "device": "cpu",
+  "runtime_seconds": 130.08,
+  "future_leakage_violations": 0,
+  "nan_inf_embeddings": 0,
+  "output_path": "D:\\DATA PREPROCESSING\\data\\embeddings\\tcn\\india_2025_embeddings.parquet",
+  "output_file_size_mb": 509.98,
+  "checkpoint_sha256": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16"
+}

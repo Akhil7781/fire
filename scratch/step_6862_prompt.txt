@@ -1,0 +1,291 @@
+<USER_REQUEST>
+# Stage 8.19D — Native-Raster Geometry Verification and Live STAC Readiness Audit
+
+## Role
+
+Act as a senior geospatial ML engineer and remote-sensing data pipeline auditor. Work directly within the existing project repository. Your task is to conduct a rigorous, reproducible, read-only audit of the Stage 8.19C deliverables and determine whether the eight-chip Sentinel-2 pilot is ready for controlled acquisition.
+
+Prioritize correctness, reproducibility, data integrity, and leakage prevention over speed. Do not make assumptions where the repository or source data is insufficient.
+
+## Project Context
+
+The project uses NASA FIRMS thermal detections and Sentinel-2 L2A imagery to build a geospatial system for distinguishing industrial fires, forest fires, agricultural fires, and other thermal sources.
+
+The current DS08 Sentinel-2 expansion manifest is:
+
+`data/reference/ds08/manifests/stage8_19b/ds08_expansion_candidates_v3.json`
+
+The eight-chip pilot cohort is defined in the Stage 8.19C audit report. The acquisition script is:
+
+`scripts/stage8_20_pilot_acquisition.py`
+
+The previous audit reports:
+
+* 250 manifest records, including 235 expansion candidates and 15 held-out pilot benchmark records.
+* Five spatial folds containing 47 expansion candidates each.
+* A minimum cross-fold footprint separation of 50.0079 km under the current approximation.
+* Eight selected pilot candidates covering all six expansion strata.
+* Two conditional cloud exceptions requiring raster-level verification.
+* No imagery downloads, model training, or manifest modifications.
+
+Read the existing Stage 8.19B and 8.19C reports, manifest, relevant geometry utilities, acquisition script, and tests before implementing or executing anything.
+
+## Non-Negotiable Restrictions
+
+This stage is an audit only.
+
+1. Do not download Sentinel-2 imagery or any raster assets.
+2. Do not train, evaluate, or modify any model.
+3. Do not generate synthetic labels or annotations.
+4. Do not modify, regenerate, reorder, or overwrite the authoritative manifest.
+5. Do not change the eight-chip pilot cohort.
+6. Do not alter existing reference packages, annotations, or historical artifacts.
+7. Do not print, expose, copy, or log credentials, access tokens, client secrets, or authorization headers.
+8. Do not run the Stage 8.20 acquisition script in acquisition mode.
+9. Do not use `--confirm-acquisition`.
+10. Do not silently relax the 50 km spatial-separation rule or cloud-screening thresholds.
+11. Do not install packages or change dependency versions without explicit authorization.
+12. If live STAC verification cannot be performed safely using existing read-only access, stop and report the blocker rather than attempting an alternative acquisition route.
+
+A live STAC metadata query is permitted only if it is read-only, does not retrieve raster assets, and uses the existing configured credentials safely.
+
+## Task 1 — Repository and Artifact Inspection
+
+Inspect:
+
+* Stage 8.19B manifest v3.
+* Stage 8.19B decision-resolution and spatial-revalidation reports.
+* Stage 8.19C final pre-acquisition audit.
+* Stage 8.20 pilot acquisition plan and script.
+* Existing footprint construction and spatial-validation code.
+* Relevant tests and configuration.
+
+Record:
+
+* Exact files inspected.
+* Manifest hash before and after the audit.
+* Pilot chip IDs and their product IDs.
+* Existing geometry assumptions.
+* Any inconsistency between reports, code, tests, and manifest.
+
+Do not assume the audit report's claims are correct merely because its tests passed.
+
+## Task 2 — Native-Raster Footprint Verification
+
+The previous audit constructs a 5.12 km × 5.12 km footprint using geodesic offsets from chip centers. However, Sentinel-2 chips are aligned to native UTM raster grids, not necessarily to the geographic axis-aligned approximation.
+
+Investigate whether the repository contains sufficient information to reconstruct the actual chip footprints, including:
+
+* MGRS tile identifiers.
+* UTM zone and CRS.
+* Pixel resolution and chip dimensions.
+* Raster-grid alignment or affine transforms.
+* Exact chip-center coordinates.
+* Any existing chip-window or AOI geometry definitions.
+
+If native-grid geometry can be reconstructed without downloading raster assets:
+
+1. Build the actual projected chip polygons using the documented CRS and grid alignment.
+2. Transform the polygons appropriately for distance calculations.
+3. Compute minimum cross-fold polygon-to-polygon distances using a defensible geospatial method.
+4. Compare results with the existing WGS84 approximation.
+5. Identify all cross-fold pairs near the 50 km threshold.
+6. Report the closest pair, its chip IDs, folds, center distance, footprint distance, and margin.
+7. Verify whether the current 50.0079 km minimum remains valid under the reconstructed geometry.
+
+Do not invent affine transforms, pixel origins, or exact raster alignment if they are unavailable.
+
+If the repository does not contain enough information to reconstruct native-grid footprints, explicitly classify native-raster verification as **BLOCKED**. State exactly which metadata or source artifact is missing and how it can be obtained without bulk imagery acquisition.
+
+Do not modify fold assignments or the manifest.
+
+## Task 3 — Spatial Leakage Audit
+
+Independently verify the existing spatial-validation rules:
+
+* Five folds with 47 expansion records each.
+* Fifteen benchmark records remain held out.
+* No MGRS tile is split across folds.
+* No incident group is split across folds.
+* Cross-fold spatial separation is evaluated using the documented footprint definition.
+* All distance calculations use consistent units and coordinate reference assumptions.
+
+Report:
+
+* Total number of cross-fold pairs evaluated.
+* Number of violations at or below 50 km.
+* Minimum cross-fold distance.
+* Number of pairs within 55 km.
+* Any geometry or grouping ambiguity.
+* Whether the result is robust enough to support the stated leakage-control claim.
+
+Do not claim that a 50 km buffer eliminates all spatial dependence. Describe only the specific leakage controls that were verified.
+
+## Task 4 — Read-Only Live STAC Verification
+
+If the existing project configuration and access permit safe read-only queries, verify the eight pilot products against the relevant Sentinel-2 catalog.
+
+Pilot candidates:
+
+* `DS08_EXP_S1_003`
+* `DS08_EXP_S1_002`
+* `DS08_EXP_S1_004`
+* `DS08_EXP_S2_001`
+* `DS08_EXP_S3_001`
+* `DS08_EXP_S4_001`
+* `DS08_EXP_S5_001`
+* `DS08_EXP_S6_001`
+
+For each candidate, verify only metadata:
+
+* Product identifier.
+* Product existence in the catalog.
+* Sensing timestamp.
+* MGRS tile.
+* Processing level.
+* Availability of required B02, B03, B04, B11, and B12 assets.
+* Asset metadata and access status, without downloading raster data.
+* Whether the catalog product matches the local manifest.
+
+Do not download assets to test accessibility. Do not print signed URLs or authorization information.
+
+If the catalog is unavailable, credentials are missing, or the query would require an unsafe or undocumented access path, mark the relevant checks as **NOT VERIFIED** and explain why.
+
+Do not replace candidate products or update the manifest.
+
+## Task 5 — Cloud-Exception Review
+
+The current protocol allows a conditional exception for:
+
+* `DS08_EXP_S1_002` — reported scene cloud cover 14.74%.
+* `DS08_EXP_S1_004` — reported scene cloud cover 19.32%.
+
+The exception requires:
+
+* Scene-level cloud exception to be explicitly documented.
+* SCL-based cloud and shadow contamination over the full 5.12 km chip AOI to be no more than 5%.
+* The central 1 km area to be fully clear.
+
+Review whether the protocol is consistently represented in the manifest, decision log, tests, and acquisition/preprocessing code.
+
+Since raster assets must not be downloaded in this stage, do not claim that either exception has passed raster-level screening.
+
+For each exception, report:
+
+* Scene-level cloud metadata.
+* Whether the exception is correctly recorded.
+* Whether the AOI-level and central-area conditions can currently be evaluated.
+* What must happen after authorized acquisition before the chip can be accepted.
+
+If an exception is inconsistent or insufficiently specified, flag it. Do not automatically reject, accept, or replace the candidate.
+
+## Task 6 — Acquisition Script Safety Review
+
+Inspect the Stage 8.20 acquisition script without running it in acquisition mode.
+
+Verify:
+
+* Pilot IDs are explicitly restricted to the approved eight.
+* No bulk manifest iteration or fallback acquisition path exists.
+* The confirmation gate prevents network acquisition when absent.
+* Dry-run behavior does not write files or download bytes.
+* Output paths cannot overwrite historical packages or source data.
+* Product IDs and timestamps are checked against the manifest.
+* Credentials are handled without logging secrets.
+* Retry behavior and HTTP errors cannot trigger uncontrolled or bulk downloads.
+* Asset selection is restricted to the required bands.
+* Failure handling does not silently substitute another product or chip.
+
+If safe, run only existing tests and a dry-run command that is demonstrably network-free. Do not run any command that can retrieve raster assets.
+
+Report any safety issue with the exact file and relevant function or line range.
+
+## Task 7 — Test and Integrity Verification
+
+Run the relevant existing test suites for:
+
+* Stage 8.19B readiness.
+* Stage 8.19C audit.
+* Spatial geometry and fold validation.
+* Stage 8.20 acquisition safety.
+* Cloud-exception logic.
+* Manifest integrity.
+
+Do not change tests merely to make them pass.
+
+Record exact commands and results. Verify the manifest and protected artifact hashes before and after the audit.
+
+If a test fails, investigate and report the cause. Do not repair project code during this audit stage.
+
+## Required Deliverables
+
+Create:
+
+`docs/stage8_19d/STAGE8_19D_NATIVE_GEOMETRY_AND_STAC_AUDIT.md`
+
+The report must contain:
+
+1. Executive summary.
+2. Scope and restrictions followed.
+3. Files and artifacts inspected.
+4. Native-raster geometry verification, including method and limitations.
+5. Independent spatial leakage audit.
+6. Live STAC verification table for all eight pilot products.
+7. Cloud-exception review.
+8. Acquisition script safety findings.
+9. Test results.
+10. Artifact integrity and hash comparison.
+11. Issues, blockers, and unresolved assumptions.
+12. Final readiness determination.
+
+Use explicit statuses:
+
+* **PASS**
+* **FAIL**
+* **BLOCKED**
+* **NOT VERIFIED**
+* **CONDITIONAL**
+
+Do not use vague terms such as “mostly passed” without explaining which checks passed and which did not.
+
+## Final Readiness Decision
+
+Choose exactly one status:
+
+### READY FOR CONTROLLED PILOT ACQUISITION
+
+Only if:
+
+* Spatial validation is reproducible and the 50 km rule is satisfied under the approved footprint definition.
+* No unresolved critical geometry ambiguity remains.
+* The eight products are verified in the live catalog.
+* The acquisition script has no critical safety issue.
+* Existing tests pass.
+* Cloud exceptions are clearly conditional on post-acquisition raster screening.
+
+### BLOCKED — RESOLUTION REQUIRED
+
+If any critical geometry, catalog, safety, or integrity issue remains unresolved.
+
+### READY FOR FURTHER READ-ONLY VERIFICATION
+
+If local checks pass but live catalog verification or another non-destructive prerequisite remains incomplete.
+
+Do not authorize acquisition yourself. This report is a technical readiness assessment only. Actual acquisition requires a separate explicit owner decision.
+
+## Final Response
+
+After completing the audit, provide:
+
+* A concise summary of the result.
+* The final readiness status.
+* The exact report path.
+* The most important unresolved issue, if any.
+* Confirmation that no raster imagery was downloaded, no model was trained, and no authoritative manifest was modified.
+
+Be precise. Do not claim a check was performed if it was only described in a plan or inferred from existing reports.
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-02T23:13:39+05:30.
+</ADDITIONAL_METADATA>

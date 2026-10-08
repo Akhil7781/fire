@@ -1,0 +1,163 @@
+{
+  "total_viable_scenes": 6,
+  "results": [
+    {
+      "incident_id": "SEBI_2024_DOMBIVLI_BOILER_BLAST",
+      "facility_name": "Amudan Chemicals Pvt Ltd, Phase II MIDC Dombivli",
+      "state": "Maharashtra",
+      "event_year": 2024,
+      "event_start": "2024-05-23T08:10:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "NGT_2024_VIZAG_ESCIENTIA_PHARMA",
+      "facility_name": "Escientia Advanced Sciences Pvt Ltd, Atchutapuram Pharma SEZ",
+      "state": "Andhra Pradesh",
+      "event_year": 2024,
+      "event_start": "2024-08-21T08:45:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "NDMA_2024_HARDA_FIRECRACKERS",
+      "facility_name": "Bairagarh Fireworks Factory & Explosives Store, Harda",
+      "state": "Madhya Pradesh",
+      "event_year": 2024,
+      "event_start": "2024-02-06T05:30:00Z",
+      "viable_scenes_count": 2,
+      "scenes": [
+        {
+          "scene_id": "S2B_MSIL2A_20240205T052019_N0510_R062_T43QFE_20240205T074754.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2024-02-05T05:32:51.173Z",
+          "s2_acquisition_year": 2024,
+          "delta_hours": 23.95,
+          "mgrs_tile": "T43QFE"
+        },
+        {
+          "scene_id": "S2B_MSIL2A_20240205T052019_N0510_R062_T43QGE_20240205T074754.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2024-02-05T05:32:48.397Z",
+          "s2_acquisition_year": 2024,
+          "delta_hours": 23.95,
+          "mgrs_tile": "T43QGE"
+        }
+      ]
+    },
+    {
+      "incident_id": "SDMA_2024_BADDI_NR_AROMA",
+      "facility_name": "NR Aroma Chemical & Perfume Packaging Unit, Jharmajri, Baddi",
+      "state": "Himachal Pradesh",
+      "event_year": 2024,
+      "event_start": "2024-02-02T08:00:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "SPCB_2024_SURAT_SACHIN_DYES",
+      "facility_name": "Sachin GIDC Textile Dyeing & Chemical Intermediates Unit, Surat",
+      "state": "Gujarat",
+      "event_year": 2024,
+      "event_start": "2024-04-18T06:00:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "SEBI_2024_DAHEJ_BHARAT_RASAYAN",
+      "facility_name": "Agro-Chemicals Technical Plant, Dahej GIDC Phase I",
+      "state": "Gujarat",
+      "event_year": 2024,
+      "event_start": "2024-03-12T10:30:00Z",
+      "viable_scenes_count": 4,
+      "scenes": [
+        {
+          "scene_id": "S2B_MSIL2A_20240312T053639_N0510_R005_T42QZJ_20240312T081140.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2024-03-12T05:53:09.609Z",
+          "s2_acquisition_year": 2024,
+          "delta_hours": 4.61,
+          "mgrs_tile": "T42QZJ"
+        },
+        {
+          "scene_id": "S2B_MSIL2A_20240312T053639_N0510_R005_T43QBD_20240312T081140.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2024-03-12T05:53:08.697Z",
+          "s2_acquisition_year": 2024,
+          "delta_hours": 4.61,
+          "mgrs_tile": "T43QBD"
+        },
+        {
+          "scene_id": "S2B_MSIL2A_20240312T053639_N0510_R005_T42QZK_20240312T081140.SAFE",
+          "cloud_cover": 0.01,
+          "s2_datetime": "2024-03-12T05:52:55.191Z",
+          "s2_acquisition_year": 2024,
+          "delta_hours": 4.62,
+          "mgrs_tile": "T42QZK"
+        },
+        {
+          "scene_id": "S2B_MSIL2A_20240312T053639_N0510_R005_T43QBE_20240312T081140.SAFE",
+          "cloud_cover": 0.01,
+          "s2_datetime": "2024-03-12T05:52:54.109Z",
+          "s2_acquisition_year": 2024,
+          "delta_hours": 4.62,
+          "mgrs_tile": "T43QBE"
+        }
+      ]
+    },
+    {
+      "incident_id": "RIICO_2024_NEEMRANA_AUTO_COMPLEX",
+      "facility_name": "Automotive Components Manufacturing & Paint Shop, RIICO Neemrana",
+      "state": "Rajasthan",
+      "event_year": 2024,
+      "event_start": "2024-03-16T12:00:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "SEBI_2024_MUNDRA_PORT_TERMINAL",
+      "facility_name": "Liquid Hydrocarbon Bulk Storage Terminal, Mundra SEZ",
+      "state": "Gujarat",
+      "event_year": 2024,
+      "event_start": "2024-06-15T07:15:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "MPCB_2024_TALOJA_ORGANICS",
+      "facility_name": "Organic Chemical Synthesis & Solvent Distillation Unit, MIDC Taloja",
+      "state": "Maharashtra",
+      "event_year": 2024,
+      "event_start": "2024-07-08T04:30:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "TNPCB_2024_GUMMIDIPOONDI_SIPCOT",
+      "facility_name": "Industrial Polymers & Chemical Compounding Unit, SIPCOT Gummidipoondi",
+      "state": "Tamil Nadu",
+      "event_year": 2024,
+      "event_start": "2024-09-04T09:00:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "KSPCB_2024_PEENYA_CHEMICALS",
+      "facility_name": "Industrial Solvents & Adhesive Formulations Depot, Peenya 2nd Stage",
+      "state": "Karnataka",
+      "event_year": 2024,
+      "event_start": "2024-10-12T14:00:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "UPPCB_2024_NOIDA_PHARMA_PACKAGING",
+      "facility_name": "Packaging & Specialty Chemical Unit, Sector 63 Industrial Area",
+      "state": "Uttar Pradesh",
+      "event_year": 2024,
+      "event_start": "2024-11-20T11:30:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    }
+  ]
+}

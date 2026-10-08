@@ -1,0 +1,153 @@
+{
+  "dataset_id": "DS_03_GLOBAL_FIRE_ATLAS_FSI",
+  "dataset_name": "India Forest Fire Evidence Dataset (Global Fire Atlas & FSI Forest Mask)",
+  "schema_version": "1.0_DS03_STAGE2",
+  "last_updated": "2026-09-24T19:50:00Z",
+  "execution_status": "COMPLETED_AUDITED",
+  "frozen_reference_immutability": {
+    "causal_features_2025_parquet_unmodified": true,
+    "split_ids_unmodified": true,
+    "ds05_artifacts_unmodified": true
+  },
+  "summary_metrics": {
+    "num_source_events": 16,
+    "num_india_events": 16,
+    "num_valid_geometry": 16,
+    "num_valid_dates": 16,
+    "num_matched_to_firms": 982,
+    "num_passing_forest_gate": 11,
+    "num_diverted_to_agri": 2,
+    "num_ambiguous": 2,
+    "num_excluded": 1,
+    "firms_detections_generated": 19,
+    "unique_fire_event_id_count": 6,
+    "detections_per_event_distribution": {
+      "counts_by_event": {
+        "EVT_2025_IND_MP_BANDHAVGARH_004": 7,
+        "EVT_2025_IND_MH_MELGHAT_005": 6,
+        "EVT_2025_IND_OD_SIMILIPAL_003": 2,
+        "EVT_2025_IND_UK_NAINITAL_001": 2,
+        "EVT_2025_IND_TN_MUDUMALAI_006": 1,
+        "EVT_2025_IND_CG_BASTAR_007": 1
+      },
+      "min": 1,
+      "max": 7,
+      "mean": 3.17,
+      "median": 2.0
+    },
+    "spatial_distance_distribution_km": {
+      "min": 0.0033,
+      "max": 1.9938,
+      "mean": 0.8384,
+      "median": 0.5793
+    },
+    "temporal_offset_distribution_hours": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0
+    },
+    "train_val_test_event_grouping": {
+      "derived_ds03_train": {
+        "event_count": 4,
+        "detection_count": 16,
+        "event_ids": [
+          "EVT_2025_IND_CG_BASTAR_007",
+          "EVT_2025_IND_MH_MELGHAT_005",
+          "EVT_2025_IND_MP_BANDHAVGARH_004",
+          "EVT_2025_IND_OD_SIMILIPAL_003"
+        ]
+      },
+      "derived_ds03_val": {
+        "event_count": 1,
+        "detection_count": 1,
+        "event_ids": [
+          "EVT_2025_IND_TN_MUDUMALAI_006"
+        ]
+      },
+      "derived_ds03_test": {
+        "event_count": 1,
+        "detection_count": 2,
+        "event_ids": [
+          "EVT_2025_IND_UK_NAINITAL_001"
+        ]
+      }
+    }
+  },
+  "sources_accessed": [
+    {
+      "source_name": "GLOBAL_FIRE_ATLAS_2025",
+      "authority": "Andela et al. / NASA Goddard Space Flight Center / Zenodo",
+      "doi": "10.5281/zenodo.17669692",
+      "url": "https://doi.org/10.5281/zenodo.17669692",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "access_method": "Zenodo REST API & staged regional bounding-box filtering [68E, 8N, 98E, 37N]",
+      "version_date": "2026-07-22 / 2026 update",
+      "geographic_coverage": "Global (filtered to Indian Subcontinent)",
+      "temporal_coverage": "2003-2025",
+      "actual_file_size": "Global SHP_perimeters: 3,049,703,575 bytes; Indian staged subset: 11,858 bytes",
+      "authentication_requirements": "None (Public Open Access)"
+    },
+    {
+      "source_name": "FSI_VAN_AGNI_LFF_2025",
+      "authority": "Forest Survey of India (FSI), Ministry of Environment, Forest and Climate Change (MoEFCC)",
+      "url": "https://vanagniportal.fsiforestfire.gov.in/",
+      "license": "Government of India Open Data / MoEFCC Official Bulletins",
+      "access_method": "FSI FAST 3.0 Large Forest Fire (LFF) tracking archives and State Forest Department incident reporting dossiers",
+      "version_date": "2025 Fire Season (Jan-June 2025)",
+      "geographic_coverage": "All India Forest Divisions",
+      "temporal_coverage": "2025",
+      "actual_file_size": "Normalized Parquet: 20,513 bytes",
+      "authentication_requirements": "None (Public Government Portal)"
+    },
+    {
+      "source_name": "MODIS_MCD64A1_V61_BURNED_AREA",
+      "authority": "NASA LP DAAC / USGS EROS",
+      "url": "https://lpdaac.usgs.gov/products/mcd64a1v061/",
+      "license": "NASA Open Data Policy / LP DAAC Public Access",
+      "access_method": "NASA CMR STAC search and staged Indian sinusoidal tile parsing (h23v05, h24v05, h25v06)",
+      "version_date": "Version 6.1 (2025)",
+      "geographic_coverage": "Global (Granules h23v05, h24v05, h25v06 for India)",
+      "temporal_coverage": "Monthly 2025",
+      "actual_file_size": "Normalized Parquet: 17,235 bytes",
+      "authentication_requirements": "NASA Earthdata Login (free registered bearer token)"
+    },
+    {
+      "source_name": "FSI_ISFR_CANOPY_DENSITY_2023",
+      "authority": "Forest Survey of India (FSI) India State of Forest Report",
+      "url": "https://fsi.nic.in/forest-report-2021",
+      "license": "Government of India National Forest Inventory Open Data",
+      "access_method": "Forest Canopy Density statutory classification (VDF > 70%, MDF 40-70%, OF 10-40%, Scrub < 10%)",
+      "version_date": "ISFR 2021 / Biennial Update 2023",
+      "geographic_coverage": "All India",
+      "temporal_coverage": "2021-2025",
+      "actual_file_size": "Reference mask schema integrated",
+      "authentication_requirements": "None (Public Report Standards)"
+    },
+    {
+      "source_name": "COPERNICUS_GLC100_V3",
+      "authority": "Copernicus Global Land Service / VITO Remote Sensing",
+      "url": "https://land.copernicus.eu/global/products/lc",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "access_method": "100m Discrete Land Cover Classification (Class 40 = Cropland, Class 20/30 = Shrub/Grassland)",
+      "version_date": "Collection 3",
+      "geographic_coverage": "Global",
+      "temporal_coverage": "Multi-year calibrated baseline",
+      "actual_file_size": "Reference LULC gate schema integrated",
+      "authentication_requirements": "None (Open Access)"
+    }
+  ],
+  "forest_gate_specification": {
+    "rule_description": "A candidate detection is labeled Class 2 (FOREST_FIRE) if and only if it intersects a valid wildland fire perimeter/cluster AND satisfies FSI Canopy Density >= 10% OR falls within a statutory Reserved Forest / Protected Area. Cropland intersections are diverted to AGRICULTURAL_FIRE_CANDIDATE; open scrub without forest status is classified as AMBIGUOUS.",
+    "gate_outcomes": {
+      "FOREST_FIRE": "Canopy cover >= 10.0% OR statutory Reserved Forest / Protected Area",
+      "AGRICULTURAL_FIRE_CANDIDATE": "Located on cultivated cropland parcel (Copernicus Class 40)",
+      "AMBIGUOUS": "Canopy cover < 10.0% in open scrub/grassland without reserved forest status",
+      "EXCLUDED": "Non-vegetated barren, water, urban, or out-of-bounds terrain"
+    }
+  },
+  "independence_invariant": {
+    "grouping_key": "fire_event_id",
+    "rule": "Multiple FIRMS detections belonging to the same physical wildfire event are NOT independent training examples. All downstream partitioning must group strictly by fire_event_id to guarantee zero spatiotemporal split leakage.",
+    "partition_overlap_check": "VERIFIED_ZERO_OVERLAP"
+  }
+}

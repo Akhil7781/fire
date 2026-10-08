@@ -1,0 +1,65 @@
+{
+  "chip_id": "PILOT_07_CENTRAL",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "human_verified": true,
+  "annotation_start_timestamp": "2026-09-30T15:16:15.246Z",
+  "annotation_completion_timestamp": "2026-09-30T15:16:31.008Z",
+  "interaction_audit": {
+    "interface_version": "v1.0_manual",
+    "bbox_creation_actions": 1,
+    "bbox_edit_actions": 0,
+    "class_selection_actions": 1,
+    "save_events": 2
+  },
+  "annotations": [
+    {
+      "annotation_id": "PILOT_07_CENTRAL_ANN_01",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 144,
+        "y_min": 140,
+        "x_max": 371,
+        "y_max": 308
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "PENDING",
+      "notes": "",
+      "annotator_id": "HUMAN_ANNOTATOR_02",
+      "annotation_timestamp": "2026-09-30T15:16:31.010308+00:00"
+    }
+  ],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "36f34ca3494ca4271994da427be9ce680304ba3ac03dee6ab076ef7fd11b4799",
+    "firms_latitude": 24.15625,
+    "firms_longitude": 78.77988,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 10.16,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2C_MSIL2A_20250326T051711_N0511_R062_T43QHG_20250326T103119.SAFE",
+    "tile_id": "T43QHG",
+    "cloud_cover_pct": 0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "task_status": "COMPLETED_HUMAN_ANNOTATION"
+}

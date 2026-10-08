@@ -1,0 +1,478 @@
+{
+  "Model_A_SimpleMLP": {
+    "model_name": "Model_A_SimpleMLP",
+    "mean_accuracy": 0.8348,
+    "std_accuracy": 0.1362,
+    "mean_macro_f1": 0.8449,
+    "std_macro_f1": 0.1221,
+    "overall_accuracy": 0.8168,
+    "overall_macro_f1": 0.7928,
+    "overall_balanced_accuracy": 0.7926,
+    "worst_fold_region": "North",
+    "worst_fold_macro_f1": 0.6622,
+    "per_class": {
+      "Industrial Fire": {
+        "recall": 0.8,
+        "precision": 0.875,
+        "f1": 0.8358,
+        "support": 35
+      },
+      "Forest Fire": {
+        "recall": 0.8148,
+        "precision": 0.5789,
+        "f1": 0.6769,
+        "support": 27
+      },
+      "Agricultural Fire": {
+        "recall": 0.5556,
+        "precision": 0.8824,
+        "f1": 0.6818,
+        "support": 27
+      },
+      "Other / Persistent": {
+        "recall": 1.0,
+        "precision": 0.9545,
+        "f1": 0.9767,
+        "support": 42
+      }
+    },
+    "folds": [
+      {
+        "region": "North",
+        "val_size": 45,
+        "accuracy": 0.6222,
+        "macro_f1": 0.6622,
+        "balanced_accuracy": 0.6999
+      },
+      {
+        "region": "Central_East",
+        "val_size": 35,
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "balanced_accuracy": 1.0
+      },
+      {
+        "region": "Central_West",
+        "val_size": 19,
+        "accuracy": 0.8421,
+        "macro_f1": 0.8286,
+        "balanced_accuracy": 0.8542
+      },
+      {
+        "region": "South",
+        "val_size": 32,
+        "accuracy": 0.875,
+        "macro_f1": 0.8889,
+        "balanced_accuracy": 0.9216
+      }
+    ]
+  },
+  "Model_B_GroupedMLP": {
+    "model_name": "Model_B_GroupedMLP",
+    "mean_accuracy": 0.7607,
+    "std_accuracy": 0.1784,
+    "mean_macro_f1": 0.7042,
+    "std_macro_f1": 0.1091,
+    "overall_accuracy": 0.7328,
+    "overall_macro_f1": 0.6814,
+    "overall_balanced_accuracy": 0.6974,
+    "worst_fold_region": "North",
+    "worst_fold_macro_f1": 0.5362,
+    "per_class": {
+      "Industrial Fire": {
+        "recall": 0.8,
+        "precision": 0.8235,
+        "f1": 0.8116,
+        "support": 35
+      },
+      "Forest Fire": {
+        "recall": 0.7778,
+        "precision": 0.4667,
+        "f1": 0.5833,
+        "support": 27
+      },
+      "Agricultural Fire": {
+        "recall": 0.2593,
+        "precision": 0.7,
+        "f1": 0.3784,
+        "support": 27
+      },
+      "Other / Persistent": {
+        "recall": 0.9524,
+        "precision": 0.9524,
+        "f1": 0.9524,
+        "support": 42
+      }
+    },
+    "folds": [
+      {
+        "region": "North",
+        "val_size": 45,
+        "accuracy": 0.4667,
+        "macro_f1": 0.5362,
+        "balanced_accuracy": 0.5821
+      },
+      {
+        "region": "Central_East",
+        "val_size": 35,
+        "accuracy": 0.9429,
+        "macro_f1": 0.6865,
+        "balanced_accuracy": 0.6875
+      },
+      {
+        "region": "Central_West",
+        "val_size": 19,
+        "accuracy": 0.7895,
+        "macro_f1": 0.7667,
+        "balanced_accuracy": 0.7083
+      },
+      {
+        "region": "South",
+        "val_size": 32,
+        "accuracy": 0.8438,
+        "macro_f1": 0.8275,
+        "balanced_accuracy": 0.8358
+      }
+    ]
+  },
+  "Model_C_GroupedGatedFusion": {
+    "model_name": "Model_C_GroupedGatedFusion",
+    "mean_accuracy": 0.8137,
+    "std_accuracy": 0.1756,
+    "mean_macro_f1": 0.6682,
+    "std_macro_f1": 0.0603,
+    "overall_accuracy": 0.7786,
+    "overall_macro_f1": 0.7355,
+    "overall_balanced_accuracy": 0.7484,
+    "worst_fold_region": "North",
+    "worst_fold_macro_f1": 0.5662,
+    "per_class": {
+      "Industrial Fire": {
+        "recall": 0.7714,
+        "precision": 0.931,
+        "f1": 0.8438,
+        "support": 35
+      },
+      "Forest Fire": {
+        "recall": 0.8889,
+        "precision": 0.5106,
+        "f1": 0.6486,
+        "support": 27
+      },
+      "Agricultural Fire": {
+        "recall": 0.3333,
+        "precision": 0.75,
+        "f1": 0.4615,
+        "support": 27
+      },
+      "Other / Persistent": {
+        "recall": 1.0,
+        "precision": 0.9767,
+        "f1": 0.9882,
+        "support": 42
+      }
+    },
+    "folds": [
+      {
+        "region": "North",
+        "val_size": 45,
+        "accuracy": 0.5111,
+        "macro_f1": 0.5662,
+        "balanced_accuracy": 0.6208
+      },
+      {
+        "region": "Central_East",
+        "val_size": 35,
+        "accuracy": 0.9429,
+        "macro_f1": 0.6865,
+        "balanced_accuracy": 0.6875
+      },
+      {
+        "region": "Central_West",
+        "val_size": 19,
+        "accuracy": 0.8947,
+        "macro_f1": 0.7222,
+        "balanced_accuracy": 0.75
+      },
+      {
+        "region": "South",
+        "val_size": 32,
+        "accuracy": 0.9062,
+        "macro_f1": 0.698,
+        "balanced_accuracy": 0.9412
+      }
+    ]
+  },
+  "Model_D_GroupedMultiTask": {
+    "model_name": "Model_D_GroupedMultiTask",
+    "mean_accuracy": 0.7872,
+    "std_accuracy": 0.176,
+    "mean_macro_f1": 0.667,
+    "std_macro_f1": 0.0777,
+    "overall_accuracy": 0.7557,
+    "overall_macro_f1": 0.7016,
+    "overall_balanced_accuracy": 0.7228,
+    "worst_fold_region": "North",
+    "worst_fold_macro_f1": 0.5405,
+    "per_class": {
+      "Industrial Fire": {
+        "recall": 0.7429,
+        "precision": 0.8966,
+        "f1": 0.8125,
+        "support": 35
+      },
+      "Forest Fire": {
+        "recall": 0.8889,
+        "precision": 0.5106,
+        "f1": 0.6486,
+        "support": 27
+      },
+      "Agricultural Fire": {
+        "recall": 0.2593,
+        "precision": 0.6364,
+        "f1": 0.3684,
+        "support": 27
+      },
+      "Other / Persistent": {
+        "recall": 1.0,
+        "precision": 0.9545,
+        "f1": 0.9767,
+        "support": 42
+      }
+    },
+    "folds": [
+      {
+        "region": "North",
+        "val_size": 45,
+        "accuracy": 0.4889,
+        "macro_f1": 0.5405,
+        "balanced_accuracy": 0.593
+      },
+      {
+        "region": "Central_East",
+        "val_size": 35,
+        "accuracy": 0.9429,
+        "macro_f1": 0.6865,
+        "balanced_accuracy": 0.6875
+      },
+      {
+        "region": "Central_West",
+        "val_size": 19,
+        "accuracy": 0.8421,
+        "macro_f1": 0.7522,
+        "balanced_accuracy": 0.7083
+      },
+      {
+        "region": "South",
+        "val_size": 32,
+        "accuracy": 0.875,
+        "macro_f1": 0.6889,
+        "balanced_accuracy": 0.9216
+      }
+    ]
+  },
+  "Model_E_Stage832Full": {
+    "model_name": "Model_E_Stage832Full",
+    "mean_accuracy": 0.8259,
+    "std_accuracy": 0.1227,
+    "mean_macro_f1": 0.6917,
+    "std_macro_f1": 0.0971,
+    "overall_accuracy": 0.8015,
+    "overall_macro_f1": 0.7704,
+    "overall_balanced_accuracy": 0.7698,
+    "worst_fold_region": "North",
+    "worst_fold_macro_f1": 0.5533,
+    "per_class": {
+      "Industrial Fire": {
+        "recall": 0.8571,
+        "precision": 0.7317,
+        "f1": 0.7895,
+        "support": 35
+      },
+      "Forest Fire": {
+        "recall": 0.5185,
+        "precision": 0.7,
+        "f1": 0.5957,
+        "support": 27
+      },
+      "Agricultural Fire": {
+        "recall": 0.7037,
+        "precision": 0.76,
+        "f1": 0.7308,
+        "support": 27
+      },
+      "Other / Persistent": {
+        "recall": 1.0,
+        "precision": 0.9333,
+        "f1": 0.9655,
+        "support": 42
+      }
+    },
+    "folds": [
+      {
+        "region": "North",
+        "val_size": 45,
+        "accuracy": 0.6222,
+        "macro_f1": 0.5533,
+        "balanced_accuracy": 0.6184
+      },
+      {
+        "region": "Central_East",
+        "val_size": 35,
+        "accuracy": 0.9429,
+        "macro_f1": 0.6865,
+        "balanced_accuracy": 0.6875
+      },
+      {
+        "region": "Central_West",
+        "val_size": 19,
+        "accuracy": 0.8947,
+        "macro_f1": 0.6996,
+        "balanced_accuracy": 0.75
+      },
+      {
+        "region": "South",
+        "val_size": 32,
+        "accuracy": 0.8438,
+        "macro_f1": 0.8275,
+        "balanced_accuracy": 0.8358
+      }
+    ]
+  },
+  "Model_F_GroupedTCN": {
+    "model_name": "Model_F_GroupedTCN",
+    "mean_accuracy": 0.7817,
+    "std_accuracy": 0.1854,
+    "mean_macro_f1": 0.6517,
+    "std_macro_f1": 0.096,
+    "overall_accuracy": 0.7481,
+    "overall_macro_f1": 0.6883,
+    "overall_balanced_accuracy": 0.7135,
+    "worst_fold_region": "North",
+    "worst_fold_macro_f1": 0.4934,
+    "per_class": {
+      "Industrial Fire": {
+        "recall": 0.7429,
+        "precision": 0.8667,
+        "f1": 0.8,
+        "support": 35
+      },
+      "Forest Fire": {
+        "recall": 0.8889,
+        "precision": 0.4898,
+        "f1": 0.6316,
+        "support": 27
+      },
+      "Agricultural Fire": {
+        "recall": 0.2222,
+        "precision": 0.6667,
+        "f1": 0.3333,
+        "support": 27
+      },
+      "Other / Persistent": {
+        "recall": 1.0,
+        "precision": 0.9767,
+        "f1": 0.9882,
+        "support": 42
+      }
+    },
+    "folds": [
+      {
+        "region": "North",
+        "val_size": 45,
+        "accuracy": 0.4667,
+        "macro_f1": 0.4934,
+        "balanced_accuracy": 0.5682
+      },
+      {
+        "region": "Central_East",
+        "val_size": 35,
+        "accuracy": 0.9429,
+        "macro_f1": 0.6865,
+        "balanced_accuracy": 0.6875
+      },
+      {
+        "region": "Central_West",
+        "val_size": 19,
+        "accuracy": 0.8421,
+        "macro_f1": 0.7522,
+        "balanced_accuracy": 0.7083
+      },
+      {
+        "region": "South",
+        "val_size": 32,
+        "accuracy": 0.875,
+        "macro_f1": 0.6746,
+        "balanced_accuracy": 0.8995
+      }
+    ]
+  },
+  "Model_G_BestSimplified": {
+    "model_name": "Model_G_BestSimplified",
+    "mean_accuracy": 0.78,
+    "std_accuracy": 0.1328,
+    "mean_macro_f1": 0.6942,
+    "std_macro_f1": 0.1043,
+    "overall_accuracy": 0.7481,
+    "overall_macro_f1": 0.7108,
+    "overall_balanced_accuracy": 0.7135,
+    "worst_fold_region": "North",
+    "worst_fold_macro_f1": 0.5926,
+    "per_class": {
+      "Industrial Fire": {
+        "recall": 0.7429,
+        "precision": 0.8387,
+        "f1": 0.7879,
+        "support": 35
+      },
+      "Forest Fire": {
+        "recall": 0.7037,
+        "precision": 0.475,
+        "f1": 0.5672,
+        "support": 27
+      },
+      "Agricultural Fire": {
+        "recall": 0.4074,
+        "precision": 0.6471,
+        "f1": 0.5,
+        "support": 27
+      },
+      "Other / Persistent": {
+        "recall": 1.0,
+        "precision": 0.9767,
+        "f1": 0.9882,
+        "support": 42
+      }
+    },
+    "folds": [
+      {
+        "region": "North",
+        "val_size": 45,
+        "accuracy": 0.5556,
+        "macro_f1": 0.5926,
+        "balanced_accuracy": 0.6425
+      },
+      {
+        "region": "Central_East",
+        "val_size": 35,
+        "accuracy": 0.8571,
+        "macro_f1": 0.6913,
+        "balanced_accuracy": 0.8125
+      },
+      {
+        "region": "Central_West",
+        "val_size": 19,
+        "accuracy": 0.8947,
+        "macro_f1": 0.8641,
+        "balanced_accuracy": 0.8854
+      },
+      {
+        "region": "South",
+        "val_size": 32,
+        "accuracy": 0.8125,
+        "macro_f1": 0.6288,
+        "balanced_accuracy": 0.8162
+      }
+    ]
+  }
+}

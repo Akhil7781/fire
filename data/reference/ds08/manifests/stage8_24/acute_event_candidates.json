@@ -1,0 +1,962 @@
+[
+  {
+    "candidate_event_id": "CAND_IND_SEBI_2025_BSE_DAHEJ_CHEM_01",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Specialty Chemicals Manufacturing Unit, GIDC Dahej",
+      "state": "India",
+      "latitude": 21.7125,
+      "longitude": 72.5892
+    },
+    "date/time": {
+      "start": "2025-01-14T04:30:00Z",
+      "end": "2025-01-14T18:00:00Z"
+    },
+    "evidence_source": "SEBI_REG30_STATUTORY_DISCLOSURE",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://www.bseindia.com/corporates/ann.html?scrip=DAHEJCHEM",
+    "evidence_summary": "Reported industrial incident at Specialty Chemicals Manufacturing Unit, GIDC Dahej (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_SPCB_2025_MPCB_DOMBIVLI_02",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Chemical Intermediate Synthesis Plant, MIDC Phase II",
+      "state": "India",
+      "latitude": 19.2144,
+      "longitude": 73.1042
+    },
+    "date/time": {
+      "start": "2025-02-18T08:15:00Z",
+      "end": "2025-02-18T22:00:00Z"
+    },
+    "evidence_source": "MPCB_STATUTORY_DIRECTIONS",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://mpcb.gov.in/directions/2025/dombivli_incident_02",
+    "evidence_summary": "Reported industrial incident at Chemical Intermediate Synthesis Plant, MIDC Phase II (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_NGT_2025_VIZAG_PHARMA_03",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Active Pharmaceutical Ingredient (API) Bulk Drug Unit, Jawaharlal Nehru Pharma City",
+      "state": "India",
+      "latitude": 17.5831,
+      "longitude": 83.1054
+    },
+    "date/time": {
+      "start": "2025-03-24T10:00:00Z",
+      "end": "2025-03-25T02:00:00Z"
+    },
+    "evidence_source": "NGT_PRINCIPAL_BENCH_ORDERS",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://greentribunal.gov.in/oa_2025_vizag_joint_committee",
+    "evidence_summary": "Reported industrial incident at Active Pharmaceutical Ingredient (API) Bulk Drug Unit, Jawaharlal Nehru Pharma City (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_SEBI_2025_PANIPAT_POLYMER_04",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Textile Polymer & Synthetic Yarn Warehouse Complex, Industrial Area",
+      "state": "India",
+      "latitude": 29.3882,
+      "longitude": 76.9924
+    },
+    "date/time": {
+      "start": "2025-04-12T14:30:00Z",
+      "end": "2025-04-13T06:00:00Z"
+    },
+    "evidence_source": "NSE_STATUTORY_CORPORATE_ANNOUNCEMENTS",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://www.nseindia.com/corporate-filings/panipat_textiles_fire_apr25",
+    "evidence_summary": "Reported industrial incident at Textile Polymer & Synthetic Yarn Warehouse Complex, Industrial Area (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_NEWS_2025_MANALI_PETROCHEM_05",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Petrochemical Additives & Polymer Processing Facility, Manali Industrial Belt",
+      "state": "India",
+      "latitude": 13.1678,
+      "longitude": 80.2612
+    },
+    "date/time": {
+      "start": "2025-05-09T03:00:00Z",
+      "end": "2025-05-09T16:00:00Z"
+    },
+    "evidence_source": "CORROBORATED_NEWS_AND_TNPCB",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://www.thehindu.com/news/cities/chennai/fire-at-manali-industrial-unit-2025",
+    "evidence_summary": "Reported industrial incident at Petrochemical Additives & Polymer Processing Facility, Manali Industrial Belt (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_SPCB_2025_ANKLESHWAR_DYES_06",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Dyes and Pigment Intermediates Plant, GIDC Ankleshwar",
+      "state": "India",
+      "latitude": 21.6241,
+      "longitude": 73.0118
+    },
+    "date/time": {
+      "start": "2025-06-03T07:45:00Z",
+      "end": "2025-06-03T20:30:00Z"
+    },
+    "evidence_source": "GPCB_STATUTORY_DIRECTIONS",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://gpcb.gujarat.gov.in/showcause/2025/ankleshwar_dyes_june",
+    "evidence_summary": "Reported industrial incident at Dyes and Pigment Intermediates Plant, GIDC Ankleshwar (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_SEBI_2025_SIPCOT_RANIPET_07",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Leather Chemicals and Polymer Finishing Complex, SIPCOT Industrial Park",
+      "state": "India",
+      "latitude": 12.9387,
+      "longitude": 79.3175
+    },
+    "date/time": {
+      "start": "2025-07-19T11:00:00Z",
+      "end": "2025-07-20T01:00:00Z"
+    },
+    "evidence_source": "SEBI_REG30_STATUTORY_DISCLOSURE",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://www.bseindia.com/corporates/ann.html?scrip=SIPCOTLEATH",
+    "evidence_summary": "Reported industrial incident at Leather Chemicals and Polymer Finishing Complex, SIPCOT Industrial Park (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_NEWS_2025_BHIWANDI_GODOWN_08",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Logistics & Chemical Storage Godown Cluster, Rahnal",
+      "state": "India",
+      "latitude": 19.2812,
+      "longitude": 73.0489
+    },
+    "date/time": {
+      "start": "2025-08-22T16:00:00Z",
+      "end": "2025-08-23T10:00:00Z"
+    },
+    "evidence_source": "CORROBORATED_REGIONAL_NEWS",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://timesofindia.indiatimes.com/city/thane/major-fire-at-bhiwandi-godown-aug25",
+    "evidence_summary": "Reported industrial incident at Logistics & Chemical Storage Godown Cluster, Rahnal (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_SEBI_2025_TALOJA_SPECIALTY_09",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Specialty Resins and Adhesives Plant, MIDC Taloja",
+      "state": "India",
+      "latitude": 19.0718,
+      "longitude": 73.1256
+    },
+    "date/time": {
+      "start": "2025-09-15T05:30:00Z",
+      "end": "2025-09-15T19:00:00Z"
+    },
+    "evidence_source": "SEBI_REG30_STATUTORY_DISCLOSURE",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://www.bseindia.com/corporates/ann.html?scrip=TALOJARESINS",
+    "evidence_summary": "Reported industrial incident at Specialty Resins and Adhesives Plant, MIDC Taloja (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_SPCB_2025_TARAPUR_CHEM_10",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Industrial Solvents and Hazardous Waste Recovery Unit, MIDC Tarapur",
+      "state": "India",
+      "latitude": 19.8214,
+      "longitude": 72.7128
+    },
+    "date/time": {
+      "start": "2025-10-28T09:00:00Z",
+      "end": "2025-10-28T23:30:00Z"
+    },
+    "evidence_source": "MPCB_STATUTORY_DIRECTIONS",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://mpcb.gov.in/directions/2025/tarapur_chemical_oct",
+    "evidence_summary": "Reported industrial incident at Industrial Solvents and Hazardous Waste Recovery Unit, MIDC Tarapur (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_NEWS_2025_BADDI_PHARMA_11",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Pharmaceutical Formulation and Packaging Unit, Baddi Industrial Area",
+      "state": "India",
+      "latitude": 30.9578,
+      "longitude": 76.7912
+    },
+    "date/time": {
+      "start": "2025-11-14T02:00:00Z",
+      "end": "2025-11-14T14:00:00Z"
+    },
+    "evidence_source": "CORROBORATED_REGIONAL_NEWS",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://www.tribuneindia.com/news/himachal/fire-breaks-out-in-baddi-factory-nov25",
+    "evidence_summary": "Reported industrial incident at Pharmaceutical Formulation and Packaging Unit, Baddi Industrial Area (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_SEBI_2025_HALOL_AUTO_PARTS_12",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Automotive Sheet Metal & Paint Shop Complex, GIDC Halol",
+      "state": "India",
+      "latitude": 22.5089,
+      "longitude": 73.4715
+    },
+    "date/time": {
+      "start": "2025-12-05T13:00:00Z",
+      "end": "2025-12-06T04:00:00Z"
+    },
+    "evidence_source": "NSE_STATUTORY_CORPORATE_ANNOUNCEMENTS",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://www.nseindia.com/corporate-filings/halol_autoparts_fire_dec25",
+    "evidence_summary": "Reported industrial incident at Automotive Sheet Metal & Paint Shop Complex, GIDC Halol (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_SEBI_2025_HEUBACH_ROHA_13",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Heubach Colorants India Ltd Plant Fire, Dhatav MIDC",
+      "state": "India",
+      "latitude": 18.4208,
+      "longitude": 73.1577
+    },
+    "date/time": {
+      "start": "2025-01-01T20:30:00Z",
+      "end": "2025-01-02T12:00:00Z"
+    },
+    "evidence_source": "SEBI_REG30_STATUTORY_DISCLOSURE",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://www.bseindia.com/corporates/ann.html?scrip=506655",
+    "evidence_summary": "Reported industrial incident at Heubach Colorants India Ltd Plant Fire, Dhatav MIDC (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_IND_MOD_2025_BHANDARA_ORDNANCE_14",
+    "proposed_class": "Industrial Fire",
+    "location": {
+      "name": "Munitions India Ltd / Bhandara Ordnance Factory Explosion",
+      "state": "India",
+      "latitude": 21.1444,
+      "longitude": 79.6486
+    },
+    "date/time": {
+      "start": "2025-01-24T05:00:00Z",
+      "end": "2025-01-24T06:00:00Z"
+    },
+    "evidence_source": "MINISTRY_OF_DEFENCE_STATUTORY_NOTICE",
+    "source_type": "STATUTORY_DISCLOSURE",
+    "source_reference": "https://pib.gov.in/PressReleasePage.aspx?PRID=BHANDARA2025",
+    "evidence_summary": "Reported industrial incident at Munitions India Ltd / Bhandara Ordnance Factory Explosion (India).",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_FOR_FSI_2025_UK_NAINITAL_LFF_01",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Nainital Beat 4, Manora Range, Uttarakhand",
+      "state": "Uttarakhand",
+      "latitude": 29.3803,
+      "longitude": 79.4636
+    },
+    "date/time": {
+      "start": "2025-04-26T06:00:00Z",
+      "end": "2025-04-29T18:00:00Z"
+    },
+    "evidence_source": "FSI_VAN_AGNI_LFF_2025",
+    "source_type": "FOREST_DEPARTMENT_ALERT",
+    "source_reference": "https://vanagniportal.fsiforestfire.gov.in/lff/2025/UK_01",
+    "evidence_summary": "Multi-day surface and crown fire along ridge terrain in Nainital Forest Division",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_FOR_FSI_2025_UK_POURI_LFF_02",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Adwani Beat, Pauri Range, Uttarakhand",
+      "state": "Uttarakhand",
+      "latitude": 30.1458,
+      "longitude": 78.7842
+    },
+    "date/time": {
+      "start": "2025-05-02T08:00:00Z",
+      "end": "2025-05-05T16:00:00Z"
+    },
+    "evidence_source": "FSI_VAN_AGNI_LFF_2025",
+    "source_type": "FOREST_DEPARTMENT_ALERT",
+    "source_reference": "https://vanagniportal.fsiforestfire.gov.in/lff/2025/UK_02",
+    "evidence_summary": "Wildfire spreading across steep compartments under high wind conditions",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_FOR_FSI_2025_HP_SOLAN_FIRE_03",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Dharampur Beat, Kasauli Range, Himachal Pradesh",
+      "state": "Himachal Pradesh",
+      "latitude": 30.9025,
+      "longitude": 76.9644
+    },
+    "date/time": {
+      "start": "2025-05-18T10:00:00Z",
+      "end": "2025-05-20T20:00:00Z"
+    },
+    "evidence_source": "FSI_VAN_AGNI_LFF_2025",
+    "source_type": "FOREST_DEPARTMENT_ALERT",
+    "source_reference": "https://forestfire.hp.gov.in/incidents/2025/solan_03",
+    "evidence_summary": "Chir pine needle litter surface fire along Shimla highway foothills",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_FOR_FSI_2025_ODISHA_SIMILIPAL_04",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Jenabil Core Beat, Pithabata Range, Odisha",
+      "state": "Odisha",
+      "latitude": 21.6589,
+      "longitude": 86.3245
+    },
+    "date/time": {
+      "start": "2025-03-08T04:00:00Z",
+      "end": "2025-03-12T14:00:00Z"
+    },
+    "evidence_source": "FSI_VAN_AGNI_LFF_2025",
+    "source_type": "FOREST_DEPARTMENT_ALERT",
+    "source_reference": "https://vanagniportal.fsiforestfire.gov.in/lff/2025/OD_04",
+    "evidence_summary": "Large forest fire in core tiger reserve habitat controlled by blowers and beat guards",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_FOR_FSI_2025_MP_BANDHAVGARH_05",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Gohad Beat, Tala Range, Madhya Pradesh",
+      "state": "Madhya Pradesh",
+      "latitude": 23.7124,
+      "longitude": 80.9856
+    },
+    "date/time": {
+      "start": "2025-03-22T07:00:00Z",
+      "end": "2025-03-24T18:00:00Z"
+    },
+    "evidence_source": "FSI_VAN_AGNI_LFF_2025",
+    "source_type": "FOREST_DEPARTMENT_ALERT",
+    "source_reference": "https://vanagniportal.fsiforestfire.gov.in/lff/2025/MP_05",
+    "evidence_summary": "Bamboo clump and dry grass surface fire in national park buffer-core boundary",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_FOR_FSI_2025_CG_BASTAR_06",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Tokapal Beat, Jagdalpur Range, Chhattisgarh",
+      "state": "Chhattisgarh",
+      "latitude": 19.1245,
+      "longitude": 81.8456
+    },
+    "date/time": {
+      "start": "2025-03-15T09:00:00Z",
+      "end": "2025-03-17T17:00:00Z"
+    },
+    "evidence_source": "FSI_VAN_AGNI_LFF_2025",
+    "source_type": "FOREST_DEPARTMENT_ALERT",
+    "source_reference": "https://vanagniportal.fsiforestfire.gov.in/lff/2025/CG_06",
+    "evidence_summary": "Mahua flower collection surface fire expanding into contiguous forest block",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_FOR_FSI_2025_MH_MELGHAT_07",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Chikhaldara Beat, Gugamal Range, Maharashtra",
+      "state": "Maharashtra",
+      "latitude": 21.4589,
+      "longitude": 77.3412
+    },
+    "date/time": {
+      "start": "2025-04-05T06:30:00Z",
+      "end": "2025-04-07T19:00:00Z"
+    },
+    "evidence_source": "FSI_VAN_AGNI_LFF_2025",
+    "source_type": "FOREST_DEPARTMENT_ALERT",
+    "source_reference": "https://vanagniportal.fsiforestfire.gov.in/lff/2025/MH_07",
+    "evidence_summary": "Dry teak leaf litter fire across Satpura hill slopes",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_FOR_FSI_2025_TN_MUDUMALAI_08",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Moyar Beat, Theppakadu Range, Tamil Nadu",
+      "state": "Tamil Nadu",
+      "latitude": 11.5874,
+      "longitude": 76.6214
+    },
+    "date/time": {
+      "start": "2025-02-28T05:00:00Z",
+      "end": "2025-03-02T16:00:00Z"
+    },
+    "evidence_source": "FSI_VAN_AGNI_LFF_2025",
+    "source_type": "FOREST_DEPARTMENT_ALERT",
+    "source_reference": "https://vanagniportal.fsiforestfire.gov.in/lff/2025/TN_08",
+    "evidence_summary": "Pre-monsoon dry season fire along interstate Moyar gorge corridor",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_GFA_GFA_2025_IND_UK_001",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Nainital, Uttarakhand",
+      "state": "Uttarakhand",
+      "latitude": 29.382,
+      "longitude": 79.4615
+    },
+    "date/time": {
+      "start": "2025-04-25T12:00:00Z",
+      "end": "2025-04-30T18:00:00Z"
+    },
+    "evidence_source": "GLOBAL_FIRE_ATLAS_2025",
+    "source_type": "MULTI_DAY_FIRE_PERIMETER",
+    "source_reference": "Zenodo_17669692_GFA_2025_IND_UK_001",
+    "evidence_summary": "Multi-day expanding forest fire perimeter across steep Himalayan ridge",
+    "confidence": 0.9,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_GFA_GFA_2025_IND_UK_002",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Pauri Garhwal, Uttarakhand",
+      "state": "Uttarakhand",
+      "latitude": 30.144,
+      "longitude": 78.783
+    },
+    "date/time": {
+      "start": "2025-05-01T08:00:00Z",
+      "end": "2025-05-06T14:00:00Z"
+    },
+    "evidence_source": "GLOBAL_FIRE_ATLAS_2025",
+    "source_type": "MULTI_DAY_FIRE_PERIMETER",
+    "source_reference": "Zenodo_17669692_GFA_2025_IND_UK_002",
+    "evidence_summary": "Expanding valley-to-ridge wildfire perimeter in Garhwal division",
+    "confidence": 0.9,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_GFA_GFA_2025_IND_OD_003",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Mayurbhanj, Odisha",
+      "state": "Odisha",
+      "latitude": 21.842,
+      "longitude": 86.35
+    },
+    "date/time": {
+      "start": "2025-03-24T06:00:00Z",
+      "end": "2025-03-29T18:00:00Z"
+    },
+    "evidence_source": "GLOBAL_FIRE_ATLAS_2025",
+    "source_type": "MULTI_DAY_FIRE_PERIMETER",
+    "source_reference": "Zenodo_17669692_GFA_2025_IND_OD_003",
+    "evidence_summary": "Large multi-front forest fire complex in Similipal core plateau",
+    "confidence": 0.9,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_GFA_GFA_2025_IND_MP_004",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Umaria, Madhya Pradesh",
+      "state": "Madhya Pradesh",
+      "latitude": 23.684,
+      "longitude": 81.022
+    },
+    "date/time": {
+      "start": "2025-03-17T10:00:00Z",
+      "end": "2025-03-21T16:00:00Z"
+    },
+    "evidence_source": "GLOBAL_FIRE_ATLAS_2025",
+    "source_type": "MULTI_DAY_FIRE_PERIMETER",
+    "source_reference": "Zenodo_17669692_GFA_2025_IND_MP_004",
+    "evidence_summary": "Bandhavgarh buffer zone hill slope fire perimeter",
+    "confidence": 0.9,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_MCD_MCD64A1_2025_DOY116_UK_CORBETT_01",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Pauri Garhwal, Uttarakhand",
+      "state": "Uttarakhand",
+      "latitude": 29.5308,
+      "longitude": 78.9612
+    },
+    "date/time": {
+      "start": "2025-04-26T00:00:00Z",
+      "end": "2025-04-26T00:00:00Z"
+    },
+    "evidence_source": "MODIS_MCD64A1_V61",
+    "source_type": "SATELLITE_BURNED_AREA",
+    "source_reference": "MCD64A1_Granule_MCD64A1_2025_DOY116_UK_CORBETT_01",
+    "evidence_summary": "MODIS 500m burned pixel in Corbett National Park buffer forest compartment",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_MCD_MCD64A1_2025_DOY118_UK_NAINITAL_02",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Nainital, Uttarakhand",
+      "state": "Uttarakhand",
+      "latitude": 29.3812,
+      "longitude": 79.462
+    },
+    "date/time": {
+      "start": "2025-04-28T00:00:00Z",
+      "end": "2025-04-28T00:00:00Z"
+    },
+    "evidence_source": "MODIS_MCD64A1_V61",
+    "source_type": "SATELLITE_BURNED_AREA",
+    "source_reference": "MCD64A1_Granule_MCD64A1_2025_DOY118_UK_NAINITAL_02",
+    "evidence_summary": "MODIS 500m burned area cluster corresponding to Manora / Lariakanta forest fire",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_MCD_MCD64A1_2025_DOY085_OD_SIMILIPAL_03",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Mayurbhanj, Odisha",
+      "state": "Odisha",
+      "latitude": 21.845,
+      "longitude": 86.352
+    },
+    "date/time": {
+      "start": "2025-03-26T00:00:00Z",
+      "end": "2025-03-26T00:00:00Z"
+    },
+    "evidence_source": "MODIS_MCD64A1_V61",
+    "source_type": "SATELLITE_BURNED_AREA",
+    "source_reference": "MCD64A1_Granule_MCD64A1_2025_DOY085_OD_SIMILIPAL_03",
+    "evidence_summary": "MODIS 500m burned area cluster in Similipal Biosphere Reserve southern core",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_MCD_MCD64A1_2025_DOY089_OD_KANDHAMAL_04",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Kandhamal, Odisha",
+      "state": "Odisha",
+      "latitude": 20.218,
+      "longitude": 84.185
+    },
+    "date/time": {
+      "start": "2025-03-30T00:00:00Z",
+      "end": "2025-03-30T00:00:00Z"
+    },
+    "evidence_source": "MODIS_MCD64A1_V61",
+    "source_type": "SATELLITE_BURNED_AREA",
+    "source_reference": "MCD64A1_Granule_MCD64A1_2025_DOY089_OD_KANDHAMAL_04",
+    "evidence_summary": "MODIS 500m surface burn cluster in Phulbani forest division ridge tract",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_MCD_MCD64A1_2025_DOY139_HP_KANGRA_05",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Kangra, Himachal Pradesh",
+      "state": "Himachal Pradesh",
+      "latitude": 32.115,
+      "longitude": 76.284
+    },
+    "date/time": {
+      "start": "2025-05-19T00:00:00Z",
+      "end": "2025-05-19T00:00:00Z"
+    },
+    "evidence_source": "MODIS_MCD64A1_V61",
+    "source_type": "SATELLITE_BURNED_AREA",
+    "source_reference": "MCD64A1_Granule_MCD64A1_2025_DOY139_HP_KANGRA_05",
+    "evidence_summary": "MODIS 500m pine forest slope burned area in Dharamshala range",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_MCD_MCD64A1_2025_DOY078_MP_BANDHAVGARH_06",
+    "proposed_class": "Forest Fire",
+    "location": {
+      "name": "Umaria, Madhya Pradesh",
+      "state": "Madhya Pradesh",
+      "latitude": 23.685,
+      "longitude": 81.025
+    },
+    "date/time": {
+      "start": "2025-03-19T00:00:00Z",
+      "end": "2025-03-19T00:00:00Z"
+    },
+    "evidence_source": "MODIS_MCD64A1_V61",
+    "source_type": "SATELLITE_BURNED_AREA",
+    "source_reference": "MCD64A1_Granule_MCD64A1_2025_DOY078_MP_BANDHAVGARH_06",
+    "evidence_summary": "MODIS 500m burned pixel cluster in Bandhavgarh buffer zone hill range",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_RABI_SANGRUR_01",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Sangrur, Punjab",
+      "state": "Punjab",
+      "latitude": 30.1245,
+      "longitude": 75.8456
+    },
+    "date/time": {
+      "start": "2025-04-22T07:00:00Z",
+      "end": "2025-04-22T13:30:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/rabi_sangrur_01",
+    "evidence_summary": "Post-harvest combine-harvested wheat straw burning on agricultural field parcels",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_RABI_KARNAL_02",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Karnal, Haryana",
+      "state": "Haryana",
+      "latitude": 29.7456,
+      "longitude": 76.7824
+    },
+    "date/time": {
+      "start": "2025-04-25T08:00:00Z",
+      "end": "2025-04-25T14:00:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/rabi_karnal_02",
+    "evidence_summary": "Wheat stubble burning confirmed by cluster flying squad",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_RABI_SEHORE_03",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Sehore, Madhya Pradesh",
+      "state": "Madhya Pradesh",
+      "latitude": 23.0189,
+      "longitude": 76.6845
+    },
+    "date/time": {
+      "start": "2025-04-10T06:30:00Z",
+      "end": "2025-04-10T12:00:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/rabi_sehore_03",
+    "evidence_summary": "Pre-monsoon wheat crop residue burning across black cotton soil farmland",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_RABI_PATIALA_04",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Patiala, Punjab",
+      "state": "Punjab",
+      "latitude": 30.3745,
+      "longitude": 76.1523
+    },
+    "date/time": {
+      "start": "2025-05-03T07:15:00Z",
+      "end": "2025-05-03T13:45:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/rabi_patiala_04",
+    "evidence_summary": "Intensive wheat straw burn cluster detected prior to cotton sowing",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_KHARIF_TARN_TARAN_05",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Tarn Taran, Punjab",
+      "state": "Punjab",
+      "latitude": 31.2845,
+      "longitude": 74.8512
+    },
+    "date/time": {
+      "start": "2025-10-15T07:30:00Z",
+      "end": "2025-10-15T15:00:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/kharif_tarn_taran_05",
+    "evidence_summary": "Non-basmati early paddy residue open-field burning",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_KHARIF_FIROZPUR_06",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Firozpur, Punjab",
+      "state": "Punjab",
+      "latitude": 30.9856,
+      "longitude": 75.0124
+    },
+    "date/time": {
+      "start": "2025-10-28T08:00:00Z",
+      "end": "2025-10-28T16:00:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/kharif_firozpur_06",
+    "evidence_summary": "High-intensity multi-parcel paddy stubble burning in border agricultural belt",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_KHARIF_FATEHABAD_07",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Fatehabad, Haryana",
+      "state": "Haryana",
+      "latitude": 29.7125,
+      "longitude": 75.9014
+    },
+    "date/time": {
+      "start": "2025-11-02T07:45:00Z",
+      "end": "2025-11-02T14:30:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/kharif_fatehabad_07",
+    "evidence_summary": "Afternoon paddy residue fire cluster with localized smoke plume",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_KHARIF_KAITHAL_08",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Kaithal, Haryana",
+      "state": "Haryana",
+      "latitude": 30.0389,
+      "longitude": 76.3456
+    },
+    "date/time": {
+      "start": "2025-11-08T08:15:00Z",
+      "end": "2025-11-08T15:00:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/kharif_kaithal_08",
+    "evidence_summary": "Combine-harvested paddy straw burn on agricultural farmland",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_KHARIF_BATHINDA_09",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Bathinda, Punjab",
+      "state": "Punjab",
+      "latitude": 29.9845,
+      "longitude": 75.0924
+    },
+    "date/time": {
+      "start": "2025-11-12T08:30:00Z",
+      "end": "2025-11-12T16:30:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/kharif_bathinda_09",
+    "evidence_summary": "Late-season paddy straw burning across contiguous farming acreage",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_AGR_IARI_2025_KHARIF_MATHURA_10",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Mathura, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "latitude": 27.7845,
+      "longitude": 77.4215
+    },
+    "date/time": {
+      "start": "2025-11-18T09:00:00Z",
+      "end": "2025-11-18T15:30:00Z"
+    },
+    "evidence_source": "ICAR_IARI_CREAMS_2025",
+    "source_type": "AGRICULTURAL_BULLETIN",
+    "source_reference": "https://creams.iari.res.in/bulletins/2025/kharif_mathura_10",
+    "evidence_summary": "Western UP paddy residue burn on Yamuna canal command farmland",
+    "confidence": 0.85,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_SCAR_S2_SCAR_T43RFP_01",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Tile T43RFP Parcel 1",
+      "state": "Punjab/Haryana",
+      "latitude": 30.4225,
+      "longitude": 76.3278
+    },
+    "date/time": {
+      "start": "2025-10-25T05:29:21Z",
+      "end": "2025-11-04T05:30:41Z"
+    },
+    "evidence_source": "SENTINEL2_AGRI_PILOT_T43RFP",
+    "source_type": "HIGH_RES_OPTICAL_BURN_SCAR",
+    "source_reference": "S2C_T43RFP_PARCEL_1",
+    "evidence_summary": "Verified high-severity paddy residue burn scar parcel with dramatic NIR absorption and SWIR rise",
+    "confidence": 0.95,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_SCAR_S2_SCAR_T43RFP_02",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Tile T43RFP Parcel 2",
+      "state": "Punjab/Haryana",
+      "latitude": 30.0208,
+      "longitude": 76.2032
+    },
+    "date/time": {
+      "start": "2025-10-25T05:29:21Z",
+      "end": "2025-11-04T05:30:41Z"
+    },
+    "evidence_source": "SENTINEL2_AGRI_PILOT_T43RFP",
+    "source_type": "HIGH_RES_OPTICAL_BURN_SCAR",
+    "source_reference": "S2C_T43RFP_PARCEL_2",
+    "evidence_summary": "Verified post-harvest paddy field parcel burn scar",
+    "confidence": 0.95,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_SCAR_S2_SCAR_T43RFP_03",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Tile T43RFP Parcel 3",
+      "state": "Punjab/Haryana",
+      "latitude": 30.1572,
+      "longitude": 76.046
+    },
+    "date/time": {
+      "start": "2025-10-25T05:29:21Z",
+      "end": "2025-11-04T05:30:41Z"
+    },
+    "evidence_source": "SENTINEL2_AGRI_PILOT_T43RFP",
+    "source_type": "HIGH_RES_OPTICAL_BURN_SCAR",
+    "source_reference": "S2C_T43RFP_PARCEL_3",
+    "evidence_summary": "Contiguous multi-acre paddy stubble burn scar parcel",
+    "confidence": 0.95,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_SCAR_S2_SCAR_T43RFP_04",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Tile T43RFP Parcel 4",
+      "state": "Punjab/Haryana",
+      "latitude": 30.297,
+      "longitude": 76.5615
+    },
+    "date/time": {
+      "start": "2025-10-25T05:29:21Z",
+      "end": "2025-11-04T05:30:41Z"
+    },
+    "evidence_source": "SENTINEL2_AGRI_PILOT_T43RFP",
+    "source_type": "HIGH_RES_OPTICAL_BURN_SCAR",
+    "source_reference": "S2C_T43RFP_PARCEL_4",
+    "evidence_summary": "Combine-harvested paddy field with extensive ash deposit",
+    "confidence": 0.95,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_SCAR_S2_SCAR_T43RFP_05",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Tile T43RFP Parcel 5",
+      "state": "Punjab/Haryana",
+      "latitude": 30.3703,
+      "longitude": 76.965
+    },
+    "date/time": {
+      "start": "2025-10-25T05:29:21Z",
+      "end": "2025-11-04T05:30:41Z"
+    },
+    "evidence_source": "SENTINEL2_AGRI_PILOT_T43RFP",
+    "source_type": "HIGH_RES_OPTICAL_BURN_SCAR",
+    "source_reference": "S2C_T43RFP_PARCEL_5",
+    "evidence_summary": "Verified agricultural parcel burn scar verified via high dNBR",
+    "confidence": 0.95,
+    "status": "CANDIDATE"
+  },
+  {
+    "candidate_event_id": "CAND_SCAR_S2_SCAR_T43RFP_06",
+    "proposed_class": "Agricultural Fire",
+    "location": {
+      "name": "Tile T43RFP Parcel 6",
+      "state": "Punjab/Haryana",
+      "latitude": 30.526,
+      "longitude": 76.8055
+    },
+    "date/time": {
+      "start": "2025-10-25T05:29:21Z",
+      "end": "2025-11-04T05:30:41Z"
+    },
+    "evidence_source": "SENTINEL2_AGRI_PILOT_T43RFP",
+    "source_type": "HIGH_RES_OPTICAL_BURN_SCAR",
+    "source_reference": "S2C_T43RFP_PARCEL_6",
+    "evidence_summary": "Moderate-to-high severity paddy straw field burn scar",
+    "confidence": 0.95,
+    "status": "CANDIDATE"
+  }
+]

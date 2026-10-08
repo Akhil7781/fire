@@ -1,0 +1,15 @@
+{
+  "stage": "8.30",
+  "model_type": "RegistryFreeCausalClassifier",
+  "persistent_registry_used": false,
+  "h0_accuracy": 0.8928571428571429,
+  "h0_correct": 25,
+  "macro_f1_h0": 0.8709207459207459,
+  "balanced_accuracy_h0": 0.875,
+  "features_dim": {
+    "curr": 14,
+    "geo": 11,
+    "hist_summary": 104,
+    "hist_seq": 11
+  }
+}

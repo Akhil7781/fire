@@ -1,0 +1,392 @@
+{
+  "num_source_events": 10,
+  "num_india_events": 10,
+  "num_valid_geometry": 10,
+  "num_valid_dates": 10,
+  "num_matched_to_firms": 571,
+  "num_cropland_gated_events": 9,
+  "num_spectral_passes": 9,
+  "num_independent_passes": 7,
+  "final_agricultural_fire_detections": 18,
+  "unique_agricultural_fire_events": 6,
+  "ambiguous_and_rejected_breakdown": {
+    "REJECTED_SPATIOTEMPORAL": 540,
+    "AMBIGUOUS_SPECTRAL": 9,
+    "DEMOTED_PILOT": 6,
+    "AMBIGUOUS_UNCORROBORATED": 4
+  },
+  "detections_per_event_distribution": {
+    "counts_by_event": {
+      "EVT_2025_AGRI_HR_KARNAL_RABI_002": 9,
+      "EVT_2025_AGRI_MP_SEHORE_RABI_003": 4,
+      "EVT_2025_AGRI_PB_SANGRUR_RABI_001": 2,
+      "EVT_2025_AGRI_PB_PATIALA_RABI_004": 1,
+      "EVT_2025_AGRI_PB_PATIALA_KHARIF_005": 1,
+      "EVT_2025_AGRI_HR_KAITHAL_KHARIF_006": 1
+    },
+    "min": 1,
+    "max": 9,
+    "mean": 3.0,
+    "median": 1.5
+  },
+  "spatial_distance_distribution_km": {
+    "min": 0.0022,
+    "max": 0.7513,
+    "mean": 0.3544,
+    "median": 0.3847
+  },
+  "temporal_offset_distribution_hours": {
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  "train_val_test_event_grouping": {
+    "derived_ds04_train": {
+      "event_count": 4,
+      "detection_count": 15,
+      "event_ids": [
+        "EVT_2025_AGRI_HR_KAITHAL_KHARIF_006",
+        "EVT_2025_AGRI_HR_KARNAL_RABI_002",
+        "EVT_2025_AGRI_MP_SEHORE_RABI_003",
+        "EVT_2025_AGRI_PB_PATIALA_KHARIF_005"
+      ]
+    },
+    "derived_ds04_val": {
+      "event_count": 1,
+      "detection_count": 1,
+      "event_ids": [
+        "EVT_2025_AGRI_PB_PATIALA_RABI_004"
+      ]
+    },
+    "derived_ds04_test": {
+      "event_count": 1,
+      "detection_count": 2,
+      "event_ids": [
+        "EVT_2025_AGRI_PB_SANGRUR_RABI_001"
+      ]
+    }
+  },
+  "previous_pilot_audit": {
+    "total_pilot_detections_audited": 8,
+    "retained_count": 2,
+    "demoted_count": 6,
+    "records": [
+      {
+        "detection_id": "bfa7be650c6056a861bd8a646372ecc90ac1bcd5580ce86fb63bf836f2f55332",
+        "previous_status": "PROMOTED_PILOT",
+        "stage3_status": "RETAINED_CORROBORATED",
+        "c1_cropland": true,
+        "c2_season": true,
+        "c3_spectral": true,
+        "c4_independent": true,
+        "audit_notes": "Passed full 4-condition composite rule with independent bulletin corroboration."
+      },
+      {
+        "detection_id": "bcf63941a02707e047c9edad0dfedd608f4ee8af466d086e15911294fa09e4ba",
+        "previous_status": "PROMOTED_PILOT",
+        "stage3_status": "DEMOTED_INSUFFICIENT_COMPOSITE_EVIDENCE",
+        "c1_cropland": true,
+        "c2_season": true,
+        "c3_spectral": false,
+        "c4_independent": false,
+        "audit_notes": "Demoted: Did not satisfy dual spectral absorption condition and lacked field-level bulletin corroboration."
+      },
+      {
+        "detection_id": "547bac5b3784dfef59381741cf6be940357f979b3a51e0afb7a64245f566d20c",
+        "previous_status": "PROMOTED_PILOT",
+        "stage3_status": "DEMOTED_INSUFFICIENT_COMPOSITE_EVIDENCE",
+        "c1_cropland": true,
+        "c2_season": true,
+        "c3_spectral": false,
+        "c4_independent": false,
+        "audit_notes": "Demoted: Did not satisfy dual spectral absorption condition and lacked field-level bulletin corroboration."
+      },
+      {
+        "detection_id": "ec1910c696b927278f7284b7c04cf192dfbe2655f8e4a81726d3a085fd6da0fe",
+        "previous_status": "PROMOTED_PILOT",
+        "stage3_status": "DEMOTED_INSUFFICIENT_COMPOSITE_EVIDENCE",
+        "c1_cropland": true,
+        "c2_season": true,
+        "c3_spectral": false,
+        "c4_independent": false,
+        "audit_notes": "Demoted: Did not satisfy dual spectral absorption condition and lacked field-level bulletin corroboration."
+      },
+      {
+        "detection_id": "11b71e6f93f9ead9f7af527645297049a1eab6e2dd26dd17aa23318d6cb50808",
+        "previous_status": "PROMOTED_PILOT",
+        "stage3_status": "RETAINED_CORROBORATED",
+        "c1_cropland": true,
+        "c2_season": true,
+        "c3_spectral": true,
+        "c4_independent": true,
+        "audit_notes": "Passed full 4-condition composite rule with independent bulletin corroboration."
+      },
+      {
+        "detection_id": "eab82d4fb506d2ab3c76ee0117d181687cfce96914a2c93f01971ec1d10afd20",
+        "previous_status": "PROMOTED_PILOT",
+        "stage3_status": "DEMOTED_INSUFFICIENT_COMPOSITE_EVIDENCE",
+        "c1_cropland": true,
+        "c2_season": true,
+        "c3_spectral": false,
+        "c4_independent": false,
+        "audit_notes": "Demoted: Did not satisfy dual spectral absorption condition and lacked field-level bulletin corroboration."
+      },
+      {
+        "detection_id": "8608087bfd93c6fdc7210c2537fca263b4f6494072d7d49811ea5e219713c23e",
+        "previous_status": "PROMOTED_PILOT",
+        "stage3_status": "DEMOTED_INSUFFICIENT_COMPOSITE_EVIDENCE",
+        "c1_cropland": true,
+        "c2_season": true,
+        "c3_spectral": false,
+        "c4_independent": false,
+        "audit_notes": "Demoted: Did not satisfy dual spectral absorption condition and lacked field-level bulletin corroboration."
+      },
+      {
+        "detection_id": "e56c19bdd915a9de4d93a0cf4178478d4714adfba6d46c86ea19fbf1ff62a6b2",
+        "previous_status": "PROMOTED_PILOT",
+        "stage3_status": "DEMOTED_INSUFFICIENT_COMPOSITE_EVIDENCE",
+        "c1_cropland": true,
+        "c2_season": true,
+        "c3_spectral": false,
+        "c4_independent": false,
+        "audit_notes": "Demoted: Did not satisfy dual spectral absorption condition and lacked field-level bulletin corroboration."
+      }
+    ]
+  },
+  "calibration_sweep": {
+    "calibration_partition": "train",
+    "calibration_sample_size": 50,
+    "calibration_partitions_read": [
+      "train"
+    ],
+    "isolation_verification": "PASSED_STRICT_TRAIN_ISOLATION",
+    "baseline_thresholds": {
+      "tau_dnbr": 0.18,
+      "tau_nir_ratio": 0.85
+    },
+    "sweep_grid_results": [
+      {
+        "tau_dnbr": 0.15,
+        "tau_nir_ratio": 0.75,
+        "sample_size": 50,
+        "num_passed": 25,
+        "pass_percentage": 50.0,
+        "mean_frp_mw": 9.83,
+        "mean_dnbr": 0.3948
+      },
+      {
+        "tau_dnbr": 0.15,
+        "tau_nir_ratio": 0.8,
+        "sample_size": 50,
+        "num_passed": 35,
+        "pass_percentage": 70.0,
+        "mean_frp_mw": 8.17,
+        "mean_dnbr": 0.3527
+      },
+      {
+        "tau_dnbr": 0.15,
+        "tau_nir_ratio": 0.85,
+        "sample_size": 50,
+        "num_passed": 39,
+        "pass_percentage": 78.0,
+        "mean_frp_mw": 7.59,
+        "mean_dnbr": 0.3386
+      },
+      {
+        "tau_dnbr": 0.15,
+        "tau_nir_ratio": 0.9,
+        "sample_size": 50,
+        "num_passed": 44,
+        "pass_percentage": 88.0,
+        "mean_frp_mw": 6.85,
+        "mean_dnbr": 0.3215
+      },
+      {
+        "tau_dnbr": 0.17,
+        "tau_nir_ratio": 0.75,
+        "sample_size": 50,
+        "num_passed": 25,
+        "pass_percentage": 50.0,
+        "mean_frp_mw": 9.83,
+        "mean_dnbr": 0.3948
+      },
+      {
+        "tau_dnbr": 0.17,
+        "tau_nir_ratio": 0.8,
+        "sample_size": 50,
+        "num_passed": 35,
+        "pass_percentage": 70.0,
+        "mean_frp_mw": 8.17,
+        "mean_dnbr": 0.3527
+      },
+      {
+        "tau_dnbr": 0.17,
+        "tau_nir_ratio": 0.85,
+        "sample_size": 50,
+        "num_passed": 38,
+        "pass_percentage": 76.0,
+        "mean_frp_mw": 7.69,
+        "mean_dnbr": 0.3431
+      },
+      {
+        "tau_dnbr": 0.17,
+        "tau_nir_ratio": 0.9,
+        "sample_size": 50,
+        "num_passed": 41,
+        "pass_percentage": 82.0,
+        "mean_frp_mw": 7.2,
+        "mean_dnbr": 0.3334
+      },
+      {
+        "tau_dnbr": 0.19,
+        "tau_nir_ratio": 0.75,
+        "sample_size": 50,
+        "num_passed": 24,
+        "pass_percentage": 48.0,
+        "mean_frp_mw": 10.1,
+        "mean_dnbr": 0.4037
+      },
+      {
+        "tau_dnbr": 0.19,
+        "tau_nir_ratio": 0.8,
+        "sample_size": 50,
+        "num_passed": 33,
+        "pass_percentage": 66.0,
+        "mean_frp_mw": 8.43,
+        "mean_dnbr": 0.3632
+      },
+      {
+        "tau_dnbr": 0.19,
+        "tau_nir_ratio": 0.85,
+        "sample_size": 50,
+        "num_passed": 36,
+        "pass_percentage": 72.0,
+        "mean_frp_mw": 7.91,
+        "mean_dnbr": 0.3521
+      },
+      {
+        "tau_dnbr": 0.19,
+        "tau_nir_ratio": 0.9,
+        "sample_size": 50,
+        "num_passed": 39,
+        "pass_percentage": 78.0,
+        "mean_frp_mw": 7.38,
+        "mean_dnbr": 0.3413
+      },
+      {
+        "tau_dnbr": 0.21,
+        "tau_nir_ratio": 0.75,
+        "sample_size": 50,
+        "num_passed": 24,
+        "pass_percentage": 48.0,
+        "mean_frp_mw": 10.1,
+        "mean_dnbr": 0.4037
+      },
+      {
+        "tau_dnbr": 0.21,
+        "tau_nir_ratio": 0.8,
+        "sample_size": 50,
+        "num_passed": 32,
+        "pass_percentage": 64.0,
+        "mean_frp_mw": 8.57,
+        "mean_dnbr": 0.3681
+      },
+      {
+        "tau_dnbr": 0.21,
+        "tau_nir_ratio": 0.85,
+        "sample_size": 50,
+        "num_passed": 35,
+        "pass_percentage": 70.0,
+        "mean_frp_mw": 8.02,
+        "mean_dnbr": 0.3563
+      },
+      {
+        "tau_dnbr": 0.21,
+        "tau_nir_ratio": 0.9,
+        "sample_size": 50,
+        "num_passed": 37,
+        "pass_percentage": 74.0,
+        "mean_frp_mw": 7.63,
+        "mean_dnbr": 0.3489
+      },
+      {
+        "tau_dnbr": 0.23,
+        "tau_nir_ratio": 0.75,
+        "sample_size": 50,
+        "num_passed": 24,
+        "pass_percentage": 48.0,
+        "mean_frp_mw": 10.1,
+        "mean_dnbr": 0.4037
+      },
+      {
+        "tau_dnbr": 0.23,
+        "tau_nir_ratio": 0.8,
+        "sample_size": 50,
+        "num_passed": 29,
+        "pass_percentage": 58.0,
+        "mean_frp_mw": 9.15,
+        "mean_dnbr": 0.3832
+      },
+      {
+        "tau_dnbr": 0.23,
+        "tau_nir_ratio": 0.85,
+        "sample_size": 50,
+        "num_passed": 30,
+        "pass_percentage": 60.0,
+        "mean_frp_mw": 8.89,
+        "mean_dnbr": 0.379
+      },
+      {
+        "tau_dnbr": 0.23,
+        "tau_nir_ratio": 0.9,
+        "sample_size": 50,
+        "num_passed": 30,
+        "pass_percentage": 60.0,
+        "mean_frp_mw": 8.89,
+        "mean_dnbr": 0.379
+      },
+      {
+        "tau_dnbr": 0.25,
+        "tau_nir_ratio": 0.75,
+        "sample_size": 50,
+        "num_passed": 23,
+        "pass_percentage": 46.0,
+        "mean_frp_mw": 10.33,
+        "mean_dnbr": 0.411
+      },
+      {
+        "tau_dnbr": 0.25,
+        "tau_nir_ratio": 0.8,
+        "sample_size": 50,
+        "num_passed": 27,
+        "pass_percentage": 54.0,
+        "mean_frp_mw": 9.43,
+        "mean_dnbr": 0.3937
+      },
+      {
+        "tau_dnbr": 0.25,
+        "tau_nir_ratio": 0.85,
+        "sample_size": 50,
+        "num_passed": 28,
+        "pass_percentage": 56.0,
+        "mean_frp_mw": 9.14,
+        "mean_dnbr": 0.3889
+      },
+      {
+        "tau_dnbr": 0.25,
+        "tau_nir_ratio": 0.9,
+        "sample_size": 50,
+        "num_passed": 28,
+        "pass_percentage": 56.0,
+        "mean_frp_mw": 9.14,
+        "mean_dnbr": 0.3889
+      }
+    ]
+  },
+  "licensing_limitations": {
+    "SENTINEL2_MSI": "Copernicus Open Access Hub / Microsoft Planetary Computer Open Data. Free and open scholarly access under Copernicus Sentinel Data Policy.",
+    "ICAR_IARI_CREAMS": "Indian Agricultural Research Institute, Division of Agricultural Physics. Ministry of Agriculture and Farmers Welfare, Government of India. Official Open Bulletins.",
+    "PRSC_CRBIMS": "Punjab Remote Sensing Centre, Department of Science, Technology and Environment, Government of Punjab.",
+    "HARSAC": "Haryana Space Applications Centre, Citizen Resources Information Department, Government of Haryana."
+  }
+}

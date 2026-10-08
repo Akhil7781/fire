@@ -1,0 +1,142 @@
+<USER_REQUEST>
+STAGE 8.28 — FORENSIC VERIFICATION AND REPAIR OF REAL-TIME CAUSAL 4-CLASS CLASSIFICATION
+
+You are working on the frozen industrial-fire multimodal project.
+
+IMPORTANT:
+Stage 8.27 reported 89.29% accuracy / 0.8741 macro-F1 for H0, H1, H2, H3, H6, H12, H24 AND retrospective evaluation. 
+Do NOT accept this result as scientifically valid yet.
+
+This stage is a strict forensic audit and repair stage.
+
+DO NOT:
+- change the frozen Stage 8.25 independent test manifest
+- change the test event identities
+- add new test labels
+- tune on the test set
+- change the original Stage 8.26 evaluation to make Stage 8.27 look better
+- use future observations
+- use post-event information
+- use retrospective event statistics in causal inference
+- silently replace failed tests with assumptions
+- declare success merely because accuracy >= 85%
+
+OBJECTIVE
+
+Verify that the claimed real-time H0–H24 performance is genuinely produced from progressively available causal prefixes.
+
+The fundamental requirement is:
+
+At horizon H, the model may use ONLY information available at or before:
+    t_first_detection + H hours
+
+For H0:
+    only the first detection / information available at alert time.
+
+For H1:
+    only information <= 1 hour after first detection.
+
+For H2:
+    only information <= 2 hours.
+
+For H3:
+    only information <= 3 hours.
+
+For H6:
+    only information <= 6 hours.
+
+For H12:
+    only information <= 12 hours.
+
+For H24:
+    only information <= 24 hours.
+
+Retrospective is allowed only as a non-causal comparison.
+
+==================================================
+1. FREEZE AND AUDIT ALL INPUT ARTIFACTS
+==================================================
+
+Before modifying anything, identify and print:
+
+- Stage 8.25 frozen independent test manifest
+- Stage 8.26 clean evaluation artifacts
+- Stage 8.27 causal dataset
+- Stage 8.27 model/checkpoint
+- feature-generation scripts
+- sequence-generation scripts
+- training script
+- inference/evaluation script
+- la
+<truncated 13591 bytes>
+uning occurred.
+8. Event-level bootstrap evaluation is complete.
+9. H0/H1/etc metrics are produced from their actual prefixes.
+10. The target >=85% accuracy is achieved on the intended real-time evaluation horizon.
+11. Performance is not solely produced by a suspicious retrospective or target-derived feature.
+12. The 2025 chronological holdout is explicitly reported.
+13. All negative/uncertain semantics remain unchanged.
+
+Otherwise use one of:
+
+CAUSAL_MODEL_VALID_BUT_TARGET_NOT_MET
+
+or
+
+STAGE_8_28_BLOCKED_BY_IMPLEMENTATION_ERROR
+
+or
+
+STAGE_8_28_BLOCKED_BY_DATA_LEAKAGE
+
+or
+
+STAGE_8_28_REQUIRES_MORE_REAL_CAUSAL_DATA
+
+==================================================
+18. DO NOT OPTIMIZE FOR THE NUMBER
+==================================================
+
+The objective is NOT to preserve 89.29%.
+
+The objective is to determine whether 89.29% is real.
+
+If the verified accuracy becomes 70%, 60%, or lower after removing leakage or implementation bugs, report that honestly.
+
+A lower but valid causal result is scientifically preferable to a higher contaminated result.
+
+==================================================
+19. FINAL REPORT REQUIREMENT
+==================================================
+
+The final report must contain these sections:
+
+1. Executive verdict
+2. Stage 8.27 reproducibility audit
+3. Horizon construction audit
+4. Causal feature audit
+5. Industrial facility baseline audit
+6. Temporal encoder implementation audit
+7. Leakage findings
+8. Repaired methodology
+9. Horizon-wise results
+10. Comparison with Stage 8.26
+11. Bootstrap confidence intervals
+12. Sanity/adversarial tests
+13. Limitations
+14. Frozen artifacts and hashes
+15. Final acceptance status
+
+At the very end print exactly one status:
+
+STAGE_8_28_STATUS=<value>
+
+and:
+
+SCIENTIFIC_CLAIM=<one sentence>
+
+Do not claim the 85% target is met unless the acceptance gates above pass.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-04T10:15:07+05:30.
+</ADDITIONAL_METADATA>

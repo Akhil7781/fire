@@ -1,0 +1,566 @@
+{
+  "metadata_version": "1.0_TRAINING_DATA_STRATEGY",
+  "last_updated": "2026-09-24T18:55:00Z",
+  "project_scope": "Satellite Thermal Anomaly Classification in India (VIIRS NOAA-20 2025)",
+  "primary_frozen_dataset": {
+    "file_path": "data/interim/causal_features_2025.parquet",
+    "total_rows": 1175795,
+    "total_columns": 51,
+    "role": "Target deployment dataset, causal history, domain adaptation, and unlabeled pool"
+  },
+  "candidate_datasets": [
+    {
+      "dataset_id": "DS_TS_SATFIRE_2023",
+      "name": "TS-SatFire: Multi-Task Satellite Image Time-Series Dataset for Wildfire",
+      "year": 2023,
+      "target_model_branch": "TCN / Temporal Model",
+      "dataset_type": "EVENT_LABELED",
+      "status": "SELECTED",
+      "target_task": "Active fire detection, daily burned area mapping, next-day wildfire progression",
+      "geographic_coverage": "Contiguous United States (CONUS)",
+      "satellite_sensors": [
+        "VIIRS 375m (S-NPP / NOAA-20)",
+        "GridMET",
+        "SRTM",
+        "MODIS Landcover"
+      ],
+      "spatial_resolution": "375m (VIIRS) / 4km (GridMET)",
+      "temporal_resolution": "Daily time-series sequences (2017-2021)",
+      "sample_size": "179 major wildfire events, 3,552 satellite image time series",
+      "label_generation_method": "Multi-temporal satellite active fire masks matched to official interagency wildfire incident perimeters and daily fire progression logs",
+      "label_type": "event-perimeter-derived and raster-derived active fire masks",
+      "train_val_test_strategy": "Spatial and temporal splitting by wildfire event ID (no spatial/temporal leakage across splits)",
+      "models_benchmarked": [
+        "3D-CNN",
+        "ConvLSTM",
+        "Temporal UNet",
+        "TCN"
+      ],
+      "data_availability": "Public Open Access",
+      "url_or_doi": "https://github.com/zhaoyutim/TS-SatFire",
+      "repository": "https://www.kaggle.com/datasets/z789456sx/ts-satfire",
+      "license": "MIT License",
+      "commercial_data_required": false,
+      "india_specific": false,
+      "domain_shift_to_india": "Vegetation and fuel models reflect North American conifers/chaparral; temporal cooling and fire progression dynamics transfer well to TCN feature extractors, but requires fine-tuning on Indian tropical/monsoonal fire regimes."
+    },
+    {
+      "dataset_id": "DS_WILDFIRE_SPREAD_TS_2023",
+      "name": "WildfireSpreadTS: Multi-Temporal Remote Sensing Dataset for 24h Wildfire Spread",
+      "year": 2023,
+      "target_model_branch": "TCN / Temporal Model",
+      "dataset_type": "EVENT_LABELED",
+      "status": "SELECTED",
+      "target_task": "24-hour ahead wildfire spread and active fire progression modeling",
+      "geographic_coverage": "United States nationwide",
+      "satellite_sensors": [
+        "VIIRS 375m Active Fire",
+        "ERA5-Land",
+        "LANDFIRE Fuel",
+        "USGS DEM"
+      ],
+      "spatial_resolution": "375m pixel footprint",
+      "temporal_resolution": "Daily 24-hour time steps (2018-2021)",
+      "sample_size": "607 fire events, 13,607 daily multi-modal observation scenes, 23 input channels",
+      "label_generation_method": "Daily active fire detection masks derived from VIIRS I-band (375m) filtered against official NIFC incident polygons",
+      "label_type": "event-perimeter-derived daily progression masks",
+      "train_val_test_strategy": "Chronological and fire-event level splitting (424 train, 91 val, 92 test)",
+      "models_benchmarked": [
+        "U-Net",
+        "ConvLSTM",
+        "Temporal Convolutional Networks (TCN)",
+        "Swin Transformer"
+      ],
+      "data_availability": "Public Open Access via Zenodo",
+      "url_or_doi": "https://doi.org/10.5281/zenodo.8006177",
+      "repository": "https://github.com/SebastianGer/WildfireSpreadTS",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "commercial_data_required": false,
+      "india_specific": false,
+      "domain_shift_to_india": "Large spatial scale of US mega-fires exceeds typical Indian forest fires; however, multi-timestep temporal representations of fire growth and decay are physically universal."
+    },
+    {
+      "dataset_id": "DS_GLOBAL_FIRE_ATLAS_2026",
+      "name": "Global Fire Atlas (GFA) Individual Fire Perimeter and Ignition Database",
+      "year": 2026,
+      "target_model_branch": "Forest Fire Branch",
+      "dataset_type": "EVENT_LABELED",
+      "status": "SELECTED",
+      "target_task": "Global discrete fire perimeter tracking, duration, spread speed, and ignition dating",
+      "geographic_coverage": "Global (including all India)",
+      "satellite_sensors": [
+        "MODIS MCD64A1 500m Burned Area"
+      ],
+      "spatial_resolution": "500m gridded / polygon vector perimeters",
+      "temporal_resolution": "Daily progression tracking (2003-2025)",
+      "sample_size": "Millions of tracked individual fire polygons globally; over 120,000 distinct fire events across India (2003-2025)",
+      "label_generation_method": "Automated spatiotemporal clustering of MCD64A1 500m daily burn pixels into contiguous individual fire objects tracking spread rates, perimeter growth, and extinction",
+      "label_type": "event-perimeter-derived polygon vectors",
+      "train_val_test_strategy": "Temporal split (2003-2022 train, 2023-2024 val, 2025 test) or spatial ecoregion split",
+      "models_benchmarked": [
+        "Spatial clustering algorithms",
+        "Extreme value models",
+        "Ecosystem fire regime models"
+      ],
+      "data_availability": "Public Open Access via Zenodo",
+      "url_or_doi": "https://doi.org/10.5281/zenodo.17669692",
+      "repository": "https://globalfiredata.org",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "commercial_data_required": false,
+      "india_specific": true,
+      "domain_shift_to_india": "Zero geographic domain shift for India; directly covers Himalayan pine forests, central deciduous tracts, and Western Ghats. Resolution limitation: 500m pixel size cannot detect small fires < 25 ha."
+    },
+    {
+      "dataset_id": "DS_MTBS_NIFC_PERIMETERS",
+      "name": "Monitoring Trends in Burn Severity (MTBS) & NIFC Interagency Fire Perimeters",
+      "year": 2024,
+      "target_model_branch": "Forest Fire Branch",
+      "dataset_type": "EVENT_LABELED",
+      "status": "SELECTED",
+      "target_task": "High-fidelity wildfire perimeter delineations, ignition causes, and burn severity",
+      "geographic_coverage": "United States nationwide",
+      "satellite_sensors": [
+        "Landsat 30m TM/ETM+/OLI",
+        "Sentinel-2 10-20m MSI",
+        "GPS field perimeters"
+      ],
+      "spatial_resolution": "30m raster / Cadastral GIS vector boundaries",
+      "temporal_resolution": "Individual fire events (1984-present)",
+      "sample_size": "Over 28,000 documented large wildfire perimeters with exact incident timelines",
+      "label_generation_method": "Pre- and post-fire satellite dNBR imagery validated against aerial infrared fire mapper flights and incident command system (ICS-209) statutory reports",
+      "label_type": "manual and multi-spectral raster-derived verified perimeters",
+      "train_val_test_strategy": "Chronological pre-2020 vs post-2020 or geographic state-based split",
+      "models_benchmarked": [
+        "Random Forest",
+        "U-Net",
+        "Gradient Boosted Trees"
+      ],
+      "data_availability": "Public Domain (US Government)",
+      "url_or_doi": "https://www.mtbs.gov",
+      "repository": "https://data-nifc.opendata.arcgis.com",
+      "license": "Public Domain / Open US Government Data",
+      "commercial_data_required": false,
+      "india_specific": false,
+      "domain_shift_to_india": "Topography and forest canopy structure differ from Indian tropical forests; however, provides gold-standard negative/positive perimeter boundaries for pretraining thermal-spatial models."
+    },
+    {
+      "dataset_id": "DS_MA_INDIA_HEAVY_IND_2019",
+      "name": "India Heavy Industrial Heat Sources Dataset (2012-2018)",
+      "year": 2019,
+      "target_model_branch": "Industrial / Confounder Branch",
+      "dataset_type": "SOURCE_INVENTORY",
+      "status": "SELECTED",
+      "target_task": "Spatiotemporal distribution and boundary mapping of heavy industrial heat emitters across India",
+      "geographic_coverage": "All India (Jharkhand, Odisha, Chhattisgarh, Gujarat, Maharashtra, Assam, etc.)",
+      "satellite_sensors": [
+        "Suomi NPP VIIRS 375m (VNP14IMG)",
+        "VIIRS DNB Nighttime Light"
+      ],
+      "spatial_resolution": "375m active fire clusters / point & polygon facility centroids",
+      "temporal_resolution": "7-year multi-temporal aggregation (2012-2018)",
+      "sample_size": "Documented industrial heat source clusters across major Indian manufacturing corridors; >92.7% validation accuracy",
+      "label_generation_method": "Multi-temporal VIIRS 375m active fire filtering using adaptive K-means clustering + threshold recognition model on persistence and radiance + Google Earth high-resolution optical inspection",
+      "label_type": "source-inventory derived from satellite recurrence and verified with high-resolution imagery",
+      "train_val_test_strategy": "Regional cross-validation across industrial corridors",
+      "models_benchmarked": [
+        "Adaptive K-Means Clustering",
+        "Threshold Recognition Models"
+      ],
+      "data_availability": "Open Access (Peer-Reviewed Journal Publication Supplementary Data)",
+      "url_or_doi": "https://doi.org/10.3390/ijgi8110488",
+      "repository": "ISPRS International Journal of Geo-Information",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "commercial_data_required": false,
+      "india_specific": true,
+      "domain_shift_to_india": "Zero geographic domain shift. Directly covers Indian heavy industry (steel, cement, chemical, smelting). Must be mapped to Class 4 (Stationary Confounder) for acute fire tasks."
+    },
+    {
+      "dataset_id": "DS_MA_SUI_IND_HEAT_2023",
+      "name": "Dataset of Industrial Heat Sources using Long-Term Active Fire Data (2012-2021)",
+      "year": 2023,
+      "target_model_branch": "Industrial / Confounder Branch",
+      "dataset_type": "SOURCE_INVENTORY",
+      "status": "SELECTED",
+      "target_task": "Long-term industrial heat source cataloging, sub-sector classification, and activity tracking",
+      "geographic_coverage": "China nationwide (Extensible methodology)",
+      "satellite_sensors": [
+        "VIIRS 375m Active Fire",
+        "MODIS 1km Active Fire",
+        "Landsat 8/Sentinel-2"
+      ],
+      "spatial_resolution": "375m cluster coordinates / sub-hectare facility polygons",
+      "temporal_resolution": "Annual composites (2012-2021)",
+      "sample_size": "Tens of thousands of validated industrial heat source entities categorized into iron/steel, cement, chemical, and non-ferrous smelting",
+      "label_generation_method": "Automated spatiotemporal density clustering of active fire hotspots followed by exhaustive manual visual verification against sub-meter optical satellite imagery and corporate registries",
+      "label_type": "manually verified source inventory",
+      "train_val_test_strategy": "Annual train/test splits (2012-2018 train, 2019-2021 test)",
+      "models_benchmarked": [
+        "DBSCAN",
+        "Adaptive K-Means",
+        "Random Forest Classifier"
+      ],
+      "data_availability": "Public Open Access via Zenodo and Science Data Bank",
+      "url_or_doi": "https://doi.org/10.5281/zenodo.7824013",
+      "repository": "https://doi.org/10.5194/essd-2023-114",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "commercial_data_required": false,
+      "india_specific": false,
+      "domain_shift_to_india": "Industrial facility types (cement kilns, blast furnaces, flare stacks) share identical physical thermal signatures with Indian facilities; excellent for pretraining industrial thermal recurrence models."
+    },
+    {
+      "dataset_id": "DS_VIIRS_NIGHTFIRE_VNF",
+      "name": "VIIRS Nightfire (VNF) Global Combustion Sources",
+      "year": 2024,
+      "target_model_branch": "Persistent Confounder Branch",
+      "dataset_type": "SOURCE_INVENTORY",
+      "status": "SELECTED",
+      "target_task": "Sub-pixel combustion temperature, source area, and radiant heat determination for gas flares and industrial emitters",
+      "geographic_coverage": "Global (including all onshore and offshore India)",
+      "satellite_sensors": [
+        "VIIRS Day/Night Band (DNB) & Shortwave Infrared (M7, M8, M10, M12, M13)"
+      ],
+      "spatial_resolution": "750m pixel footprint (with sub-pixel Planck blackbody modeling down to 1 m2)",
+      "temporal_resolution": "Daily nocturnal overpasses (2012-present)",
+      "sample_size": "Millions of nightly global observations; continuous daily monitoring for ~1,200 persistent flaring sites in South Asia",
+      "label_generation_method": "Dual-Planck blackbody curve fitting on multi-spectral nocturnal radiances detecting high-temperature targets (>1000 K) with background solar radiation completely eliminated",
+      "label_type": "physical model-derived sub-pixel combustion parameters",
+      "train_val_test_strategy": "Chronological and geographic partitioning",
+      "models_benchmarked": [
+        "Planck Inversion Model",
+        "Simplex Optimization"
+      ],
+      "data_availability": "Open Access via Earth Observation Group (EOG)",
+      "url_or_doi": "https://eogdata.mines.edu/products/vnf/",
+      "repository": "Colorado School of Mines Payne Institute",
+      "license": "Open Data Policy / Free Academic Use",
+      "commercial_data_required": false,
+      "india_specific": true,
+      "domain_shift_to_india": "Zero domain shift. Uniquely provides temperature (Kelvin) to separate gas flaring (~1600-2000 K) from biomass/forest fires (~600-1000 K)."
+    },
+    {
+      "dataset_id": "DS_STANFORD_BRICK_KILNS_2020",
+      "name": "South Asia Brick Kiln Geolocation Dataset (Stanford / Misra et al.)",
+      "year": 2020,
+      "target_model_branch": "Persistent Confounder Branch",
+      "dataset_type": "SOURCE_INVENTORY",
+      "status": "SELECTED",
+      "target_task": "Exhaustive geolocated mapping of brick manufacturing kilns in the Indo-Gangetic Plains",
+      "geographic_coverage": "Indo-Gangetic Plains (India, Pakistan, Bangladesh, Nepal)",
+      "satellite_sensors": [
+        "Sentinel-2 10m MSI",
+        "DigitalGlobe / Maxar High-Resolution Imagery"
+      ],
+      "spatial_resolution": "10m imagery / GPS point centroids",
+      "temporal_resolution": "Multi-year survey composite (2017-2020)",
+      "sample_size": "Over 50,000 geolocated brick kilns across India (Punjab, Haryana, UP, Bihar, WB)",
+      "label_generation_method": "Deep learning (YOLOv2 / ResNet) applied to multi-spectral optical satellite imagery followed by human crowd-worker and expert verification",
+      "label_type": "manually verified optical object locations",
+      "train_val_test_strategy": "Geographic block cross-validation across northern Indian states",
+      "models_benchmarked": [
+        "YOLO",
+        "ResNet-50",
+        "Faster R-CNN"
+      ],
+      "data_availability": "Public Open Access via PNAS / GitHub",
+      "url_or_doi": "https://doi.org/10.1073/pnas.2018863117",
+      "repository": "https://github.com/ermongroup/brick-kilns",
+      "license": "Open Academic Use / MIT License",
+      "commercial_data_required": false,
+      "india_specific": true,
+      "domain_shift_to_india": "Zero domain shift. Directly covers the exact geography of our 2025 FIRMS observations, identifying brick kilns as non-acute persistent confounders."
+    },
+    {
+      "dataset_id": "DS_DIOR_REMOTE_SENSING_2020",
+      "name": "DIOR: Large-Scale Benchmark for Optical Remote Sensing Object Detection",
+      "year": 2020,
+      "target_model_branch": "Vision / YOLO Branch (Infrastructure)",
+      "dataset_type": "PIXEL_IMAGE_LABELED",
+      "status": "SELECTED",
+      "target_task": "Bounding box object detection for industrial facilities, storage tanks, and chimneys",
+      "geographic_coverage": "Global optical satellite scenes",
+      "satellite_sensors": [
+        "Google Earth High-Resolution Optical Imagery (0.5m - 1.0m resolution)"
+      ],
+      "spatial_resolution": "0.5m - 1.0m optical",
+      "temporal_resolution": "Static image chips",
+      "sample_size": "23,463 images (800x800 pixels), 192,472 object instances across 20 classes; includes 10,500+ Storage Tanks and 3,800+ Chimneys",
+      "label_generation_method": "Manual bounding box annotations by remote sensing image interpretation experts",
+      "label_type": "manually annotated horizontal/oriented bounding boxes",
+      "train_val_test_strategy": "Official standard benchmark split: 5,862 train, 5,863 val, 11,738 test",
+      "models_benchmarked": [
+        "Faster R-CNN",
+        "YOLOv3/v4/v5/v8",
+        "RetinaNet",
+        "SSD"
+      ],
+      "data_availability": "Public Open Access",
+      "url_or_doi": "https://doi.org/10.1016/j.isprsjprs.2019.11.023",
+      "repository": "https://gcheng-nwpu.github.io/#Datasets",
+      "license": "Open Academic Use (NWPU)",
+      "commercial_data_required": false,
+      "india_specific": false,
+      "domain_shift_to_india": "Storage tanks and industrial chimneys have visually invariant geometric forms globally; excellent for pretraining YOLOv8n to identify industrial targets in satellite patches."
+    },
+    {
+      "dataset_id": "DS_FASDD_FLAME_SMOKE_2023",
+      "name": "FASDD: Flame and Smoke Detection Dataset (Remote Sensing Split: FASDD_RS)",
+      "year": 2023,
+      "target_model_branch": "Vision / YOLO Branch (Flame & Smoke)",
+      "dataset_type": "PIXEL_IMAGE_LABELED",
+      "status": "SELECTED",
+      "target_task": "Object detection of active flame fronts and smoke plumes in satellite remote sensing imagery",
+      "geographic_coverage": "Global satellite scenes (FASDD_RS)",
+      "satellite_sensors": [
+        "Sentinel-2",
+        "Landsat 8",
+        "Gaofen Series Optical Satellite Sensors"
+      ],
+      "spatial_resolution": "10m - 30m satellite imagery",
+      "temporal_resolution": "Individual disaster events",
+      "sample_size": "Over 120,000 images in full benchmark; FASDD_RS contains thousands of satellite flame and smoke bounding boxes in standard YOLO format",
+      "label_generation_method": "Expert visual interpretation and manual labeling of flame and smoke plumes in remote sensing scenes",
+      "label_type": "manually annotated bounding boxes in YOLO format",
+      "train_val_test_strategy": "Pre-partitioned 70% train, 15% validation, 15% test splits",
+      "models_benchmarked": [
+        "YOLOv5",
+        "YOLOv7",
+        "YOLOv8",
+        "Faster R-CNN"
+      ],
+      "data_availability": "Public Open Access via Science Data Bank",
+      "url_or_doi": "https://doi.org/10.57760/sciencedb.j00104.00103",
+      "repository": "https://github.com/openrsgis/FASDD",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "commercial_data_required": false,
+      "india_specific": false,
+      "domain_shift_to_india": "Plume physics and flame spectral appearance in 10-30m optical imagery are globally applicable; transfers directly to Sentinel-2 chips over India."
+    },
+    {
+      "dataset_id": "DS_ICAR_IARI_CREAMS_2025",
+      "name": "ICAR-IARI CREAMS Real-Time Agricultural Residue Burning Monitoring Dataset",
+      "year": 2025,
+      "target_model_branch": "Agricultural Fire Branch",
+      "dataset_type": "WEAKLY_LABELED",
+      "status": "SELECTED",
+      "target_task": "Monitoring and reporting paddy and wheat stubble burning across northern India",
+      "geographic_coverage": "Punjab, Haryana, Uttar Pradesh, Madhya Pradesh, Rajasthan",
+      "satellite_sensors": [
+        "Suomi NPP VIIRS 375m",
+        "NOAA-20 VIIRS 375m",
+        "Terra/Aqua MODIS 1km"
+      ],
+      "spatial_resolution": "375m / administrative village centroid level",
+      "temporal_resolution": "Daily multi-pass bulletins during Kharif (Oct-Nov) and Rabi (Apr-May)",
+      "sample_size": "Over 50,000 active fire points recorded across 2024-2025 harvest seasons",
+      "label_generation_method": "Satellite active fire detection algorithm (VNP14IMG/MOD14) filtered by agricultural land-use boundaries and corroborated by state nodal ground flying squads",
+      "label_type": "weakly labeled administrative and satellite point clusters",
+      "train_val_test_strategy": "Temporal split across harvest seasons (Rabi 2025 train, Kharif 2025 test)",
+      "models_benchmarked": [
+        "None (Government Monitoring Product)"
+      ],
+      "data_availability": "Open Public Bulletins via ICAR-IARI",
+      "url_or_doi": "https://creams.iari.res.in",
+      "repository": "Consortium for Research on Agroecosystem Monitoring and Modeling from Space",
+      "license": "Government Open Data / Public Access",
+      "commercial_data_required": false,
+      "india_specific": true,
+      "domain_shift_to_india": "Zero domain shift. Represents the operational ground-truth monitoring stream for North Indian crop burning."
+    },
+    {
+      "dataset_id": "DS_FSI_VAN_AGNI_LFF",
+      "name": "Forest Survey of India (FSI) Van Agni Large Forest Fire (LFF) Alerts",
+      "year": 2025,
+      "target_model_branch": "Forest Fire Branch",
+      "dataset_type": "EVENT_LABELED",
+      "status": "SELECTED",
+      "target_task": "Monitoring and ground notification of continuous large forest fire incidents (>3 contiguous pixels)",
+      "geographic_coverage": "All forested divisions in India",
+      "satellite_sensors": [
+        "SNPP VIIRS 375m",
+        "NOAA-20 VIIRS 375m",
+        "Terra/Aqua MODIS"
+      ],
+      "spatial_resolution": "375m active fire cluster centroids with forest administrative beat/compartment boundaries",
+      "temporal_resolution": "Near-real-time (2-3 hour latency)",
+      "sample_size": "Several thousand verified large forest fire incident alerts annually across India",
+      "label_generation_method": "Automated spatiotemporal clustering of contiguous active fire detections intersecting the National Forest Inventory canopy mask, followed by state forest department beat officer field verification",
+      "label_type": "event-labeled with ground officer validation",
+      "train_val_test_strategy": "Chronological seasonal splitting (Dry season vs monsoon)",
+      "models_benchmarked": [
+        "FAST 3.0 Alert Engine"
+      ],
+      "data_availability": "Open Access Portal (FSI Van Agni Geo-portal)",
+      "url_or_doi": "https://vanagniportal.fsiforestfire.gov.in",
+      "repository": "Forest Survey of India / MoEFCC",
+      "license": "Government Open Access",
+      "commercial_data_required": false,
+      "india_specific": true,
+      "domain_shift_to_india": "Zero domain shift. Official statutory ground truth for Indian forest fires."
+    },
+    {
+      "dataset_id": "DS_WRI_GLOBAL_POWER_PLANTS",
+      "name": "World Resources Institute (WRI) Global Power Plant Database",
+      "year": 2021,
+      "target_model_branch": "Persistent Confounder Branch",
+      "dataset_type": "SOURCE_INVENTORY",
+      "status": "SELECTED",
+      "target_task": "Comprehensive geolocation and fuel-type mapping of thermal and renewable power generation facilities",
+      "geographic_coverage": "Global (including 1,000+ power stations in India)",
+      "satellite_sensors": [
+        "None (Asset Inventory verified via High-Res Imagery)"
+      ],
+      "spatial_resolution": "Exact point geodetic coordinates (GPS / cadastral)",
+      "temporal_resolution": "Static inventory with annual updates",
+      "sample_size": "34,936 power plants globally; 1,020 major plants in India (coal, gas, oil, nuclear)",
+      "label_generation_method": "Compilation from official regulatory registries (Central Electricity Authority CEA India), government gazettes, and high-resolution optical imagery verification",
+      "label_type": "authoritative asset inventory",
+      "train_val_test_strategy": "Cross-sectional spatial validation",
+      "models_benchmarked": [
+        "None (Ground Truth Asset Registry)"
+      ],
+      "data_availability": "Public Open Access",
+      "url_or_doi": "https://doi.org/10.46830/wridn.20.00072",
+      "repository": "https://datasets.wri.org/dataset/globalpowerplantdatabase",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "commercial_data_required": false,
+      "india_specific": true,
+      "domain_shift_to_india": "Zero domain shift. Authoritative coordinates of all Indian thermal stations (e.g. Mundra, Vindhyachal) to prevent false positive acute fire labeling."
+    },
+    {
+      "dataset_id": "DS_GEM_GLOBAL_STEEL_PLANTS",
+      "name": "Global Energy Monitor (GEM) Global Steel Plant Tracker",
+      "year": 2024,
+      "target_model_branch": "Persistent Confounder Branch",
+      "dataset_type": "SOURCE_INVENTORY",
+      "status": "SELECTED",
+      "target_task": "Geolocation, capacity, and furnace technology mapping of primary iron and steel plants",
+      "geographic_coverage": "Global (including all integrated steel mills in India: SAIL, Tata Steel, JSW, JSPL)",
+      "satellite_sensors": [
+        "None (Asset Registry verified via Satellite Imagery)"
+      ],
+      "spatial_resolution": "Exact plant coordinates / polygon footprints",
+      "temporal_resolution": "Biannual updates (2020-present)",
+      "sample_size": "Over 1,000 operating steel plants globally; 120+ integrated facilities in India",
+      "label_generation_method": "Corporate filings, government environmental impact assessments (EIA), and satellite imagery cross-referencing",
+      "label_type": "curated corporate/regulatory asset inventory",
+      "train_val_test_strategy": "Spatial facility-level splitting",
+      "models_benchmarked": [
+        "None (Asset Registry)"
+      ],
+      "data_availability": "Public Open Access",
+      "url_or_doi": "https://globalenergymonitor.org/projects/global-steel-plant-tracker/",
+      "repository": "Global Energy Monitor Data Portal",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "commercial_data_required": false,
+      "india_specific": true,
+      "domain_shift_to_india": "Zero domain shift. Authoritative locations of blast furnaces and basic oxygen furnaces that produce continuous thermal anomalies."
+    },
+    {
+      "dataset_id": "DS_SEBI_REG30_INCIDENTS_2025",
+      "name": "SEBI Regulation 30 Statutory Industrial Emergency Fire Disclosures",
+      "year": 2025,
+      "target_model_branch": "Industrial Fire Branch / Evaluation Anchors",
+      "dataset_type": "EVENT_LABELED",
+      "status": "SELECTED",
+      "target_task": "Statutory corporate reporting of material factory fires, explosions, and emergency shutdowns",
+      "geographic_coverage": "India nationwide",
+      "satellite_sensors": [
+        "None (Ground Legal Filing matched to VIIRS / Sentinel-2)"
+      ],
+      "spatial_resolution": "Exact manufacturing plant cadastral address and coordinates",
+      "temporal_resolution": "Immediate statutory filing (within 24 hours of incident)",
+      "sample_size": "12 audited major industrial fire incidents across India for 2025",
+      "label_generation_method": "Mandatory legal disclosures under SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, corroborated by State Pollution Control Board closure notices",
+      "label_type": "statutory legal corporate disclosures",
+      "train_val_test_strategy": "Held-out evaluation anchors",
+      "models_benchmarked": [
+        "None (Gold-Standard Regulatory Event Ground Truth)"
+      ],
+      "data_availability": "Public Open Access via BSE / NSE Portals",
+      "url_or_doi": "https://www.bseindia.com/corporates/ann.html",
+      "repository": "BSE / NSE Corporate Announcements",
+      "license": "Public Statutory Record",
+      "commercial_data_required": false,
+      "india_specific": true,
+      "domain_shift_to_india": "Zero domain shift. Exact ground reality of Indian industrial fires."
+    },
+    {
+      "dataset_id": "DS_DOTA_V2_AERIAL",
+      "name": "DOTA-v2.0: Large-Scale Dataset for Object Detection in Aerial Images",
+      "year": 2021,
+      "target_model_branch": "Vision / YOLO Branch (Alternative)",
+      "dataset_type": "PIXEL_IMAGE_LABELED",
+      "status": "CANDIDATE_SECONDARY",
+      "target_task": "Oriented bounding box object detection in aerial and satellite images",
+      "geographic_coverage": "Global aerial scenes",
+      "satellite_sensors": [
+        "Google Earth, JL-1, GF-2"
+      ],
+      "spatial_resolution": "0.1m - 1.0m",
+      "temporal_resolution": "Static image chips",
+      "sample_size": "11,268 aerial images, 1,793,658 instances across 18 classes (includes storage tanks, harbors, bridges)",
+      "label_generation_method": "Manual oriented bounding box annotations",
+      "label_type": "manually annotated oriented bounding boxes",
+      "train_val_test_strategy": "Official train/val/test benchmark split",
+      "models_benchmarked": [
+        "RoI Transformer",
+        "Oriented R-CNN",
+        "YOLO-OBB"
+      ],
+      "data_availability": "Free for Academic Research (Registration Required)",
+      "url_or_doi": "https://doi.org/10.1109/TPAMI.2021.3079979",
+      "repository": "https://captain-whu.github.io/DOTA/dataset.html",
+      "license": "Custom Academic Research License",
+      "commercial_data_required": false,
+      "india_specific": false,
+      "domain_shift_to_india": "Aerial optical domain differs from 10m Sentinel-2 satellite imagery; secondary priority compared to DIOR and FASDD_RS."
+    },
+    {
+      "dataset_id": "DS_FLAME_2_AERIAL_BURNS",
+      "name": "FLAME 2: Drone-Based Multi-Spectral Fire and Smoke Dataset",
+      "year": 2023,
+      "target_model_branch": "Vision / YOLO Branch (Secondary)",
+      "dataset_type": "PIXEL_IMAGE_LABELED",
+      "status": "CANDIDATE_SECONDARY",
+      "target_task": "Aerial thermal and optical fire detection and flame contour segmentation",
+      "geographic_coverage": "Prescribed burns in Northern Arizona, USA",
+      "satellite_sensors": [
+        "Zenmuse XT2 Drone (Thermal LWIR 8-14um + 4K RGB)"
+      ],
+      "spatial_resolution": "Centimetric UAV imagery",
+      "temporal_resolution": "30 fps video frames",
+      "sample_size": "53,451 pairs of thermal and optical frames",
+      "label_generation_method": "Pixel-level annotation of flame and smoke in thermal/optical pairs",
+      "label_type": "manually annotated bounding boxes and segmentation masks",
+      "train_val_test_strategy": "Video-clip level train/test split",
+      "models_benchmarked": [
+        "YOLOv5",
+        "U-Net"
+      ],
+      "data_availability": "Public Open Access",
+      "url_or_doi": "https://doi.org/10.3390/fire6070275",
+      "repository": "https://github.com/FLAME-Fire-Dataset",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "commercial_data_required": false,
+      "india_specific": false,
+      "domain_shift_to_india": "UAV oblique viewing perspective differs from nadir spaceborne satellite sensors. High utility for thermal-optical flame dynamics, but secondary to FASDD_RS for satellite deployment."
+    }
+  ],
+  "rejection_registry": [
+    {
+      "dataset_id": "REJ_MODIS_FIRE_GLOBAL_TERRA_AQUA",
+      "name": "Raw Global MODIS Active Fire Hotspots (MCD14ML)",
+      "rejection_reason": "Redundant and coarse. 1km resolution is significantly coarser than VIIRS 375m and provides no independent ground truth; using it as training labels constitutes pseudo-labeling."
+    },
+    {
+      "dataset_id": "REJ_VIIRS_VNP14IMGTDL_UNAUDITED",
+      "name": "Raw Global VIIRS Active Fire Archive (FIRMS NRT)",
+      "rejection_reason": "Contains raw satellite thermal detections without independent ground confirmation; circular reasoning to train on unverified active fire points."
+    },
+    {
+      "dataset_id": "REJ_COMMERCIAL_PLANET_ARCHIVE",
+      "name": "PlanetScope 3m Commercial Imagery Archive",
+      "rejection_reason": "Requires proprietary paid API subscription; violates zero-commercial-dependency project requirement."
+    }
+  ]
+}

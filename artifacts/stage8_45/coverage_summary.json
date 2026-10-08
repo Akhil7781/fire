@@ -1,0 +1,28 @@
+{
+  "verified_continuous_local": [
+    {
+      "start": "2024-10-01",
+      "end": "2025-12-31",
+      "sensor": "VIIRS_NOAA20_SP",
+      "scope": "India bbox"
+    }
+  ],
+  "targeted_2024_date_chunks": 1013,
+  "targeted_2024_covered_candidate_days": 4993,
+  "complete_windows_by_hypothesis": {
+    "7": 11,
+    "30": 10,
+    "90": 4,
+    "180": 0,
+    "365": 0
+  },
+  "candidate_day_raw_detection_confirmed": 6,
+  "unresolved_t0": 14,
+  "acquisition_requests": 1495,
+  "downloaded_bytes": 973661,
+  "request_latency_seconds": 689.7154310000002,
+  "total_processing_seconds": 1001.272,
+  "verified_continuous_local_day_count": 457,
+  "max_consecutive_continuous_local_history_days": 457,
+  "note": "The 2024 event-day query is a single observation date per AOI, not continuous history coverage."
+}

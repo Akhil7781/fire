@@ -1,0 +1,52 @@
+{
+  "chip_id": "PILOT_15_EAST",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_15_EAST_HUMA_01",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 150,
+        "y_min": 220,
+        "x_max": 175,
+        "y_max": 240
+      },
+      "geometry_confidence": "HIGH",
+      "source_class_confidence": "HIGH",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE"
+      ],
+      "firms_relationship": "NEAR_OBJECT",
+      "review_status": "PENDING",
+      "annotator_id": "HUMAN_ANNOTATOR_01",
+      "annotation_timestamp": "2026-09-29T16:33:36.248234+00:00",
+      "notes": "Active mountain slope fire front in dense forest canopy (~900m west of FIRMS detection point)."
+    }
+  ],
+  "context_metadata": {
+    "firms_detection_id": "3eada191e748d53d55c3bbac415143c877498fc56cd960961e7f45b24f06aa82",
+    "firms_latitude": 19.75968,
+    "firms_longitude": 97.69302,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 2.28,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2B_MSIL2A_20250317T035539_N0511_R004_T47QLB_20250317T063905.SAFE",
+    "tile_id": "T47QLB",
+    "cloud_cover_pct": 0.56,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

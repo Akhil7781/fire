@@ -1,0 +1,220 @@
+{
+  "runtime_seconds": 13.41,
+  "total_firms_detections": 1175795,
+  "total_labeled": 1885,
+  "total_unlabeled": 1173910,
+  "labeled_percentage": 0.1603,
+  "class_distribution": {
+    "0": 1173910,
+    "4": 1870,
+    "3": 8,
+    "2": 5,
+    "1": 2
+  },
+  "confidence_tier_distribution": {
+    "Tier D": 1173910,
+    "Tier B": 1877,
+    "Tier A": 8
+  },
+  "label_status_distribution": {
+    "UNLABELED": 1173909,
+    "PERSISTENT_THERMAL_SOURCE": 1870,
+    "CONFIRMED_EVENT": 8,
+    "PROBABLE_EVENT": 7,
+    "CONTEXT_ONLY": 1
+  },
+  "partition_class_matrix": {
+    "context_burn_in": {
+      "0": 150469,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 330
+    },
+    "test": {
+      "0": 47567,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 314
+    },
+    "test_seen_spatial": {
+      "0": 91518,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 328
+    },
+    "train": {
+      "0": 577858,
+      "1": 0,
+      "2": 3,
+      "3": 0,
+      "4": 604
+    },
+    "train_heldout_spatial": {
+      "0": 277257,
+      "1": 2,
+      "2": 2,
+      "3": 0,
+      "4": 134
+    },
+    "val": {
+      "0": 29241,
+      "1": 0,
+      "2": 0,
+      "3": 8,
+      "4": 160
+    }
+  },
+  "reference_diagnostics": {
+    "INDIA_INDUSTRIAL_INCIDENTS_2025": {
+      "source_name": "INDIA_INDUSTRIAL_INCIDENTS_2025",
+      "record_count": 12,
+      "unique_evidence_ids": 12,
+      "duplicate_rate": 0.0,
+      "geographic_extent": {
+        "min_lat": 12.9387,
+        "max_lat": 30.9578,
+        "min_lon": 72.5892,
+        "max_lon": 83.1054
+      },
+      "temporal_extent": {
+        "min_start": "2025-01-14T04:30:00+00:00",
+        "max_end": "2025-12-06T04:00:00+00:00"
+      },
+      "missingness": {
+        "geometry_wkt": 1.0,
+        "event_description": 0.0,
+        "source_url": 0.0
+      }
+    },
+    "FSI_VAN_AGNI_LFF_2025": {
+      "source_name": "FSI_VAN_AGNI_LFF_2025",
+      "record_count": 8,
+      "unique_evidence_ids": 8,
+      "duplicate_rate": 0.0,
+      "geographic_extent": {
+        "min_lat": 11.5874,
+        "max_lat": 30.9025,
+        "min_lon": 76.6214,
+        "max_lon": 86.3245
+      },
+      "temporal_extent": {
+        "min_start": "2025-02-28T05:00:00+00:00",
+        "max_end": "2025-05-20T20:00:00+00:00"
+      },
+      "missingness": {
+        "geometry_wkt": 1.0,
+        "event_description": 0.0,
+        "source_url": 0.0
+      }
+    },
+    "MODIS_MCD64A1_V61_BURNED_AREA": {
+      "source_name": "MODIS_MCD64A1_V61_BURNED_AREA",
+      "record_count": 6,
+      "unique_evidence_ids": 6,
+      "duplicate_rate": 0.0,
+      "geographic_extent": {
+        "min_lat": 20.218,
+        "max_lat": 32.115,
+        "min_lon": 76.284,
+        "max_lon": 86.352
+      },
+      "temporal_extent": {
+        "min_start": "2025-03-18T00:00:00+00:00",
+        "max_end": "2025-05-20T23:59:00+00:00"
+      },
+      "missingness": {
+        "geometry_wkt": 1.0,
+        "event_description": 0.0,
+        "source_url": 0.0
+      }
+    },
+    "GLOBAL_FIRE_ATLAS_2025": {
+      "source_name": "GLOBAL_FIRE_ATLAS_2025",
+      "record_count": 4,
+      "unique_evidence_ids": 4,
+      "duplicate_rate": 0.0,
+      "geographic_extent": {
+        "min_lat": 21.842,
+        "max_lat": 30.144,
+        "min_lon": 78.783,
+        "max_lon": 86.35
+      },
+      "temporal_extent": {
+        "min_start": "2025-03-17T10:00:00+00:00",
+        "max_end": "2025-05-06T14:00:00+00:00"
+      },
+      "missingness": {
+        "geometry_wkt": 0.0,
+        "event_description": 0.0,
+        "source_url": 0.0
+      }
+    },
+    "ICAR_IARI_CREAMS_2025": {
+      "source_name": "ICAR_IARI_CREAMS_2025",
+      "record_count": 10,
+      "unique_evidence_ids": 10,
+      "duplicate_rate": 0.0,
+      "geographic_extent": {
+        "min_lat": 23.0189,
+        "max_lat": 31.2845,
+        "min_lon": 74.8512,
+        "max_lon": 77.4215
+      },
+      "temporal_extent": {
+        "min_start": "2025-04-10T06:30:00+00:00",
+        "max_end": "2025-11-18T15:30:00+00:00"
+      },
+      "missingness": {
+        "geometry_wkt": 1.0,
+        "event_description": 0.0,
+        "source_url": 0.0
+      }
+    },
+    "SENTINEL2_AGRI_PILOT_T43RFP": {
+      "source_name": "SENTINEL2_AGRI_PILOT_T43RFP",
+      "record_count": 6,
+      "unique_evidence_ids": 6,
+      "duplicate_rate": 0.0,
+      "geographic_extent": {
+        "min_lat": 30.0208,
+        "max_lat": 30.526,
+        "min_lon": 76.046,
+        "max_lon": 76.965
+      },
+      "temporal_extent": {
+        "min_start": "2025-10-25T05:29:21+00:00",
+        "max_end": "2025-11-04T05:30:41+00:00"
+      },
+      "missingness": {
+        "geometry_wkt": 0.0,
+        "event_description": 0.0,
+        "source_url": 0.0
+      }
+    },
+    "INDIA_OTHER_THERMAL_SOURCES_2025": {
+      "source_name": "INDIA_OTHER_THERMAL_SOURCES_2025",
+      "record_count": 11,
+      "unique_evidence_ids": 11,
+      "duplicate_rate": 0.0,
+      "geographic_extent": {
+        "min_lat": 12.278,
+        "max_lat": 27.3245,
+        "min_lon": 69.5245,
+        "max_lon": 95.3189
+      },
+      "temporal_extent": {
+        "min_start": "2024-10-01T00:00:00+00:00",
+        "max_end": "2025-12-31T23:59:59+00:00"
+      },
+      "missingness": {
+        "geometry_wkt": 1.0,
+        "event_description": 0.0,
+        "source_url": 0.0
+      }
+    }
+  },
+  "output_path": "D:\\DATA PREPROCESSING\\data\\processed\\labels\\master_labels_2025.parquet"
+}

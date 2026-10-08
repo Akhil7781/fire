@@ -1,0 +1,50 @@
+{
+  "dataset": "DS_08_Indian_Domain_Optical",
+  "benchmark_purpose": "Indian-domain adaptation for YOLOv8n-Infra (Storage_Tank, Chimney_Stack, Industrial_Shed) and YOLOv8n-Fire/Smoke (Flame_Front, Smoke_Plume)",
+  "semantic_separation_statements": [
+    "Infrastructure detection != industrial fire. Structural asset presence is spatial/contextual prior evidence, NOT an active combustion label.",
+    "Flame/smoke detection != fire-source class. Optical combustion/plume detection does NOT determine whether the fire is Industrial, Forest, or Agricultural."
+  ],
+  "num_classes": 5,
+  "classes": {
+    "0": "Storage_Tank",
+    "1": "Chimney_Stack",
+    "2": "Industrial_Shed",
+    "3": "Flame_Front",
+    "4": "Smoke_Plume"
+  },
+  "infra_branch_classes": {
+    "0": "Storage_Tank",
+    "1": "Chimney_Stack",
+    "2": "Industrial_Shed"
+  },
+  "fire_smoke_branch_classes": {
+    "3": "Flame_Front",
+    "4": "Smoke_Plume"
+  },
+  "class_name_to_id": {
+    "storage_tank": 0,
+    "storage tank": 0,
+    "tank": 0,
+    "chimney_stack": 1,
+    "chimney stack": 1,
+    "chimney": 1,
+    "stack": 1,
+    "industrial_shed": 2,
+    "industrial shed": 2,
+    "shed": 2,
+    "flame_front": 3,
+    "flame front": 3,
+    "flame": 3,
+    "smoke_plume": 4,
+    "smoke plume": 4,
+    "smoke": 4
+  },
+  "annotation_grounding": "All annotations are visually grounded. Labels are NOT derived from FIRMS thermal detections, proximity heuristics, or model predictions.",
+  "target_composition": {
+    "industrial_chips": 100,
+    "agricultural_chips": 100,
+    "forest_chips": 50,
+    "total_target": 250
+  }
+}

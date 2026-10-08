@@ -1,0 +1,325 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "stage": "8.25",
+    "date": "2026-10-03",
+    "description": "Frozen Stage 8.25 independent test partition manifest. Chronological holdout (2026). Strictly >50km spatial isolation.",
+    "total_test_events": 28
+  },
+  "class_support": {
+    "Industrial Fire": 6,
+    "Forest Fire": 6,
+    "Agricultural Fire": 6,
+    "Other Thermal Source": 10
+  },
+  "events": [
+    {
+      "event_id": "EVT_825_IND_IND_INC_2026_SOLAPUR_MIDC",
+      "class_id": 0,
+      "target_class": "Industrial Fire",
+      "centroid_lat": 17.658005044152315,
+      "centroid_lon": 75.90672978413447,
+      "year": 2026,
+      "state": "Maharashtra",
+      "evidence_source": "MPCB Solapur Sub-Regional Office Accident Investigation Notice",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_IND_IND_INC_2026_CUDDALORE_SIPCOT",
+      "class_id": 0,
+      "target_class": "Industrial Fire",
+      "centroid_lat": 11.704227374954975,
+      "centroid_lon": 79.7640373868003,
+      "year": 2026,
+      "state": "Tamil Nadu",
+      "evidence_source": "TNPCB Cuddalore Regional Office Accident Inspection Report",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_IND_IND_INC_2026_NEELAM_MUZAFFARNAGAR",
+      "class_id": 0,
+      "target_class": "Industrial Fire",
+      "centroid_lat": 29.471548200480605,
+      "centroid_lon": 77.70580546286128,
+      "year": 2026,
+      "state": "Uttar Pradesh",
+      "evidence_source": "UP Pollution Control Board Regional Office Muzaffarnagar Inspection",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_IND_IND_INC_2026_JABALPUR_RICHHAI",
+      "class_id": 0,
+      "target_class": "Industrial Fire",
+      "centroid_lat": 23.211519931741428,
+      "centroid_lon": 79.99452932162265,
+      "year": 2026,
+      "state": "Madhya Pradesh",
+      "evidence_source": "MP Pollution Control Board Jabalpur Regional Office Log",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_IND_IND_INC_2026_COIMBATORE_SIDCO",
+      "class_id": 0,
+      "target_class": "Industrial Fire",
+      "centroid_lat": 10.952699872251456,
+      "centroid_lon": 76.97574477313175,
+      "year": 2026,
+      "state": "Tamil Nadu",
+      "evidence_source": "Tamil Nadu Fire and Rescue Services Station Coimbatore Call Record",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_IND_IND_INC_2026_WALUJ_AURANGABAD",
+      "class_id": 0,
+      "target_class": "Industrial Fire",
+      "centroid_lat": 19.84511332606742,
+      "centroid_lon": 75.24144815893354,
+      "year": 2026,
+      "state": "Maharashtra",
+      "evidence_source": "MPCB Chhatrapati Sambhajinagar Regional Office Accident Notice",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_FOR_FOR_EVT_2026_UK_CHAMOLI",
+      "class_id": 1,
+      "target_class": "Forest Fire",
+      "centroid_lat": 30.518605,
+      "centroid_lon": 79.49486,
+      "year": 2026,
+      "state": "Uttarakhand",
+      "evidence_source": "FSI FAST 3.0 LFF Alert 2026-UK-0418 & Chamoli Forest Division",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_FOR_FOR_EVT_2026_HP_KULLU",
+      "class_id": 1,
+      "target_class": "Forest Fire",
+      "centroid_lat": 31.625151586309624,
+      "centroid_lon": 77.3456782950438,
+      "year": 2026,
+      "state": "Himachal Pradesh",
+      "evidence_source": "HP Forest Department FIRE Portal Alert 2026-HP-0510",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_FOR_FOR_EVT_2026_OD_KOTGARH",
+      "class_id": 1,
+      "target_class": "Forest Fire",
+      "centroid_lat": 19.92618,
+      "centroid_lon": 83.71234,
+      "year": 2026,
+      "state": "Odisha",
+      "evidence_source": "OFMS 2.0 & FSI Van Agni LFF 2026 Registry",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_FOR_FOR_EVT_2026_MP_PENCH",
+      "class_id": 1,
+      "target_class": "Forest Fire",
+      "centroid_lat": 21.786154067860664,
+      "centroid_lon": 79.32567575805498,
+      "year": 2026,
+      "state": "Madhya Pradesh",
+      "evidence_source": "MP Forest Department Tiger Reserve Alert Register",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_FOR_FOR_EVT_2026_KA_NAGARHOLE",
+      "class_id": 1,
+      "target_class": "Forest Fire",
+      "centroid_lat": 11.980042190193737,
+      "centroid_lon": 76.12544099837018,
+      "year": 2026,
+      "state": "Karnataka",
+      "evidence_source": "Karnataka Forest Department Wildfire Alert Docket",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_FOR_FOR_EVT_2026_MH_CHANDRAPUR",
+      "class_id": 1,
+      "target_class": "Forest Fire",
+      "centroid_lat": 20.21697,
+      "centroid_lon": 79.25899,
+      "year": 2026,
+      "state": "Maharashtra",
+      "evidence_source": "Maharashtra Forest Department TATR Buffer Zone Record",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_AGR_AGR_EVT_2026_MP_HARDA_RABI",
+      "class_id": 2,
+      "target_class": "Agricultural Fire",
+      "centroid_lat": 22.37631,
+      "centroid_lon": 77.10613333333333,
+      "year": 2026,
+      "state": "Madhya Pradesh",
+      "evidence_source": "IARI CREAMS Central India Rabi Bulletin 2026-04-05",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_AGR_AGR_EVT_2026_UP_RAMPUR_RABI",
+      "class_id": 2,
+      "target_class": "Agricultural Fire",
+      "centroid_lat": 28.752725531120454,
+      "centroid_lon": 79.18516775273419,
+      "year": 2026,
+      "state": "Uttar Pradesh",
+      "evidence_source": "UP Agriculture Dept Stubble Verification Register 2026",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_AGR_AGR_EVT_2026_AP_GUNTUR_RABI",
+      "class_id": 2,
+      "target_class": "Agricultural Fire",
+      "centroid_lat": 16.29923541042445,
+      "centroid_lon": 80.45018224308427,
+      "year": 2026,
+      "state": "Andhra Pradesh",
+      "evidence_source": "AP Agriculture Dept Field Burning Verification Log 2026",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_AGR_AGR_EVT_2026_BR_BUXAR_RABI",
+      "class_id": 2,
+      "target_class": "Agricultural Fire",
+      "centroid_lat": 25.559463281120337,
+      "centroid_lon": 84.00910728426673,
+      "year": 2026,
+      "state": "Bihar",
+      "evidence_source": "Bihar Agriculture Department Stubble Monitoring Cell",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_AGR_AGR_EVT_2026_RJ_KOTA_RABI",
+      "class_id": 2,
+      "target_class": "Agricultural Fire",
+      "centroid_lat": 25.17903164710401,
+      "centroid_lon": 75.82996605793046,
+      "year": 2026,
+      "state": "Rajasthan",
+      "evidence_source": "Rajasthan Agriculture Dept Kota Division Register",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_AGR_AGR_EVT_2026_TN_THANJAVUR_KHARIF",
+      "class_id": 2,
+      "target_class": "Agricultural Fire",
+      "centroid_lat": 10.779452162978599,
+      "centroid_lon": 79.12999818635738,
+      "year": 2026,
+      "state": "Tamil Nadu",
+      "evidence_source": "Tamil Nadu Agriculture Dept Delta Monitoring Division",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_01",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 12.278520118275223,
+      "centroid_lon": 93.8582084680365,
+      "year": 2026,
+      "state": "Andaman & Nicobar Islands",
+      "evidence_source": "Smithsonian Global Volcanism Program & GSI",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_02",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 19.532313877376204,
+      "centroid_lon": 71.3451315553206,
+      "year": 2026,
+      "state": "Offshore Maharashtra",
+      "evidence_source": "VIIRS Nightfire (VNF) & World Bank GGFR",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_03",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 18.985242311424418,
+      "centroid_lon": 71.385054063638,
+      "year": 2026,
+      "state": "Offshore Maharashtra",
+      "evidence_source": "VIIRS Nightfire (VNF) & World Bank GGFR",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_06",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 16.784794172448475,
+      "centroid_lon": 82.25489472816925,
+      "year": 2026,
+      "state": "Andhra Pradesh",
+      "evidence_source": "VIIRS Nightfire (VNF) & World Bank GGFR",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_21",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 9.985666709779418,
+      "centroid_lon": 76.36832694468036,
+      "year": 2026,
+      "state": "Kerala",
+      "evidence_source": "GEM / MoPNG National Refinery Registry",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_25",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 26.564981929741155,
+      "centroid_lon": 93.75787525678892,
+      "year": 2026,
+      "state": "Assam",
+      "evidence_source": "GEM / MoPNG National Refinery Registry",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_26",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 12.984915662182509,
+      "centroid_lon": 74.8321474924693,
+      "year": 2026,
+      "state": "Karnataka",
+      "evidence_source": "GEM / MoPNG National Refinery Registry",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_47",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 18.75786878168898,
+      "centroid_lon": 79.46531009779333,
+      "year": 2026,
+      "state": "Telangana",
+      "evidence_source": "CEA National Power Registry",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_49",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 22.82528857123692,
+      "centroid_lon": 69.52753525002383,
+      "year": 2026,
+      "state": "Gujarat",
+      "evidence_source": "CEA National Power Registry",
+      "label_tier": "CONFIRMED"
+    },
+    {
+      "event_id": "EVT_825_PER_PER_SRC_52",
+      "class_id": 3,
+      "target_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "centroid_lat": 25.564914817129225,
+      "centroid_lon": 84.88489438122537,
+      "year": 2026,
+      "state": "Bihar",
+      "evidence_source": "TERI & BSPCB Brick Kiln Survey",
+      "label_tier": "CONFIRMED"
+    }
+  ]
+}

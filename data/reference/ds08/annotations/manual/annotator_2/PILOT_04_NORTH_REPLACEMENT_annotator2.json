@@ -1,0 +1,41 @@
+{
+  "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "NO_VISIBLE_TARGET",
+  "human_verified": true,
+  "annotation_start_timestamp": "2026-09-30T16:18:40.331Z",
+  "annotation_completion_timestamp": "2026-09-30T16:18:44.180Z",
+  "interaction_audit": {
+    "interface_version": "v1.0_manual",
+    "bbox_creation_actions": 0,
+    "bbox_edit_actions": 0,
+    "class_selection_actions": 0,
+    "save_events": 2
+  },
+  "annotations": [],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "42b541f95919c538f0ae679757216b76120210f5a3264e33c6e5dabc1727d66a",
+    "firms_latitude": 29.76735,
+    "firms_longitude": 77.66902,
+    "firms_acq_datetime_utc": "2025-03-19T07:22:00Z",
+    "firms_frp": 3.05,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2C_MSIL2A_20250319T052711_N0511_R105_T43RGP_20250319T104817.SAFE",
+    "tile_id": "T43RGP",
+    "cloud_cover_pct": 0.23,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "task_status": "COMPLETED_HUMAN_ANNOTATION"
+}

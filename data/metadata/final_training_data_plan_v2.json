@@ -1,0 +1,289 @@
+{
+  "schema_version": "2.0_FINAL_TRAINING_DATA_ARCHITECTURE_V2",
+  "last_updated": "2026-09-24T19:15:00Z",
+  "project_title": "Satellite Thermal Anomaly Classification in India (VIIRS NOAA-20 2025)",
+  "project_directory": "D:\\DATA PREPROCESSING",
+  "frozen_primary_dataset": {
+    "file_path": "data/interim/causal_features_2025.parquet",
+    "total_rows": 1175795,
+    "total_columns": 51,
+    "immutability_status": "FROZEN_AUDITED",
+    "sha256_hash_verified": true,
+    "role": "Primary deployment testbed, causal history, Deep SAD unlabeled pool, and stationary confounder calibration"
+  },
+  "shortlist_constraints": {
+    "max_primary_datasets": 7,
+    "max_total_download_gb": 50.0,
+    "verified_access_methods_only": true,
+    "open_research_license_only": true,
+    "strictly_enforce_dataset_types": true
+  },
+  "shortlisted_datasets": [
+    {
+      "shortlist_id": "DS_01_FIRMS_INDIA_2025",
+      "dataset_name": "FIRMS VIIRS NOAA-20 SP India 2025 (Causal Feature Table)",
+      "dataset_classification": "LOCAL PROJECT DATA / UNLABELED DATA",
+      "existing_or_derived": "LOCAL PROJECT DATA",
+      "provider_authority": "NASA LANCE / FIRMS & Project Causal Feature Pipeline",
+      "access_protocol": "Local Parquet (Pre-existing on disk)",
+      "access_url": "file:///d:/DATA%20PREPROCESSING/data/interim/causal_features_2025.parquet",
+      "license": "NASA Open Data Policy / Project Internal Frozen Baseline",
+      "credentials_required": false,
+      "size_status": "VERIFIED",
+      "storage_footprint_gb": 0.45,
+      "download_required_gb": 0.0,
+      "data_format": "Apache Parquet (Snappy-compressed, Partitioned)",
+      "input_modality": "1D Tabular Feature Vector (51 Causal Features)",
+      "native_label": "Unlabeled satellite active fire detections + 15 verified acute events + 1,870 persistent confounders",
+      "our_label": "Unlabeled Pool (y_SAD = -1 / Unknown), Positive Anomaly Anchors (y = -1 in SAD; y in {1, 2, 3} in classifier), Persistent Confounders (is_supervised_target = False)",
+      "target_model_branch": "Deep SAD (Semi-Supervised Anomaly Core), Causal Sequence Pipeline, Multimodal Fusion",
+      "target_task": "Unlabeled manifold representation learning, stationary confounder calibration, positive supervision anchors, and in-domain deployment testbed",
+      "exact_features_or_labels_provided": "51 causal thermal/spatial features (FRP, I4/I5 brightness temps, 6h/24h causal cluster counts, local density, scan/track); 1,870 stationary confounder flags (Class 4); 15 certified acute anomaly anchors (2 Ind, 5 Forest, 8 Agri); 1,173,910 unlabeled rows (y_SAD = -1 / Unknown).",
+      "why_needed": "Serves as the empirical foundation of the entire research project; represents the exact operational data distribution and real-world deployment target in India.",
+      "what_it_cannot_provide": "It cannot provide independent ground truth labels for the 1.17M unlabeled detections; it cannot provide sub-pixel optical imagery or parcel boundary scars.",
+      "verification_status": "VERIFIED_LOCAL"
+    },
+    {
+      "shortlist_id": "DS_02_DERIVED_VIIRS_EVENT_SEQUENCES",
+      "dataset_name": "Derived FIRMS Event Sequences (NIFC/MTBS Fire Perimeters + VIIRS 375m Archive)",
+      "dataset_classification": "DERIVED DATASET",
+      "existing_or_derived": "DERIVED DATASET",
+      "provider_authority": "National Interagency Fire Center (NIFC) / USGS MTBS / NASA FIRMS Archive (Constructed by Project Pipeline)",
+      "methodological_precedent": "2026 FIRMS active fire sequence modeling and USDA/USFS MTBS multi-timestep wildfire progression mapping",
+      "construction_formula": "Official VIIRS active-fire observations + NIFC/MTBS fire-perimeter records + spatiotemporal matching + FIRMS-like feature extraction + event sequence construction",
+      "raw_source_datasets": [
+        {
+          "name": "USGS MTBS / NIFC Interagency Fire Perimeter History",
+          "access": "https://www.mtbs.gov/direct-download & https://data-nifc.opendata.arcgis.com/",
+          "size_status": "VERIFIED",
+          "size_gb": 0.85,
+          "format": "ESRI Shapefile / GeoPackage"
+        },
+        {
+          "name": "NASA VIIRS 375m Active Fire Point Archive (VNP14IMGTDL / VJ114IMGTDL)",
+          "access": "https://firms.modaps.eosdis.nasa.gov/download/ & NASA Earthdata HTTPS",
+          "size_status": "VERIFIED",
+          "size_gb": 2.50,
+          "format": "Compressed CSV / Parquet"
+        }
+      ],
+      "access_protocol": "Constructed locally via spatial-temporal joining pipeline",
+      "access_url": "data/processed/derived_sequences/viirs_event_sequences.parquet (Target Path)",
+      "license": "US Public Domain / Creative Commons CC0",
+      "credentials_required": false,
+      "size_status": "TO BE MEASURED",
+      "storage_footprint_gb": null,
+      "download_required_gb": 3.35,
+      "data_format": "Apache Parquet 3D Tensor Structure [Batch, Timesteps (T=16), Channels (C=8)]",
+      "input_modality": "1D Tabular Time-Series Sequences (8 Causal Channels)",
+      "native_label": "Official Wildfire Incident Perimeter and Burn Severity Boundary",
+      "our_label": "Active Wildfire Progression Sequence (y_pretrain = 1)",
+      "target_model_branch": "1D Temporal Convolutional Network (TCN Branch)",
+      "target_task": "Self-supervised masked autoencoding and pretraining of 1D TCN on physical combustion growth, peak FRP, and diurnal cooling trajectories",
+      "join_keys": {
+        "spatial_join": "Geodesic Point-in-Polygon (ST_Within) matching VIIRS point to MTBS/NIFC event polygon perimeter",
+        "temporal_join": "Acquisition timestamp within [fire_start - 24h, fire_containment + 48h]",
+        "group_key": "fire_event_id"
+      },
+      "sequence_schema_channels": [
+        "elapsed_time_hours",
+        "geodesic_distance_km",
+        "frp_mw",
+        "log1p_frp",
+        "thermal_contrast_k",
+        "pixel_footprint_km2",
+        "solar_zenith_deg",
+        "daynight_flag"
+      ],
+      "train_val_test_split_strategy": "Strict event-level split by fire_event_id (70% train, 15% val, 15% test) to prevent temporal and spatial leakage",
+      "why_needed": "WildfireSpreadTS and TS-SatFire are 2D raster image grids that cannot train a 1D tabular sequence model. This derived dataset provides thousands of multi-day combustion time-series matching our exact causal feature space.",
+      "what_it_cannot_provide": "Cannot provide Indian tropical/monsoonal vegetation characteristics; cannot provide chemical explosion kinetics or smallholder agricultural field scars.",
+      "verification_status": "PIPELINE_DESIGNED_READY_FOR_CONSTRUCTION"
+    },
+    {
+      "shortlist_id": "DS_03_GLOBAL_FIRE_ATLAS_FSI",
+      "dataset_name": "Global Fire Atlas (GFA) 2003-2025 + FSI Forest Canopy Density Mask",
+      "dataset_classification": "EXTERNAL EXISTING DATASET",
+      "existing_or_derived": "EXTERNAL EXISTING DATASET",
+      "provider_authority": "NASA GSFC / UC Irvine (Andela et al.) & Forest Survey of India (FSI)",
+      "access_protocol": "Open HTTPS Download via Zenodo / FSI Geoportal",
+      "access_url": "https://doi.org/10.5281/zenodo.17669692 & https://fsi.nic.in/",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "credentials_required": false,
+      "size_status": "VERIFIED",
+      "storage_footprint_gb": 1.6,
+      "download_required_gb": 1.6,
+      "data_format": "ESRI Shapefile / GeoPackage (Vectors) & GeoTIFF (Forest Canopy Mask)",
+      "input_modality": "Geospatial Polygon Vectors & Raster Canopy Cover Mask",
+      "native_label": "MCD64A1-derived individual fire perimeter and lifecycle attributes (tracks all vegetation fires)",
+      "our_label": "Class 2 (Forest Fire) Candidate ONLY IF passing Forest Canopy Gate (Canopy Cover >= 10% or Reserved Forest); otherwise Cropland candidate or Ambiguous/Excluded",
+      "target_model_branch": "Forest Fire Branch & Supervised Ground-Truth Matching Pipeline",
+      "target_task": "Providing independent polygon perimeters, ignition dates, extinction dates, spread rates, and durations for large forest fires across India",
+      "exact_features_or_labels_provided": "fire_id, ig_date (ignition date), cl_date (extinction date), dur (duration in days), tot_ar (burned area km2), speed (km/day), direction, polygon geometry. FSI Mask provides forest canopy density class (VDF, MDF, OF, Non-Forest).",
+      "why_needed": "Provides objective, independent satellite-derived fire perimeters and lifecycle boundaries for wildland combustion events in India, eliminating reliance on raw FIRMS clustering.",
+      "what_it_cannot_provide": "GFA events are NOT automatically Forest Fire. It cannot be used without the Forest Canopy Gate (because GFA tracks all global vegetation fires, including savannas and crop residue); cannot delineate sub-500m fires due to MODIS sensor resolution.",
+      "verification_status": "VERIFIED_ACCESSIBLE"
+    },
+    {
+      "shortlist_id": "DS_04_SENTINEL2_CREAMS_AGRI",
+      "dataset_name": "Sentinel-2 L2A STAC Collection + ICAR-IARI CREAMS Crop Residue Bulletins",
+      "dataset_classification": "EXTERNAL EXISTING DATASET",
+      "existing_or_derived": "EXTERNAL EXISTING DATASET",
+      "provider_authority": "European Space Agency (Copernicus) & ICAR-IARI Satellite Agricultural Monitoring",
+      "access_protocol": "Spatially Targeted STAC API (Planetary Computer / AWS Open Data) + IARI Daily Bulletins",
+      "access_url": "https://planetarycomputer.microsoft.com/dataset/sentinel-2-l2a & http://creams.iari.res.in/",
+      "license": "Copernicus Open Access / ICAR Open Research Data",
+      "credentials_required": false,
+      "size_status": "TO BE MEASURED",
+      "storage_footprint_gb": null,
+      "download_required_gb": 15.0,
+      "data_format": "Cloud-Optimized GeoTIFF (COG) & CSV Incident Records",
+      "input_modality": "Decametric Optical Multispectral Bands (10m/20m) & Geospatial CSV Records",
+      "native_label": "Pre/Post Surface Reflectance (B04, B08, B11, B12) & Daily Stubble Active Fire Coordinates",
+      "our_label": "Class 3 (Agricultural Fire) confirmed strictly via 4-part composite rule with configurable calibration parameters",
+      "target_model_branch": "Agricultural Fire Branch & Composite Ground-Truth Matcher",
+      "target_task": "Multi-condition verification of agricultural stubble burning via parcel-level optical burn scars and daily agricultural monitoring bulletins",
+      "exact_features_or_labels_provided": "Pre-burn and post-burn surface reflectance (B04, B08, B11, B12), differenced Normalized Burn Ratio (dNBR), post-burn NIR drop ratio, parcel coordinates, district-level daily stubble fire counts and coordinates.",
+      "why_needed": "Optical burn scars at 10m/20m resolution prove physical combustion on agricultural parcels, transforming ambiguous thermal points into certified Class 3 ground truth.",
+      "what_it_cannot_provide": "Cannot provide cloud-penetrating evidence during continuous overcast conditions; dNBR alone without crop mask and harvest window cannot distinguish stubble fires from plowed dry soil.",
+      "verification_status": "VERIFIED_ACCESSIBLE"
+    },
+    {
+      "shortlist_id": "DS_05_INDIA_HEAVY_INDUSTRY_SEBI",
+      "dataset_name": "Ma et al. 2019 India Industrial Heat Sources + SEBI Reg 30 Incident Filings",
+      "dataset_classification": "EXTERNAL EXISTING DATASET",
+      "existing_or_derived": "EXTERNAL EXISTING DATASET",
+      "provider_authority": "ISPRS / Chinese Academy of Sciences (Ma et al.) & Securities and Exchange Board of India",
+      "access_protocol": "Open Journal Supplementary Repository / BSE & NSE Statutory Corporate Filings",
+      "access_url": "https://doi.org/10.3390/ijgi8110488 & https://www.bseindia.com/corporates/ann.html",
+      "license": "Creative Commons Attribution 4.0 (CC-BY-4.0) / Public Regulatory Disclosures",
+      "credentials_required": false,
+      "size_status": "VERIFIED",
+      "storage_footprint_gb": 0.15,
+      "download_required_gb": 0.15,
+      "data_format": "GeoJSON Point Vectors & Structured JSON Corporate Filings",
+      "input_modality": "Geospatial Point Vectors (Industrial Facilities) & Text/JSON Regulatory Filings",
+      "native_label": "Heavy Industrial Heat Source Entity (ISPRS) & Material Disaster Announcements (SEBI Reg 30)",
+      "our_label": "Class 4 Confounder (PERSISTENT_THERMAL_SOURCE, is_supervised_target = False) & Class 1 Positive Anchors (INDUSTRIAL_FIRE)",
+      "target_model_branch": "Confounder Suppression Branch (Class 4) & Industrial Fire Few-Shot Calibration (Class 1)",
+      "target_task": "Isolating stationary industrial thermal emitters from acute emergency disasters, and providing statutory incident anchors for industrial fire classification",
+      "exact_features_or_labels_provided": "Geocoded coordinates of heavy industrial heat source complexes (iron & steel plants, cement kilns, chemical refineries, thermal power plants); statutory corporate fire emergency disclosures with date, hour, facility name, loss valuation, and incident narrative.",
+      "why_needed": "Solves the spatial proximity fallacy by explicitly distinguishing normal operational industrial emitters (confounders) from certified emergency industrial disaster fires.",
+      "what_it_cannot_provide": "Cannot detect small informal industrial fires (e.g. unlisted scrap warehouses or informal textile units lacking statutory corporate disclosure); cannot provide automated daily incident alerts.",
+      "verification_status": "VERIFIED_ACCESSIBLE"
+    },
+    {
+      "shortlist_id": "DS_06_DIOR_INFRASTRUCTURE_BENCHMARK",
+      "dataset_name": "DIOR Benchmark: Optical Remote Sensing Object Detection (Tanks & Chimneys)",
+      "dataset_classification": "EXTERNAL EXISTING DATASET",
+      "existing_or_derived": "EXTERNAL EXISTING DATASET",
+      "provider_authority": "Northwestern Polytechnical University (Li et al., ISPRS P&RS 2020)",
+      "access_protocol": "Direct Academic Download via NWPU / Academic Mirror",
+      "access_url": "https://gcheng-nwpu.github.io/#Datasets",
+      "license": "Open Access for Academic Research",
+      "credentials_required": false,
+      "size_status": "VERIFIED",
+      "storage_footprint_gb": 7.2,
+      "download_required_gb": 7.2,
+      "data_format": "JPEG Satellite Chips (800x800) + XML / YOLO Bounding Boxes",
+      "input_modality": "Sub-Meter High-Resolution Optical Satellite Chips (0.5m-1.0m)",
+      "native_label": "Bounding boxes for Storage Tank and Chimney",
+      "our_label": "Industrial Asset Presence Probability P(Industrial Asset) and Structural Bounding Boxes",
+      "target_model_branch": "YOLOv8n-Infra (Vision / Object Detection Branch)",
+      "target_task": "Pretraining YOLOv8n-Infra to identify industrial manufacturing infrastructure (storage tanks and industrial chimneys/exhaust stacks) in high-resolution optical satellite chips",
+      "exact_features_or_labels_provided": "10,500+ annotated bounding boxes for Storage Tank; 3,800+ annotated bounding boxes for Chimney; normalized box coordinates [class, x_center, y_center, width, height].",
+      "why_needed": "Gives YOLOv8n spatial perception to detect petrochemical storage tanks and factory flues, enabling the multimodal fusion head to determine whether a thermal anomaly is colocated with industrial assets.",
+      "what_it_cannot_provide": "Cannot detect active combustion, smoke, or fire; cannot directly label an industrial fire event without independent incident confirmation; imagery consists primarily of US/Chinese facilities requiring Indian domain adaptation.",
+      "verification_status": "VERIFIED_ACCESSIBLE"
+    },
+    {
+      "shortlist_id": "DS_07_FASDD_RS_FLAME_SMOKE",
+      "dataset_name": "FASDD_RS: Flame and Smoke Detection Dataset (Remote Sensing Split)",
+      "dataset_classification": "EXTERNAL EXISTING DATASET",
+      "existing_or_derived": "EXTERNAL EXISTING DATASET",
+      "provider_authority": "Wuhan University (Yue et al., Int. J. Digital Earth 2023)",
+      "access_protocol": "Open Access Download via Science Data Bank",
+      "access_url": "https://doi.org/10.57760/sciencedb.j00104.00103",
+      "license": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+      "credentials_required": false,
+      "size_status": "VERIFIED",
+      "storage_footprint_gb": 6.5,
+      "download_required_gb": 6.5,
+      "data_format": "Optical Satellite Images (10m-30m) + Native YOLO Format Text Annotations",
+      "input_modality": "Satellite Remote Sensing Optical Scenes (10m-30m)",
+      "native_label": "Native YOLO format bounding boxes for Flame and Smoke",
+      "our_label": "Combustion Plume Presence Probability P(Smoke Plume), P(Flame Front)",
+      "target_model_branch": "YOLOv8n-Fire/Smoke (Vision / Plume Detection Branch)",
+      "target_task": "Pretraining YOLOv8n-Fire/Smoke to detect active combustion flame fronts and dispersing smoke plumes in optical satellite scenes",
+      "exact_features_or_labels_provided": "Thousands of bounding boxes for 'Flame' and 'Smoke' in native YOLO text format, normalized bounding coordinates, and confidence metadata.",
+      "why_needed": "Provides visual evidence of active uncontained combustion and plume dispersion, complementing FIRMS mid-infrared radiometry with optical plume confirmation.",
+      "what_it_cannot_provide": "Cannot distinguish an industrial smoke plume from a forest fire smoke plume on optical texture alone; cannot penetrate cloud decks or detect nighttime fires (optical sensor limitation).",
+      "verification_status": "VERIFIED_ACCESSIBLE"
+    }
+  ],
+  "proposed_in_domain_annotation_task": {
+    "task_name": "Targeted Indian Satellite Optical Benchmark Annotation",
+    "dataset_classification": "PROPOSED ANNOTATION TARGET (NOT EXISTING DATA)",
+    "target_sample_size": "250 hand-annotated Sentinel-2 10m/20m & high-resolution optical chips (512x512)",
+    "status": "PROPOSED_NOT_YET_COLLECTED",
+    "target_composition": {
+      "industrial_corridor_chips": 100,
+      "agricultural_burn_chips": 100,
+      "forest_wildfire_chips": 50
+    },
+    "annotation_classes": [
+      "Storage_Tank",
+      "Chimney_Stack",
+      "Industrial_Shed",
+      "Smoke_Plume",
+      "Flame_Front"
+    ],
+    "purpose": "Domain adaptation of pretrained YOLOv8n-Infra and YOLOv8n-Fire/Smoke models to irregular Indian industrial shed morphology, smallholder agricultural parcel geometry, and monsoonal atmospheric aerosol conditions."
+  },
+  "optional_research_references": [
+    {
+      "name": "WildfireSpreadTS (NeurIPS 2023)",
+      "role": "Methodological reference / prior art for multi-temporal wildfire spread; NOT a required dependency for tabular TCN."
+    },
+    {
+      "name": "TS-SatFire (2023)",
+      "role": "Methodological reference / prior art for satellite time-series active fire forecasting; NOT a required dependency for tabular TCN."
+    }
+  ],
+  "dataset_rejection_register": [
+    {
+      "dataset_name": "WildfireSpreadTS (NeurIPS 2023)",
+      "exclusion_rationale": "Format Incompatibility. WildfireSpreadTS is a 2D multi-modal raster image dataset (64x64 patches of active fire masks, ERA5 weather, fuel rasters, DEM) designed for 2D ConvNets and ConvLSTMs. It cannot be used to pretrain a 1D Temporal Convolutional Network operating on 51-column tabular FIRMS point sequences without artificial rasterization. Replaced by DS_02 (tabular event sequences constructed from MTBS/NIFC perimeters joined with VIIRS active fire archives)."
+    },
+    {
+      "dataset_name": "TS-SatFire (2023)",
+      "exclusion_rationale": "Format Incompatibility. Similar to WildfireSpreadTS, TS-SatFire packages multi-temporal 2D satellite image rasters rather than tabular point sequences. Its spatial convolutional feature extractors do not transfer to our 1D tabular sequence architecture."
+    },
+    {
+      "dataset_name": "Stanford South Asia Brick Kilns Dataset (PNAS 2020)",
+      "exclusion_rationale": "Redundancy & Consolidation. The 50,000+ brick kilns are already represented as persistent thermal sources in our audited Class 4 confounder table (1,870 rows) and in the heavy industrial heat source inventories (DS_05). Preserving project focus and staying strictly within the 7-dataset limit."
+    },
+    {
+      "dataset_name": "World Bank Global Gas Flaring Tracker (GGFR)",
+      "exclusion_rationale": "Redundancy. Stationary gas flare locations across India are already absorbed into the stationary confounder mask and DS_05 heavy industrial heat source catalogs."
+    },
+    {
+      "dataset_name": "MODIS MCD64A1 Raw Rasters (500m Global HDF)",
+      "exclusion_rationale": "Redundancy & High Overhead. The Global Fire Atlas (DS_03) has already processed, clustered, and validated MCD64A1 into discrete fire event polygons with ignition and extinction dates, rendering raw multi-gigabyte HDF raster ingestion unnecessary."
+    },
+    {
+      "dataset_name": "DOTA-v2.0 / FLAME 2 UAV Dataset",
+      "exclusion_rationale": "Domain Mismatch. DOTA focuses on generic aerial objects (planes, vehicles, bridges) with sparse industrial targets; FLAME 2 is low-altitude drone video footage, whose sub-centimeter perspective does not transfer to 10m/375m satellite imagery. Outperformed by DIOR (satellite industrial assets) and FASDD_RS (satellite flame/smoke)."
+    }
+  ],
+  "total_budget_summary": {
+    "total_shortlisted_datasets": 7,
+    "max_allowed_datasets": 7,
+    "verified_download_footprint_gb": 18.95,
+    "to_be_measured_download_cap_gb": 15.0,
+    "max_potential_download_gb": 33.95,
+    "max_allowed_download_gb": 50.0,
+    "hardware_compatibility": "Fully compatible with local workstation storage and memory constraints",
+    "execution_status": "LOCKED_FOR_AUDIT_NO_DOWNLOADS_AUTHORIZED"
+  }
+}

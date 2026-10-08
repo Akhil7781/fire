@@ -1,0 +1,25 @@
+{
+  "provider": "NASA FIRMS Data Availability API",
+  "checked_at_utc": "2026-10-06",
+  "requests": [
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "http_result": 200,
+      "min_date": "2018-04-01",
+      "max_date": "2026-06-30"
+    },
+    {
+      "source": "VIIRS_NOAA21_SP",
+      "http_result": 400,
+      "result": "Invalid source"
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "http_result": 200,
+      "min_date": "2012-01-20",
+      "max_date": "2026-06-30"
+    }
+  ],
+  "request_url_template": "https://firms.modaps.eosdis.nasa.gov/api/data_availability/csv/[REDACTED]/{source}",
+  "credential_redacted": true
+}

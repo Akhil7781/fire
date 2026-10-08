@@ -1,0 +1,41 @@
+{
+  "chip_id": "PILOT_20_WEST",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "NO_VISIBLE_TARGET",
+  "human_verified": true,
+  "annotation_start_timestamp": "2026-09-30T16:18:27.011Z",
+  "annotation_completion_timestamp": "2026-09-30T16:18:38.588Z",
+  "interaction_audit": {
+    "interface_version": "v1.0_manual",
+    "bbox_creation_actions": 0,
+    "bbox_edit_actions": 0,
+    "class_selection_actions": 0,
+    "save_events": 2
+  },
+  "annotations": [],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "273e2946a8b121e5c887f1724891e7ffd662d25483b78aaa6ebbf576f47fba34",
+    "firms_latitude": 21.39935,
+    "firms_longitude": 73.64595,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 5.7,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2A_MSIL2A_20250314T054241_N0511_R005_T43QCD_20250314T103620.SAFE",
+    "tile_id": "T43QCD",
+    "cloud_cover_pct": 0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "task_status": "COMPLETED_HUMAN_ANNOTATION"
+}

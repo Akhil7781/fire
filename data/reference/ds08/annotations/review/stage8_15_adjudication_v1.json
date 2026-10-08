@@ -1,0 +1,10 @@
+{
+  "stage": "STAGE_8.15",
+  "title": "Stage 8.15 Final Human Adjudication Audit",
+  "audit_version": "v1.0",
+  "audit_timestamp_utc": "2026-09-30T16:58:30.000000+00:00",
+  "overall_status": "FAIL",
+  "completion_audit_file": "data/reference/ds08/annotations/review/stage8_15_adjudication_completion_v1.json",
+  "completion_markdown_file": "data/reference/ds08/annotations/review/stage8_15_adjudication_completion_v1.md",
+  "failure_summary": "All 6 adjudication files failed the mandatory Human Rationale Quality Check (Section 3). Each file contains prohibited generic rationales ('I saw the fire on the image' / 'i saw the fire in the image') without chip-specific observable visual basis. Furthermore, all 6 files contain unaligned dummy/placeholder bounding box coordinates [200, 200, 300, 300] repeated multiple times."
+}

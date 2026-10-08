@@ -1,0 +1,154 @@
+{
+  "status": "VALIDATED_SINGLE_CHIP_EXTRACTION",
+  "metadata_version": "1.0",
+  "firms_detection": {
+    "detection_id": "b18ce007dc003134da73556195ff1c84b9cecc89cf80a03cc3421eae8ce91624",
+    "latitude": 21.63424,
+    "longitude": 76.66431,
+    "acquisition_datetime_utc": "2025-03-11T08:10:00Z",
+    "frp": 20.85,
+    "partition": "train"
+  },
+  "sentinel2_scene": {
+    "product_id": "S2B_MSIL2A_20250311T051649_N0511_R062_T43QFD_20250311T075623.SAFE",
+    "platform": "sentinel-2b",
+    "acquisition_datetime_utc": "2025-03-11T05:33:09.634Z",
+    "temporal_gap_hours": 2.613991,
+    "cloud_cover_pct": 0.0,
+    "collection": "sentinel-2-l2a",
+    "tile_id": "T43QFD"
+  },
+  "extraction": {
+    "processing_api_endpoint": "https://sh.dataspace.copernicus.eu/process/v1",
+    "aoi": {
+      "center_wgs84": {
+        "latitude": 21.63424,
+        "longitude": 76.66431
+      },
+      "center_utm": {
+        "x": 672246.28,
+        "y": 2393265.85
+      },
+      "chip_span_meters": 5120.0,
+      "utm_epsg": 32643,
+      "utm_crs_uri": "http://www.opengis.net/def/crs/EPSG/0/32643",
+      "utm_bbox": [
+        669686.28,
+        2390705.85,
+        674806.28,
+        2395825.85
+      ],
+      "wgs84_bbox": [
+        76.639321,
+        21.611366,
+        76.689307,
+        21.65711
+      ],
+      "utm_geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              674806.28,
+              2390705.85
+            ],
+            [
+              674806.28,
+              2395825.85
+            ],
+            [
+              669686.28,
+              2395825.85
+            ],
+            [
+              669686.28,
+              2390705.85
+            ],
+            [
+              674806.28,
+              2390705.85
+            ]
+          ]
+        ]
+      }
+    },
+    "crs": "EPSG:32643",
+    "output_width_pixels": 512,
+    "output_height_pixels": 512,
+    "output_resolution_meters": 10.0,
+    "band_order": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "input_units": "REFLECTANCE",
+    "resampling_method": "BILINEAR (native 20m B11/B12 resampled to 10m common grid)",
+    "output_data_type": "FLOAT32",
+    "extraction_timestamp_utc": "2026-09-29T13:31:37.977779+00:00",
+    "file_size_bytes": 3022470,
+    "sha256_checksum": "d80889ffbf629fc48025a8b717f49967af1eaba706a48196e871c1eec6cc869c",
+    "previews": {
+      "rgb_preview": "D:\\DATA PREPROCESSING\\data\\reference\\ds08\\preview\\b18ce007dc003134da73556195ff1c84b9cecc89cf80a03cc3421eae8ce91624_sentinel2b_20250311_chip_rgb_preview.png",
+      "swir_preview": "D:\\DATA PREPROCESSING\\data\\reference\\ds08\\preview\\b18ce007dc003134da73556195ff1c84b9cecc89cf80a03cc3421eae8ce91624_sentinel2b_20250311_chip_swir_preview.png"
+    },
+    "band_statistics": {
+      "B02": {
+        "band_index": 1,
+        "band_name": "B02",
+        "min": 0.0218,
+        "max": 0.171,
+        "mean": 0.060295,
+        "std": 0.011509,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B03": {
+        "band_index": 2,
+        "band_name": "B03",
+        "min": 0.0347,
+        "max": 0.2284,
+        "mean": 0.080912,
+        "std": 0.015018,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B04": {
+        "band_index": 3,
+        "band_name": "B04",
+        "min": 0.0335,
+        "max": 0.3247,
+        "mean": 0.120973,
+        "std": 0.023539,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B11": {
+        "band_index": 4,
+        "band_name": "B11",
+        "min": 0.0484,
+        "max": 0.7162,
+        "mean": 0.333089,
+        "std": 0.057383,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B12": {
+        "band_index": 5,
+        "band_name": "B12",
+        "min": 0.0441,
+        "max": 1.5316,
+        "mean": 0.258547,
+        "std": 0.038658,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      }
+    }
+  }
+}

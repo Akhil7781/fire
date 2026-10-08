@@ -1,0 +1,14 @@
+I have completed the comprehensive research into independent reference datasets and sources for ground-truth forest fire evidence in India for the year 2025. 
+
+The full, structured report has been transmitted to you via `send_message`. Below is a brief summary of the key findings:
+
+1. **Forest Survey of India (FSI FAST 3.0 / Van Agni Geo-Portal):** Fully accessible pan-India near-real-time point alerts (MODIS/VIIRS) and Large Forest Fire (LFF) cluster-tracking records ($\ge 40$ ha) via `fsiforestfire.gov.in`.
+2. **MODIS Burned Area (MCD64A1 v6.1):** 500 m gridded monthly product providing Day-of-Year burn dates for all 2025 across India via NASA LP DAAC and Google Earth Engine.
+3. **Copernicus EMS (CEMS) Activations:** **Zero activations** exist for forest fires/wildfires in India (activations have been exclusively for floods, cyclones, and landslides). CEMS On-Demand Mapping is therefore theoretical/inaccessible for Indian fire perimeters.
+4. **GWIS / EFFIS (GlobFire):** Fully accessible via JRC; provides country profiles, tabular monthly statistics, and GlobFire ESRI vector perimeters derived from MCD64A1.
+5. **NDMA Fire Reports / SACHET:** Accessible early warning platform (CAP-compliant alerts and PDF bulletins), but does not publish an independent spatial fire incident or burned area database.
+6. **State Forest Department Fire Reports:** Several states host ground-verified reporting engines, notably **Himachal Pradesh's FIRE portal** (`forestfire.hp.gov.in`) with beat/compartment damage and burnt area records, and **Uttarakhand's FFRMS** with seasonal fire bulletins.
+7. **Sentinel-2 Burned Area Products:** Copernicus operates a 300 m Sentinel-3 product (CLMS v4.0); there is no operational wall-to-wall 20 m Sentinel-2 burned area product for India, so true 10–20 m fire perimeters must be generated via custom dNBR / BAIS2 workflows using Sentinel-2 Level-2A imagery in GEE/CDSE.
+8. **LANDFIRE Equivalents:** FSI Forest Fire Risk Zonation (5 km grid), FSI Forest Fire Danger Rating System (FWI), and ISFR canopy/fuel classifications act as static baseline hazard layers rather than dynamic 2025 event records.
+9. **Global Fire Emissions Database (GFED5):** GFED5.1NRT is accessible via SFTP/web at 0.25° resolution (~25 km) for macro-level daily/monthly emissions and area burned, but does not provide event perimeters.
+10. **India-Specific Perimeter Datasets:** The **Global Fire Atlas (GFA v20250411)** on Zenodo (DOI: 10.5281/zenodo.14065246) provides individual fire perimeters and ignition dynamics, while ISRO/NRSC's INFFRAS on Bhuvan provides active fire monitoring and post-disaster assessments.

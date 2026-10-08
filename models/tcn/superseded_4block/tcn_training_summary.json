@@ -1,0 +1,29 @@
+{
+  "model_architecture": "1D Dilated Causal TCN",
+  "in_channels": 8,
+  "hidden_channels": 64,
+  "dilations": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "latent_dim": 64,
+  "total_parameters": 97666,
+  "best_epoch": 4,
+  "total_epochs_trained": 16,
+  "best_val_loss": 0.2526,
+  "final_train_loss": 0.1633,
+  "val_frp_mae_mw": 8.63,
+  "val_frp_rmse_mw": 11.044,
+  "val_dt_mae_k": 2.246,
+  "val_dt_rmse_k": 2.757,
+  "training_runtime_seconds": 8.35,
+  "hardware": "CPU (PyTorch 2.14.0+cpu)",
+  "embeddings": {
+    "train": 339,
+    "val": 71,
+    "test": 71
+  },
+  "data_isolation_guarantee": "Train partition alone was used for optimizer gradient updates and scaler fitting. Validation was used exclusively for checkpoint selection and early stopping. Test partition was strictly untouched until post-training embedding inference."
+}

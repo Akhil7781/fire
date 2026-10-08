@@ -1,0 +1,23 @@
+{
+  "train": {
+    "num_scenes": 16,
+    "num_images": 80,
+    "num_boxes": 388,
+    "num_storage_tanks": 289,
+    "num_chimneys": 99
+  },
+  "val": {
+    "num_scenes": 4,
+    "num_images": 20,
+    "num_boxes": 112,
+    "num_storage_tanks": 89,
+    "num_chimneys": 23
+  },
+  "test": {
+    "num_scenes": 4,
+    "num_images": 20,
+    "num_boxes": 80,
+    "num_storage_tanks": 52,
+    "num_chimneys": 28
+  }
+}

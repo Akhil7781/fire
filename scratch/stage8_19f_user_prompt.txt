@@ -1,0 +1,857 @@
+<USER_REQUEST>
+# Stage 8.19F — Independent Evidence Reproduction, Acquisition-Script Audit, and Final Readiness Verification
+
+## ROLE
+
+Act as a senior remote-sensing researcher, geospatial validation engineer, reproducibility auditor, and software safety reviewer.
+
+You are continuing from Stage 8.19E.
+
+Stage 8.19E claims that the two Stage 8.19D blockers were resolved:
+
+1. The cross-fold native-footprint separation violation was repaired.
+2. Five missing Sentinel-2 pilot products were reconciled against the live CDSE catalog.
+
+Stage 8.19E currently reports:
+
+READY_FOR_STAGE_8_20_REVIEW
+
+Your task in Stage 8.19F is NOT to assume those claims are correct.
+
+Your task is to independently REPRODUCE and VERIFY them from the actual repository state and available live metadata.
+
+The final result must distinguish:
+
+- PROVEN
+- PARTIALLY_PROVEN
+- NOT_REPRODUCED
+- BLOCKED
+
+Do not downgrade or relax any scientific constraint merely to obtain a PASS.
+
+---
+
+# 1. PRIMARY OBJECTIVE
+
+Perform an independent final audit of Stage 8.19E.
+
+You must reproduce four areas:
+
+A. Full spatial-separation verification
+B. Full CDSE product reconciliation verification
+C. Exact pytest/test-count verification
+D. Stage 8.20 acquisition-script safety audit
+
+Only after all four are independently reproduced may you determine whether:
+
+READY_FOR_STAGE_8_20_REVIEW
+
+is justified.
+
+---
+
+# 2. ABSOLUTE SAFETY RULES
+
+This stage is READ-ONLY verification except for creation of new Stage 8.19F audit artifacts.
+
+## NEVER:
+
+- download Sentinel-2 imagery,
+- download SAFE archives,
+- download JP2 files,
+- download quicklooks,
+- generate annotations,
+- generate labels,
+- run training,
+- run model inference,
+- evaluate models,
+- modify the frozen v3 manifest,
+- overwrite historical manifests,
+- overwrite Stage 8.19E reports,
+- execute Stage 8.20 with acquisition enabled,
+- pass `--confirm-acquisition`,
+- expose credentials,
+- print secrets,
+- write access tokens or signed URLs,
+- fabricate missing CDSE metadata.
+
+## ALLOWED:
+
+- read repository files,
+- inspect source code,
+- inspect manifests,
+- inspect Stage 8.19E artifacts,
+- recompute geometry,
+- perform READ-ONLY CDSE metadata queries,
+- inspect product metadata,
+- run pytest,
+- execute acquisition script ONLY in dry-run/no-confirmation mode,
+- create Stage 8.19F audit artifacts.
+
+---
+
+# 3. ESTABLISH BASELINE BEFORE DOING ANYTHING
+
+Before executing verification:
+
+1. Record repository status.
+2. Record SHA-256 of:
+
+   data/reference/ds08/manifests/stage8_19b/ds08_expansion_candidates_v3.json
+
+3. Verify expected v3 hash:
+
+   dbba88fd8992db863ec374fea7c266a11e4173e50f257cc0fc9f84368b57b848
+
+4. Record current SHA-256 of:
+
+   data/reference/ds08/manifests/stage8_19e/ds08_expansion_candidates_v4.json
+
+5. Record current SHA-256 of:
+
+   docs/stage8_19e/STAGE8_19E_RECONCILED_MANIFEST_V4.json
+
+6. Record SHA-256 of:
+
+   scripts/stage8_20_pilot_acquisition.py
+
+7. Record all Stage 8.19E report hashes.
+
+Do not modify any existing artifact during this baseline step.
+
+---
+
+# 4. REPRODUCE THE FULL SPATIAL AUDIT
+
+## 4.1 Use the actual V4 manifest
+
+Do NOT recreate the spatial audit by manually typing candidate coordinates from the report.
+
+Load:
+
+data/reference/ds08/manifests/stage8_19e/ds08_expansion_candidates_v4.json
+
+Use the actual:
+
+- latitude
+- longitude
+- MGRS tile
+- assigned_fold
+- chip_id
+- incident_id
+- candidate_stratum_id
+
+from V4.
+
+## 4.2 Reproduce the exact geometry methodology
+
+Identify the geometry method used by Stage 8.19D/E.
+
+Document:
+
+- CRS
+- UTM-zone logic
+- chip dimensions
+- half-width/half-height
+- footprint construction
+- WGS84 transformation
+- geodesic distance calculation
+- whether the metric is corner-to-corner, edge-to-edge, centroid-to-centroid, etc.
+
+Do not silently substitute a different distance metric.
+
+## 4.3 Recompute EVERY cross-fold pair
+
+Evaluate every cross-fold pair.
+
+Do not inspect only the previously problematic pair.
+
+Calculate:
+
+- total cross-fold pairs,
+- number of pairs <= 50.000000 km,
+- minimum cross-fold separation,
+- globally closest pair,
+- exact distance of globally closest pair,
+- margin above 50 km,
+- number of pairs below 55 km.
+
+Required hard condition:
+
+distance > 50.000000 km
+
+NOT:
+
+distance >= 50.000000 km
+
+NOT:
+
+distance approximately 50 km
+
+NOT:
+
+50 km ± tolerance.
+
+## 4.4 Verify the original repaired pair
+
+Explicitly reproduce:
+
+DS08_EXP_S4_018
+DS08_EXP_S5_016
+
+Verify that the two records are no longer a cross-fold violating pair.
+
+Also verify the reassignment:
+
+DS08_EXP_S4_018 -> Fold 3
+DS08_EXP_S4_043 -> Fold 4
+
+Do not merely trust the report.
+
+## 4.5 Verify structural isolation
+
+Recompute:
+
+- MGRS tile split violations,
+- incident split violations,
+- fold counts,
+- benchmark isolation.
+
+Expected structure from Stage 8.19E:
+
+- 47 active expansion chips in each Fold 1–5
+- 15 benchmark chips
+- 0 tile splits
+- 0 incident splits
+
+If the actual repository differs, report the actual value.
+
+Do NOT alter the data to obtain the expected result.
+
+---
+
+# 5. FULL CDSE REPRODUCTION FOR THE FIVE RECONCILED PRODUCTS
+
+The following five records were previously unresolved:
+
+- DS08_EXP_S2_001
+- DS08_EXP_S3_001
+- DS08_EXP_S4_001
+- DS08_EXP_S5_001
+- DS08_EXP_S6_001
+
+The Stage 8.19E report claims that they were reconciled to real CDSE products.
+
+You must independently verify every one.
+
+---
+
+# 6. FOR EACH OF THE FIVE PRODUCTS
+
+For each candidate:
+
+## 6.1 Load source evidence from V3 and V4
+
+Extract:
+
+- chip_id
+- candidate_stratum_id
+- expected_target_class
+- latitude
+- longitude
+- original date/time
+- event/source date if present
+- original MGRS tile
+- V4 MGRS tile
+- V4 product name
+- V4 product UUID
+- assigned fold
+- annotation status
+
+Preserve the original evidence.
+
+## 6.2 Verify product existence against LIVE CDSE
+
+Use READ-ONLY OData/STAC queries.
+
+For every selected product verify:
+
+- product exists,
+- product UUID corresponds to product,
+- product name corresponds to UUID,
+- product is Sentinel-2,
+- product is Level-2A,
+- acquisition time,
+- MGRS tile,
+- platform,
+- cloud metadata where available,
+- online status where available.
+
+Do NOT download the raster.
+
+## 6.3 Verify the UUID/name relationship
+
+This is critical.
+
+For every replacement verify:
+
+V4 UUID
+        ↓
+LIVE CDSE PRODUCT
+        ↓
+EXACT PRODUCT NAME
+        ↓
+EXPECTED TILE
+        ↓
+EXPECTED ACQUISITION
+
+Do not merely query the UUID and assume the resulting product belongs to the desired candidate.
+
+## 6.4 Verify spatial coverage
+
+Confirm that the selected product footprint covers the candidate point.
+
+Use actual catalog geometry when available.
+
+Do not infer coverage solely from the tile string.
+
+Report:
+
+- point coordinates,
+- product footprint availability,
+- point-in-footprint result.
+
+If footprint geometry cannot be verified through metadata, explicitly mark it:
+
+FOOTPRINT_COVERAGE_NOT_REPRODUCED
+
+Do not convert that into PASS.
+
+---
+
+# 7. VERIFY TEMPORAL CONSISTENCY
+
+The replacement product date must be compared with the original source evidence.
+
+For each candidate report:
+
+- original event/source date,
+- selected Sentinel-2 date,
+- time difference,
+- temporal tier/relationship,
+- rationale for accepting the temporal difference.
+
+Particularly inspect:
+
+DS08_EXP_S5_001
+
+The Stage 8.19E log contains an earlier exploratory query around:
+
+2025-01-15
+
+while the selected product is reported as:
+
+2025-01-28
+
+Do NOT automatically reject January 28.
+
+Instead, prove why January 28 satisfies the documented temporal rule.
+
+If the source rules permit it, show the exact rule.
+
+If the log does not contain enough evidence, report:
+
+TEMPORAL_JUSTIFICATION_INCOMPLETE
+
+Do not invent a rationale.
+
+---
+
+# 8. VERIFY THE FIVE SPECIFIC REPLACEMENTS
+
+Reproduce and independently verify:
+
+DS08_EXP_S2_001
+Expected V4 product:
+
+S2B_MSIL2A_20250608T054639_N0511_R048_T43SBS_20250608T074909.SAFE
+
+DS08_EXP_S3_001
+Expected V4 product:
+
+S2B_MSIL2A_20250516T053639_N0511_R005_T43RDP_20250516T074822.SAFE
+
+DS08_EXP_S4_001
+Expected V4 product:
+
+S2A_MSIL2A_20241023T053901_N0511_R005_T43RFP_20241023T090052.SAFE
+
+DS08_EXP_S5_001
+Expected V4 product:
+
+S2C_MSIL2A_20250128T053131_N0511_R105_T43RGM_20250128T084454.SAFE
+
+DS08_EXP_S6_001
+Expected V4 product:
+
+S2B_MSIL2A_20250212T052839_N0511_R105_T44RKS_20250212T073606.SAFE
+
+Use the actual V4 manifest rather than assuming these strings are correct.
+
+For every product record:
+
+- actual CDSE product ID
+- actual CDSE product name
+- actual acquisition timestamp
+- actual tile
+- actual platform
+- actual cloud metadata
+- actual online/offline metadata
+- point coverage result
+- result status
+
+---
+
+# 9. DO NOT TRUST CLOUD VALUES BLINDLY
+
+Cloud percentage is metadata-level screening only.
+
+Do NOT claim:
+
+"scene is clear"
+
+or:
+
+"AOI is clear"
+
+from catalog cloud percentage alone.
+
+Do NOT claim SCL validation was completed.
+
+The following remain POST-ACQUISITION:
+
+- AOI cloud <= 5%
+- central 1 km clear
+- SCL cloud/shadow screening
+- pixel-level contamination checks
+
+Explicitly preserve this distinction.
+
+---
+
+# 10. AUDIT THE THREE STRATUM-1 PILOT PRODUCTS
+
+Stage 8.19E claims:
+
+"8 of 8 pilot cohort candidates verified"
+
+But only five products were newly reconciled in Stage 8.19E.
+
+Therefore separately audit the three STR-1 pilot products:
+
+- DS08_EXP_S1_003
+- DS08_EXP_S1_002
+- DS08_EXP_S1_004
+
+Determine whether their verification evidence comes from:
+
+A. Stage 8.19E live verification
+or
+B. carried-forward verification from an earlier stage.
+
+Report the provenance explicitly.
+
+Do not merge inherited evidence and new evidence into one undifferentiated claim.
+
+---
+
+# 11. AUDIT THE STAGE 8.20 ACQUISITION SCRIPT
+
+Inspect:
+
+scripts/stage8_20_pilot_acquisition.py
+
+This is a critical safety audit.
+
+## 11.1 Verify pilot restriction
+
+Confirm exactly which chip IDs can be acquired.
+
+Expected:
+
+8 pilot chip IDs only.
+
+Verify there is NO path that accidentally iterates over:
+
+- all 235 candidates,
+- all folds,
+- all manifest records,
+- all V4 records.
+
+## 11.2 Verify explicit confirmation gate
+
+The script MUST satisfy:
+
+Without:
+
+--confirm-acquisition
+
+there must be:
+
+- no raster download,
+- no SAFE download,
+- no JP2 download,
+- no write to the acquisition output directory,
+- no network acquisition request.
+
+With:
+
+--confirm-acquisition
+
+the script may proceed, but DO NOT execute it with the flag in this stage.
+
+## 11.3 Perform dry run only
+
+Run:
+
+python scripts/stage8_20_pilot_acquisition.py
+
+or the documented equivalent that does NOT include the confirmation flag.
+
+Capture the exact output.
+
+Verify:
+
+- mode,
+- status,
+- files written,
+- bytes downloaded,
+- HTTP request behavior if observable.
+
+## 11.4 Inspect all recent edits
+
+Stage 8.19E explicitly edited the acquisition script.
+
+Inspect the diff between:
+
+Stage 8.19E initial state
+and
+current repository state
+
+using git history when available.
+
+Determine:
+
+- what changed,
+- why it changed,
+- whether any safeguard weakened,
+- whether the eligible pilot set changed,
+- whether the input manifest changed,
+- whether the output path changed,
+- whether confirmation logic changed.
+
+Do NOT modify the script.
+
+---
+
+# 12. EXACT TEST-COUNT REPRODUCTION
+
+The Stage 8.19E report claims:
+
+- 12/12 Stage 8.19E tests
+- 53 Stage 8.19 tests
+- 87 total
+
+These numbers MUST be reproduced.
+
+Do not accept them merely because the report says so.
+
+## Execute:
+
+pytest -q tests/test_ds08_stage8_19e_audit.py
+
+Then execute the complete Stage 8.19 regression suite.
+
+Identify the exact intended test files using the repository rather than assuming filenames.
+
+Then execute all relevant historical DS08 test suites.
+
+Report:
+
+- collected count,
+- passed,
+- failed,
+- skipped,
+- xfailed,
+- warnings,
+- runtime.
+
+Explicitly calculate whether the claimed totals:
+
+53 Stage 8.19
+87 total
+
+are numerically correct.
+
+If they are not, explain the discrepancy.
+
+Do not modify tests just to make counts match the report.
+
+---
+
+# 13. TEST QUALITY AUDIT
+
+Passing tests are not sufficient.
+
+Inspect:
+
+tests/test_ds08_stage8_19e_audit.py
+
+Determine whether the tests actually verify:
+
+- live CDSE product identity,
+- exact UUID/name relationship,
+- spatial separation,
+- fold isolation,
+- tile isolation,
+- incident isolation,
+- V3 immutability,
+- V4 provenance,
+- no label generation,
+- dry-run behavior.
+
+Identify any tests that only inspect hardcoded expected values rather than independently calculating them.
+
+Mark such tests as:
+
+HARD_CODED_ASSERTION_RISK
+
+where appropriate.
+
+Do NOT change the tests during this stage unless absolutely required to make the audit itself executable.
+
+---
+
+# 14. ARTIFACT INTEGRITY
+
+After all verification:
+
+Recompute SHA-256 for:
+
+- V3 manifest
+- V4 manifest
+- Stage 8.19E reconciliation report
+- Stage 8.19E spatial report
+- Stage 8.19E decision log
+- Stage 8.19E catalog results
+- acquisition script
+- Stage 8.19F artifacts
+
+The V3 hash MUST remain:
+
+dbba88fd8992db863ec374fea7c266a11e4173e50f257cc0fc9f84368b57b848
+
+If V3 changed:
+
+STOP AND REPORT FAILURE.
+
+Never repair V3 during this stage.
+
+---
+
+# 15. CREATE STAGE 8.19F ARTIFACTS
+
+Create a new directory:
+
+docs/stage8_19f/
+
+Create:
+
+1. STAGE8_19F_FINAL_EVIDENCE_AUDIT.md
+
+2. STAGE8_19F_CDSE_REPRODUCTION.json
+
+3. STAGE8_19F_SPATIAL_REPRODUCTION.json
+
+4. STAGE8_19F_ACQUISITION_SCRIPT_AUDIT.md
+
+5. STAGE8_19F_TEST_REPRODUCTION.md
+
+6. STAGE8_19F_DECISION_LOG.md
+
+7. tests/test_ds08_stage8_19f_audit.py
+
+Do not overwrite Stage 8.19E artifacts.
+
+---
+
+# 16. REQUIRED MACHINE-READABLE CDSE RESULT FORMAT
+
+For each product include:
+
+{
+  "chip_id": "...",
+  "v3_product": "...",
+  "v4_product": "...",
+  "v4_uuid": "...",
+  "live_catalog_found": true,
+  "live_catalog_name": "...",
+  "uuid_name_match": true,
+  "product_level_valid": true,
+  "platform": "...",
+  "acquisition_datetime": "...",
+  "mgrs_tile": "...",
+  "point_covered_by_footprint": true,
+  "cloud_metadata": ...,
+  "online": ...,
+  "temporal_consistency": "...",
+  "status": "PROVEN|PARTIALLY_PROVEN|NOT_REPRODUCED|BLOCKED"
+}
+
+Do not omit failed or uncertain checks.
+
+---
+
+# 17. REQUIRED SPATIAL RESULT FORMAT
+
+Include:
+
+{
+  "manifest_version": "v4",
+  "geometry_method": "...",
+  "chip_size_m": 5120,
+  "cross_fold_pairs": 22090,
+  "violations_le_50km": ...,
+  "minimum_separation_km": ...,
+  "minimum_margin_m": ...,
+  "closest_pair": ["...", "..."],
+  "mgrs_tile_splits": ...,
+  "incident_splits": ...,
+  "fold_counts": {...},
+  "status": "PROVEN|PARTIALLY_PROVEN|NOT_REPRODUCED|BLOCKED"
+}
+
+---
+
+# 18. FINAL REPORT FORMAT
+
+Write:
+
+# Stage 8.19F — Final Evidence Reproduction Audit
+
+## 1. Executive Summary
+
+## 2. Baseline Integrity
+
+## 3. Spatial Reproduction
+
+Include full numerical results.
+
+## 4. Five CDSE Reconciliations
+
+One row per product.
+
+## 5. STR-1 Carried-Forward Verification
+
+Clearly distinguish inherited evidence from Stage 8.19E evidence.
+
+## 6. Temporal Consistency Audit
+
+## 7. Cloud Metadata vs SCL Validation
+
+## 8. Acquisition Script Safety Audit
+
+## 9. Test Reproduction
+
+Include exact commands and exact pytest output.
+
+## 10. Test Quality Findings
+
+## 11. Artifact Hash Verification
+
+## 12. Unresolved Issues
+
+Do not hide uncertainty.
+
+## 13. Final Determination
+
+Use EXACTLY ONE:
+
+PROVEN_READY_FOR_STAGE_8_20_REVIEW
+
+PARTIALLY_PROVEN_REQUIRES_REVIEW
+
+NOT_PROVEN
+
+BLOCKED
+
+---
+
+# 19. FINAL DETERMINATION RULE
+
+Use:
+
+PROVEN_READY_FOR_STAGE_8_20_REVIEW
+
+ONLY if ALL of these are independently reproduced:
+
+1. V3 is unchanged.
+2. V4 is internally valid.
+3. Every cross-fold pair is strictly >50.000000 km.
+4. Zero spatial violations exist.
+5. Tile isolation is valid.
+6. Incident isolation is valid.
+7. Fold structure is valid.
+8. All five previously missing products are independently verified against live CDSE metadata.
+9. UUID ↔ product-name identity is verified.
+10. Spatial coverage is verified or explicitly established from catalog geometry.
+11. Temporal consistency is supported by documented rules.
+12. The three STR-1 carried-forward records have traceable prior verification.
+13. Acquisition script is safely limited to the pilot.
+14. Explicit confirmation remains mandatory.
+15. Dry run downloads zero bytes.
+16. Actual pytest totals are reproduced.
+17. Stage 8.19F tests pass.
+18. No hidden hardcoded shortcuts are being used to manufacture a PASS.
+
+Otherwise do NOT use PROVEN_READY_FOR_STAGE_8_20_REVIEW.
+
+---
+
+# 20. VERY IMPORTANT
+
+Do not "fix" a verification failure during the audit unless the fix is purely documentation-level and does not alter the underlying dataset.
+
+This stage is an AUDIT, not another optimization round.
+
+The purpose is to answer:
+
+"Can an independent reviewer reproduce the Stage 8.19E claims from the repository and live catalog?"
+
+not:
+
+"Can we make the claims pass?"
+
+At the very end give a compact verification table:
+
+| Area | Claimed | Reproduced | Status |
+|---|---|---|---|
+| V3 integrity | unchanged | ... | ... |
+| Spatial 50 km rule | 0 violations | ... | ... |
+| Five CDSE products | 5/5 verified | ... | ... |
+| STR-1 products | 3/3 inherited/verified | ... | ... |
+| Acquisition safety | protected | ... | ... |
+| Dry run | 0 bytes | ... | ... |
+| Stage 8.19E tests | 12/12 | ... | ... |
+| Stage 8.19 total | 53 | ... | ... |
+| Overall total | 87 | ... | ... |
+
+Then provide:
+
+FINAL STATUS: <one exact status>
+
+Do not claim "verified" merely because a script ran successfully.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-03T11:34:10+05:30.
+</ADDITIONAL_METADATA>

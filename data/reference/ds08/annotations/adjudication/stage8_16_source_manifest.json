@@ -1,0 +1,69 @@
+{
+  "stage": "STAGE_8_16",
+  "manifest_name": "DS08_STAGE8_16_SOURCE_MANIFEST",
+  "created_timestamp_utc": "2026-10-02T06:01:21.909006+00:00",
+  "source_directory": "data/reference/ds08/annotations/adjudication/review",
+  "immutability_guarantee": "These source files are permanent Stage 8.15 adjudication outputs and must never be modified or overwritten.",
+  "files": {
+    "PILOT_03_NORTH": {
+      "filename": "PILOT_03_NORTH_adjudicated_v1.json",
+      "relative_path": "data/reference/ds08/annotations/adjudication/review\\PILOT_03_NORTH_adjudicated_v1.json",
+      "size_bytes": 9226,
+      "sha256": "dd1d1b427796a1bda6903d71a2d17841c215d2b6978463fb0560900b049aafaa",
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "box_count": 1,
+      "audit_flags": "CONTRADICTORY_EVIDENCE"
+    },
+    "PILOT_06_CENTRAL": {
+      "filename": "PILOT_06_CENTRAL_adjudicated_v1.json",
+      "relative_path": "data/reference/ds08/annotations/adjudication/review\\PILOT_06_CENTRAL_adjudicated_v1.json",
+      "size_bytes": 11367,
+      "sha256": "7b0cbb8eac28d2387c6f197e175f39f4653148d0e41006637864280138a949c9",
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "box_count": 2,
+      "audit_flags": "CONTRADICTORY_EVIDENCE"
+    },
+    "PILOT_08_CENTRAL": {
+      "filename": "PILOT_08_CENTRAL_adjudicated_v1.json",
+      "relative_path": "data/reference/ds08/annotations/adjudication/review\\PILOT_08_CENTRAL_adjudicated_v1.json",
+      "size_bytes": 4537,
+      "sha256": "3ad0384f37a4121950f1523ca711ca030f2028c20091934e7495d99b97a214d7",
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "chip_annotation_status": "UNRESOLVED",
+      "box_count": 0,
+      "audit_flags": "UNRESOLVED_OBSERVATION_STATUS"
+    },
+    "PILOT_15_EAST": {
+      "filename": "PILOT_15_EAST_adjudicated_v1.json",
+      "relative_path": "data/reference/ds08/annotations/adjudication/review\\PILOT_15_EAST_adjudicated_v1.json",
+      "size_bytes": 13014,
+      "sha256": "1d4ba7f5ee6e16402533a58d6910503af13abffeca51de83e44015cda60abe3c",
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "box_count": 2,
+      "audit_flags": "CONTRADICTORY_EVIDENCE"
+    },
+    "PILOT_16_EAST": {
+      "filename": "PILOT_16_EAST_adjudicated_v1.json",
+      "relative_path": "data/reference/ds08/annotations/adjudication/review\\PILOT_16_EAST_adjudicated_v1.json",
+      "size_bytes": 15805,
+      "sha256": "5986b43675904a91d53184e3b57b67d8e759e2d6f8b7be3af483b3400af02264",
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "box_count": 3,
+      "audit_flags": "CONTRADICTORY_EVIDENCE"
+    },
+    "PILOT_18_WEST": {
+      "filename": "PILOT_18_WEST_adjudicated_v1.json",
+      "relative_path": "data/reference/ds08/annotations/adjudication/review\\PILOT_18_WEST_adjudicated_v1.json",
+      "size_bytes": 7720,
+      "sha256": "a88d245b12e0e6eddc833926d4928927b8835ee3b25ccbbb963fc9e844f51674",
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "box_count": 1,
+      "audit_flags": "CONTRADICTORY_EVIDENCE"
+    }
+  }
+}

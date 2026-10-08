@@ -1,0 +1,53 @@
+{
+  "chip_id": "PILOT_09_SOUTH",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_09_SOUTH_ANN_01",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 210,
+        "y_min": 50,
+        "x_max": 290,
+        "y_max": 115
+      },
+      "geometry_confidence": "HIGH",
+      "source_class_confidence": "HIGH",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE",
+        "BURN_SCAR_VISIBLE"
+      ],
+      "firms_relationship": "NEAR_OBJECT",
+      "review_status": "PENDING",
+      "annotator_id": "HUMAN_ANNOTATOR_01",
+      "annotation_timestamp": "2026-09-29T15:37:28.613217+00:00",
+      "notes": "Intense active vegetation fire on forested ridge with distinct SWIR thermal emission and slope burn scar."
+    }
+  ],
+  "context_metadata": {
+    "firms_detection_id": "d79e3b817e19da9db73712dff8cf0ffdb5cea43d4f88975de934deee0d1e8296",
+    "firms_latitude": 14.74701,
+    "firms_longitude": 78.08982,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 10.65,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2B_MSIL2A_20250308T050659_N0511_R019_T43PHS_20250308T072151.SAFE",
+    "tile_id": "T43PHS",
+    "cloud_cover_pct": 0.0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "stage": "STAGE_8.12A",
+  "title": "DS08 Manual Annotation UI End-to-End Validation",
+  "status": "STAGE_8.12A_UI_VALIDATION_COMPLETE",
+  "timestamp_utc": "2026-09-29T22:49:00+00:00",
+  "validation_scope": "MANUAL_UI_END_TO_END_AND_PROVENANCE_INTEGRITY",
+  "ui_execution_verification": {
+    "server_launch_annotator_1": "PASSED (HTTP 200, HTML5 canvas app rendered)",
+    "server_launch_annotator_2": "PASSED (HTTP 200, HTML5 canvas app rendered)",
+    "rgb_preview_endpoint": "PASSED (HTTP 200, valid PNG streamed)",
+    "swir_preview_endpoint": "PASSED (HTTP 200, valid PNG streamed)",
+    "zoom_and_pan_controls": "PASSED (interactive scaling [0.5x - 5.0x] and pan translation)",
+    "manual_bbox_drawing": "PASSED (click-and-drag coordinate extraction within [0, 512])",
+    "manual_class_selection": "PASSED (Industrial Fire, Forest Fire, Agricultural Fire, Other Thermal Source, UNRESOLVED)",
+    "manual_evidence_selection": "PASSED (multi-select visual evidence vocabulary verified)",
+    "manual_visibility_selection": "PASSED (CLEAR, PARTIALLY_OBSCURED, HEAVILY_OBSCURED)",
+    "manual_confidence_selection": "PASSED (geometry confidence and source-class confidence HIGH/MEDIUM/LOW)",
+    "save_and_reload_roundtrip": "PASSED (data persisted to disk and verified bit-for-bit upon reload)",
+    "schema_validation": "PASSED (payload strictly validates against ds08_annotation_schema.json)"
+  },
+  "auto_labeling_absence_proof": {
+    "model_inference_called": false,
+    "vision_models_loaded": false,
+    "tcn_called": false,
+    "deep_sad_called": false,
+    "yolo_called": false,
+    "auto_bbox_generated": false,
+    "auto_class_assigned": false,
+    "auto_evidence_assigned": false,
+    "firms_driven_class_recommendation": false,
+    "firms_banner_status": "EXPLICIT_WARNING_BANNER_PRESENT ('FIRMS CONTEXT — NOT GROUND TRUTH')"
+  },
+  "blank_template_behavior": {
+    "initial_state": {
+      "annotations": [],
+      "human_verified": false,
+      "task_status": "PENDING_MANUAL_INPUT",
+      "chip_annotation_status": null
+    },
+    "state_after_opening_chip": {
+      "annotations": [],
+      "human_verified": false,
+      "task_status": "PENDING_MANUAL_INPUT",
+      "chip_annotation_status": null,
+      "substantively_blank": true
+    }
+  },
+  "completion_logic_enforcement": {
+    "empty_annotations_with_has_annotations_rejected": true,
+    "null_chip_status_rejected": true,
+    "no_visible_target_with_empty_annotations_accepted": true,
+    "completed_status_value": "COMPLETED_HUMAN_ANNOTATION"
+  },
+  "human_provenance_triggers": {
+    "human_verified_true_trigger": "ONLY upon valid manual submission via /api/save",
+    "trigger_by_chip_open": false,
+    "trigger_by_template_init": false,
+    "trigger_by_file_read": false,
+    "trigger_by_validation": false,
+    "trigger_by_pytest": false
+  },
+  "workspace_isolation": {
+    "annotator_1_workspace": "data/reference/ds08/annotations/manual/annotator_1/",
+    "annotator_2_workspace": "data/reference/ds08/annotations/manual/annotator_2/",
+    "cross_workspace_access_possible": false,
+    "cross_workspace_endpoints_exist": false
+  },
+  "quarantine_isolation": {
+    "quarantine_directory": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/",
+    "manual_ui_reads_quarantine": false,
+    "quarantine_files_used_as_ground_truth": false
+  },
+  "real_template_integrity": {
+    "total_real_templates_inspected": 30,
+    "annotator_1_real_templates": 15,
+    "annotator_2_real_templates": 15,
+    "all_templates_blank": true,
+    "all_templates_pending": true,
+    "all_human_verified_false": true
+  },
+  "frozen_predecessor_integrity": {
+    "models/tcn/best_tcn.pt": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+    "models/deep_sad/best_deep_sad.pt": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+    "models/yolo/infrastructure/best_infrastructure.pt": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+    "models/yolo/fire_smoke/best_fire_smoke.pt": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+    "data/embeddings/fusion/india_2025_tcn_sad_aligned.parquet": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+    "all_hashes_matched": true
+  },
+  "test_execution_summary": {
+    "stage8_12a_ui_validation_tests": "10 / 10 PASSED",
+    "ds08_test_suite_total": "67 / 67 PASSED"
+  }
+}

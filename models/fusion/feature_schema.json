@@ -1,0 +1,54 @@
+{
+  "modality_dimensions": {
+    "tcn": 64,
+    "sad": 32,
+    "yolo_infra": 128,
+    "yolo_fire": 128,
+    "s2": 128,
+    "geo": 27,
+    "mask": 6
+  },
+  "modality_names": [
+    "tcn",
+    "sad",
+    "yolo_infra",
+    "yolo_fire",
+    "s2",
+    "geo"
+  ],
+  "causal_geo_features": [
+    "bright_ti4",
+    "bright_ti5",
+    "frp",
+    "scan",
+    "track",
+    "delta_t",
+    "temp_ratio",
+    "pixel_area",
+    "frp_density",
+    "frp_log1p",
+    "sin_diurnal",
+    "cos_diurnal",
+    "sin_lst",
+    "cos_lst",
+    "sin_annual",
+    "cos_annual",
+    "hist_count_6h_2km",
+    "hist_count_24h_2km",
+    "time_since_last_det_2km",
+    "has_prior_24h_2km",
+    "mean_frp_6h_2km",
+    "max_frp_6h_2km",
+    "mean_frp_24h_2km",
+    "max_frp_24h_2km",
+    "day_ratio_24h_2km",
+    "spatial_dispersion_24h_2km",
+    "snapshot_co_detect_count_2km"
+  ],
+  "target_taxonomy": [
+    "Industrial Fire",
+    "Forest Fire",
+    "Agricultural Fire",
+    "Other Thermal Source/Persistent Non-Biomass Thermal Source"
+  ]
+}

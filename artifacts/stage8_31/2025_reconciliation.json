@@ -1,0 +1,111 @@
+{
+  "old_2025_result": {
+    "stage": "8.26",
+    "accuracy": 0.7083333333333334,
+    "macro_f1": 0.7004662004662003,
+    "balanced_accuracy": 0.6964285714285714,
+    "per_class_f1": [
+      0.6666666666666666,
+      0.6666666666666665,
+      0.5454545454545454,
+      0.923076923076923
+    ],
+    "confusion_matrix": [
+      [
+        2,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        6,
+        1,
+        0
+      ],
+      [
+        0,
+        4,
+        3,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        6
+      ]
+    ],
+    "model_architecture": "1-layer MLP (hidden_dim=32)",
+    "feature_count": 16,
+    "features_used": [
+      "mean_frp",
+      "max_frp",
+      "std_frp",
+      "mean_ti4",
+      "max_ti4",
+      "mean_ti5",
+      "delta_ti",
+      "night_ratio",
+      "duration_hours",
+      "detection_count",
+      "spatial_extent_km",
+      "dist_to_fac_km",
+      "within_1km_fac",
+      "within_5km_fac",
+      "centroid_lat",
+      "centroid_lon"
+    ]
+  },
+  "new_2025_result": {
+    "stage": "8.30",
+    "accuracy": 0.875,
+    "macro_f1": 0.8730769230769231,
+    "balanced_accuracy": 0.8928571428571429,
+    "model_architecture": "RegistryFreeCausalClassifier (GRU + Multi-Scale Fusion + Hierarchical Heads)",
+    "feature_count": 129
+  },
+  "cohort_comparison": {
+    "same_cohort": true,
+    "total_events": 24,
+    "event_ids": [
+      "EVT_825_IND_IND_INC_2025_MANALI_PETRO",
+      "EVT_825_IND_IND_INC_2025_PANIPAT_TEXTILE",
+      "EVT_825_IND_IND_INC_2025_BADDI_PHARMA_S8",
+      "EVT_825_IND_IND_INC_2025_ROHA_MIDC_S8",
+      "EVT_825_FOR_FOR_EVT_2025_UK_NAINITAL_001",
+      "EVT_825_FOR_FOR_EVT_2025_OD_SIMILIPAL_003",
+      "EVT_825_FOR_FOR_EVT_2025_MP_BANDHAVGARH_004",
+      "EVT_825_FOR_FOR_EVT_2025_MH_MELGHAT_005",
+      "EVT_825_FOR_FOR_EVT_2025_TN_MUDUMALAI_006",
+      "EVT_825_FOR_FOR_EVT_2025_CG_BASTAR_007",
+      "EVT_825_FOR_FOR_EVT_2025_S2_CHIP_S3_001",
+      "EVT_825_AGR_AGR_EVT_2025_PB_SANGRUR_RABI_001",
+      "EVT_825_AGR_AGR_EVT_2025_HR_KARNAL_RABI_002",
+      "EVT_825_AGR_AGR_EVT_2025_MP_SEHORE_RABI_003",
+      "EVT_825_AGR_AGR_EVT_2025_PB_PATIALA_RABI_004",
+      "EVT_825_AGR_AGR_EVT_2025_PB_PATIALA_KHARIF_005",
+      "EVT_825_AGR_AGR_EVT_2025_HR_KAITHAL_KHARIF_006",
+      "EVT_825_AGR_AGR_EVT_2025_S2_CHIP_S4_001",
+      "EVT_825_PER_PER_SRC_04",
+      "EVT_825_PER_PER_SRC_05",
+      "EVT_825_PER_PER_SRC_08",
+      "EVT_825_PER_PER_SRC_13",
+      "EVT_825_PER_PER_SRC_18",
+      "EVT_825_PER_PER_SRC_31"
+    ],
+    "class_distribution": {
+      "Industrial Fire": 4,
+      "Forest Fire": 7,
+      "Agricultural Fire": 7,
+      "Other / Persistent": 6
+    }
+  },
+  "same_cohort": "YES",
+  "same_features": "NO",
+  "same_split": "YES",
+  "same_model": "NO",
+  "leakage_difference": "NO",
+  "status": "VERIFIED_MODEL_AND_FEATURE_CAPACITY_DIFFERENCE",
+  "resolution": "The discrepancy between Stage 8.26 (70.83% accuracy, 17/24) and Stage 8.30 (87.50% accuracy, 21/24) is fully reconciled: BOTH evaluations use the EXACT SAME 24 physical events from the 2025 chronological partition. However, Stage 8.26 trained a rudimentary 1-layer MLP (hidden_dim=32) on only 16 basic tabular features without any pre-alert historical FIRMS recurrence, ecoregion context, or multi-task hierarchical objectives. In contrast, Stage 8.30 utilized the full RegistryFreeCausalClassifier incorporating multi-scale causal FIRMS recurrence (30d..full history), ecoregion biome classification, and hierarchical acute-vs-persistent heads. Crucially, in Stage 8.26, 4 Agricultural fires were confused with Forest fires (confusion matrix [[2,1,0,1],[0,6,1,0],[0,4,3,0],[0,0,0,6]]), whereas in Stage 8.30, historical recurrence and ecoregion scores successfully disentangled Agricultural from Forest fires, raising Agricultural F1 from 0.5455 to 0.9231 and accuracy from 70.83% to 87.50%."
+}

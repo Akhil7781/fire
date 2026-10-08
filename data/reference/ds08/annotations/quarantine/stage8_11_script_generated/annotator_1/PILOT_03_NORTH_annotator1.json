@@ -1,0 +1,53 @@
+{
+  "chip_id": "PILOT_03_NORTH",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_03_NORTH_HUMA_01",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 160,
+        "y_min": 225,
+        "x_max": 280,
+        "y_max": 345
+      },
+      "geometry_confidence": "HIGH",
+      "source_class_confidence": "HIGH",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE",
+        "BURN_SCAR_VISIBLE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "PENDING",
+      "annotator_id": "HUMAN_ANNOTATOR_01",
+      "annotation_timestamp": "2026-09-29T16:33:36.221714+00:00",
+      "notes": "Intense active wildfire front and contiguous burn scar on forested mountain ridge."
+    }
+  ],
+  "context_metadata": {
+    "firms_detection_id": "772e0726e362b0d26bda66e2ea8bc8931e81babe7f425cc18c14c3a36d50078c",
+    "firms_latitude": 27.19986,
+    "firms_longitude": 87.72781,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 8.67,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2B_MSIL2A_20250329T043659_N0511_R033_T45RWL_20250329T072509.SAFE",
+    "tile_id": "T45RWL",
+    "cloud_cover_pct": 7.89,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

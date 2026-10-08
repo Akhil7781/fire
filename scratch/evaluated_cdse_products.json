@@ -1,0 +1,444 @@
+{
+  "DS08_EXP_S2_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S2_001",
+      "lat": 32.76166,
+      "lon": 72.62834,
+      "target_date": "2025-06-11",
+      "date_start": "2025-05-25",
+      "date_end": "2025-06-25",
+      "stratum": "STR-2",
+      "class": "Other Thermal Source"
+    },
+    "products": [
+      {
+        "Name": "S2A_MSIL2A_20250526T055251_N0511_R048_T43SBS_20250526T084856.SAFE",
+        "Id": "bd753597-9970-4b63-af96-5a5562e05650",
+        "ContentLength": 1240965259,
+        "Online": true,
+        "Start": "2025-05-26T05:52:51.024000Z",
+        "cloud_cover_pct": 1.59,
+        "tileId": "43SBS",
+        "processingLevel": "S2MSI2A",
+        "platform": "A",
+        "relativeOrbit": 48
+      },
+      {
+        "Name": "S2B_MSIL2A_20250529T054639_N0511_R048_T43SBS_20250529T075106.SAFE",
+        "Id": "0869876d-aff5-4b18-9e59-19a633c404bd",
+        "ContentLength": 1193207619,
+        "Online": true,
+        "Start": "2025-05-29T05:46:39.024000Z",
+        "cloud_cover_pct": 0.85,
+        "tileId": "43SBS",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 48
+      },
+      {
+        "Name": "S2C_MSIL2A_20250603T054701_N0511_R048_T43SBS_20250603T090740.SAFE",
+        "Id": "61446bd8-a3d1-4144-a8d1-cffd274d5894",
+        "ContentLength": 1088249209,
+        "Online": true,
+        "Start": "2025-06-03T05:47:01.025000Z",
+        "cloud_cover_pct": 65.99,
+        "tileId": "43SBS",
+        "processingLevel": "S2MSI2A",
+        "platform": "C",
+        "relativeOrbit": 48
+      },
+      {
+        "Name": "S2B_MSIL2A_20250608T054639_N0511_R048_T43SBS_20250608T074909.SAFE",
+        "Id": "d217bf07-57cf-4984-bda8-9f0767f02b28",
+        "ContentLength": 1227378633,
+        "Online": true,
+        "Start": "2025-06-08T05:46:39.024000Z",
+        "cloud_cover_pct": 0.0,
+        "tileId": "43SBS",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 48
+      },
+      {
+        "Name": "S2C_MSIL2A_20250613T054701_N0511_R048_T43SBS_20250613T090143.SAFE",
+        "Id": "39c17452-aa61-4b33-889c-8dc5c4ba75e0",
+        "ContentLength": 1219507426,
+        "Online": true,
+        "Start": "2025-06-13T05:47:01.025000Z",
+        "cloud_cover_pct": 4.27,
+        "tileId": "43SBS",
+        "processingLevel": "S2MSI2A",
+        "platform": "C",
+        "relativeOrbit": 48
+      },
+      {
+        "Name": "S2A_MSIL2A_20250615T055251_N0511_R048_T43SBS_20250615T083724.SAFE",
+        "Id": "5ced870c-5dc4-4c6b-8d95-e44f40a7d43a",
+        "ContentLength": 1186315586,
+        "Online": true,
+        "Start": "2025-06-15T05:52:51.024000Z",
+        "cloud_cover_pct": 44.09,
+        "tileId": "43SBS",
+        "processingLevel": "S2MSI2A",
+        "platform": "A",
+        "relativeOrbit": 48
+      },
+      {
+        "Name": "S2B_MSIL2A_20250618T054639_N0511_R048_T43SBS_20250618T075109.SAFE",
+        "Id": "1c9901e9-5b8e-4691-8de2-6d60d26a715c",
+        "ContentLength": 1226709051,
+        "Online": true,
+        "Start": "2025-06-18T05:46:39.024000Z",
+        "cloud_cover_pct": 10.94,
+        "tileId": "43SBS",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 48
+      },
+      {
+        "Name": "S2C_MSIL2A_20250623T054701_N0511_R048_T43SBS_20250623T090117.SAFE",
+        "Id": "3f044b3d-6a25-4e78-97ea-ac0b3bfece0d",
+        "ContentLength": 1168511142,
+        "Online": true,
+        "Start": "2025-06-23T05:47:01.025000Z",
+        "cloud_cover_pct": 49.63,
+        "tileId": "43SBS",
+        "processingLevel": "S2MSI2A",
+        "platform": "C",
+        "relativeOrbit": 48
+      }
+    ]
+  },
+  "DS08_EXP_S3_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S3_001",
+      "lat": 30.30482,
+      "lon": 74.48767,
+      "target_date": "2025-05-16",
+      "date_start": "2025-05-10",
+      "date_end": "2025-05-22",
+      "stratum": "STR-3",
+      "class": "Forest Fire"
+    },
+    "products": [
+      {
+        "Name": "S2C_MSIL2A_20250511T053701_N0511_R005_T43RDP_20250511T091913.SAFE",
+        "Id": "e24d308a-fc82-4da3-b9e1-7cc516d2047d",
+        "ContentLength": 1195958934,
+        "Online": true,
+        "Start": "2025-05-11T05:37:01.025000Z",
+        "cloud_cover_pct": 1.24,
+        "tileId": "43RDP",
+        "processingLevel": "S2MSI2A",
+        "platform": "C",
+        "relativeOrbit": 5
+      },
+      {
+        "Name": "S2A_MSIL2A_20250513T054251_N0511_R005_T43RDP_20250513T090819.SAFE",
+        "Id": "4c6da86c-08d8-4c93-88df-f55d9bb30c45",
+        "ContentLength": 1173833555,
+        "Online": true,
+        "Start": "2025-05-13T05:42:51.024000Z",
+        "cloud_cover_pct": 0.23,
+        "tileId": "43RDP",
+        "processingLevel": "S2MSI2A",
+        "platform": "A",
+        "relativeOrbit": 5
+      },
+      {
+        "Name": "S2B_MSIL2A_20250516T053639_N0511_R005_T43RDP_20250516T074822.SAFE",
+        "Id": "ec7925b0-7e83-47f8-a78f-2425a430ab20",
+        "ContentLength": 1209981763,
+        "Online": true,
+        "Start": "2025-05-16T05:36:39.024000Z",
+        "cloud_cover_pct": 0.24,
+        "tileId": "43RDP",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 5
+      },
+      {
+        "Name": "S2C_MSIL2A_20250521T053701_N0511_R005_T43RDP_20250521T091457.SAFE",
+        "Id": "9e6a2a87-09a3-4778-a320-1dee18325b81",
+        "ContentLength": 1220878185,
+        "Online": true,
+        "Start": "2025-05-21T05:37:01.025000Z",
+        "cloud_cover_pct": 0.0,
+        "tileId": "43RDP",
+        "processingLevel": "S2MSI2A",
+        "platform": "C",
+        "relativeOrbit": 5
+      }
+    ]
+  },
+  "DS08_EXP_S4_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S4_001",
+      "lat": 30.57704,
+      "lon": 76.33285,
+      "target_date": "2024-10-23",
+      "date_start": "2024-10-15",
+      "date_end": "2024-10-31",
+      "stratum": "STR-4",
+      "class": "Agricultural Fire"
+    },
+    "products": [
+      {
+        "Name": "S2B_MSIL2A_20241015T052719_N0511_R105_T43RFP_20241015T075341.SAFE",
+        "Id": "e8a2003b-15b7-4de0-92fd-8619dcf897c8",
+        "ContentLength": 1225175730,
+        "Online": true,
+        "Start": "2024-10-15T05:27:19.024000Z",
+        "cloud_cover_pct": 0.0,
+        "tileId": "43RFP",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2B_MSIL2A_20241018T053739_N0511_R005_T43RFP_20241018T080539.SAFE",
+        "Id": "764aa443-1be7-4a2f-8548-e1a0839b7882",
+        "ContentLength": 468510370,
+        "Online": true,
+        "Start": "2024-10-18T05:37:39.024000Z",
+        "cloud_cover_pct": 0.0,
+        "tileId": "43RFP",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 5
+      },
+      {
+        "Name": "S2A_MSIL2A_20241020T052841_N0511_R105_T43RFP_20241020T095259.SAFE",
+        "Id": "8a8c647f-00ff-4b81-9166-3bbe60d01d81",
+        "ContentLength": 1172914358,
+        "Online": true,
+        "Start": "2024-10-20T05:28:41.024000Z",
+        "cloud_cover_pct": 0.0,
+        "tileId": "43RFP",
+        "processingLevel": "S2MSI2A",
+        "platform": "A",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2A_MSIL2A_20241023T053901_N0511_R005_T43RFP_20241023T090052.SAFE",
+        "Id": "df4ae3e0-cb59-4df4-aa30-da3650687746",
+        "ContentLength": 480235189,
+        "Online": true,
+        "Start": "2024-10-23T05:39:01.024000Z",
+        "cloud_cover_pct": 0.08,
+        "tileId": "43RFP",
+        "processingLevel": "S2MSI2A",
+        "platform": "A",
+        "relativeOrbit": 5
+      },
+      {
+        "Name": "S2B_MSIL2A_20241025T052819_N0511_R105_T43RFP_20241025T173507.SAFE",
+        "Id": "6619507c-8fc0-47d6-bf0b-ad265c0e9130",
+        "ContentLength": 1215711238,
+        "Online": true,
+        "Start": "2024-10-25T05:28:19.024000Z",
+        "cloud_cover_pct": 0.0,
+        "tileId": "43RFP",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2B_MSIL2A_20241028T053839_N0511_R005_T43RFP_20241028T080403.SAFE",
+        "Id": "75835b3e-d2ea-41b1-8a73-0ea918ca7665",
+        "ContentLength": 457019661,
+        "Online": true,
+        "Start": "2024-10-28T05:38:39.024000Z",
+        "cloud_cover_pct": 0.0,
+        "tileId": "43RFP",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 5
+      },
+      {
+        "Name": "S2A_MSIL2A_20241030T052941_N0511_R105_T43RFP_20241030T093050.SAFE",
+        "Id": "b768502e-6fb5-4e8a-8a47-df3f0f80fcb3",
+        "ContentLength": 1197905636,
+        "Online": true,
+        "Start": "2024-10-30T05:29:41.024000Z",
+        "cloud_cover_pct": 0.0,
+        "tileId": "43RFP",
+        "processingLevel": "S2MSI2A",
+        "platform": "A",
+        "relativeOrbit": 105
+      }
+    ]
+  },
+  "DS08_EXP_S5_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S5_001",
+      "lat": 28.38,
+      "lon": 77.24,
+      "target_date": "2025-01-15",
+      "date_start": "2025-01-05",
+      "date_end": "2025-01-25",
+      "stratum": "STR-5",
+      "class": "NO_VISIBLE_TARGET"
+    },
+    "products": [
+      {
+        "Name": "S2B_MSIL2A_20250113T053209_N0511_R105_T43RGM_20250113T074041.SAFE",
+        "Id": "f9198b42-3136-42b6-975b-15d42e7d7daf",
+        "ContentLength": 1204124254,
+        "Online": true,
+        "Start": "2025-01-13T05:32:09.024000Z",
+        "cloud_cover_pct": 19.09,
+        "tileId": "43RGM",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2A_MSIL2A_20250118T053141_N0511_R105_T43RGM_20250118T092848.SAFE",
+        "Id": "75fd8e2d-fa8a-4c26-82e9-5168110026e6",
+        "ContentLength": 1074673784,
+        "Online": true,
+        "Start": "2025-01-18T05:31:41.024000Z",
+        "cloud_cover_pct": 69.83,
+        "tileId": "43RGM",
+        "processingLevel": "S2MSI2A",
+        "platform": "A",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2B_MSIL2A_20250123T053029_N0511_R105_T43RGM_20250123T084836.SAFE",
+        "Id": "4d17894d-503c-4fbe-8dc8-b6c23429bb7e",
+        "ContentLength": 1197572292,
+        "Online": true,
+        "Start": "2025-01-23T05:30:29.024000Z",
+        "cloud_cover_pct": 13.79,
+        "tileId": "43RGM",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 105
+      }
+    ]
+  },
+  "DS08_EXP_S6_001": {
+    "candidate": {
+      "chip_id": "DS08_EXP_S6_001",
+      "lat": 28.25,
+      "lon": 78.35,
+      "target_date": "2025-02-12",
+      "date_start": "2025-02-05",
+      "date_end": "2025-02-25",
+      "stratum": "STR-6",
+      "class": "NO_VISIBLE_TARGET"
+    },
+    "products": [
+      {
+        "Name": "S2C_MSIL2A_20250207T053031_N0511_R105_T44RKS_20250207T084610.SAFE",
+        "Id": "6c2b538d-dfbd-4b99-853c-76e1e3f900f5",
+        "ContentLength": 573534139,
+        "Online": true,
+        "Start": "2025-02-07T05:30:31.025000Z",
+        "cloud_cover_pct": 31.11,
+        "tileId": "44RKS",
+        "processingLevel": "S2MSI2A",
+        "platform": "C",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2B_MSIL2A_20250209T051859_N0511_R062_T44RKS_20250209T075235.SAFE",
+        "Id": "cb3fb27b-98be-4bfa-9b31-83f369c34222",
+        "ContentLength": 1163532032,
+        "Online": true,
+        "Start": "2025-02-09T05:18:59.024000Z",
+        "cloud_cover_pct": 46.73,
+        "tileId": "44RKS",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 62
+      },
+      {
+        "Name": "S2B_MSIL2A_20250212T052839_N0511_R105_T44RKS_20250212T073606.SAFE",
+        "Id": "fede2b88-962f-4f9b-9f2b-23b1fe291dad",
+        "ContentLength": 613319165,
+        "Online": true,
+        "Start": "2025-02-12T05:28:39.024000Z",
+        "cloud_cover_pct": 0.0,
+        "tileId": "44RKS",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2C_MSIL2A_20250214T051941_N0511_R062_T44RKS_20250214T102811.SAFE",
+        "Id": "6e9c80a3-60f4-49c9-ae09-436306c7838d",
+        "ContentLength": 1229026413,
+        "Online": true,
+        "Start": "2025-02-14T05:19:41.025000Z",
+        "cloud_cover_pct": 0.05,
+        "tileId": "44RKS",
+        "processingLevel": "S2MSI2A",
+        "platform": "C",
+        "relativeOrbit": 62
+      },
+      {
+        "Name": "S2C_MSIL2A_20250217T052931_N0511_R105_T44RKS_20250217T090011.SAFE",
+        "Id": "33a3be7f-9893-4763-92bc-2b76cffa1cb6",
+        "ContentLength": 618506314,
+        "Online": true,
+        "Start": "2025-02-17T05:29:31.025000Z",
+        "cloud_cover_pct": 11.47,
+        "tileId": "44RKS",
+        "processingLevel": "S2MSI2A",
+        "platform": "C",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2B_MSIL2A_20250219T051759_N0511_R062_T44RKS_20250219T072733.SAFE",
+        "Id": "a9a9cf4c-9664-436b-8978-66c9bb400a30",
+        "ContentLength": 1110627285,
+        "Online": true,
+        "Start": "2025-02-19T05:17:59.024000Z",
+        "cloud_cover_pct": 70.82,
+        "tileId": "44RKS",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 62
+      },
+      {
+        "Name": "S2B_MSIL2A_20250222T052739_N0511_R105_T44RKS_20250222T074108.SAFE",
+        "Id": "8e562456-e549-423d-aeb4-1001a4f790e9",
+        "ContentLength": 440076936,
+        "Online": true,
+        "Start": "2025-02-22T05:27:39.024000Z",
+        "cloud_cover_pct": 3.62,
+        "tileId": "44RKS",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2B_MSIL2A_20250222T052739_N0511_R105_T44RKS_20250222T073727.SAFE",
+        "Id": "c64b15be-92d1-4a79-b1a0-8afc280a9567",
+        "ContentLength": 302089566,
+        "Online": true,
+        "Start": "2025-02-22T05:27:39.024000Z",
+        "cloud_cover_pct": 0.01,
+        "tileId": "44RKS",
+        "processingLevel": "S2MSI2A",
+        "platform": "B",
+        "relativeOrbit": 105
+      },
+      {
+        "Name": "S2C_MSIL2A_20250224T051841_N0511_R062_T44RKS_20250224T103411.SAFE",
+        "Id": "e8e3ea83-810f-432d-afdd-9b37cc3e5500",
+        "ContentLength": 1233250722,
+        "Online": true,
+        "Start": "2025-02-24T05:18:41.025000Z",
+        "cloud_cover_pct": 1.99,
+        "tileId": "44RKS",
+        "processingLevel": "S2MSI2A",
+        "platform": "C",
+        "relativeOrbit": 62
+      }
+    ]
+  }
+}

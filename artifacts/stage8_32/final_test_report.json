@@ -1,0 +1,177 @@
+{
+  "evaluation_protocol": {
+    "model_type": "DEEP_LEARNING_ONLY",
+    "classical_ml_used": false,
+    "test_evaluation_count": 1,
+    "test_cohort_size": 28,
+    "strictly_causal_h0": true,
+    "registry_free": true,
+    "manifest_hash_verified": true
+  },
+  "performance_metrics": {
+    "accuracy": 0.7857,
+    "macro_f1": 0.78,
+    "balanced_accuracy": 0.8,
+    "correct_predictions": 22,
+    "total_test_events": 28,
+    "target_85_met": false
+  },
+  "uncertainty_quantification": {
+    "single_event_shift_percentage": 3.57,
+    "accuracy_95_bootstrap_ci": [
+      0.6071,
+      0.9286
+    ],
+    "macro_f1_95_bootstrap_ci": [
+      0.5771,
+      0.9247
+    ],
+    "balanced_acc_95_bootstrap_ci": [
+      0.6262,
+      0.9318
+    ],
+    "accuracy_95_wilson_ci": [
+      0.6046,
+      0.8979
+    ],
+    "sample_size_qualification": "Small test support (N=28) means each misclassification changes overall accuracy by 3.57%."
+  },
+  "per_class_breakdown": {
+    "Industrial Fire": {
+      "class_id": 0,
+      "support": 6,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "tp": 6,
+      "fp": 3,
+      "fn": 0
+    },
+    "Forest Fire": {
+      "class_id": 1,
+      "support": 6,
+      "precision": 0.7143,
+      "recall": 0.8333,
+      "f1": 0.7692,
+      "tp": 5,
+      "fp": 2,
+      "fn": 1
+    },
+    "Agricultural Fire": {
+      "class_id": 2,
+      "support": 6,
+      "precision": 0.8,
+      "recall": 0.6667,
+      "f1": 0.7273,
+      "tp": 4,
+      "fp": 1,
+      "fn": 2
+    },
+    "Other / Persistent": {
+      "class_id": 3,
+      "support": 10,
+      "precision": 1.0,
+      "recall": 0.7,
+      "f1": 0.8235,
+      "tp": 7,
+      "fp": 0,
+      "fn": 3
+    }
+  },
+  "confusion_matrix": [
+    [
+      6,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      5,
+      1,
+      0
+    ],
+    [
+      0,
+      2,
+      4,
+      0
+    ],
+    [
+      3,
+      0,
+      0,
+      7
+    ]
+  ],
+  "error_analysis": {
+    "total_errors": 6,
+    "errors": [
+      {
+        "event_id": "EVT_825_FOR_FOR_EVT_2026_UK_CHAMOLI",
+        "true_class": "Forest Fire",
+        "predicted_class": "Agricultural Fire",
+        "p_true": 0.16002021729946136,
+        "p_pred": 0.8292936086654663,
+        "dist_to_fac_km": 207.9709643472193,
+        "current_frp": 4.95,
+        "hist_count_2km": 0.0
+      },
+      {
+        "event_id": "EVT_825_AGR_AGR_EVT_2026_BR_BUXAR_RABI",
+        "true_class": "Agricultural Fire",
+        "predicted_class": "Forest Fire",
+        "p_true": 0.13873736560344696,
+        "p_pred": 0.8396503925323486,
+        "dist_to_fac_km": 201.45527781231334,
+        "current_frp": 17.733446489353383,
+        "hist_count_2km": 0.0
+      },
+      {
+        "event_id": "EVT_825_AGR_AGR_EVT_2026_TN_THANJAVUR_KHARIF",
+        "true_class": "Agricultural Fire",
+        "predicted_class": "Forest Fire",
+        "p_true": 0.16317996382713318,
+        "p_pred": 0.7925825119018555,
+        "dist_to_fac_km": 124.04742354468247,
+        "current_frp": 13.66096852144493,
+        "hist_count_2km": 0.0
+      },
+      {
+        "event_id": "EVT_825_PER_PER_SRC_02",
+        "true_class": "Other / Persistent",
+        "predicted_class": "Industrial Fire",
+        "p_true": 0.07837776094675064,
+        "p_pred": 0.904657244682312,
+        "dist_to_fac_km": 146.3627095768869,
+        "current_frp": 9.420403308674764,
+        "hist_count_2km": 5.0
+      },
+      {
+        "event_id": "EVT_825_PER_PER_SRC_03",
+        "true_class": "Other / Persistent",
+        "predicted_class": "Industrial Fire",
+        "p_true": 0.2459712028503418,
+        "p_pred": 0.7414367198944092,
+        "dist_to_fac_km": 158.13672391367464,
+        "current_frp": 7.746106762846649,
+        "hist_count_2km": 5.0
+      },
+      {
+        "event_id": "EVT_825_PER_PER_SRC_49",
+        "true_class": "Other / Persistent",
+        "predicted_class": "Industrial Fire",
+        "p_true": 0.22946220636367798,
+        "p_pred": 0.7590866088867188,
+        "dist_to_fac_km": 53.18030149479185,
+        "current_frp": 7.3602306547403025,
+        "hist_count_2km": 5.0
+      }
+    ]
+  },
+  "validation_2025_metrics": {
+    "accuracy": 0.9583,
+    "macro_f1": 0.9476,
+    "balanced_acc": 0.9375
+  }
+}

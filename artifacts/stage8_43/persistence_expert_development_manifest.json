@@ -1,0 +1,102 @@
+{
+  "stage": "8.43",
+  "status": "NOT_READY_FOR_MODELING",
+  "dataset_path": null,
+  "dataset_sha256": null,
+  "dataset_created": false,
+  "construction_timestamp_utc": "2026-10-06T17:02:19.797078+00:00",
+  "development_event_count": 99,
+  "record_count": 0,
+  "candidate_label_counts": {
+    "Agricultural Fire": 25,
+    "Forest Fire": 25,
+    "Industrial Fire": 25,
+    "Other Thermal Source/Persistent Non-Biomass Thermal Source": 24
+  },
+  "persistent_candidate_count": 24,
+  "persistent_events_by_year": {
+    "2024": 21,
+    "2025": 3
+  },
+  "persistent_events_by_region": {
+    "Central_East": 17,
+    "North": 4,
+    "South": 3
+  },
+  "persistent_label_quality_by_year": {
+    "2024:LABEL_AMBIGUOUS": 11,
+    "2024:LABEL_CONFIDENT": 21,
+    "2024:LABEL_POTENTIAL_DUPLICATE": 4,
+    "2025:LABEL_AMBIGUOUS": 1,
+    "2025:LABEL_CONFIDENT": 3,
+    "2025:LABEL_POTENTIAL_DUPLICATE": 2
+  },
+  "persistent_t0_reconstructed_count": 0,
+  "history_depth_available_count": 0,
+  "history_depth_unavailable_count": 99,
+  "persistent_event_start_fixed_2018_03_15_count": 42,
+  "canonical_label_quality_excluded_count": 32,
+  "stage8_35_persistent_expansion_excluded_count": 18,
+  "persistent_repeated_source_groups": 0,
+  "persistent_source_groups_crossing_existing_split": 0,
+  "confident_candidate_cross_split_pairs_within_5km": 2,
+  "confident_candidate_cross_split_pairs_within_5km_details": [
+    {
+      "event_a": "EVT_825_FOR_FOR_EVT_2019_OD_SIMILIPAL",
+      "event_b": "EVT_825_FOR_FOR_EVT_2025_OD_SIMILIPAL_003",
+      "distance_km": 1.2872185380264836,
+      "same_incident_id": false,
+      "same_split": false,
+      "split_a": "train",
+      "split_b": "val",
+      "same_spatial_component": true,
+      "class_a": "Forest Fire",
+      "class_b": "Forest Fire"
+    },
+    {
+      "event_a": "EVT_825_FOR_FOR_EVT_2022_MP_BANDHAVGARH",
+      "event_b": "EVT_825_FOR_FOR_EVT_2025_MP_BANDHAVGARH_004",
+      "distance_km": 3.9813074528210377,
+      "same_incident_id": false,
+      "same_split": false,
+      "split_a": "train",
+      "split_b": "val",
+      "same_spatial_component": true,
+      "class_a": "Forest Fire",
+      "class_b": "Forest Fire"
+    }
+  ],
+  "authoritative_cohort_path": "artifacts/stage8_34/trusted_development_cohort.parquet",
+  "authoritative_cohort_sha256": "35e5616c2dc1fb44a2b7b3487ba75848a92b94be9178486caedd575cba98d16a",
+  "label_metadata_path": "data/interim/ds08_stage8_25_multiyear_labels.parquet",
+  "label_metadata_sha256": "c67b795fe535821068ed31c1e5e71c26f5384f104717030c012ac091fac9855a",
+  "physical_event_metadata_path": "data/interim/ds08_stage8_25_physical_events.parquet",
+  "physical_event_metadata_sha256": "24205b75d568c449d3ec85260129314a4cf459d9cf237816db1d103ff9480725",
+  "raw_source_inventory_path": "artifacts/stage8_43/raw_source_inventory.json",
+  "raw_source_inventory_sha256": "12be8d195ca4ac92ea8dbeb95160a152959a2e3ab9d9dbd9909633a834365995",
+  "eligible_event_provenance_path": "artifacts/stage8_43/eligible_event_provenance.csv",
+  "excluded_events_path": "artifacts/stage8_43/excluded_events.csv",
+  "closest_pairs_path": "artifacts/stage8_43/closest_development_event_pairs.csv",
+  "raw_source_summary": {
+    "event_window_file_count": 90,
+    "annual_2025_file_count": 73,
+    "annual_2025_start": "2025-01-01",
+    "annual_2025_end": "2025-12-31",
+    "coverage_assessment": "Event-window extracts before 2025 are not continuous spatial-temporal archive coverage; annual raw coverage is present only for 2025."
+  },
+  "proposed_feature_schema_sha256": "992230889957d9ee2f1d71aadeaf4805fd02ae746fce300bbde85d22ba75adea",
+  "features_computed": false,
+  "feature_schema_sha256": null,
+  "causality_audit": "NOT_RUN: no feature table was constructed because coverage is incomplete",
+  "software": {
+    "python": "3.10.6",
+    "pandas": "2.3.3",
+    "pyarrow": "25.0.1"
+  },
+  "blockers": [
+    "Pre-2025 FIRMS records are event-window extracts rather than a continuous archive; historical zero counts cannot be distinguished from unobserved periods.",
+    "The 18 Stage 8.35 added Persistent examples are generated from six facility/site definitions with fixed event times and fixed feature values; no matching observed event-level FIRMS linkage is established.",
+    "Canonical Persistent event_start metadata uses 2018-03-15 despite label years 2024/2025; Persistent alert t0 must be rebuilt from observed detections.",
+    "The development features parquet cannot be certified from raw lineage until full local archive coverage and source-row provenance are supplied."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "chip_id": "PILOT_14_EAST",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "UNRESOLVED",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_14_EAST_HUMA_01",
+      "class_id": 0,
+      "class_name": "UNRESOLVED",
+      "bbox": {
+        "x_min": 225,
+        "y_min": 225,
+        "x_max": 285,
+        "y_max": 285
+      },
+      "geometry_confidence": "LOW",
+      "source_class_confidence": "LOW",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "FOREST_CONTEXT_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "PENDING",
+      "annotator_id": "HUMAN_ANNOTATOR_02",
+      "annotation_timestamp": "2026-09-29T16:33:36.244717+00:00",
+      "notes": "Ambiguous montane valley shadow vs vegetative disturbance; no active SWIR elevation or smoke plume."
+    }
+  ],
+  "context_metadata": {
+    "firms_detection_id": "2b861ec037807373ad6488b8904047adf108390ff54498b2dedefdafa6bc29ad",
+    "firms_latitude": 18.62757,
+    "firms_longitude": 95.67833,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 4.86,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2A_MSIL2A_20250317T041211_N0511_R047_T46QGF_20250317T072917.SAFE",
+    "tile_id": "T46QGF",
+    "cloud_cover_pct": 0.01,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

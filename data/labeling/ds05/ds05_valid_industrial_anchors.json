@@ -1,0 +1,32 @@
+[
+  {
+    "detection_id": "be964232de1507731fd75bf1d2aa458ed4ab35e5cdfc92147f7fe0769e768ece",
+    "incident_id": "NEWS_2025_MANALI_PETROCHEM_05",
+    "facility_name": "Petrochemical Additives & Polymer Processing Facility, Manali Industrial Belt",
+    "spatial_distance_km": 2.8368,
+    "temporal_difference_hours": 0.0,
+    "matching_method": "GEODESIC_AND_TEMPORAL_INTERVAL",
+    "match_quality": "VALID_EVENT",
+    "frp_mw": 2.34,
+    "partition": "train_heldout_spatial",
+    "evidence_category": "EVENT_EVIDENCE",
+    "target_class": 1,
+    "is_supervised_target": true,
+    "audit_notes": "Verified industrial fire detection at Petrochemical Additives & Polymer Processing Facility, Manali Industrial Belt within 3.0km and 48.0h"
+  },
+  {
+    "detection_id": "c2f0beeeee6deb19996c5f07208156d6fdf1cf2fb5cbf949677b5f73471f7c83",
+    "incident_id": "NEWS_2025_MANALI_PETROCHEM_05",
+    "facility_name": "Petrochemical Additives & Polymer Processing Facility, Manali Industrial Belt",
+    "spatial_distance_km": 2.6681,
+    "temporal_difference_hours": 28.2667,
+    "matching_method": "GEODESIC_AND_TEMPORAL_INTERVAL",
+    "match_quality": "VALID_EVENT",
+    "frp_mw": 0.83,
+    "partition": "train_heldout_spatial",
+    "evidence_category": "EVENT_EVIDENCE",
+    "target_class": 1,
+    "is_supervised_target": true,
+    "audit_notes": "Verified industrial fire detection at Petrochemical Additives & Polymer Processing Facility, Manali Industrial Belt within 3.0km and 48.0h"
+  }
+]

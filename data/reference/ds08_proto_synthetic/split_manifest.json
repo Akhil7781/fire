@@ -1,0 +1,47 @@
+{
+  "train": {
+    "num_scenes": 34,
+    "num_images": 170,
+    "num_boxes": 900,
+    "num_storage_tanks": 285,
+    "num_chimney_stacks": 96,
+    "num_industrial_sheds": 142,
+    "num_flame_fronts": 190,
+    "num_smoke_plumes": 187,
+    "domain_distribution": {
+      "INDUSTRIAL": 70,
+      "AGRICULTURAL": 75,
+      "FOREST": 25
+    }
+  },
+  "val": {
+    "num_scenes": 8,
+    "num_images": 40,
+    "num_boxes": 205,
+    "num_storage_tanks": 63,
+    "num_chimney_stacks": 19,
+    "num_industrial_sheds": 31,
+    "num_flame_fronts": 43,
+    "num_smoke_plumes": 49,
+    "domain_distribution": {
+      "INDUSTRIAL": 15,
+      "AGRICULTURAL": 10,
+      "FOREST": 15
+    }
+  },
+  "test": {
+    "num_scenes": 8,
+    "num_images": 40,
+    "num_boxes": 194,
+    "num_storage_tanks": 60,
+    "num_chimney_stacks": 23,
+    "num_industrial_sheds": 22,
+    "num_flame_fronts": 46,
+    "num_smoke_plumes": 43,
+    "domain_distribution": {
+      "INDUSTRIAL": 15,
+      "AGRICULTURAL": 15,
+      "FOREST": 10
+    }
+  }
+}

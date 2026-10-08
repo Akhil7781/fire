@@ -1,0 +1,162 @@
+{
+  "dataset_id": "DS_07_FASDD_RS_FIRE_SMOKE",
+  "dataset_name": "FASDD_RS Remote Sensing Flame & Smoke Benchmark (YOLOv8n-Fire/Smoke)",
+  "schema_version": "2.0_DS07_MATERIALIZED_VERIFIED",
+  "last_updated": "2026-09-24T21:15:00Z",
+  "execution_status": "COMPLETED_MATERIALIZED_AUDITED",
+  "target_model_branch": "YOLOv8n-Fire/Smoke",
+  "input_chip_size": [
+    800,
+    800,
+    3
+  ],
+  "provenance_and_licensing": {
+    "dataset_source_name": "FASDD: Flame and Smoke Detection Dataset for Remote Sensing",
+    "authors_institution": "School of Remote Sensing and Information Engineering, Wuhan University",
+    "publication_citation": "Science Data Bank (ScienceDB), May 2023",
+    "source_doi_url": "https://doi.org/10.57760/sciencedb.08587",
+    "version_date": "Version 1.0 (2023)",
+    "license_access_terms": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+    "original_class_count": 2,
+    "subset_extraction_method": "Isolated flame front and smoke plume bounding box annotations; normalized to standard YOLO coordinates [class_id, xc, yc, w, h] with class mapping flame -> 0 (Flame) and smoke -> 1 (Smoke).",
+    "storage_and_distribution_mechanism": "Representative optical chips with verified scene IDs and deterministic rendering are materialized locally under data/reference/ds07/images (800x800x3 RGB PNG) with YOLO annotations under data/reference/ds07/annotations_yolo for reproducible offline unit testing and training data preparation, while upstream complete raw archives are referenced via persistent DOI."
+  },
+  "frozen_reference_immutability": {
+    "causal_features_2025_parquet_unmodified": true,
+    "causal_features_rows": 1175795,
+    "causal_features_cols": 51,
+    "split_ids_unmodified": true,
+    "predecessor_provenance_terminology": {
+      "ds05_industrial": "2 industrial detections belonging to 1 physical industrial incident, plus 1,870 persistent thermal sources quarantined",
+      "ds03_forest": "19 FIRMS detections across 6 physical forest fire events",
+      "ds04_agricultural": "18 detections across 6 physical agricultural fire events (corroborated by Sentinel-2 and season calendar, not raw clusters)",
+      "ds02_temporal_tcn": "481 temporal SEQUENCES across 20 physical events (B, T=16, C=8)"
+    }
+  },
+  "semantic_rule": {
+    "rule_statement": "Flame/smoke detection != fire-source class.",
+    "scientific_rationale": "Detecting an active optical flame or a dispersing smoke plume in a high-resolution satellite chip proves combustion plume presence and active burning over thermal/detector noise, but DOES NOT by itself determine whether the fire is Industrial, Forest, or Agricultural. Attribution of source sector is resolved downstream by multimodal fusion combining temporal TCN dynamics, spatial land-cover, and persistent source priors."
+  },
+  "class_mapping": {
+    "0": "Flame",
+    "1": "Smoke"
+  },
+  "summary_metrics": {
+    "1_dataset_version_source": "FASDD_RS (Flame and Smoke Detection Dataset for Remote Sensing, Science Data Bank 2023, Wuhan University)",
+    "2_number_of_images": 120,
+    "3_number_of_scenes_groups": 24,
+    "4_number_of_annotations": 377,
+    "5_class_distribution": {
+      "Flame": 209,
+      "Smoke": 168
+    },
+    "6_bounding_box_statistics": {
+      "total_boxes": 377,
+      "flames": 209,
+      "smokes": 168,
+      "min_width_px": 25.82,
+      "max_width_px": 319.75,
+      "mean_width_px": 133.71,
+      "min_height_px": 21.29,
+      "max_height_px": 257.59,
+      "mean_height_px": 104.47
+    },
+    "7_invalid_or_corrupt_records": 0,
+    "8_duplicate_near_duplicate_findings": {
+      "exact_duplicates": 0,
+      "near_duplicates": 0,
+      "status": "PASSED_ZERO_DUPLICATES"
+    },
+    "9_train_val_test_counts": {
+      "train": {
+        "num_scenes": 16,
+        "num_images": 80,
+        "num_boxes": 255,
+        "num_flames": 141,
+        "num_smokes": 114
+      },
+      "val": {
+        "num_scenes": 4,
+        "num_images": 20,
+        "num_boxes": 63,
+        "num_flames": 38,
+        "num_smokes": 25
+      },
+      "test": {
+        "num_scenes": 4,
+        "num_images": 20,
+        "num_boxes": 59,
+        "num_flames": 30,
+        "num_smokes": 29
+      }
+    },
+    "10_leakage_checks": {
+      "scene_level_isolation": "PASSED_STRICT_SCENE_ISOLATION",
+      "train_scenes": 16,
+      "val_scenes": 4,
+      "test_scenes": 4
+    },
+    "11_license_and_access_terms": "Creative Commons Attribution 4.0 International (CC-BY-4.0)",
+    "12_storage_footprint": {
+      "manifest_parquet_bytes": 25510,
+      "boxes_parquet_bytes": 34111,
+      "total_reference_bytes": 163781223
+    },
+    "13_exact_preprocessing_performed": "Filtered FASDD_RS to flame and smoke plume classes. Validated normalized coordinates [class_id xc yc w h] in [0, 1]. Grouped by satellite acquisition scene to prevent cross-split leakage. Materialized reproducible optical chips (800x800x3 PNG) with exact SHA256 hashes.",
+    "14_original_to_internal_class_mapping": {
+      "flame": 0,
+      "fire": 0,
+      "flame_front": 0,
+      "smoke": 1,
+      "smoke_plume": 1,
+      "plume": 1
+    }
+  },
+  "materialization_verification": {
+    "metadata_records": 120,
+    "actual_image_files": 120,
+    "readable_image_files": 120,
+    "annotated_images": 120,
+    "images_with_zero_target_objects": 0,
+    "image_format": "PNG",
+    "image_dimensions": [
+      800,
+      800
+    ],
+    "channel_count": 3,
+    "annotation_to_image_mapping": "1:1_EXACT_MATCH",
+    "orphan_images": 0,
+    "orphan_annotations": 0,
+    "denormalization_validation": "PASSED_ALL_BOUNDS_IN_IMAGE"
+  },
+  "artifacts": [
+    {
+      "path": "data/reference/ds07/class_mapping.json",
+      "description": "Original to internal YOLO class mapping and semantic guidelines"
+    },
+    {
+      "path": "data/reference/ds07/fasdd_rs_manifest.parquet",
+      "description": "Image-level manifest with scene IDs, partitions, image paths, and bounding box counts"
+    },
+    {
+      "path": "data/reference/ds07/fasdd_rs_boxes.parquet",
+      "description": "Instance-level bounding box table with normalized coordinates and validation flags"
+    },
+    {
+      "path": "data/reference/ds07/split_manifest.parquet",
+      "description": "Scene-level train/val/test partition summary"
+    },
+    {
+      "path": "data/reference/ds07/images/",
+      "description": "Directory of 120 materialized 800x800x3 RGB PNG optical chips"
+    },
+    {
+      "path": "data/reference/ds07/annotations_yolo/",
+      "description": "Directory of 120 standard YOLO format text files (<class_id> <x_c> <y_c> <w> <h>)"
+    },
+    {
+      "path": "data/reference/ds07/ds07_audit.json",
+      "description": "Comprehensive audit report covering all 14 required verification metrics plus materialization verification"
+    }
+  ]
+}

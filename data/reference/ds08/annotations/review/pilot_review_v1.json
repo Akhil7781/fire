@@ -1,0 +1,226 @@
+{
+  "status": "STAGE_8.10A_HUMAN_ANNOTATION_PILOT_REVIEW_COMPLETE",
+  "timestamp_utc": "2026-09-29T15:38:38.083805+00:00",
+  "total_chips_evaluated": 5,
+  "selected_chip_ids": [
+    "PILOT_01_NORTH",
+    "PILOT_05_CENTRAL",
+    "PILOT_09_SOUTH",
+    "PILOT_13_EAST",
+    "PILOT_17_WEST"
+  ],
+  "pilot_qa_metrics": {
+    "class_agreement_count": "3/5",
+    "class_agreement_rate_pct": 60.0,
+    "disagreement_count": 3,
+    "disagreement_rate_pct": 60.0,
+    "cohens_kappa": 0.4737,
+    "cohens_kappa_note": "Calculated over n=5 samples across 4 categories.",
+    "mean_matched_box_iou": 0.7141,
+    "evidence_jaccard_similarity": 0.6667,
+    "visibility_agreement_pct": 100.0,
+    "unresolved_count_annotator1": 0,
+    "unresolved_count_annotator2": 1,
+    "no_visible_target_count_annotator1": 1,
+    "no_visible_target_count_annotator2": 2,
+    "chips_requiring_adjudication_count": 3,
+    "chips_requiring_adjudication_ids": [
+      "PILOT_01_NORTH",
+      "PILOT_13_EAST",
+      "PILOT_17_WEST"
+    ]
+  },
+  "class_distribution": {
+    "annotator_1": {
+      "Agricultural Fire": 2,
+      "NO_VISIBLE_TARGET": 1,
+      "Forest Fire": 2
+    },
+    "annotator_2": {
+      "NO_VISIBLE_TARGET": 2,
+      "Forest Fire": 1,
+      "UNRESOLVED": 1,
+      "Agricultural Fire": 1
+    }
+  },
+  "chips": [
+    {
+      "chip_id": "PILOT_01_NORTH",
+      "annotator1_status": "HAS_ANNOTATIONS",
+      "annotator2_status": "NO_VISIBLE_TARGET",
+      "annotator1_ann_count": 1,
+      "annotator2_ann_count": 0,
+      "matched_boxes_count": 0,
+      "unmatched_boxes_a1": 1,
+      "unmatched_boxes_a2": 0,
+      "matched_pairs": [],
+      "status_agreement": false,
+      "class_agreement": false,
+      "disagreement_categories": [
+        "CLASS_DISAGREEMENT"
+      ],
+      "requires_adjudication": true
+    },
+    {
+      "chip_id": "PILOT_05_CENTRAL",
+      "annotator1_status": "NO_VISIBLE_TARGET",
+      "annotator2_status": "NO_VISIBLE_TARGET",
+      "annotator1_ann_count": 0,
+      "annotator2_ann_count": 0,
+      "matched_boxes_count": 0,
+      "unmatched_boxes_a1": 0,
+      "unmatched_boxes_a2": 0,
+      "matched_pairs": [],
+      "status_agreement": true,
+      "class_agreement": true,
+      "disagreement_categories": [],
+      "requires_adjudication": false
+    },
+    {
+      "chip_id": "PILOT_09_SOUTH",
+      "annotator1_status": "HAS_ANNOTATIONS",
+      "annotator2_status": "HAS_ANNOTATIONS",
+      "annotator1_ann_count": 1,
+      "annotator2_ann_count": 1,
+      "matched_boxes_count": 1,
+      "unmatched_boxes_a1": 0,
+      "unmatched_boxes_a2": 0,
+      "matched_pairs": [
+        {
+          "ann1_id": "PILOT_09_SOUTH_ANN_01",
+          "ann2_id": "PILOT_09_SOUTH_ANN_01",
+          "iou": 0.7222,
+          "class_a1": "Forest Fire",
+          "class_a2": "Forest Fire",
+          "class_match": true,
+          "vis_a1": "CLEAR",
+          "vis_a2": "CLEAR",
+          "vis_match": true,
+          "evidence_jaccard": 1.0,
+          "evidence_a1": [
+            "DIRECT_FIRE_VISIBLE",
+            "FOREST_CONTEXT_VISIBLE",
+            "BURN_SCAR_VISIBLE"
+          ],
+          "evidence_a2": [
+            "DIRECT_FIRE_VISIBLE",
+            "BURN_SCAR_VISIBLE",
+            "FOREST_CONTEXT_VISIBLE"
+          ],
+          "geom_conf_a1": "HIGH",
+          "geom_conf_a2": "HIGH",
+          "src_conf_a1": "HIGH",
+          "src_conf_a2": "HIGH",
+          "firms_rel_a1": "NEAR_OBJECT",
+          "firms_rel_a2": "NEAR_OBJECT"
+        }
+      ],
+      "status_agreement": true,
+      "class_agreement": true,
+      "disagreement_categories": [],
+      "requires_adjudication": false
+    },
+    {
+      "chip_id": "PILOT_13_EAST",
+      "annotator1_status": "HAS_ANNOTATIONS",
+      "annotator2_status": "UNRESOLVED",
+      "annotator1_ann_count": 1,
+      "annotator2_ann_count": 1,
+      "matched_boxes_count": 1,
+      "unmatched_boxes_a1": 0,
+      "unmatched_boxes_a2": 0,
+      "matched_pairs": [
+        {
+          "ann1_id": "PILOT_13_EAST_ANN_01",
+          "ann2_id": "PILOT_13_EAST_ANN_01",
+          "iou": 0.716,
+          "class_a1": "Forest Fire",
+          "class_a2": "UNRESOLVED",
+          "class_match": false,
+          "vis_a1": "CLEAR",
+          "vis_a2": "CLEAR",
+          "vis_match": true,
+          "evidence_jaccard": 0.3333,
+          "evidence_a1": [
+            "FOREST_CONTEXT_VISIBLE",
+            "BURN_SCAR_VISIBLE"
+          ],
+          "evidence_a2": [
+            "FOREST_CONTEXT_VISIBLE",
+            "NO_CLEAR_VISUAL_EVIDENCE"
+          ],
+          "geom_conf_a1": "MEDIUM",
+          "geom_conf_a2": "LOW",
+          "src_conf_a1": "MEDIUM",
+          "src_conf_a2": "LOW",
+          "firms_rel_a1": "INSIDE_OBJECT",
+          "firms_rel_a2": "INSIDE_OBJECT"
+        }
+      ],
+      "status_agreement": false,
+      "class_agreement": false,
+      "disagreement_categories": [
+        "EVIDENCE_DISAGREEMENT",
+        "UNRESOLVED_DISAGREEMENT"
+      ],
+      "requires_adjudication": true
+    },
+    {
+      "chip_id": "PILOT_17_WEST",
+      "annotator1_status": "HAS_ANNOTATIONS",
+      "annotator2_status": "HAS_ANNOTATIONS",
+      "annotator1_ann_count": 1,
+      "annotator2_ann_count": 1,
+      "matched_boxes_count": 1,
+      "unmatched_boxes_a1": 0,
+      "unmatched_boxes_a2": 0,
+      "matched_pairs": [
+        {
+          "ann1_id": "PILOT_17_WEST_ANN_01",
+          "ann2_id": "PILOT_17_WEST_ANN_01",
+          "iou": 0.7041,
+          "class_a1": "Agricultural Fire",
+          "class_a2": "Agricultural Fire",
+          "class_match": true,
+          "vis_a1": "CLEAR",
+          "vis_a2": "CLEAR",
+          "vis_match": true,
+          "evidence_jaccard": 0.6667,
+          "evidence_a1": [
+            "DIRECT_FIRE_VISIBLE",
+            "CROPLAND_CONTEXT_VISIBLE",
+            "BURN_SCAR_VISIBLE"
+          ],
+          "evidence_a2": [
+            "DIRECT_FIRE_VISIBLE",
+            "CROPLAND_CONTEXT_VISIBLE"
+          ],
+          "geom_conf_a1": "HIGH",
+          "geom_conf_a2": "HIGH",
+          "src_conf_a1": "HIGH",
+          "src_conf_a2": "HIGH",
+          "firms_rel_a1": "NEAR_OBJECT",
+          "firms_rel_a2": "NEAR_OBJECT"
+        }
+      ],
+      "status_agreement": true,
+      "class_agreement": true,
+      "disagreement_categories": [
+        "EVIDENCE_DISAGREEMENT"
+      ],
+      "requires_adjudication": true
+    }
+  ],
+  "proposed_protocol_changes": [
+    {
+      "issue_id": "PROP_01_OFF_CENTER_SEARCH_RADIUS",
+      "friction_observed": "In PILOT_01_NORTH, Annotator 1 identified an active agricultural residue burn patch ~1 km southeast of the FIRMS coordinate, while Annotator 2 assigned NO_VISIBLE_TARGET because no target was at the center (256, 256).",
+      "recommendation": "Formally standardize the maximum spatial association radius for DS08 chips: define whether thermal anomalies within 500m vs 1000m of the FIRMS point should be bound, or if the primary target must fall within a 500m radius."
+    },
+    {
+      "issue_id": "PROP_02_COLD_BURN_SCAR_CRITERIA",
+      "friction_observed": "In PILOT_13_EAST, Annotator 1 classified a dark montane forest canopy patch as Forest Fire (burn scar), while Annotator 2 assigned UNRESOLVED due to lack of active SWIR emission (max B12=0.448) and potential terrain shadow confusion.",
+      "recommendation": "Add an explicit guideline clause stating that a cold vegetative scar without active SWIR emission or smoke plume requires corroborating contextual evidence or must be designated UNRESOLVED if terrain shadow ambiguity cannot be ruled out at 10m."
+    }
+  ]
+}

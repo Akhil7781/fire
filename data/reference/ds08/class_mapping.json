@@ -1,0 +1,74 @@
+{
+  "dataset": "DS_08_Real_Indian_Optical",
+  "status": "ANNOTATION_PENDING",
+  "benchmark_purpose": "Real Indian-domain optical adaptation fine-tuning for YOLOv8n-Infra and YOLOv8n-Fire/Smoke. Images are real Sentinel-2 L2A chips. Annotations MUST be human-created by visually examining actual satellite imagery.",
+
+  "annotation_provenance_requirement": "HUMAN_ANNOTATED",
+  "pipeline_generated_annotations_permitted": false,
+  "firms_derived_annotations_permitted": false,
+  "heuristic_coordinate_annotations_permitted": false,
+
+  "branches": {
+    "YOLOv8n-Infra": {
+      "annotation_directory": "data/reference/ds08/annotations_infra/",
+      "num_classes": 3,
+      "classes": {
+        "0": "Storage_Tank",
+        "1": "Chimney_Stack",
+        "2": "Industrial_Shed"
+      },
+      "applicable_domains": ["INDUSTRIAL"],
+      "cross_dataset_name_reconciliation": {
+        "Storage_Tank": {
+          "ds06_internal_name": "Storage_Tank",
+          "ds06_class_id": 0,
+          "status": "EXACT_MATCH"
+        },
+        "Chimney_Stack": {
+          "ds06_internal_name": "Chimney",
+          "ds06_class_id": 1,
+          "ds06_alias_registered": true,
+          "status": "ALIAS_SAME_SEMANTIC_IDENTITY"
+        },
+        "Industrial_Shed": {
+          "ds06_internal_name": "NOT_IN_DS06",
+          "ds06_class_id": null,
+          "status": "NEW_CLASS_FOR_INDIAN_ADAPTATION",
+          "note": "Architecture-sanctioned (FINAL_TRAINING_DATA_ARCHITECTURE_v2.md §3.6). Expands YOLOv8n-Infra head from 2 to 3 classes at fine-tuning time."
+        }
+      }
+    },
+    "YOLOv8n-Fire_Smoke": {
+      "annotation_directory": "data/reference/ds08/annotations_fire_smoke/",
+      "num_classes": 2,
+      "classes": {
+        "0": "Flame_Front",
+        "1": "Smoke_Plume"
+      },
+      "applicable_domains": ["AGRICULTURAL", "FOREST"],
+      "cross_dataset_name_reconciliation": {
+        "Flame_Front": {
+          "ds07_internal_name": "Flame",
+          "ds07_class_id": 0,
+          "ds07_alias_registered": true,
+          "status": "ALIAS_SAME_SEMANTIC_IDENTITY"
+        },
+        "Smoke_Plume": {
+          "ds07_internal_name": "Smoke",
+          "ds07_class_id": 1,
+          "ds07_alias_registered": true,
+          "status": "ALIAS_SAME_SEMANTIC_IDENTITY"
+        }
+      }
+    }
+  },
+
+  "semantic_rules": {
+    "rule_1": "Infrastructure detection != industrial fire",
+    "rule_2": "Flame/smoke detection != fire-source class",
+    "rule_3": "Domain type is NOT inferred from FIRMS proximity",
+    "rule_4": "Annotations must correspond to visually observable objects in actual Sentinel-2 imagery"
+  },
+
+  "note_on_five_class_head": "DS_08 uses TWO SEPARATE annotation branches (Infra: 3 classes, Fire/Smoke: 2 classes). A single 5-class YOLO head is NOT required and NOT used. Each branch has its own class_id namespace starting from 0."
+}

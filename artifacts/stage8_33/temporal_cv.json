@@ -1,0 +1,62 @@
+{
+  "model_name": "Model_G_BestSimplified",
+  "overall_temporal_accuracy": 0.4762,
+  "overall_temporal_macro_f1": 0.484,
+  "overall_temporal_balanced_accuracy": 0.6429,
+  "total_evaluated_events": 84,
+  "per_class": {
+    "Industrial Fire": {
+      "recall": 0.9286,
+      "precision": 0.4333,
+      "f1": 0.5909,
+      "support": 14
+    },
+    "Forest Fire": {
+      "recall": 0.5,
+      "precision": 0.3333,
+      "f1": 0.4,
+      "support": 14
+    },
+    "Agricultural Fire": {
+      "recall": 1.0,
+      "precision": 0.5385,
+      "f1": 0.7,
+      "support": 14
+    },
+    "Other / Persistent": {
+      "recall": 0.1429,
+      "precision": 0.8571,
+      "f1": 0.2449,
+      "support": 42
+    }
+  },
+  "temporal_splits": [
+    {
+      "split_name": "2022_to_2023",
+      "val_year": 2023,
+      "train_size": 47,
+      "val_size": 11,
+      "accuracy": 0.7273,
+      "macro_f1": 0.5897,
+      "balanced_accuracy": 0.6667
+    },
+    {
+      "split_name": "2023_to_2024",
+      "val_year": 2024,
+      "train_size": 58,
+      "val_size": 49,
+      "accuracy": 0.2449,
+      "macro_f1": 0.289,
+      "balanced_accuracy": 0.6875
+    },
+    {
+      "split_name": "2024_to_2025",
+      "val_year": 2025,
+      "train_size": 107,
+      "val_size": 24,
+      "accuracy": 0.8333,
+      "macro_f1": 0.8183,
+      "balanced_accuracy": 0.8304
+    }
+  ]
+}

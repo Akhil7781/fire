@@ -1,0 +1,49 @@
+# ==============================================================================
+# Base Configuration for Satellite Thermal Anomaly Classification
+# Note: Sensitive secrets (e.g., FIRMS_MAP_KEY) must be loaded from .env
+# ==============================================================================
+
+project:
+  name: "satellite-thermal-anomaly-classification"
+  version: "0.1.0"
+  random_seed: 42
+  target_region: "India"
+
+dataset:
+  name: "NASA FIRMS VIIRS NOAA-20 Standard Processing"
+  year: 2025
+  description: "1,024,996 India-region NOAA-20 SP detections for 2025"
+  expected_files: 73
+  expected_detections: 1024996
+  expected_columns: 16
+  dates:
+    start: "2025-01-01"
+    end: "2025-12-31"
+
+context_dataset:
+  name: "NASA FIRMS VIIRS NOAA-20 Standard Processing (Burn-in Context)"
+  period: "2024-10-01 to 2024-12-31"
+  region: "India"
+  purpose: "Context-only burn-in for 90-day causal history; never used for testing"
+
+paths:
+  raw_dir: "data/raw"
+  raw_context_dir: "data/raw_context"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+  checkpoints_dir: "checkpoints"
+  logs_dir: "logs"
+
+models:
+  tcn:
+    enabled: true
+    sequence_horizon_days: 90
+    context_radius_km: 2.0
+  deep_sad:
+    enabled: true
+    context_radius_km: 2.0
+    causal_windows_hours: [6, 24]
+  yolov8:
+    enabled: true
+  fusion:
+    enabled: true

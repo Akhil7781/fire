@@ -1,0 +1,28 @@
+{
+  "chip_id": "PILOT_01_NORTH",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "NO_VISIBLE_TARGET",
+  "annotations": [],
+  "context_metadata": {
+    "firms_detection_id": "8df03f53dba1675b675e3155002cd7b9a7682a8e741aefefd35702d8ae1bb0c7",
+    "firms_latitude": 27.07941,
+    "firms_longitude": 86.02953,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 0.6,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2B_MSIL2A_20250401T044659_N0511_R076_T45RUK_20250401T065324.SAFE",
+    "tile_id": "T45RUK",
+    "cloud_cover_pct": 0.0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

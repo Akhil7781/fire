@@ -1,0 +1,41 @@
+{
+  "chip_id": "PILOT_02_NORTH",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "NO_VISIBLE_TARGET",
+  "human_verified": true,
+  "annotation_start_timestamp": "2026-09-30T15:13:11.747Z",
+  "annotation_completion_timestamp": "2026-09-30T15:13:47.596Z",
+  "interaction_audit": {
+    "interface_version": "v1.0_manual",
+    "bbox_creation_actions": 0,
+    "bbox_edit_actions": 0,
+    "class_selection_actions": 0,
+    "save_events": 2
+  },
+  "annotations": [],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "0e0d9718f34bb069b02a4216d8525de8de8d2b7ed93b7c4c906ced898c959f5a",
+    "firms_latitude": 28.80476,
+    "firms_longitude": 77.26028,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 4.07,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2B_MSIL2A_20250324T052649_N0511_R105_T43RGM_20250324T074123.SAFE",
+    "tile_id": "T43RGM",
+    "cloud_cover_pct": 0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "task_status": "COMPLETED_HUMAN_ANNOTATION"
+}

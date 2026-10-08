@@ -1,0 +1,8 @@
+{
+  "coverage_audit.csv": "ee3be11a7f4b0c97be591fa3a0aa400fcdef339babf917b56569f49a3d247a67",
+  "development_split_manifest.json": "3c1d041b52fa0a2acf83dfa34ba3080cc420c994745b77d8641d3e7bdcac536c",
+  "historical_firms_index_manifest.json": "9a874ccf74e51cbcc10246cacf43f2987cdf7a1b7e5faba71c6dad654a94d741",
+  "persistent_event_timeline.csv": "286b63f4b073e0a44e3ae20aefc37baceb33546906f14e91d1827964af248f04",
+  "persistent_feature_reconstruction.parquet": "1bd733ac4ee952ea1f99533366fba2c80045ebb80b372264d64ad8f6af4f7057",
+  "stage8_44_report.md": "e787f0b14d75fa91fbc2cd3d772e523fd8f21d0c68e67458b0f69aaed5da80cb"
+}

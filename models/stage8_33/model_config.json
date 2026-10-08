@@ -1,0 +1,19 @@
+{
+  "model_type": "ModelG_BestSimplified",
+  "deep_learning_only": true,
+  "classical_ml_components": false,
+  "hidden_dim": 64,
+  "dropout": 0.15,
+  "lr": 0.002,
+  "weight_decay": 0.0001,
+  "loss_type": "focal_loss",
+  "gamma": 1.5,
+  "raw_coordinates_excluded": true,
+  "epochs": 40,
+  "feature_group_dims": {
+    "thermal": 14,
+    "historical": 104,
+    "industrial": 6,
+    "ecoregion": 3
+  }
+}

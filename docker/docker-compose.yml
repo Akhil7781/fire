@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgis/postgis:15-3.3
+    container_name: ds08_postgis_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ds08_operational
+      POSTGRES_USER: ds08_admin
+      POSTGRES_PASSWORD: operational_secure_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+      - ../database/schema.sql:/docker-entrypoint-initdb.d/init_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ds08_admin -d ds08_operational"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: ds08_attribution_api
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://ds08_admin:operational_secure_password@db:5432/ds08_operational
+      HOST: 0.0.0.0
+      PORT: 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../data:/app/data
+      - ../artifacts/stage8_37:/app/artifacts/stage8_37
+
+volumes:
+  postgis_data:

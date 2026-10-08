@@ -1,0 +1,120 @@
+{
+  "stage": "STAGE_8.12",
+  "title": "DS08 Manual Annotation Pipeline Repair & Provenance Verification",
+  "status": "STAGE_8.12_MANUAL_ANNOTATION_REPAIR_COMPLETE",
+  "timestamp_utc": "2026-09-29T22:38:00+00:00",
+  "stage_8_11_audit_verdict": "FAILED_INVALID_SCRIPT_GENERATED",
+  "invalidation_reason": "Substantive annotation decisions (classes, bounding boxes, evidence tags, confidence scores) were hardcoded in dictionary data structures (A1_DATA / A2_DATA) and generated programmatically rather than resulting from independent human visual inspection.",
+  "quarantine_record": {
+    "quarantine_location": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/",
+    "documentation_path": "data/reference/ds08/annotations/quarantine/STAGE8_11_INVALID_SCRIPT_GENERATED.md",
+    "manifest_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/quarantine_manifest.json",
+    "total_quarantined_files": 30,
+    "annotator_1_quarantined_files": 15,
+    "annotator_2_quarantined_files": 15,
+    "machine_readable_metadata": {
+      "status": "INVALID_SCRIPT_GENERATED",
+      "reason": "substantive annotation decisions were generated programmatically",
+      "human_verified": false,
+      "eligible_for_training": false,
+      "eligible_for_validation": false,
+      "eligible_for_evaluation": false,
+      "eligible_for_agreement": false,
+      "eligible_for_adjudication": false
+    },
+    "quarantine_rules": [
+      "Retained strictly for provenance, transparency, and audit tracking",
+      "Excluded from all model training, validation, and test datasets",
+      "Excluded from all inter-annotator agreement calculations",
+      "Excluded from adjudication pipelines",
+      "Protected against promotion to final annotations"
+    ]
+  },
+  "reannotation_scope": {
+    "total_chips_requiring_genuine_reannotation": 15,
+    "chips": [
+      "PILOT_02_NORTH",
+      "PILOT_03_NORTH",
+      "PILOT_06_CENTRAL",
+      "PILOT_07_CENTRAL",
+      "PILOT_08_CENTRAL",
+      "PILOT_10_SOUTH",
+      "PILOT_11_SOUTH",
+      "PILOT_12_SOUTH",
+      "PILOT_14_EAST",
+      "PILOT_15_EAST",
+      "PILOT_16_EAST",
+      "PILOT_18_WEST",
+      "PILOT_19_WEST",
+      "PILOT_20_WEST",
+      "PILOT_04_NORTH_REPLACEMENT"
+    ]
+  },
+  "manual_annotation_workspace": {
+    "workspace_root": "data/reference/ds08/annotations/manual/",
+    "annotator_1_workspace": "data/reference/ds08/annotations/manual/annotator_1/",
+    "annotator_2_workspace": "data/reference/ds08/annotations/manual/annotator_2/",
+    "annotator_1_templates_count": 15,
+    "annotator_2_templates_count": 15,
+    "template_task_status": "PENDING_MANUAL_INPUT",
+    "prepopulated_classes_count": 0,
+    "prepopulated_bboxes_count": 0,
+    "prepopulated_evidence_count": 0,
+    "human_verified_initial_state": false,
+    "annotator_isolation_verified": true
+  },
+  "manual_annotation_tool": {
+    "tool_path": "scripts/ds08_annotation_tool.py",
+    "interface_status": "READY_AND_VERIFIED",
+    "interface_version": "v1.0_manual",
+    "zero_model_dependency_verified": true,
+    "firms_context_banner": "FIRMS CONTEXT — NOT GROUND TRUTH",
+    "features_implemented": [
+      "512x512 canvas display with RGB (B04-B03-B02) and SWIR (B12-B11-B04) preview toggle",
+      "Zoom (+/- / 100%) and pan navigation controls",
+      "Manual interactive click-and-drag bounding box drawing with strict bounds [0, 512]",
+      "Mandatory manual class selection dropdown (Industrial Fire, Forest Fire, Agricultural Fire, Other Thermal Source, UNRESOLVED) with zero default/recommendation",
+      "Mandatory visual evidence checklist selection",
+      "Observation status selection (HAS_ANNOTATIONS, NO_VISIBLE_TARGET, UNRESOLVED)",
+      "Strict workspace isolation preventing Annotator 1 and Annotator 2 from observing each other's work",
+      "Real-time schema validation against ds08_annotation_schema.json",
+      "Explicit human interaction audit trail recording start/completion timestamps, click counters, and save events"
+    ]
+  },
+  "protocol_governance": {
+    "guidelines_document": "data/reference/ds08/annotations/guidelines/DS08_ANNOTATION_GUIDELINES_v1.md",
+    "protocol_version": "v1.0",
+    "protocol_changes_made": false,
+    "association_radius_policy": "NOT_YET_FROZEN",
+    "montane_b12_threshold_policy": "REJECTED_AS_MANDATORY_CRITERION",
+    "b12_physical_interpretation": "BOA_SURFACE_REFLECTANCE_ONLY (never thermal radiance or brightness temperature)"
+  },
+  "agreement_and_models_status": {
+    "agreement_metrics_computed": false,
+    "agreement_status": "DEFERRED_UNTIL_GENUINE_HUMAN_ANNOTATION_COMPLETION",
+    "models_modified": false,
+    "embeddings_regenerated": false,
+    "fusion_modified": false
+  },
+  "active_draft_cohort": {
+    "active_draft_directory": "data/reference/ds08/annotations/draft/",
+    "annotator_1_valid_files": 5,
+    "annotator_2_valid_files": 5,
+    "pre_agreed_chips": ["PILOT_05_CENTRAL", "PILOT_09_SOUTH"],
+    "pilot_09_south_class": "Forest Fire"
+  },
+  "final_adjudicated_cohort": {
+    "final_directory": "data/reference/ds08/annotations/final/",
+    "adjudicated_files_count": 3,
+    "adjudicated_chips": ["PILOT_01_NORTH", "PILOT_13_EAST", "PILOT_17_WEST"],
+    "hashes_intact": true
+  },
+  "frozen_predecessor_integrity": {
+    "models/tcn/best_tcn.pt": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+    "models/deep_sad/best_deep_sad.pt": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+    "models/yolo/infrastructure/best_infrastructure.pt": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+    "models/yolo/fire_smoke/best_fire_smoke.pt": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+    "data/embeddings/fusion/india_2025_tcn_sad_aligned.parquet": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+    "all_hashes_matched": true
+  }
+}

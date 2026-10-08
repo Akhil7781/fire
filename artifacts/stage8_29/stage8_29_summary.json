@@ -1,0 +1,399 @@
+{
+  "metadata": {
+    "stage": "8.29",
+    "date": "2026-10-04",
+    "test_events_count": 28
+  },
+  "ablations_h0": [
+    {
+      "Model": "Stage 8.28 FULL",
+      "Input_Dim": 94,
+      "H0_Accuracy": 0.9642857142857143,
+      "Macro_F1": 0.958041958041958,
+      "Balanced_Acc": 0.9583333333333334,
+      "Industrial_F1": 1.0,
+      "Forest_F1": 0.923076923076923,
+      "Agricultural_F1": 0.9090909090909091,
+      "Persistent_F1": 1.0,
+      "Accuracy_95_CI": [
+        0.8928571428571429,
+        1.0
+      ],
+      "Macro_F1_95_CI": [
+        0.8391826923076924,
+        1.0
+      ]
+    },
+    {
+      "Model": "NO_PERSISTENT_REGISTRY",
+      "Input_Dim": 91,
+      "H0_Accuracy": 0.7857142857142857,
+      "Macro_F1": 0.7820158102766799,
+      "Balanced_Acc": 0.7666666666666666,
+      "Industrial_F1": 1.0,
+      "Forest_F1": 0.8,
+      "Agricultural_F1": 0.5454545454545454,
+      "Persistent_F1": 0.7826086956521738,
+      "Accuracy_95_CI": [
+        0.6071428571428571,
+        0.9285714285714286
+      ],
+      "Macro_F1_95_CI": [
+        0.594378078817734,
+        0.9176685442703749
+      ]
+    },
+    {
+      "Model": "NO_FACILITY_REGISTRY",
+      "Input_Dim": 88,
+      "H0_Accuracy": 0.8928571428571429,
+      "Macro_F1": 0.8741258741258741,
+      "Balanced_Acc": 0.875,
+      "Industrial_F1": 1.0,
+      "Forest_F1": 0.7692307692307692,
+      "Agricultural_F1": 0.7272727272727272,
+      "Persistent_F1": 1.0,
+      "Accuracy_95_CI": [
+        0.7848214285714286,
+        1.0
+      ],
+      "Macro_F1_95_CI": [
+        0.699861111111111,
+        1.0
+      ]
+    },
+    {
+      "Model": "NO_STATIC_REGISTRIES",
+      "Input_Dim": 85,
+      "H0_Accuracy": 0.7857142857142857,
+      "Macro_F1": 0.7427881297446515,
+      "Balanced_Acc": 0.75,
+      "Industrial_F1": 0.8571428571428571,
+      "Forest_F1": 0.8,
+      "Agricultural_F1": 0.4444444444444444,
+      "Persistent_F1": 0.8695652173913044,
+      "Accuracy_95_CI": [
+        0.6071428571428571,
+        0.9285714285714286
+      ],
+      "Macro_F1_95_CI": [
+        0.5311993561993562,
+        0.8918065953654188
+      ]
+    },
+    {
+      "Model": "CURRENT_THERMAL_ONLY",
+      "Input_Dim": 5,
+      "H0_Accuracy": 0.8214285714285714,
+      "Macro_F1": 0.7869047619047619,
+      "Balanced_Acc": 0.7916666666666667,
+      "Industrial_F1": 0.8333333333333334,
+      "Forest_F1": 0.6,
+      "Agricultural_F1": 0.7142857142857143,
+      "Persistent_F1": 1.0,
+      "Accuracy_95_CI": [
+        0.6785714285714286,
+        0.9642857142857143
+      ],
+      "Macro_F1_95_CI": [
+        0.5953712406015037,
+        0.9286904761904761
+      ]
+    },
+    {
+      "Model": "TEMPORAL_ONLY",
+      "Input_Dim": 64,
+      "H0_Accuracy": 0.35714285714285715,
+      "Macro_F1": 0.13513513513513514,
+      "Balanced_Acc": 0.25,
+      "Industrial_F1": 0.0,
+      "Forest_F1": 0.0,
+      "Agricultural_F1": 0.0,
+      "Persistent_F1": 0.5405405405405406,
+      "Accuracy_95_CI": [
+        0.17857142857142858,
+        0.5357142857142857
+      ],
+      "Macro_F1_95_CI": [
+        0.078125,
+        0.17857142857142858
+      ]
+    },
+    {
+      "Model": "GEOGRAPHIC_ONLY",
+      "Input_Dim": 4,
+      "H0_Accuracy": 0.4642857142857143,
+      "Macro_F1": 0.44920634920634916,
+      "Balanced_Acc": 0.44166666666666665,
+      "Industrial_F1": 0.4,
+      "Forest_F1": 0.28571428571428575,
+      "Agricultural_F1": 0.4444444444444444,
+      "Persistent_F1": 0.6666666666666665,
+      "Accuracy_95_CI": [
+        0.2857142857142857,
+        0.6428571428571429
+      ],
+      "Macro_F1_95_CI": [
+        0.25486959935489345,
+        0.6087566111971104
+      ]
+    },
+    {
+      "Model": "NON_REGISTRY_MULTIMODAL",
+      "Input_Dim": 85,
+      "H0_Accuracy": 0.7857142857142857,
+      "Macro_F1": 0.7427881297446515,
+      "Balanced_Acc": 0.75,
+      "Industrial_F1": 0.8571428571428571,
+      "Forest_F1": 0.8,
+      "Agricultural_F1": 0.4444444444444444,
+      "Persistent_F1": 0.8695652173913044,
+      "Accuracy_95_CI": [
+        0.6071428571428571,
+        0.9285714285714286
+      ],
+      "Macro_F1_95_CI": [
+        0.5311993561993562,
+        0.8918065953654188
+      ]
+    }
+  ],
+  "no_registry_horizons": [
+    {
+      "horizon": "H0",
+      "num_events": 28,
+      "accuracy": 0.7857142857142857,
+      "macro_f1": 0.7820158102766799,
+      "balanced_accuracy": 0.7666666666666666,
+      "industrial_f1": 1.0,
+      "forest_f1": 0.8,
+      "agricultural_f1": 0.5454545454545454,
+      "persistent_f1": 0.7826086956521738,
+      "accuracy_ci_95": "[0.6071428571428571, 0.9285714285714286]",
+      "macro_f1_ci_95": "[0.594378078817734, 0.9176685442703749]",
+      "confusion_matrix": "[[6, 0, 0, 0], [0, 4, 1, 1], [0, 0, 3, 3], [0, 0, 1, 9]]"
+    },
+    {
+      "horizon": "H1",
+      "num_events": 28,
+      "accuracy": 0.7857142857142857,
+      "macro_f1": 0.7820158102766799,
+      "balanced_accuracy": 0.7666666666666666,
+      "industrial_f1": 1.0,
+      "forest_f1": 0.8,
+      "agricultural_f1": 0.5454545454545454,
+      "persistent_f1": 0.7826086956521738,
+      "accuracy_ci_95": "[0.6071428571428571, 0.9285714285714286]",
+      "macro_f1_ci_95": "[0.594378078817734, 0.9176685442703749]",
+      "confusion_matrix": "[[6, 0, 0, 0], [0, 4, 1, 1], [0, 0, 3, 3], [0, 0, 1, 9]]"
+    },
+    {
+      "horizon": "H2",
+      "num_events": 28,
+      "accuracy": 0.7857142857142857,
+      "macro_f1": 0.7820158102766799,
+      "balanced_accuracy": 0.7666666666666666,
+      "industrial_f1": 1.0,
+      "forest_f1": 0.8,
+      "agricultural_f1": 0.5454545454545454,
+      "persistent_f1": 0.7826086956521738,
+      "accuracy_ci_95": "[0.6071428571428571, 0.9285714285714286]",
+      "macro_f1_ci_95": "[0.594378078817734, 0.9176685442703749]",
+      "confusion_matrix": "[[6, 0, 0, 0], [0, 4, 1, 1], [0, 0, 3, 3], [0, 0, 1, 9]]"
+    },
+    {
+      "horizon": "H3",
+      "num_events": 28,
+      "accuracy": 0.7857142857142857,
+      "macro_f1": 0.7820158102766799,
+      "balanced_accuracy": 0.7666666666666666,
+      "industrial_f1": 1.0,
+      "forest_f1": 0.8,
+      "agricultural_f1": 0.5454545454545454,
+      "persistent_f1": 0.7826086956521738,
+      "accuracy_ci_95": "[0.6071428571428571, 0.9285714285714286]",
+      "macro_f1_ci_95": "[0.594378078817734, 0.9176685442703749]",
+      "confusion_matrix": "[[6, 0, 0, 0], [0, 4, 1, 1], [0, 0, 3, 3], [0, 0, 1, 9]]"
+    },
+    {
+      "horizon": "H6",
+      "num_events": 28,
+      "accuracy": 0.7857142857142857,
+      "macro_f1": 0.7820158102766799,
+      "balanced_accuracy": 0.7666666666666666,
+      "industrial_f1": 1.0,
+      "forest_f1": 0.8,
+      "agricultural_f1": 0.5454545454545454,
+      "persistent_f1": 0.7826086956521738,
+      "accuracy_ci_95": "[0.6071428571428571, 0.9285714285714286]",
+      "macro_f1_ci_95": "[0.594378078817734, 0.9176685442703749]",
+      "confusion_matrix": "[[6, 0, 0, 0], [0, 4, 1, 1], [0, 0, 3, 3], [0, 0, 1, 9]]"
+    },
+    {
+      "horizon": "H12",
+      "num_events": 28,
+      "accuracy": 0.7857142857142857,
+      "macro_f1": 0.7820158102766799,
+      "balanced_accuracy": 0.7666666666666666,
+      "industrial_f1": 1.0,
+      "forest_f1": 0.8,
+      "agricultural_f1": 0.5454545454545454,
+      "persistent_f1": 0.7826086956521738,
+      "accuracy_ci_95": "[0.6071428571428571, 0.9285714285714286]",
+      "macro_f1_ci_95": "[0.594378078817734, 0.9176685442703749]",
+      "confusion_matrix": "[[6, 0, 0, 0], [0, 4, 1, 1], [0, 0, 3, 3], [0, 0, 1, 9]]"
+    },
+    {
+      "horizon": "H24",
+      "num_events": 28,
+      "accuracy": 0.75,
+      "macro_f1": 0.7274703557312252,
+      "balanced_accuracy": 0.725,
+      "industrial_f1": 1.0,
+      "forest_f1": 0.7272727272727272,
+      "agricultural_f1": 0.4,
+      "persistent_f1": 0.7826086956521738,
+      "accuracy_ci_95": "[0.5714285714285714, 0.8928571428571429]",
+      "macro_f1_ci_95": "[0.538596259691461, 0.8700849470222871]",
+      "confusion_matrix": "[[6, 0, 0, 0], [0, 4, 1, 1], [0, 1, 2, 3], [0, 0, 1, 9]]"
+    },
+    {
+      "horizon": "Retro",
+      "num_events": 28,
+      "accuracy": 0.7857142857142857,
+      "macro_f1": 0.7512626262626261,
+      "balanced_accuracy": 0.75,
+      "industrial_f1": 1.0,
+      "forest_f1": 0.7272727272727272,
+      "agricultural_f1": 0.4444444444444444,
+      "persistent_f1": 0.8333333333333333,
+      "accuracy_ci_95": "[0.6071428571428571, 0.9285714285714286]",
+      "macro_f1_ci_95": "[0.5686681547619048, 0.894000819000819]",
+      "confusion_matrix": "[[6, 0, 0, 0], [0, 4, 1, 1], [0, 1, 2, 3], [0, 0, 0, 10]]"
+    }
+  ],
+  "temporal_value_test": {
+    "H0_with_temporal": {
+      "accuracy": 0.9642857142857143,
+      "macro_f1": 0.958041958041958
+    },
+    "H0_without_temporal": {
+      "accuracy": 0.8928571428571429,
+      "macro_f1": 0.8741258741258741
+    },
+    "H0_delta_accuracy": 0.0714285714285714,
+    "H24_with_temporal": {
+      "accuracy": 0.9285714285714286,
+      "macro_f1": 0.9142857142857144
+    },
+    "H24_without_temporal": {
+      "accuracy": 0.8928571428571429,
+      "macro_f1": 0.8741258741258741
+    },
+    "H24_delta_accuracy": 0.0357142857142857
+  },
+  "spatial_memorization": {
+    "nearest_train_distance_km_mean": 180.42184877399558,
+    "nearest_train_distance_km_min": 53.186593467463474,
+    "coordinate_perturbation_tests": [
+      {
+        "jitter_deg": 0.02,
+        "mean_prob_diff": 9.768544259713963e-05,
+        "prediction_flips": 0
+      },
+      {
+        "jitter_deg": 0.05,
+        "mean_prob_diff": 0.00024398854293394834,
+        "prediction_flips": 0
+      }
+    ]
+  },
+  "registry_permutation_test": {
+    "full_accuracy": 0.9642857142857143,
+    "no_registry_accuracy": 0.7857142857142857,
+    "random_registry_accuracy": 0.75,
+    "random_registry_macro_f1": 0.7035024154589372
+  },
+  "prediction_flips": {
+    "total_flips": 6,
+    "flipped_events": [
+      {
+        "event_id": "EVT_825_FOR_FOR_EVT_2026_UK_CHAMOLI",
+        "true_class": "Forest Fire",
+        "full_prediction": "Forest Fire",
+        "no_reg_prediction": "Agricultural Fire"
+      },
+      {
+        "event_id": "EVT_825_FOR_FOR_EVT_2026_OD_KOTGARH",
+        "true_class": "Forest Fire",
+        "full_prediction": "Forest Fire",
+        "no_reg_prediction": "Other Thermal Source/Persistent Non-Biomass Thermal Source"
+      },
+      {
+        "event_id": "EVT_825_AGR_AGR_EVT_2026_AP_GUNTUR_RABI",
+        "true_class": "Agricultural Fire",
+        "full_prediction": "Agricultural Fire",
+        "no_reg_prediction": "Other Thermal Source/Persistent Non-Biomass Thermal Source"
+      },
+      {
+        "event_id": "EVT_825_AGR_AGR_EVT_2026_BR_BUXAR_RABI",
+        "true_class": "Agricultural Fire",
+        "full_prediction": "Agricultural Fire",
+        "no_reg_prediction": "Other Thermal Source/Persistent Non-Biomass Thermal Source"
+      },
+      {
+        "event_id": "EVT_825_AGR_AGR_EVT_2026_TN_THANJAVUR_KHARIF",
+        "true_class": "Agricultural Fire",
+        "full_prediction": "Forest Fire",
+        "no_reg_prediction": "Other Thermal Source/Persistent Non-Biomass Thermal Source"
+      },
+      {
+        "event_id": "EVT_825_PER_PER_SRC_49",
+        "true_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+        "full_prediction": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+        "no_reg_prediction": "Agricultural Fire"
+      }
+    ]
+  },
+  "small_sample_uncertainty": {
+    "discrete_levels": [
+      {
+        "correct_events": 28,
+        "total_events": 28,
+        "accuracy": 1.0,
+        "description": "100.0% perfect benchmark"
+      },
+      {
+        "correct_events": 27,
+        "total_events": 28,
+        "accuracy": 0.9643,
+        "description": "Stage 8.28 verified full model (1 error)"
+      },
+      {
+        "correct_events": 26,
+        "total_events": 28,
+        "accuracy": 0.9286,
+        "description": "Stage 8.28 H24 / Stage 8.29 no-registry (2 errors)"
+      },
+      {
+        "correct_events": 25,
+        "total_events": 28,
+        "accuracy": 0.8929,
+        "description": "Stage 8.27 reported (3 errors)"
+      },
+      {
+        "correct_events": 24,
+        "total_events": 28,
+        "accuracy": 0.8571,
+        "description": "Lowest integer passing 85% threshold (4 errors)"
+      },
+      {
+        "correct_events": 23,
+        "total_events": 28,
+        "accuracy": 0.8214,
+        "description": "First failing integer below 85% threshold (5 errors)"
+      }
+    ],
+    "single_event_sensitivity_pct": 3.5714
+  }
+}

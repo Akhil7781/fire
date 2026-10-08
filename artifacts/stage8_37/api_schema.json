@@ -1,0 +1,960 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DS08 Operational Thermal-Source Attribution System",
+    "description": "Real-Time Causal 4-Class Attribution of Satellite Thermal Anomalies (NASA FIRMS)",
+    "version": "8.37.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "description": "Returns system status, active model version, and verified checkpoint hash.",
+        "operationId": "health_check_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/predict": {
+      "post": {
+        "summary": "Predict Single Event",
+        "description": "Performs 4-class attribution on an input thermal event.",
+        "operationId": "predict_single_event_predict_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThermalEventInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PredictionOutput"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/predict/batch": {
+      "post": {
+        "summary": "Predict Batch Events",
+        "description": "Performs batch attribution on multiple thermal events.",
+        "operationId": "predict_batch_events_predict_batch_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "items": {
+                  "$ref": "#/components/schemas/ThermalEventInput"
+                },
+                "type": "array",
+                "title": "Events"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchPredictionResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/events": {
+      "get": {
+        "summary": "List Events",
+        "description": "Lists processed events with predictions and filtering.",
+        "operationId": "list_events_events_get",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limit"
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 0,
+              "default": 0,
+              "title": "Offset"
+            }
+          },
+          {
+            "name": "class_filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Class Filter"
+            }
+          },
+          {
+            "name": "min_confidence",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "default": 0.0,
+              "title": "Min Confidence"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/events/{event_id}": {
+      "get": {
+        "summary": "Get Event Detail",
+        "description": "Retrieves full details, predictions, and detections for an event.",
+        "operationId": "get_event_detail_events__event_id__get",
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Event Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/events/{event_id}/explanation": {
+      "get": {
+        "summary": "Get Event Explanation",
+        "description": "Retrieves feature-grounded attribution explanation for an event.",
+        "operationId": "get_event_explanation_events__event_id__explanation_get",
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Event Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/events/{event_id}/history": {
+      "get": {
+        "summary": "Get Event History",
+        "description": "Retrieves chronological detection timeline for an event.",
+        "operationId": "get_event_history_events__event_id__history_get",
+        "parameters": [
+          {
+            "name": "event_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Event Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/statistics": {
+      "get": {
+        "summary": "Get Operational Statistics",
+        "description": "Returns database summary statistics and class distribution breakdown.",
+        "operationId": "get_operational_statistics_statistics_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/geojson": {
+      "get": {
+        "summary": "Get Map Geojson",
+        "description": "Returns RFC 7946 GeoJSON FeatureCollection for GIS map rendering.",
+        "operationId": "get_map_geojson_api_geojson_get",
+        "parameters": [
+          {
+            "name": "class_filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Class Filter"
+            }
+          },
+          {
+            "name": "min_confidence",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "default": 0.0,
+              "title": "Min Confidence"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ingest/csv": {
+      "post": {
+        "summary": "Ingest Csv File",
+        "description": "Uploads a NASA FIRMS CSV, clusters events, infers classes, and stores them in DB.",
+        "operationId": "ingest_csv_file_ingest_csv_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_ingest_csv_file_ingest_csv_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dashboard": {
+      "get": {
+        "summary": "Serve Dashboard",
+        "operationId": "serve_dashboard_dashboard_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "Serve Dashboard",
+        "operationId": "serve_dashboard__get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BatchPredictionResponse": {
+        "properties": {
+          "total_events": {
+            "type": "integer",
+            "title": "Total Events"
+          },
+          "predictions": {
+            "items": {
+              "$ref": "#/components/schemas/PredictionOutput"
+            },
+            "type": "array",
+            "title": "Predictions"
+          },
+          "processing_time_ms": {
+            "type": "number",
+            "title": "Processing Time Ms"
+          }
+        },
+        "type": "object",
+        "required": [
+          "total_events",
+          "predictions",
+          "processing_time_ms"
+        ],
+        "title": "BatchPredictionResponse",
+        "description": "Batch prediction results."
+      },
+      "Body_ingest_csv_file_ingest_csv_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_ingest_csv_file_ingest_csv_post"
+      },
+      "EcoregionContext": {
+        "properties": {
+          "forest_biome_score": {
+            "type": "number",
+            "title": "Forest Biome Score"
+          },
+          "agri_heartland_score": {
+            "type": "number",
+            "title": "Agri Heartland Score"
+          },
+          "s2_available": {
+            "type": "number",
+            "title": "S2 Available",
+            "default": 0.0
+          },
+          "ecoregion_context_available": {
+            "type": "boolean",
+            "title": "Ecoregion Context Available",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "forest_biome_score",
+          "agri_heartland_score"
+        ],
+        "title": "EcoregionContext",
+        "description": "Land cover and ecological biome indicators."
+      },
+      "ExplanationRecord": {
+        "properties": {
+          "prediction_summary": {
+            "type": "string",
+            "title": "Prediction Summary"
+          },
+          "thermal_evidence": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Thermal Evidence"
+          },
+          "recurrence_evidence": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Recurrence Evidence"
+          },
+          "ecological_evidence": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Ecological Evidence"
+          },
+          "industrial_evidence": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Industrial Evidence"
+          }
+        },
+        "type": "object",
+        "required": [
+          "prediction_summary",
+          "thermal_evidence",
+          "recurrence_evidence",
+          "ecological_evidence",
+          "industrial_evidence"
+        ],
+        "title": "ExplanationRecord",
+        "description": "Feature-grounded structured explanation."
+      },
+      "FirmsDetectionRecord": {
+        "properties": {
+          "detection_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Detection Id"
+          },
+          "latitude": {
+            "type": "number",
+            "maximum": 90.0,
+            "minimum": -90.0,
+            "title": "Latitude",
+            "description": "Latitude in decimal degrees"
+          },
+          "longitude": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Longitude",
+            "description": "Longitude in decimal degrees"
+          },
+          "acq_date": {
+            "type": "string",
+            "title": "Acq Date",
+            "description": "Acquisition date YYYY-MM-DD"
+          },
+          "acq_time": {
+            "type": "string",
+            "title": "Acq Time",
+            "description": "Acquisition time HHMM"
+          },
+          "acq_datetime_utc": {
+            "type": "string",
+            "title": "Acq Datetime Utc",
+            "description": "ISO 8601 acquisition timestamp in UTC"
+          },
+          "bright_ti4": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Bright Ti4",
+            "description": "VIIRS/MODIS channel 4 brightness temperature (K)"
+          },
+          "bright_ti5": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Bright Ti5",
+            "description": "VIIRS/MODIS channel 5 brightness temperature (K)"
+          },
+          "frp": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Frp",
+            "description": "Fire Radiative Power (MW)"
+          },
+          "confidence": {
+            "type": "string",
+            "title": "Confidence",
+            "description": "Detection confidence (nominal/high/low/numeric)",
+            "default": "nominal"
+          },
+          "satellite": {
+            "type": "string",
+            "title": "Satellite",
+            "description": "Satellite platform (N=Suomi NPP, 20=NOAA-20, 1=Aqua, 2=Terra)",
+            "default": "N"
+          },
+          "sensor": {
+            "type": "string",
+            "title": "Sensor",
+            "description": "Sensor instrument (VIIRS, MODIS)",
+            "default": "VIIRS"
+          },
+          "daynight": {
+            "type": "string",
+            "title": "Daynight",
+            "description": "D=Day, N=Night",
+            "default": "D"
+          }
+        },
+        "type": "object",
+        "required": [
+          "latitude",
+          "longitude",
+          "acq_date",
+          "acq_time",
+          "acq_datetime_utc",
+          "bright_ti4",
+          "bright_ti5",
+          "frp"
+        ],
+        "title": "FirmsDetectionRecord",
+        "description": "Normalized NASA FIRMS detection point."
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "IndustrialContext": {
+        "properties": {
+          "nearest_facility_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nearest Facility Name"
+          },
+          "nearest_facility_distance_km": {
+            "type": "number",
+            "title": "Nearest Facility Distance Km"
+          },
+          "within_1km_fac": {
+            "type": "number",
+            "title": "Within 1Km Fac"
+          },
+          "within_5km_fac": {
+            "type": "number",
+            "title": "Within 5Km Fac"
+          },
+          "facility_baseline_frp": {
+            "type": "number",
+            "title": "Facility Baseline Frp"
+          },
+          "facility_context_available": {
+            "type": "boolean",
+            "title": "Facility Context Available",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "nearest_facility_distance_km",
+          "within_1km_fac",
+          "within_5km_fac",
+          "facility_baseline_frp"
+        ],
+        "title": "IndustrialContext",
+        "description": "Industrial geographic proximity and facility baseline."
+      },
+      "PersistenceEvidence": {
+        "properties": {
+          "level": {
+            "type": "string",
+            "title": "Level",
+            "description": "LOW, MODERATE, or STRONG"
+          },
+          "historical_detection_count": {
+            "type": "number",
+            "title": "Historical Detection Count"
+          },
+          "historical_active_days": {
+            "type": "number",
+            "title": "Historical Active Days"
+          },
+          "historical_active_months": {
+            "type": "number",
+            "title": "Historical Active Months"
+          },
+          "time_since_previous_detection_days": {
+            "type": "number",
+            "title": "Time Since Previous Detection Days"
+          },
+          "historical_mean_frp": {
+            "type": "number",
+            "title": "Historical Mean Frp"
+          },
+          "historical_night_ratio": {
+            "type": "number",
+            "title": "Historical Night Ratio"
+          },
+          "distinct_calendar_months": {
+            "type": "number",
+            "title": "Distinct Calendar Months"
+          }
+        },
+        "type": "object",
+        "required": [
+          "level",
+          "historical_detection_count",
+          "historical_active_days",
+          "historical_active_months",
+          "time_since_previous_detection_days",
+          "historical_mean_frp",
+          "historical_night_ratio",
+          "distinct_calendar_months"
+        ],
+        "title": "PersistenceEvidence",
+        "description": "Recurrence analysis from pre-alert historical FIRMS archive."
+      },
+      "PredictionOutput": {
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "title": "Event Id"
+          },
+          "centroid_lat": {
+            "type": "number",
+            "title": "Centroid Lat"
+          },
+          "centroid_lon": {
+            "type": "number",
+            "title": "Centroid Lon"
+          },
+          "alert_time": {
+            "type": "string",
+            "title": "Alert Time"
+          },
+          "predicted_class": {
+            "type": "string",
+            "title": "Predicted Class"
+          },
+          "class_id": {
+            "type": "integer",
+            "title": "Class Id"
+          },
+          "confidence": {
+            "type": "number",
+            "title": "Confidence"
+          },
+          "probability_industrial": {
+            "type": "number",
+            "title": "Probability Industrial"
+          },
+          "probability_forest": {
+            "type": "number",
+            "title": "Probability Forest"
+          },
+          "probability_agricultural": {
+            "type": "number",
+            "title": "Probability Agricultural"
+          },
+          "probability_persistent": {
+            "type": "number",
+            "title": "Probability Persistent"
+          },
+          "persistence_evidence": {
+            "$ref": "#/components/schemas/PersistenceEvidence"
+          },
+          "industrial_context": {
+            "$ref": "#/components/schemas/IndustrialContext"
+          },
+          "ecoregion_context": {
+            "$ref": "#/components/schemas/EcoregionContext"
+          },
+          "explanation": {
+            "$ref": "#/components/schemas/ExplanationRecord"
+          },
+          "model_version": {
+            "type": "string",
+            "title": "Model Version",
+            "default": "8.36_final"
+          },
+          "model_checkpoint_hash": {
+            "type": "string",
+            "title": "Model Checkpoint Hash"
+          },
+          "feature_schema_version": {
+            "type": "string",
+            "title": "Feature Schema Version",
+            "default": "8.35_expanded"
+          },
+          "prediction_timestamp": {
+            "type": "string",
+            "title": "Prediction Timestamp"
+          }
+        },
+        "type": "object",
+        "required": [
+          "event_id",
+          "centroid_lat",
+          "centroid_lon",
+          "alert_time",
+          "predicted_class",
+          "class_id",
+          "confidence",
+          "probability_industrial",
+          "probability_forest",
+          "probability_agricultural",
+          "probability_persistent",
+          "persistence_evidence",
+          "industrial_context",
+          "ecoregion_context",
+          "explanation",
+          "model_checkpoint_hash",
+          "prediction_timestamp"
+        ],
+        "title": "PredictionOutput",
+        "description": "Official 4-class attribution prediction response."
+      },
+      "ThermalEventInput": {
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "title": "Event Id"
+          },
+          "centroid_lat": {
+            "type": "number",
+            "maximum": 90.0,
+            "minimum": -90.0,
+            "title": "Centroid Lat"
+          },
+          "centroid_lon": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Centroid Lon"
+          },
+          "event_start_time": {
+            "type": "string",
+            "title": "Event Start Time",
+            "description": "Timestamp of first detection (t0) in UTC"
+          },
+          "event_detection_count": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Event Detection Count",
+            "default": 1
+          },
+          "detections": {
+            "items": {
+              "$ref": "#/components/schemas/FirmsDetectionRecord"
+            },
+            "type": "array",
+            "title": "Detections"
+          }
+        },
+        "type": "object",
+        "required": [
+          "event_id",
+          "centroid_lat",
+          "centroid_lon",
+          "event_start_time"
+        ],
+        "title": "ThermalEventInput",
+        "description": "Spatiotemporal cluster of FIRMS thermal detections representing an event."
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

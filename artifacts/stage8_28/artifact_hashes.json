@@ -1,0 +1,187 @@
+{
+  "data/reference/ds08/manifests/stage8_25/independent_test_manifest.json": {
+    "exists": true,
+    "sha256": "5686345a1300282407d303c943e190867b63c0c5d5ea536973d4859cd8a95d6c",
+    "size_bytes": 11494
+  },
+  "data/interim/ds08_stage8_25_physical_events.parquet": {
+    "exists": true,
+    "sha256": "24205b75d568c449d3ec85260129314a4cf459d9cf237816db1d103ff9480725",
+    "size_bytes": 53561
+  },
+  "data/interim/ds08_stage8_25_multiyear_firms.parquet": {
+    "exists": true,
+    "sha256": "241ad5b97a8be15864892660dbe7ce07dba81700e1777d32e9b991ba19b7ac1c",
+    "size_bytes": 153819
+  },
+  "data/reference/ds08/manifests/stage8_25/industrial_facility_database.json": {
+    "exists": true,
+    "sha256": "fc72086efeac7c8ea0e432acd01de49da5658d44d5186607cef6b4280a2a8696",
+    "size_bytes": 10385
+  },
+  "data/reference/ds08/manifests/stage8_25/persistent_source_manifest.json": {
+    "exists": true,
+    "sha256": "bb2404d9e8b3fce8d2045333003f966c9613d676de7f44aef334c6a309e4880e",
+    "size_bytes": 32042
+  },
+  "models/stage7a/best_tcn.pt": {
+    "exists": false,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "models/stage7b/best_deep_sad.pt": {
+    "exists": false,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "models/stage8_21/best_s2_encoder.pt": {
+    "exists": false,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "models/stage6/best_infrastructure.pt": {
+    "exists": false,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "models/stage6/best_fire_smoke.pt": {
+    "exists": false,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "models/stage8_22/best_multimodal_fusion.pt": {
+    "exists": false,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "reports/stage8_26_audit_summary.json": {
+    "exists": true,
+    "sha256": "6caaa66b91693e1908b51e214f5730fb4fd0f4ea0403bf71dfbece8eeff6d76b",
+    "size_bytes": 56019
+  },
+  "reports/stage8_26_forensic_audit_report.md": {
+    "exists": true,
+    "sha256": "ee1f11484d2580d0a197fe48b1794ab76f18714fb524dc7af0a65155f7a5af1c",
+    "size_bytes": 23890
+  },
+  "data/interim/ds08_stage8_27_causal_prefix_dataset.parquet": {
+    "exists": true,
+    "sha256": "f25c00e3efbeb0ca8a60c11b63eeee48236db3b0cdad4bf7ed91589c59dc2f2f",
+    "size_bytes": 38995
+  },
+  "data/interim/ds08_stage8_27_causal_features.parquet": {
+    "exists": true,
+    "sha256": "54186f257c464ccabdcff55d4ba8420e945611c717d4ec69358f20725c004687",
+    "size_bytes": 59461
+  },
+  "models/stage8_27/best_causal_temporal_encoder.pt": {
+    "exists": true,
+    "sha256": "e5e9693366c540afa0cbb164fc1e0fe58eb999c0b3c3ef221e007b593ce41862",
+    "size_bytes": 225473
+  },
+  "models/stage8_27/best_hierarchical_causal_classifier.pt": {
+    "exists": true,
+    "sha256": "3cef5fd7a10e21685a133391ec61ad773df96b204f8a7c1810e253cc7e4cae6b",
+    "size_bytes": 33805
+  },
+  "src/stage8_27/prefix_dataset.py": {
+    "exists": true,
+    "sha256": "7308d88928271dd0912beec4f067a4622aed996cd5949789de682a5e2ba93ccb",
+    "size_bytes": 12387
+  },
+  "src/stage8_27/train_and_evaluate.py": {
+    "exists": true,
+    "sha256": "d5cd1f4e220bfc95afd4582b534b3fc782a48b1f227ace5b365fcbae02fe9123",
+    "size_bytes": 21607
+  },
+  "src/stage8_28/prefix_dataset.py": {
+    "exists": true,
+    "sha256": "c985e1ab6cf74ee138c35b669a93ce7b3cd4dea7e854e843111fe25e694e1a84",
+    "size_bytes": 29486
+  },
+  "src/stage8_28/models.py": {
+    "exists": true,
+    "sha256": "12a3f9105d58c0bc507b9718f15d2aee6d9fae86fea987bdb98505d354f1bc6e",
+    "size_bytes": 7761
+  },
+  "src/stage8_28/train_and_evaluate.py": {
+    "exists": true,
+    "sha256": "102d61c083ed9edab66bd67b3d9a07923d0fa1ecf5780d99536ddedf770bcd75",
+    "size_bytes": 38075
+  },
+  "data/interim/ds08_stage8_28_causal_prefix_dataset.parquet": {
+    "exists": true,
+    "sha256": "823e038ea7eb204cb9499897b22e5fc30742473fc719cce48f3ebabf36b34809",
+    "size_bytes": 57385
+  },
+  "data/interim/ds08_stage8_28_causal_features.parquet": {
+    "exists": true,
+    "sha256": "19613db8ce8c10f0f08a30d78a035746ad613d645a62906bfaac4a036d8a2c5d",
+    "size_bytes": 63712
+  },
+  "models/stage8_28/causal_temporal_encoder.pt": {
+    "exists": true,
+    "sha256": "fb650d33d5554cedfd38d469fc1d74b7fcc326dcccdab133b3b43e7af646f58f",
+    "size_bytes": 244795
+  },
+  "models/stage8_28/causal_classifier.pt": {
+    "exists": true,
+    "sha256": "ed7300a375a85cc9f7502d907ea17a9089ffd714826f876db3b2f676f3c5db35",
+    "size_bytes": 50205
+  },
+  "models/stage8_28/scaler.json": {
+    "exists": true,
+    "sha256": "ba3a529214e44d6a555fd45e9f2592782e7cf2c7065ba2ddeb3ace2b6f465b98",
+    "size_bytes": 1502
+  },
+  "models/stage8_28/metadata.json": {
+    "exists": true,
+    "sha256": "c0184aa641c56a6b964d33eb4fed3e6d148d44b9f8cb51623c1dba28ebc6ecf1",
+    "size_bytes": 564
+  },
+  "artifacts/stage8_28/stage8_28_artifact_audit.json": {
+    "exists": true,
+    "sha256": "abde94e0ea1c66cdef2433bc3d8b81abc18c0112d48e2b2a02b850d8e926cbc0",
+    "size_bytes": 5433
+  },
+  "artifacts/stage8_28/causal_feature_audit.csv": {
+    "exists": true,
+    "sha256": "d248bb88fe8cfe297e55827f51f6abb00ba6affcc837425679b8e80192d7a982",
+    "size_bytes": 5987
+  },
+  "artifacts/stage8_28/horizon_prefix_audit.csv": {
+    "exists": true,
+    "sha256": "8ab73c230a0fa987aaeb95475e7b619ce41715a2d81773fd8f87e17db140e501",
+    "size_bytes": 52198
+  },
+  "artifacts/stage8_28/facility_baseline_audit.csv": {
+    "exists": true,
+    "sha256": "68618ea3ca716a7dc427246d0deef31be0b047307f9754fb009fd43d7beb79f7",
+    "size_bytes": 24357
+  },
+  "artifacts/stage8_28/horizon_prediction_audit.csv": {
+    "exists": true,
+    "sha256": "c2747781b81624e9526c9958ec2b84398600db79d9ef0b1120f3a726f0b7f369",
+    "size_bytes": 63003
+  },
+  "artifacts/stage8_28/confusion_matrices.json": {
+    "exists": true,
+    "sha256": "51f30e1fd4ffde993307005729a8d9a4ec04819adfeef5b1ed1955908710d69e",
+    "size_bytes": 1872
+  },
+  "artifacts/stage8_28/bootstrap_metrics.json": {
+    "exists": true,
+    "sha256": "5b146c3464ad098c5373a426e59d1b5a3b7210809e7114af944087ff2845a70b",
+    "size_bytes": 2600
+  },
+  "artifacts/stage8_28/leakage_audit.json": {
+    "exists": true,
+    "sha256": "d4f3663c059216452cae5a88cbec00f7645f298cc74375f7df212be2c0ad51e1",
+    "size_bytes": 1884
+  },
+  "artifacts/stage8_28/stage8_28_summary.json": {
+    "exists": true,
+    "sha256": "c3eec02ea98d278689af69129e9c0545070930f9da5c5618fc4d1fc48e98833c",
+    "size_bytes": 17668
+  }
+}

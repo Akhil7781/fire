@@ -1,0 +1,107 @@
+{
+  "class_support_matrix": {
+    "Agricultural Fire": {
+      "is_test_supported": false,
+      "test_detections": 0,
+      "test_events": 0,
+      "train_detections": 16,
+      "train_events": 4,
+      "val_detections": 3,
+      "val_events": 3
+    },
+    "Forest Fire": {
+      "is_test_supported": false,
+      "test_detections": 0,
+      "test_events": 0,
+      "train_detections": 20,
+      "train_events": 7,
+      "val_detections": 0,
+      "val_events": 0
+    },
+    "Industrial Fire": {
+      "is_test_supported": false,
+      "test_detections": 0,
+      "test_events": 0,
+      "train_detections": 5,
+      "train_events": 4,
+      "val_detections": 0,
+      "val_events": 0
+    },
+    "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+      "is_test_supported": true,
+      "test_detections": 642,
+      "test_events": 18,
+      "train_detections": 739,
+      "train_events": 18,
+      "val_detections": 169,
+      "val_events": 18
+    }
+  },
+  "description": "Frozen independent test partition definition and class support accounting for Stage 8.24.",
+  "evaluation_splits": {
+    "INDEPENDENT_TEST": [
+      "IND_EVT_SEBI_2025_HALOL_AUTO_PARTS_12"
+    ],
+    "TRAIN": [
+      "EVT_2025_AGRI_HR_KARNAL_RABI_002",
+      "EVT_2025_AGRI_HR_PLOWED_SOIL_009",
+      "EVT_2025_AGRI_MP_SEHORE_RABI_003",
+      "EVT_2025_AGRI_MP_UNCORROBORATED_010",
+      "EVT_2025_AGRI_PB_OFFSEASON_007",
+      "EVT_2025_AGRI_PB_PATIALA_RABI_004",
+      "EVT_2025_AGRI_PB_SANGRUR_RABI_001",
+      "EVT_2025_AGRI_UK_FOREST_FAIL_008",
+      "EVT_2025_IND_CG_BASTAR_007",
+      "EVT_2025_IND_GJ_KUTCH_BARREN_016",
+      "EVT_2025_IND_HP_KANGRA_009",
+      "EVT_2025_IND_HP_SOLAN_008",
+      "EVT_2025_IND_HR_KARNAL_AGRI_013",
+      "EVT_2025_IND_MH_AHMEDNAGAR_SCRUB_015",
+      "EVT_2025_IND_MH_MELGHAT_005",
+      "EVT_2025_IND_MP_BANDHAVGARH_004",
+      "EVT_2025_IND_OD_KANDHAMAL_010",
+      "EVT_2025_IND_OD_SIMILIPAL_003",
+      "EVT_2025_IND_PB_SANGRUR_AGRI_012",
+      "EVT_2025_IND_RJ_BIKANER_SCRUB_014",
+      "EVT_2025_IND_TN_MUDUMALAI_006",
+      "EVT_2025_IND_UK_CORBETT_011",
+      "EVT_2025_IND_UK_NAINITAL_001",
+      "EVT_2025_IND_UK_PAURI_002",
+      "IND_EVT_MOD_2025_BHANDARA_ORDNANCE_14",
+      "IND_EVT_NEWS_2025_MANALI_PETROCHEM_05",
+      "IND_EVT_NGT_2025_VIZAG_PHARMA_03",
+      "IND_EVT_SEBI_2025_BSE_DAHEJ_CHEM_01",
+      "IND_EVT_SEBI_2025_HEUBACH_ROHA_13",
+      "IND_EVT_SEBI_2025_SIPCOT_RANIPET_07",
+      "IND_EVT_SPCB_2025_MPCB_DOMBIVLI_02",
+      "S2_CHIP_DS08_EXP_S1_003",
+      "S2_CHIP_DS08_EXP_S2_001",
+      "S2_CHIP_DS08_EXP_S3_001",
+      "S2_CHIP_S8_001",
+      "S2_CHIP_S8_002"
+    ],
+    "VAL": [
+      "EVT_2025_AGRI_HR_KAITHAL_KHARIF_006",
+      "EVT_2025_AGRI_PB_PATIALA_KHARIF_005",
+      "S2_CHIP_DS08_EXP_S4_001",
+      "S2_CHIP_DS08_EXP_S5_001",
+      "S2_CHIP_DS08_EXP_S6_001"
+    ]
+  },
+  "leakage_controls_verified": {
+    "s2_scene_isolation_verified": true,
+    "spatial_buffer_verified": true,
+    "synthetic_data_excluded": true,
+    "temporal_holdout_verified": true,
+    "unrelated_yolo_joins_excluded": true,
+    "zero_detection_leakage": true,
+    "zero_event_leakage": true,
+    "zero_incident_leakage": true
+  },
+  "manifest_name": "ds08_stage8_24_independent_test_manifest",
+  "scientific_readiness_decision": "MULTIMODAL_INTEGRATION_READY_BUT_DATA_GATED",
+  "split_policy": "Strict Physical-Event Level Partitioning with Anti-Proximity & Temporal Holdout",
+  "stage": "Stage 8.24",
+  "temporal_holdout_window": "2025-11-01T00:00:00Z to 2025-12-31T23:59:59Z",
+  "version": "1.0_FROZEN"
+}

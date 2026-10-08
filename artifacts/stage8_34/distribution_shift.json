@@ -1,0 +1,223 @@
+{
+  "spatial_distribution": {
+    "counts": {
+      "Agricultural Fire": {
+        "Central_East": 1,
+        "Central_West": 3,
+        "North": 23,
+        "South": 0
+      },
+      "Forest Fire": {
+        "Central_East": 8,
+        "Central_West": 2,
+        "North": 9,
+        "South": 8
+      },
+      "Industrial Fire": {
+        "Central_East": 4,
+        "Central_West": 8,
+        "North": 6,
+        "South": 17
+      },
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+        "Central_East": 22,
+        "Central_West": 6,
+        "North": 7,
+        "South": 7
+      }
+    },
+    "p_class_given_region": {
+      "Agricultural Fire": {
+        "Central_East": 0.0286,
+        "Central_West": 0.1579,
+        "North": 0.5111,
+        "South": 0.0
+      },
+      "Forest Fire": {
+        "Central_East": 0.2286,
+        "Central_West": 0.1053,
+        "North": 0.2,
+        "South": 0.25
+      },
+      "Industrial Fire": {
+        "Central_East": 0.1143,
+        "Central_West": 0.4211,
+        "North": 0.1333,
+        "South": 0.5312
+      },
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+        "Central_East": 0.6286,
+        "Central_West": 0.3158,
+        "North": 0.1556,
+        "South": 0.2188
+      }
+    },
+    "p_region_given_class": {
+      "Central_East": {
+        "Agricultural Fire": 0.037,
+        "Forest Fire": 0.2963,
+        "Industrial Fire": 0.1143,
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 0.5238
+      },
+      "Central_West": {
+        "Agricultural Fire": 0.1111,
+        "Forest Fire": 0.0741,
+        "Industrial Fire": 0.2286,
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 0.1429
+      },
+      "North": {
+        "Agricultural Fire": 0.8519,
+        "Forest Fire": 0.3333,
+        "Industrial Fire": 0.1714,
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 0.1667
+      },
+      "South": {
+        "Agricultural Fire": 0.0,
+        "Forest Fire": 0.2963,
+        "Industrial Fire": 0.4857,
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 0.1667
+      }
+    },
+    "region_entropies": {
+      "Central_East": 1.411925999515808,
+      "Central_West": 1.81294527625988,
+      "North": 1.7644639971958465,
+      "South": 1.4644264763856563
+    },
+    "findings": {
+      "agricultural_concentration": {
+        "north_count": 23,
+        "total_count": 27,
+        "percentage_in_north": 85.19,
+        "note": "85.19% of all development agricultural fires are in the North region. When North is held out in spatial CV, the training set only has 4 agricultural examples."
+      },
+      "persistent_concentration": {
+        "central_east_count": 22,
+        "total_count": 42,
+        "percentage_in_central_east": 52.38,
+        "note": "52.38% of persistent thermal sources are located in Central_East (Jharia/Raniganj coal fire belt)."
+      },
+      "south_characteristics": {
+        "agri_count": 0,
+        "industrial_count": 17,
+        "industrial_percentage": 53.12,
+        "note": "South has 0 agricultural fires and is 53.1% industrial fires."
+      }
+    }
+  },
+  "temporal_distribution": {
+    "counts": {
+      "Agricultural Fire": {
+        "2016": 1,
+        "2017": 1,
+        "2018": 1,
+        "2019": 2,
+        "2020": 2,
+        "2021": 3,
+        "2022": 3,
+        "2023": 3,
+        "2024": 4,
+        "2025": 7
+      },
+      "Forest Fire": {
+        "2016": 2,
+        "2017": 0,
+        "2018": 1,
+        "2019": 2,
+        "2020": 2,
+        "2021": 3,
+        "2022": 3,
+        "2023": 3,
+        "2024": 4,
+        "2025": 7
+      },
+      "Industrial Fire": {
+        "2016": 1,
+        "2017": 1,
+        "2018": 2,
+        "2019": 3,
+        "2020": 5,
+        "2021": 5,
+        "2022": 4,
+        "2023": 5,
+        "2024": 5,
+        "2025": 4
+      },
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+        "2016": 0,
+        "2017": 0,
+        "2018": 0,
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 0,
+        "2023": 0,
+        "2024": 36,
+        "2025": 6
+      }
+    },
+    "p_class_given_year": {
+      "Agricultural Fire": {
+        "2016": 0.25,
+        "2017": 0.5,
+        "2018": 0.25,
+        "2019": 0.2857,
+        "2020": 0.2222,
+        "2021": 0.2727,
+        "2022": 0.3,
+        "2023": 0.2727,
+        "2024": 0.0816,
+        "2025": 0.2917
+      },
+      "Forest Fire": {
+        "2016": 0.5,
+        "2017": 0.0,
+        "2018": 0.25,
+        "2019": 0.2857,
+        "2020": 0.2222,
+        "2021": 0.2727,
+        "2022": 0.3,
+        "2023": 0.2727,
+        "2024": 0.0816,
+        "2025": 0.2917
+      },
+      "Industrial Fire": {
+        "2016": 0.25,
+        "2017": 0.5,
+        "2018": 0.5,
+        "2019": 0.4286,
+        "2020": 0.5556,
+        "2021": 0.4545,
+        "2022": 0.4,
+        "2023": 0.4545,
+        "2024": 0.102,
+        "2025": 0.1667
+      },
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+        "2016": 0.0,
+        "2017": 0.0,
+        "2018": 0.0,
+        "2019": 0.0,
+        "2020": 0.0,
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.7347,
+        "2025": 0.25
+      }
+    },
+    "findings": {
+      "persistent_introduction": {
+        "pre_2024_count": 0,
+        "2024_count": 36,
+        "2025_count": 6,
+        "note": "Persistent sources were catalogued starting in 2024. No persistent events exist in 2016-2023."
+      }
+    }
+  },
+  "implications": [
+    "Spatial CV is heavily stressed by extreme spatial covariate and label shift: holding out North removes almost all training instances of Agricultural Fire.",
+    "Raw coordinates (latitude, longitude) directly encode the regional bias: a model trained with coordinates will simply memorize lat > 26 => Agricultural, lat < 20 => Industrial, failing when applied outside training regions.",
+    "Historical temporal evaluation prior to 2024 cannot evaluate 4-class attribution because Class 3 was not yet recorded."
+  ]
+}

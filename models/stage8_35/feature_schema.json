@@ -1,0 +1,72 @@
+{
+  "feature_version": "8.35_expanded",
+  "total_features": 41,
+  "excluded_columns": [
+    "associated_persistent_id",
+    "associated_forest_id",
+    "associated_agri_id",
+    "associated_incident_id",
+    "is_facility_baseline",
+    "persistent_registry_flag",
+    "centroid_lat",
+    "centroid_lon"
+  ],
+  "raw_coordinates_included": false,
+  "feature_groups": {
+    "thermal": [
+      "current_frp",
+      "current_bright_ti4",
+      "current_bright_ti5",
+      "current_delta_ti",
+      "current_is_night",
+      "detections_observed_so_far",
+      "elapsed_observation_hours",
+      "mean_frp_observed_so_far",
+      "max_frp_observed_so_far",
+      "std_frp_observed_so_far",
+      "night_ratio_observed_so_far",
+      "spatial_extent_observed_so_far",
+      "frp_trend_observed_so_far",
+      "time_since_prev_h"
+    ],
+    "industrial": [
+      "dist_to_fac_km",
+      "within_1km_fac",
+      "within_5km_fac",
+      "facility_baseline_frp",
+      "frp_deviation",
+      "facility_frp_zscore"
+    ],
+    "ecoregion": [
+      "forest_biome_score",
+      "agri_heartland_score",
+      "s2_available"
+    ],
+    "historical": [
+      "hist_count_full",
+      "hist_active_days_full",
+      "hist_active_months_full",
+      "hist_mean_frp_full",
+      "hist_max_frp_full",
+      "hist_std_frp_full",
+      "hist_cv_frp_full",
+      "hist_count_1km",
+      "hist_count_2km",
+      "hist_count_5km",
+      "hist_dispersion",
+      "hist_distinct_calendar_months",
+      "hist_days_since_latest",
+      "hist_count_365d",
+      "hist_count_90d",
+      "hist_count_30d",
+      "hist_night_ratio_full",
+      "hist_mean_delta_ti_full"
+    ]
+  },
+  "group_dimensions": {
+    "thermal": 14,
+    "industrial": 6,
+    "ecoregion": 3,
+    "historical": 18
+  }
+}

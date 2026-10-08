@@ -1,0 +1,234 @@
+{
+  "chip_id": "PILOT_18_WEST",
+  "annotation_version": "v1.0",
+  "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+  "adjudicator": "HUMAN_ADJUDICATOR_01",
+  "adjudication_timestamp": "2026-10-02T05:23:30.557397+00:00",
+  "human_verified": true,
+  "adjudication_rationale": "The Sentinel-2 SWIR imagery was reviewed to assess the candidate Forest Fire region identified by both annotators. Their proposed bounding boxes overlap around the same localized feature. The consensus bounding box was adjusted to cover the selected region based on the visible image evidence. The surrounding land-cover context was considered during the review, while the FIRMS thermal detection was treated only as supporting spatial context and not as ground-truth confirmation.",
+  "dispute_category": "Evidence nuance (A1 omitted BURN_SCAR_VISIBLE vs A2 included it). Both agree 1 Forest Fire box.",
+  "source_annotation_hashes": {
+    "annotator_1": "8714e286dbad7610e7a79b6ee6e1ef1cae30deef33ad04244fdc3aacf943c257",
+    "annotator_2": "54ba4215c080fe79eae0a3200db971a7e4b04f7820fa2f2950d5c95e5988b4f6"
+  },
+  "A1_original": {
+    "chip_annotation_status": "HAS_ANNOTATIONS",
+    "annotations": [
+      {
+        "annotation_id": "PILOT_18_WEST_ANN_01",
+        "class_id": 2,
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 238,
+          "y_min": 56,
+          "x_max": 288,
+          "y_max": 114
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "FOREST_CONTEXT_VISIBLE",
+          "NO_CLEAR_VISUAL_EVIDENCE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "review_status": "PENDING",
+        "notes": "",
+        "annotator_id": "HUMAN_ANNOTATOR_01",
+        "annotation_timestamp": "2026-09-30T16:02:32.988971+00:00"
+      }
+    ],
+    "visual_evidence": [
+      "DIRECT_FIRE_VISIBLE",
+      "FOREST_CONTEXT_VISIBLE",
+      "NO_CLEAR_VISUAL_EVIDENCE"
+    ],
+    "visibility_status": "CLEAR",
+    "confidence": {
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM"
+    }
+  },
+  "A2_original": {
+    "chip_annotation_status": "HAS_ANNOTATIONS",
+    "annotations": [
+      {
+        "annotation_id": "PILOT_18_WEST_ANN_01",
+        "class_id": 2,
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 241,
+          "y_min": 64,
+          "x_max": 289,
+          "y_max": 104
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "BURN_SCAR_VISIBLE",
+          "FOREST_CONTEXT_VISIBLE",
+          "NO_CLEAR_VISUAL_EVIDENCE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "review_status": "PENDING",
+        "notes": "",
+        "annotator_id": "HUMAN_ANNOTATOR_02",
+        "annotation_timestamp": "2026-09-30T16:18:16.800124+00:00"
+      }
+    ],
+    "visual_evidence": [
+      "BURN_SCAR_VISIBLE",
+      "DIRECT_FIRE_VISIBLE",
+      "FOREST_CONTEXT_VISIBLE",
+      "NO_CLEAR_VISUAL_EVIDENCE"
+    ],
+    "visibility_status": "CLEAR",
+    "confidence": {
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM"
+    }
+  },
+  "final_consensus": {
+    "chip_annotation_status": "HAS_ANNOTATIONS",
+    "annotations": [
+      {
+        "annotation_id": "PILOT_18_WEST_ADJ_01",
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 243,
+          "y_min": 64,
+          "x_max": 287,
+          "y_max": 106
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "BURN_SCAR_VISIBLE",
+          "FOREST_CONTEXT_VISIBLE",
+          "NO_CLEAR_VISUAL_EVIDENCE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "interaction_audit": {
+          "manual_interaction_recorded": true,
+          "event_type": "CANVAS_DRAW",
+          "coordinates": [
+            243,
+            64,
+            287,
+            106
+          ],
+          "timestamp": "2026-10-02T05:21:49.898Z"
+        },
+        "class_id": 2,
+        "annotator_id": "HUMAN_ADJUDICATOR_01",
+        "review_status": "ADJUDICATED",
+        "annotation_timestamp": "2026-10-02T05:23:30.557397+00:00"
+      }
+    ],
+    "chip_id": "PILOT_18_WEST",
+    "annotation_version": "v1.0",
+    "source_classes": [
+      "Forest Fire"
+    ],
+    "visual_evidence": [
+      "BURN_SCAR_VISIBLE",
+      "DIRECT_FIRE_VISIBLE",
+      "FOREST_CONTEXT_VISIBLE",
+      "NO_CLEAR_VISUAL_EVIDENCE"
+    ],
+    "visibility_status": "CLEAR",
+    "geometry_confidence": "MEDIUM",
+    "source_class_confidence": "MEDIUM",
+    "context_metadata": {
+      "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+      "firms_detection_id": "d92b05d94de8fc2dd77c192ac359b43348fc947a0b837299d471c16bddf4f1f6",
+      "firms_latitude": 23.41807,
+      "firms_longitude": 69.78631,
+      "firms_acq_datetime_utc": null,
+      "firms_frp": 5.4,
+      "firms_brightness_kelvin": null,
+      "firms_pixel_coord": {
+        "row": 256,
+        "col": 256
+      },
+      "product_id": "S2C_MSIL2A_20250305T054741_N0511_R048_T42QWL_20250305T090156.SAFE",
+      "tile_id": "T42QWL",
+      "cloud_cover_pct": 3.32,
+      "authoritative_bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+    }
+  },
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_18_WEST_ADJ_01",
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 243,
+        "y_min": 64,
+        "x_max": 287,
+        "y_max": 106
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "BURN_SCAR_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "interaction_audit": {
+        "manual_interaction_recorded": true,
+        "event_type": "CANVAS_DRAW",
+        "coordinates": [
+          243,
+          64,
+          287,
+          106
+        ],
+        "timestamp": "2026-10-02T05:21:49.898Z"
+      },
+      "class_id": 2,
+      "annotator_id": "HUMAN_ADJUDICATOR_01",
+      "review_status": "ADJUDICATED",
+      "annotation_timestamp": "2026-10-02T05:23:30.557397+00:00"
+    }
+  ],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "d92b05d94de8fc2dd77c192ac359b43348fc947a0b837299d471c16bddf4f1f6",
+    "firms_latitude": 23.41807,
+    "firms_longitude": 69.78631,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 5.4,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2C_MSIL2A_20250305T054741_N0511_R048_T42QWL_20250305T090156.SAFE",
+    "tile_id": "T42QWL",
+    "cloud_cover_pct": 3.32,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

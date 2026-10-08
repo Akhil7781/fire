@@ -1,0 +1,1073 @@
+<USER_REQUEST>
+STAGE 8.25
+MULTI-YEAR ACUTE-EVENT DATASET + INDUSTRIAL FIRE MINING + INDEPENDENT 4-CLASS BENCHMARK
+
+============================================================
+MISSION
+============================================================
+
+The current project has a technically complete multimodal architecture, but scientific validation is blocked because the current held-out test contains:
+
+Industrial Fire      = 0
+Forest Fire          = 0
+Agricultural Fire    = 0
+Persistent Source    = supported
+
+The objective of Stage 8.25 is to solve this data problem.
+
+The target is to build a real, independently validated 4-class benchmark capable of evaluating:
+
+1. Industrial Fire
+2. Forest Fire
+3. Agricultural Fire
+4. Other Thermal Source / Persistent Non-Biomass Thermal Source
+
+TARGET PERFORMANCE OBJECTIVE
+
+Aim for:
+
+- accuracy >= 85%
+- macro F1 >= 85%
+- balanced accuracy >= 85%
+
+IMPORTANT:
+These are TARGETS, not guaranteed results.
+
+Do not manipulate the dataset, split, labels, or test set to obtain 85%.
+
+The scientific goal is to discover whether the system can actually reach the target.
+
+============================================================
+1. DO NOT MODIFY FROZEN ARTIFACTS
+============================================================
+
+Do not modify:
+
+models/tcn/best_tcn.pt
+models/deep_sad/best_deep_sad.pt
+models/s2_encoder/best_s2_encoder.pt
+models/yolo/infrastructure/best_infrastructure.pt
+models/yolo/fire_smoke/best_fire_smoke.pt
+models/fusion/best_multimodal_fusion.pt
+
+Do not modify:
+
+data/interim/causal_features_2025.parquet
+
+Do not modify:
+
+DS08 V3
+DS08 V4
+Stage 8.20 quality policy
+Stage 8.21 quality policy
+Stage 8.24 independent test manifest
+
+All new data must receive Stage 8.25 paths and identifiers.
+
+============================================================
+2. CORE DESIGN CHANGE
+============================================================
+
+STOP treating 2025 as the entire supervised universe.
+
+Build a MULTI-YEAR event dataset.
+
+Preferred time universe:
+
+VIIRS:
+2012-present
+
+Use:
+- VIIRS S-NPP
+- VIIRS NOAA-20
+- VIIRS NOAA-21
+
+Also consider:
+- MODIS for historical context
+- Landsat active-fire data
+- Landsat thermal surface temperature where appropriate
+
+NASA FIRMS archive is the authoritative thermal-detection source.
+
+Use STANDARD SCIENCE-QUALITY data whenever available.
+
+Do not mix NRT and science-quality observations without documenting the difference.
+
+============================================================
+3. RESEARCH-FIRST REQUIREMENT
+============================================================
+
+Before writing the expansion code, perform a source-discovery and source-validation phase.
+
+Find authoritative sources for:
+
+A. INDUSTRIAL FIRES
+B. FOREST FIRES
+C. AGRICULTURAL FIRES
+D. PERSISTENT THERMAL SOURCES
+E. INDUSTRIAL FACILITY LOCATIONS
+
+Preferred evidence hierarchy:
+
+Tier 1:
+government / statutory / official datasets
+
+Tier 2:
+official research institutions
+
+Tier 3:
+well-documented public registries
+
+Tier 4:
+reputable timestamped secondary reporting
+
+Do not use a secondary report as the only basis for a high-confidence ground-truth event when stronger evidence exists.
+
+For each source store:
+
+source_name
+organization
+coverage_period
+geographic_coverage
+download/access method
+license/usage restrictions
+fields available
+event information available
+spatial precision
+temporal precision
+verification method
+
+Create:
+
+data/reference/ds08/manifests/stage8_25/source_registry.json
+
+============================================================
+4. INDUSTRIAL FIRE DATASET — PRIMARY OBJECTIVE
+============================================================
+
+This is the hardest and most important part.
+
+Construct an industrial incident universe covering multiple years.
+
+Search for:
+
+- major industrial accident registries
+- official statutory incident reports
+- state factory inspectorate / MAH records
+- chemical-plant incidents
+- refinery incidents
+- power-plant incidents
+- steel/metal plant incidents
+- cement plant incidents
+- industrial warehouses
+- manufacturing plants
+- petrochemical facilities
+- fertilizer plants
+- mining/processing facilities
+
+For every incident require:
+
+incident_id
+facility_name
+industry_type
+latitude
+longitude
+event_date
+event_start if available
+event_end if available
+state
+country
+evidence_source
+source_url/reference
+source_type
+evidence_strength
+
+DO NOT label:
+
+thermal anomaly near factory = industrial fire
+
+The incident must be independently documented.
+
+============================================================
+5. INDUSTRIAL FACILITY UNIVERSE
+============================================================
+
+Construct a separate industrial-facility database.
+
+Possible authoritative sources include:
+
+- Global Energy Monitor
+- government industrial registries
+- OpenStreetMap industrial polygons
+- CPCB/state pollution-control datasets
+- other documented industrial asset databases
+
+Each facility:
+
+facility_id
+facility_type
+sector
+name
+latitude
+longitude
+polygon if available
+source
+operational status where available
+confidence
+
+Use facilities as:
+
+CONTEXT
+
+not:
+
+GROUND TRUTH
+
+A FIRMS detection near a facility remains unlabeled until the event evidence supports industrial fire.
+
+============================================================
+6. HISTORICAL FIRMS EXTRACTION
+============================================================
+
+Download/reconstruct historical India FIRMS data for the maximum scientifically useful period.
+
+At minimum evaluate:
+
+2012-2026
+
+Sensors:
+
+VIIRS S-NPP
+VIIRS NOAA-20
+VIIRS NOAA-21
+
+Optionally include MODIS for longer temporal context.
+
+Create a normalized table:
+
+detection_id
+sensor
+satellite
+latitude
+longitude
+acq_datetime_utc
+bright_ti4
+bright_ti5
+frp
+confidence
+scan
+track
+daynight
+source_product
+processing_version
+
+Normalize all timestamps to UTC.
+
+Do not duplicate detections across sensors.
+
+============================================================
+7. BUILD PHYSICAL EVENTS
+============================================================
+
+Do not treat individual FIRMS detections as independent ground-truth events.
+
+Construct physical events.
+
+Event linkage may use:
+
+- spatial proximity
+- temporal proximity
+- connected-component clustering
+- density clustering
+- documented incident windows
+
+But the rules must be fixed before final evaluation.
+
+Generate:
+
+event_id
+detection_ids
+event_start
+event_end
+centroid_lat
+centroid_lon
+duration
+max_frp
+mean_frp
+detection_count
+spatial_extent
+
+Preserve sensor identity.
+
+============================================================
+8. INDUSTRIAL EVENT MATCHING
+============================================================
+
+For every documented industrial incident:
+
+search FIRMS events around:
+
+spatial window
++
+temporal window
+
+Calculate:
+
+min_distance_km
+temporal_difference_hours
+event_overlap
+FRP statistics
+thermal anomaly relative to local baseline
+
+Require an explicit matching decision:
+
+CONFIRMED
+PROBABLE
+REJECTED
+AMBIGUOUS
+
+Only CONFIRMED enters independent ground truth.
+
+Create:
+
+data/interim/ds08_stage8_25_industrial_event_matches.parquet
+
+============================================================
+9. FACILITY BASELINE — IMPORTANT
+============================================================
+
+For every industrial facility with sufficient history compute a normal thermal baseline.
+
+Features:
+
+facility_frp_mean_30d
+facility_frp_std_30d
+facility_frp_mean_90d
+facility_frp_std_90d
+facility_detection_frequency
+facility_nighttime_frequency
+facility_thermal_percentile
+facility_event_frequency
+
+For an event calculate:
+
+frp_baseline_deviation
+facility_frp_zscore
+peak_minus_baseline
+thermal_change_point
+event_duration
+event_spatial_expansion
+
+IMPORTANT:
+
+Do NOT hard-code arbitrary thresholds just because they produce attractive labels.
+
+Use training-period statistics.
+
+============================================================
+10. INDUSTRIAL FIRE VS PERSISTENT SOURCE
+============================================================
+
+This distinction is essential.
+
+Construct paired examples where possible:
+
+NORMAL FACILITY ACTIVITY
+vs
+DOCUMENTED ACUTE INDUSTRIAL INCIDENT
+
+The same facility may therefore produce:
+
+Persistent thermal source
+
+during ordinary operation,
+
+and:
+
+Industrial Fire
+
+during a documented acute incident.
+
+This is one of the most valuable forms of hard-negative supervision.
+
+============================================================
+11. FOREST FIRE EXPANSION
+============================================================
+
+Use the strongest available forest-fire evidence sources.
+
+Prioritize:
+
+- Forest Survey of India
+- Van Agni
+- Large Forest Fire records
+- official forest/fire records
+
+Link confirmed forest events to FIRMS physical events.
+
+Create:
+
+forest_event_id
+firms_event_id
+location
+event_start
+event_end
+evidence_source
+spatial_distance
+temporal_difference
+confidence
+verification_status
+
+Goal:
+
+substantially expand beyond the current 7 confirmed forest events.
+
+Never treat every FIRMS detection inside a forest polygon as automatically confirmed forest fire.
+
+============================================================
+12. AGRICULTURAL FIRE EXPANSION
+============================================================
+
+Use:
+
+- ISRO/Bhuvan agricultural-fire products
+- ICAR/IARI CREAMS
+- official agricultural-burning datasets where available
+- state agriculture/fire records
+
+Link to FIRMS events.
+
+Also extract:
+
+land_cover
+cropland_fraction
+field_context
+season
+district
+crop-burning season indicator
+
+Again:
+
+Agricultural fire is a documented class.
+
+Cropland proximity alone is not ground truth.
+
+============================================================
+13. PERSISTENT THERMAL SOURCE EXPANSION
+============================================================
+
+Keep the existing persistent-source methodology.
+
+Expand using:
+
+- long-term recurrence
+- spatial stability
+- facility/energy context
+- repeated nighttime thermal observations
+
+Potential examples:
+
+- industrial plants
+- refineries
+- power plants
+- coal seams
+- gas flaring
+- geothermal sources
+- volcanoes
+- other persistent non-biomass sources
+
+Do not automatically classify all industrial facilities as persistent sources.
+
+============================================================
+14. HIGH-CONFIDENCE TRAINING LABELS
+============================================================
+
+Create three label tiers:
+
+CONFIRMED
+HIGH_CONFIDENCE_WEAK
+UNLABELED
+
+Use:
+
+CONFIRMED:
+for independent benchmark ground truth
+
+HIGH_CONFIDENCE_WEAK:
+potentially usable for training only
+
+UNLABELED:
+not used as supervised targets
+
+NEVER use weak labels in the independent test.
+
+============================================================
+15. CLASS TARGET
+============================================================
+
+Build an actual event population approaching:
+
+Industrial         >= 30 independent events
+Forest             >= 30 independent events
+Agricultural       >= 30 independent events
+Persistent         >= 50 independent events
+
+These are minimum planning targets, NOT numbers to fabricate.
+
+If fewer legitimate events exist:
+
+report the actual count.
+
+Do not invent or duplicate events to satisfy a target.
+
+============================================================
+16. LEAKAGE-FREE TEMPORAL DESIGN
+============================================================
+
+Use a multi-year temporal strategy.
+
+Preferred:
+
+TRAIN:
+2012-2024
+
+VALIDATION:
+2025
+
+INDEPENDENT TEST:
+2026
+
+But verify actual data availability first.
+
+If 2026 coverage is insufficient:
+
+construct another documented chronological event holdout.
+
+Do NOT move existing 2025 acute events artificially into test.
+
+============================================================
+17. SPATIAL EVENT EXCLUSION
+============================================================
+
+Even across different years, nearby events can cause contextual leakage.
+
+Apply the existing spatial exclusion policy.
+
+Additionally test:
+
+same facility
+same industrial complex
+same forest incident region
+same agricultural burn cluster
+overlapping S2 scenes
+overlapping chip footprints
+
+No event context may leak across splits.
+
+============================================================
+18. HARD NEGATIVE DESIGN
+============================================================
+
+Explicitly construct:
+
+A. Industrial fire vs persistent facility heat
+
+B. Industrial fire vs agricultural fire near factories
+
+C. Industrial fire vs forest fire near industrial zones
+
+D. Forest vs agriculture
+
+E. Persistent facility vs acute industrial fire
+
+These hard negatives are REQUIRED.
+
+============================================================
+19. MULTIMODAL DATA ASSOCIATION
+============================================================
+
+For each confirmed event attempt to associate:
+
+FIRMS temporal representation
++
+Deep SAD representation
++
+geospatial features
++
+Sentinel-2
++
+Landsat thermal where available
++
+facility context
+
+Do not force YOLO DIOR/FASDD embeddings into the system.
+
+If genuine event-linked aerial imagery is unavailable:
+
+YOLO = unavailable
+
+Do not fabricate.
+
+============================================================
+20. ADD A THERMAL MULTI-SENSOR BRANCH
+============================================================
+
+Do not depend entirely on Sentinel-2.
+
+Create a thermal representation using:
+
+FIRMS
++
+historical FIRMS
++
+Landsat thermal where spatial/temporal coverage permits
+
+Possible architecture:
+
+TCN / temporal CNN
++
+MLP thermal-context encoder
+
+Output:
+
+thermal_multisensor_embedding
+
+Use this as an additional modality.
+
+Do not immediately replace the frozen TCN.
+
+Treat it as Stage 8.25 research branch.
+
+============================================================
+21. HIERARCHICAL CLASSIFIER
+============================================================
+
+Do NOT rely only on the previous flat 4-class head.
+
+Implement an experimental hierarchical classifier:
+
+HEAD 1:
+Acute Fire
+vs
+Persistent/Non-Acute
+
+HEAD 2:
+For Acute Fire:
+Industrial
+vs
+Biomass
+
+HEAD 3:
+For Biomass:
+Forest
+vs
+Agricultural
+
+Final:
+
+Persistent -> Other Thermal Source
+Acute + Industrial -> Industrial Fire
+Acute + Biomass + Forest -> Forest Fire
+Acute + Biomass + Agricultural -> Agricultural Fire
+
+Keep the existing flat 4-class model as a baseline.
+
+Compare them fairly.
+
+============================================================
+22. SELF-SUPERVISED PRETRAINING
+============================================================
+
+Exploit the large unlabeled FIRMS history.
+
+Do not waste the millions of unlabeled observations.
+
+Train a new optional thermal encoder using:
+
+- masked timestep reconstruction
+- temporal contrastive learning
+- multi-view thermal representation learning
+
+Do not modify the frozen Stage 7A TCN.
+
+This is a new Stage 8.25 research model.
+
+For satellite imagery, investigate whether an existing geospatial foundation model can provide a legitimate pretrained representation.
+
+Do not adopt a large foundation model merely because it is available.
+
+Measure compute and data requirements.
+
+============================================================
+23. TRAIN/VALIDATION/TEST LABEL POLICY
+============================================================
+
+TRAIN:
+Confirmed + carefully controlled high-confidence weak labels
+
+VALIDATION:
+Confirmed labels only where practical
+
+INDEPENDENT TEST:
+CONFIRMED labels only
+
+The independent test must be frozen before model optimization.
+
+============================================================
+24. TEST SUPPORT GATE
+============================================================
+
+Print:
+
+CLASS | TRAIN EVENTS | VAL EVENTS | TEST EVENTS
+
+No zero-support class may be presented as validated.
+
+Required test support:
+
+Industrial > 0
+Forest > 0
+Agricultural > 0
+Persistent > 0
+
+Prefer >= 20 independent test events per acute class.
+
+If this cannot be achieved legitimately:
+
+STOP and report DATA GATED.
+
+============================================================
+25. EVENT-LEVEL METRICS
+============================================================
+
+Evaluate:
+
+Event-level accuracy
+Macro F1
+Balanced accuracy
+Per-class precision
+Per-class recall
+Per-class F1
+Confusion matrix
+
+Also report detection-level metrics.
+
+Never present detection-level accuracy as if detections were independent physical events.
+
+============================================================
+26. 85% TARGET
+============================================================
+
+Evaluate whether:
+
+Accuracy >= 0.85
+Macro F1 >= 0.85
+Balanced Accuracy >= 0.85
+
+are achieved.
+
+If achieved:
+
+report on the frozen independent test.
+
+If not achieved:
+
+DO NOT tune against the independent test.
+
+Use validation data to investigate:
+
+- industrial/persistent confusion
+- industrial/agriculture confusion
+- forest/agriculture confusion
+- missing visual modality
+- temporal representation weakness
+
+Then create a new experiment.
+
+============================================================
+27. NO TEST SET OVERFITTING
+============================================================
+
+Once:
+
+independent_test_manifest.json
+
+is frozen:
+
+NEVER alter test membership to improve performance.
+
+Any experiment after this point must use:
+
+training
+validation
+cross-validation
+
+The independent test is touched only for final evaluation.
+
+============================================================
+28. CALIBRATION
+============================================================
+
+Evaluate:
+
+- confidence calibration
+- reliability
+- per-class probability quality
+
+Only if test support is sufficient.
+
+Do not optimize calibration on the final test.
+
+============================================================
+29. ERROR ANALYSIS
+============================================================
+
+For every independent-test error record:
+
+event_id
+true_class
+predicted_class
+probabilities
+temporal_features
+thermal_baseline_features
+facility_context
+land_cover
+S2_available
+Landsat_available
+YOLO_available
+error_type
+manual_analysis
+
+Specifically quantify:
+
+Industrial -> Persistent
+Persistent -> Industrial
+Industrial -> Agriculture
+Industrial -> Forest
+Forest -> Agriculture
+Agriculture -> Forest
+
+These confusion directions are more important than overall accuracy.
+
+============================================================
+30. VISUAL REVIEW
+============================================================
+
+For every independent test event generate a review package containing:
+
+- FIRMS event map
+- temporal FRP plot
+- facility map
+- Sentinel-2 RGB
+- Sentinel-2 SWIR
+- Landsat thermal if available
+- land-cover context
+- prediction
+- true label
+- evidence summary
+
+This becomes the evidence trail for your final paper.
+
+============================================================
+31. TESTS
+============================================================
+
+Create:
+
+tests/test_stage8_25_dataset.py
+tests/test_stage8_25_industrial.py
+tests/test_stage8_25_splits.py
+
+Test:
+
+1. no duplicate physical events
+2. no detection duplication
+3. no incident leakage
+4. no facility leakage
+5. no spatial leakage
+6. no temporal leakage
+7. no synthetic data
+8. no synthetic labels
+9. no weak labels in final test
+10. no expected-label promotion
+11. no proximity-only industrial labeling
+12. no unrelated YOLO joins
+13. correct multi-year sensor normalization
+14. correct event construction
+15. correct class support
+16. frozen test manifest
+17. no test-set modification
+18. no NaN/Inf
+19. provenance exists
+20. frozen predecessor hashes unchanged
+
+Run ALL previous regression tests.
+
+============================================================
+32. FINAL ARTIFACTS
+============================================================
+
+Create:
+
+data/reference/ds08/manifests/stage8_25/source_registry.json
+
+data/reference/ds08/manifests/stage8_25/industrial_incident_manifest.json
+
+data/reference/ds08/manifests/stage8_25/forest_event_manifest.json
+
+data/reference/ds08/manifests/stage8_25/agricultural_event_manifest.json
+
+data/reference/ds08/manifests/stage8_25/persistent_source_manifest.json
+
+data/reference/ds08/manifests/stage8_25/independent_test_manifest.json
+
+data/interim/ds08_stage8_25_multiyear_firms.parquet
+
+data/interim/ds08_stage8_25_physical_events.parquet
+
+data/interim/ds08_stage8_25_industrial_event_matches.parquet
+
+data/interim/ds08_stage8_25_multiyear_labels.parquet
+
+data/interim/ds08_stage8_25_multimodal_event_cohort.parquet
+
+data/interim/ds08_stage8_25_error_analysis.parquet
+
+============================================================
+33. FINAL REPORT
+============================================================
+
+Create:
+
+reports/stage8_25_report.md
+
+Include:
+
+1. Research sources
+2. Source reliability
+3. Multi-year FIRMS coverage
+4. Number of physical events
+5. Industrial-event expansion
+6. Forest-event expansion
+7. Agricultural-event expansion
+8. Persistent-source expansion
+9. Class distribution
+10. Independent test construction
+11. Facility-baseline methodology
+12. Hard-negative construction
+13. S2 coverage
+14. Landsat thermal coverage
+15. YOLO decision
+16. Hierarchical model
+17. Flat-model baseline
+18. Self-supervised pretraining
+19. Fusion strategy
+20. Leakage audit
+21. Accuracy
+22. Macro F1
+23. Balanced accuracy
+24. Per-class F1
+25. Confusion matrix
+26. Event-level metrics
+27. Detection-level metrics
+28. Error analysis
+29. Calibration
+30. 85% target assessment
+31. Limitations
+32. Reproducibility
+33. Artifact hashes
+
+============================================================
+34. FINAL STATUS
+============================================================
+
+Print exactly:
+
+ITEM | STATUS | VALUE
+
+Industrial events
+Forest events
+Agricultural events
+Persistent events
+
+Independent industrial test events
+Independent forest test events
+Independent agricultural test events
+Independent persistent test events
+
+FIRMS years covered
+S2-linked events
+Landsat thermal-linked events
+YOLO-linked events
+
+Train event count
+Validation event count
+Test event count
+
+Spatial leakage
+Temporal leakage
+Facility leakage
+Synthetic-data leakage
+
+Industrial F1
+Forest F1
+Agricultural F1
+Persistent F1
+
+Macro F1
+Balanced accuracy
+Event-level accuracy
+Detection-level accuracy
+
+85% accuracy target
+85% macro-F1 target
+85% balanced-accuracy target
+
+FINAL STATUS
+
+============================================================
+35. FINAL DECISION
+============================================================
+
+Use exactly one:
+
+SCIENTIFICALLY_VALIDATED_4_CLASS_SYSTEM
+
+Only if:
+
+- all four classes have independent test support
+- independent test contains multiple physical events per class
+- no leakage
+- test labels are confirmed
+- event-level metrics are valid
+- target metrics are achieved or honestly reported
+
+DATA_READY_BUT_PERFORMANCE_BELOW_TARGET
+
+If all four classes are independently testable but performance < 85%.
+
+MULTIMODAL_DATA_READY_BUT_CLASS_GATED
+
+If engineering is ready but one or more classes still have insufficient independent test support.
+
+BLOCKED
+
+If provenance, leakage, or label integrity fails.
+
+============================================================
+36. ABSOLUTE RULE
+============================================================
+
+The target is not:
+
+"make the accuracy 85%."
+
+The target is:
+
+"construct such a strong, independent, physically meaningful dataset and representation system that an 85% result, if achieved, is believable."
+
+Never modify ground truth, test membership, or thresholds merely to obtain 85%.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-03T22:25:35+05:30.
+</ADDITIONAL_METADATA>

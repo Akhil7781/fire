@@ -1,0 +1,560 @@
+{
+  "status": "STAGE_8.11_PILOT_DOUBLE_ANNOTATION_COMPLETE",
+  "timestamp_utc": "2026-09-29T16:33:36.418470+00:00",
+  "annotation_protocol_version": "v1.0",
+  "remaining_15_chips": [
+    "PILOT_02_NORTH",
+    "PILOT_03_NORTH",
+    "PILOT_06_CENTRAL",
+    "PILOT_07_CENTRAL",
+    "PILOT_08_CENTRAL",
+    "PILOT_10_SOUTH",
+    "PILOT_11_SOUTH",
+    "PILOT_12_SOUTH",
+    "PILOT_14_EAST",
+    "PILOT_15_EAST",
+    "PILOT_16_EAST",
+    "PILOT_18_WEST",
+    "PILOT_19_WEST",
+    "PILOT_20_WEST",
+    "PILOT_04_NORTH_REPLACEMENT"
+  ],
+  "remaining_15_chips_statistics": {
+    "total_chips": 15,
+    "concordant_chips_count": 11,
+    "disputed_chips_count": 4,
+    "raw_agreement_pct": 73.33,
+    "cohens_kappa": 0.5522,
+    "mean_matched_iou": 0.7186,
+    "mean_evidence_jaccard": 0.7222,
+    "a1_class_distribution": {
+      "Industrial Fire": 0,
+      "Forest Fire": 7,
+      "Agricultural Fire": 1,
+      "Other Thermal Source": 0,
+      "NO_VISIBLE_TARGET": 7,
+      "UNRESOLVED": 0
+    },
+    "a2_class_distribution": {
+      "Industrial Fire": 0,
+      "Forest Fire": 4,
+      "Agricultural Fire": 0,
+      "Other Thermal Source": 0,
+      "NO_VISIBLE_TARGET": 9,
+      "UNRESOLVED": 2
+    },
+    "disagreements": [
+      {
+        "chip_id": "PILOT_06_CENTRAL",
+        "annotator1_class": "Forest Fire",
+        "annotator2_class": "NO_VISIBLE_TARGET",
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null,
+        "evidence_jaccard": null
+      },
+      {
+        "chip_id": "PILOT_14_EAST",
+        "annotator1_class": "Forest Fire",
+        "annotator2_class": "UNRESOLVED",
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.6944444444444444,
+        "evidence_jaccard": 0.3333333333333333
+      },
+      {
+        "chip_id": "PILOT_18_WEST",
+        "annotator1_class": "Agricultural Fire",
+        "annotator2_class": "NO_VISIBLE_TARGET",
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null,
+        "evidence_jaccard": null
+      },
+      {
+        "chip_id": "PILOT_19_WEST",
+        "annotator1_class": "Forest Fire",
+        "annotator2_class": "UNRESOLVED",
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.7159763313609467,
+        "evidence_jaccard": 0.3333333333333333
+      }
+    ],
+    "chip_details": [
+      {
+        "chip_id": "PILOT_02_NORTH",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_03_NORTH",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Forest Fire",
+        "a2_class": "Forest Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.8402777777777778
+      },
+      {
+        "chip_id": "PILOT_06_CENTRAL",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "Forest Fire",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": false,
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_07_CENTRAL",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_08_CENTRAL",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Forest Fire",
+        "a2_class": "Forest Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.7755102040816326
+      },
+      {
+        "chip_id": "PILOT_10_SOUTH",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_11_SOUTH",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_12_SOUTH",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_14_EAST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "UNRESOLVED",
+        "a1_class": "Forest Fire",
+        "a2_class": "UNRESOLVED",
+        "class_match": false,
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.6944444444444444
+      },
+      {
+        "chip_id": "PILOT_15_EAST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Forest Fire",
+        "a2_class": "Forest Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.672
+      },
+      {
+        "chip_id": "PILOT_16_EAST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Forest Fire",
+        "a2_class": "Forest Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.6133333333333333
+      },
+      {
+        "chip_id": "PILOT_18_WEST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "Agricultural Fire",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": false,
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_19_WEST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "UNRESOLVED",
+        "a1_class": "Forest Fire",
+        "a2_class": "UNRESOLVED",
+        "class_match": false,
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.7159763313609467
+      },
+      {
+        "chip_id": "PILOT_20_WEST",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      }
+    ]
+  },
+  "full_20_chips_pilot_statistics": {
+    "total_chips": 20,
+    "concordant_chips_count": 14,
+    "disputed_chips_count": 6,
+    "raw_agreement_pct": 70.0,
+    "cohens_kappa": 0.5455,
+    "mean_matched_iou": 0.7171,
+    "mean_evidence_jaccard": 0.7037,
+    "a1_class_distribution": {
+      "Industrial Fire": 0,
+      "Forest Fire": 9,
+      "Agricultural Fire": 3,
+      "Other Thermal Source": 0,
+      "NO_VISIBLE_TARGET": 8,
+      "UNRESOLVED": 0
+    },
+    "a2_class_distribution": {
+      "Industrial Fire": 0,
+      "Forest Fire": 5,
+      "Agricultural Fire": 1,
+      "Other Thermal Source": 0,
+      "NO_VISIBLE_TARGET": 11,
+      "UNRESOLVED": 3
+    },
+    "disagreements": [
+      {
+        "chip_id": "PILOT_01_NORTH",
+        "annotator1_class": "Agricultural Fire",
+        "annotator2_class": "NO_VISIBLE_TARGET",
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null,
+        "evidence_jaccard": null
+      },
+      {
+        "chip_id": "PILOT_06_CENTRAL",
+        "annotator1_class": "Forest Fire",
+        "annotator2_class": "NO_VISIBLE_TARGET",
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null,
+        "evidence_jaccard": null
+      },
+      {
+        "chip_id": "PILOT_13_EAST",
+        "annotator1_class": "Forest Fire",
+        "annotator2_class": "UNRESOLVED",
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.7159763313609467,
+        "evidence_jaccard": 0.3333333333333333
+      },
+      {
+        "chip_id": "PILOT_14_EAST",
+        "annotator1_class": "Forest Fire",
+        "annotator2_class": "UNRESOLVED",
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.6944444444444444,
+        "evidence_jaccard": 0.3333333333333333
+      },
+      {
+        "chip_id": "PILOT_18_WEST",
+        "annotator1_class": "Agricultural Fire",
+        "annotator2_class": "NO_VISIBLE_TARGET",
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null,
+        "evidence_jaccard": null
+      },
+      {
+        "chip_id": "PILOT_19_WEST",
+        "annotator1_class": "Forest Fire",
+        "annotator2_class": "UNRESOLVED",
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.7159763313609467,
+        "evidence_jaccard": 0.3333333333333333
+      }
+    ],
+    "chip_details": [
+      {
+        "chip_id": "PILOT_01_NORTH",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "Agricultural Fire",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": false,
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_02_NORTH",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_03_NORTH",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Forest Fire",
+        "a2_class": "Forest Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.8402777777777778
+      },
+      {
+        "chip_id": "PILOT_05_CENTRAL",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_06_CENTRAL",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "Forest Fire",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": false,
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_07_CENTRAL",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_08_CENTRAL",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Forest Fire",
+        "a2_class": "Forest Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.7755102040816326
+      },
+      {
+        "chip_id": "PILOT_09_SOUTH",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Forest Fire",
+        "a2_class": "Forest Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.7222222222222222
+      },
+      {
+        "chip_id": "PILOT_10_SOUTH",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_11_SOUTH",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_12_SOUTH",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_13_EAST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "UNRESOLVED",
+        "a1_class": "Forest Fire",
+        "a2_class": "UNRESOLVED",
+        "class_match": false,
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.7159763313609467
+      },
+      {
+        "chip_id": "PILOT_14_EAST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "UNRESOLVED",
+        "a1_class": "Forest Fire",
+        "a2_class": "UNRESOLVED",
+        "class_match": false,
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.6944444444444444
+      },
+      {
+        "chip_id": "PILOT_15_EAST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Forest Fire",
+        "a2_class": "Forest Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.672
+      },
+      {
+        "chip_id": "PILOT_16_EAST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Forest Fire",
+        "a2_class": "Forest Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.6133333333333333
+      },
+      {
+        "chip_id": "PILOT_17_WEST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "HAS_ANNOTATIONS",
+        "a1_class": "Agricultural Fire",
+        "a2_class": "Agricultural Fire",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": 0.7040816326530612
+      },
+      {
+        "chip_id": "PILOT_18_WEST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "Agricultural Fire",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": false,
+        "disagreement_categories": [
+          "CLASS_DISAGREEMENT"
+        ],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_19_WEST",
+        "a1_status": "HAS_ANNOTATIONS",
+        "a2_status": "UNRESOLVED",
+        "a1_class": "Forest Fire",
+        "a2_class": "UNRESOLVED",
+        "class_match": false,
+        "disagreement_categories": [
+          "UNRESOLVED_DISAGREEMENT",
+          "EVIDENCE_DISAGREEMENT"
+        ],
+        "iou": 0.7159763313609467
+      },
+      {
+        "chip_id": "PILOT_20_WEST",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      },
+      {
+        "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+        "a1_status": "NO_VISIBLE_TARGET",
+        "a2_status": "NO_VISIBLE_TARGET",
+        "a1_class": "NO_VISIBLE_TARGET",
+        "a2_class": "NO_VISIBLE_TARGET",
+        "class_match": true,
+        "disagreement_categories": [],
+        "iou": null
+      }
+    ]
+  }
+}

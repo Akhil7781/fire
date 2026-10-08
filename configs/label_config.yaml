@@ -1,0 +1,98 @@
+# ==============================================================================
+# Configuration for Label Construction Pipeline
+# Conforms to LABEL_SPEC.md, label_source_comparison.md, and label_matching_plan.md
+# Calibrated via Empirical Sensitivity Analysis on Training Partition
+# ==============================================================================
+
+pipeline:
+  name: "satellite-thermal-label-construction"
+  version: "1.0.0"
+  random_seed: 42
+  target_region: "India"
+  study_year: 2025
+
+paths:
+  frozen_features: "data/interim/causal_features_2025.parquet"
+  split_dir: "data/processed/splits"
+  reference_dir: "data/reference"
+  candidates_dir: "data/labeling/candidates"
+  matches_dir: "data/labeling/matches"
+  output_labels_dir: "data/processed/labels"
+  audits_dir: "data/labeling/audits"
+
+classes:
+  0: "UNLABELED"
+  1: "INDUSTRIAL_FIRE"
+  2: "FOREST_FIRE"
+  3: "AGRICULTURAL_FIRE"
+  4: "OTHER_THERMAL_SOURCE"
+
+confidence_tiers:
+  tier_a:
+    name: "Tier A"
+    description: "Confirmed (Statutory, Regulatory Order, or Direct Optical Burn Scar)"
+    min_confidence: 0.95
+    max_confidence: 1.00
+    eligible_for_supervised: true
+  tier_b:
+    name: "Tier B"
+    description: "Probable / Weak (Multi-source News, Verified Scientific Catalog)"
+    min_confidence: 0.70
+    max_confidence: 0.94
+    eligible_for_supervised: true
+  tier_c:
+    name: "Tier C"
+    description: "Ambiguous (Spatial context only, single weak unverified report)"
+    min_confidence: 0.30
+    max_confidence: 0.69
+    eligible_for_supervised: false
+  tier_d:
+    name: "Tier D"
+    description: "Unlabeled (No matching independent evidence)"
+    min_confidence: 0.00
+    max_confidence: 0.00
+    eligible_for_supervised: false
+
+matching_parameters:
+  # Spatial Tolerances (in Kilometers) - Calibrated via Empirical Sensitivity Sweeps
+  spatial_tolerances_km:
+    industrial_exact_point: 1.000     # 1000m facility coordinate match (VIIRS pixel footprint)
+    industrial_polygon_buffer: 3.000  # 3000m buffer for industrial estate / corridor centroids
+    forest_cluster_radius: 2.000      # 2000m match to FSI LFF event perimeter (matches causal context radius)
+    agri_field_parcel: 3.500          # 3500m match to agricultural revenue village cluster centroid
+    flaring_stack: 1.000              # 1000m match to World Bank GGFR flare stack
+    brick_kiln: 1.000                 # 1000m match to SentinelKilnDB cluster
+    power_plant_stack: 1.000          # 1000m match to CEA/GEM power station generator cluster
+    coal_fire_colliery: 2.000         # 2000m match to CMPDI Jharia/Raniganj coalfield colliery
+    volcano_vent: 5.000               # 5000m radius around Barren Island vent
+
+  # Temporal Tolerances (in Hours)
+  temporal_tolerances_hours:
+    sebi_reg30_disclosure: 48.0       # +/- 48h from corporate disclosure timestamp
+    spcb_regulatory_order: 72.0       # +/- 72h from statutory inspection/order date
+    news_incident_report: 48.0        # +/- 48h from verified media report timestamp
+    fsi_forest_fire_alert: 24.0       # +/- 24h for FSI satellite overpass active alert
+    mcd64a1_burned_date: 48.0         # +/- 48h for MODIS day-of-year burn pixel
+    iari_agri_fire_bulletin: 24.0     # +/- 24h for daily agricultural fire bulletin
+    sentinel2_optical_scar: 72.0      # +/- 72h for pre/post Sentinel-2 overpass
+    static_infrastructure: 8760.0     # Permanent / multi-year persistent infrastructure
+
+  # Physical & Optical Corroboration Thresholds
+  optical_corroboration:
+    min_sentinel2_dnbr_industrial: 0.15
+    min_sentinel2_dnbr_agri: 0.20
+    max_flare_blackbody_temp_k: 1600.0
+
+confidence_weights:
+  statutory_regulatory_order: 1.00
+  direct_optical_burn_scar: 0.90
+  multi_source_news_incident: 0.85
+  scientific_catalog_verified: 0.80
+  single_news_report: 0.60
+  spatial_mask_context_only: 0.30
+
+conflict_resolution:
+  hierarchy_rule: "TIER_SUPERIORITY"  # Tier A overrides Tier B; Tier B overrides Tier C
+  incident_priority: true             # Specific disaster report overrides land cover mask
+  persistent_emitter_priority: true   # Flare / Kiln / Power plant defaults to Class 4 unless explosion proven
+  tie_breaker_default: "CONFLICTED"   # Equal conflicting evidence becomes CONFLICTED (Class 0, Tier C)

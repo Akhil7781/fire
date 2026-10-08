@@ -1,0 +1,52 @@
+{
+  "chip_id": "PILOT_13_EAST",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "UNRESOLVED",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_13_EAST_ADJ_01",
+      "class_id": 0,
+      "class_name": "UNRESOLVED",
+      "bbox": {
+        "x_min": 225,
+        "y_min": 225,
+        "x_max": 290,
+        "y_max": 290
+      },
+      "geometry_confidence": "LOW",
+      "source_class_confidence": "LOW",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "FOREST_CONTEXT_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "ADJUDICATED",
+      "annotator_id": "SENIOR_ADJUDICATION_PANEL",
+      "annotation_timestamp": "2026-09-29T16:08:22.906879+00:00",
+      "notes": "Adjudicated as UNRESOLVED due to optical ambiguity between montane terrain shadow and vegetative disturbance."
+    }
+  ],
+  "context_metadata": {
+    "firms_detection_id": "8275a8b5e6f793b25b39b6df40eaa05d270faf1aa76a8b4b93c67c4640e11dc5",
+    "firms_latitude": 23.51987,
+    "firms_longitude": 93.49424,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 9.26,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2C_MSIL2A_20250308T041641_N0511_R090_T46QEM_20250308T065415.SAFE",
+    "tile_id": "T46QEM",
+    "cloud_cover_pct": 0.0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

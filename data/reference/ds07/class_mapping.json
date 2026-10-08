@@ -1,0 +1,18 @@
+{
+  "dataset": "FASDD_RS",
+  "benchmark_purpose": "Base visual pretraining for YOLOv8n-Fire/Smoke (Combustion Plumes)",
+  "semantic_separation_statement": "Flame/smoke detection != fire-source class. Active optical combustion plume presence proves burning dynamics, NOT whether the fire is Industrial, Forest, or Agricultural.",
+  "num_classes": 2,
+  "classes": {
+    "0": "Flame",
+    "1": "Smoke"
+  },
+  "original_to_internal_mapping": {
+    "flame": 0,
+    "fire": 0,
+    "flame_front": 0,
+    "smoke": 1,
+    "smoke_plume": 1,
+    "plume": 1
+  }
+}

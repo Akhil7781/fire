@@ -1,0 +1,19 @@
+{
+  "status": "DS_08_PROTO_SYNTHETIC_ANNOTATIONS",
+  "warning": "NOT FOR MODEL TRAINING",
+  "description": "This directory contains the original DS_08 prototype dataset generated on 2026-09-24. All 1,299 bounding box annotations are PIPELINE_GENERATED using seeded numpy.random.RandomState. They are NOT manually drawn bounding boxes from human annotators examining actual Sentinel-2 imagery. The 250 PNG images are synthetic RGB arrays with noise overlays; they are NOT real Sentinel-2 pixels. This prototype is preserved for pipeline architecture audit and structural testing only.",
+  "do_not_use_for": [
+    "YOLOv8n-Infra fine-tuning",
+    "YOLOv8n-Fire/Smoke fine-tuning",
+    "Any downstream model training",
+    "Ground truth evaluation"
+  ],
+  "preserved_for": [
+    "Pipeline architecture audit",
+    "Structural test coverage",
+    "Annotation schema reference",
+    "Split isolation logic reference"
+  ],
+  "created_at": "2026-09-24T21:40:32Z",
+  "archived_at": "2026-09-25T15:57:00Z"
+}

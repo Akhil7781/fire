@@ -1,0 +1,59 @@
+{
+  "stage": "STAGE_8.13",
+  "title": "DS08 Human Annotation Session Launch & Verification",
+  "status": "UI_ACTIVE_AWAITING_HUMAN_ANNOTATOR_1_INPUT",
+  "timestamp_utc": "2026-09-29T23:17:00+00:00",
+  "ui_launch_status": {
+    "annotator_1_ui": {
+      "status": "RUNNING",
+      "port": 8090,
+      "url": "http://localhost:8090",
+      "http_status": 200,
+      "active_annotator": "annotator_1",
+      "workspace_dir": "data/reference/ds08/annotations/manual/annotator_1/"
+    },
+    "annotator_2_ui": {
+      "status": "PENDING_A1_COMPLETION",
+      "target_port": 8091,
+      "url": "http://localhost:8091",
+      "active_annotator": "annotator_2",
+      "workspace_dir": "data/reference/ds08/annotations/manual/annotator_2/"
+    }
+  },
+  "completion_counts": {
+    "annotator_1": {
+      "total_chips": 15,
+      "completed_count": 0,
+      "pending_count": 15,
+      "completion_pct": 0.0
+    },
+    "annotator_2": {
+      "total_chips": 15,
+      "completed_count": 0,
+      "pending_count": 15,
+      "completion_pct": 0.0
+    }
+  },
+  "provenance_and_integrity_verification": {
+    "all_files_have_valid_schema": true,
+    "human_verified_initial_state": false,
+    "task_status_initial_state": "PENDING_MANUAL_INPUT",
+    "zero_ai_generated_annotations": true,
+    "zero_model_predictions": true,
+    "firms_context_disclaimer": "FIRMS CONTEXT — NOT GROUND TRUTH"
+  },
+  "ui_and_save_errors": [],
+  "agreement_and_adjudication": {
+    "agreement_calculated": false,
+    "adjudication_performed": false,
+    "status": "STRICTLY_DEFERRED"
+  },
+  "frozen_predecessor_integrity": {
+    "models/tcn/best_tcn.pt": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+    "models/deep_sad/best_deep_sad.pt": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+    "models/yolo/infrastructure/best_infrastructure.pt": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+    "models/yolo/fire_smoke/best_fire_smoke.pt": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+    "data/embeddings/fusion/india_2025_tcn_sad_aligned.parquet": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+    "all_hashes_matched": true
+  }
+}

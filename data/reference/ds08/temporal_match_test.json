@@ -1,0 +1,171 @@
+{
+  "firms_detection_id": "9b557f8145b3657fa117887b5558b87e40bf7c132372b041e7f5a992ad81365c",
+  "firms_coordinates": {
+    "latitude": 21.24256,
+    "longitude": 76.81844
+  },
+  "firms_acquisition_utc": "2025-03-15T08:35:00Z",
+  "firms_frp_mw": 98.65,
+  "firms_partition": "train",
+  "search_aoi_bbox": [
+    76.76844,
+    21.19256,
+    76.86844,
+    21.29256
+  ],
+  "search_intervals": {
+    "window_6h": "2025-03-15T02:35:00Z/2025-03-15T14:35:00Z",
+    "window_24h": "2025-03-14T08:35:00Z/2025-03-16T08:35:00Z",
+    "window_48h": "2025-03-13T08:35:00Z/2025-03-17T08:35:00Z"
+  },
+  "search_counts": {
+    "count_6h": 0,
+    "count_24h": 1,
+    "count_48h": 1
+  },
+  "searches": {
+    "window_6h": {
+      "name": "Search A (\u00b16h)",
+      "temporal_window_hours": 6.0,
+      "datetime_interval": "2025-03-15T02:35:00Z/2025-03-15T14:35:00Z",
+      "returned_count": 0,
+      "items": []
+    },
+    "window_24h": {
+      "name": "Search B (\u00b124h)",
+      "temporal_window_hours": 24.0,
+      "datetime_interval": "2025-03-14T08:35:00Z/2025-03-16T08:35:00Z",
+      "returned_count": 1,
+      "items": [
+        {
+          "item_id": "S2C_MSIL2A_20250316T051711_N0511_R062_T43QFD_20250316T103215.SAFE",
+          "collection": "sentinel-2-l2a",
+          "platform": "sentinel-2c",
+          "acquisition_datetime_utc": "2025-03-16T05:33:30.884Z",
+          "absolute_time_gap_hours": 20.975246,
+          "cloud_cover_pct": 17.48,
+          "spatially_covers_firms_point": true,
+          "bbox": [
+            76.02189370841138,
+            20.699554043243875,
+            77.02785138572654,
+            21.698678674691127
+          ],
+          "geometry_type": "MultiPolygon",
+          "assets": [
+            "data"
+          ],
+          "all_required_bands_available": true,
+          "bands_status": {
+            "B02": "AVAILABLE",
+            "B03": "AVAILABLE",
+            "B04": "AVAILABLE",
+            "B11": "AVAILABLE",
+            "B12": "AVAILABLE"
+          }
+        }
+      ]
+    },
+    "window_48h": {
+      "name": "Search C (\u00b148h)",
+      "temporal_window_hours": 48.0,
+      "datetime_interval": "2025-03-13T08:35:00Z/2025-03-17T08:35:00Z",
+      "returned_count": 1,
+      "items": [
+        {
+          "item_id": "S2C_MSIL2A_20250316T051711_N0511_R062_T43QFD_20250316T103215.SAFE",
+          "collection": "sentinel-2-l2a",
+          "platform": "sentinel-2c",
+          "acquisition_datetime_utc": "2025-03-16T05:33:30.884Z",
+          "absolute_time_gap_hours": 20.975246,
+          "cloud_cover_pct": 17.48,
+          "spatially_covers_firms_point": true,
+          "bbox": [
+            76.02189370841138,
+            20.699554043243875,
+            77.02785138572654,
+            21.698678674691127
+          ],
+          "geometry_type": "MultiPolygon",
+          "assets": [
+            "data"
+          ],
+          "all_required_bands_available": true,
+          "bands_status": {
+            "B02": "AVAILABLE",
+            "B03": "AVAILABLE",
+            "B04": "AVAILABLE",
+            "B11": "AVAILABLE",
+            "B12": "AVAILABLE"
+          }
+        }
+      ]
+    }
+  },
+  "all_returned_items": [
+    {
+      "item_id": "S2C_MSIL2A_20250316T051711_N0511_R062_T43QFD_20250316T103215.SAFE",
+      "collection": "sentinel-2-l2a",
+      "platform": "sentinel-2c",
+      "acquisition_datetime_utc": "2025-03-16T05:33:30.884Z",
+      "absolute_time_gap_hours": 20.975246,
+      "cloud_cover_pct": 17.48,
+      "spatially_covers_firms_point": true,
+      "bbox": [
+        76.02189370841138,
+        20.699554043243875,
+        77.02785138572654,
+        21.698678674691127
+      ],
+      "geometry_type": "MultiPolygon",
+      "assets": [
+        "data"
+      ],
+      "all_required_bands_available": true,
+      "bands_status": {
+        "B02": "AVAILABLE",
+        "B03": "AVAILABLE",
+        "B04": "AVAILABLE",
+        "B11": "AVAILABLE",
+        "B12": "AVAILABLE"
+      }
+    }
+  ],
+  "march_11_scene_evaluation": {
+    "item_id": "S2B_MSIL2A_20250311T051649_N0511_R062_T43QFD_20250311T075623.SAFE",
+    "acquisition_datetime_utc": "2025-03-11T05:33:09.634Z",
+    "absolute_time_gap_hours": 99.030657,
+    "evaluation_result": "OUTSIDE_ACCEPTABLE_TEMPORAL_WINDOW",
+    "rationale": "March 11 scene has an absolute time gap of 99.03 hours from the FIRMS observation (2025-03-15T08:35:00Z), exceeding the \u00b148h threshold. It is strictly excluded from association under Step 7."
+  },
+  "final_match_category": "MATCH_24H",
+  "selected_item": {
+    "item_id": "S2C_MSIL2A_20250316T051711_N0511_R062_T43QFD_20250316T103215.SAFE",
+    "collection": "sentinel-2-l2a",
+    "platform": "sentinel-2c",
+    "acquisition_datetime_utc": "2025-03-16T05:33:30.884Z",
+    "absolute_time_gap_hours": 20.975246,
+    "cloud_cover_pct": 17.48,
+    "spatially_covers_firms_point": true,
+    "bbox": [
+      76.02189370841138,
+      20.699554043243875,
+      77.02785138572654,
+      21.698678674691127
+    ],
+    "geometry_type": "MultiPolygon",
+    "assets": [
+      "data"
+    ],
+    "all_required_bands_available": true,
+    "bands_status": {
+      "B02": "AVAILABLE",
+      "B03": "AVAILABLE",
+      "B04": "AVAILABLE",
+      "B11": "AVAILABLE",
+      "B12": "AVAILABLE"
+    }
+  },
+  "decision_rationale": "Found valid Sentinel-2 scene (S2C_MSIL2A_20250316T051711_N0511_R062_T43QFD_20250316T103215.SAFE) with time gap 20.9752h <= 24.0h (outside 6h window).",
+  "scientific_integrity_note": "Temporal association of Sentinel-2 Level-2A optical observation to FIRMS detection establishes physical data availability within the temporal tolerance window. It does NOT assign or prove a fire-source sector (Industrial, Forest, Agricultural, Other). Optical evidence remains decoupled from classification ground truth."
+}

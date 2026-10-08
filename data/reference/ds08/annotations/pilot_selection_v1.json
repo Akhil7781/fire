@@ -1,0 +1,12 @@
+{
+  "stage": "8.10A",
+  "selection_method": "deterministic_one_per_geographic_region_first_index",
+  "selection_rationale": "Selects the first available active chip from each of the five geographic regions of India (NORTH, CENTRAL, SOUTH, EAST, WEST) as ordered in the pilot manifest, ensuring pan-India geographic diversity without prior visual screening.",
+  "selected_chip_ids": [
+    "PILOT_01_NORTH",
+    "PILOT_05_CENTRAL",
+    "PILOT_09_SOUTH",
+    "PILOT_13_EAST",
+    "PILOT_17_WEST"
+  ]
+}

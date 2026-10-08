@@ -1,0 +1,115 @@
+# ==============================================================================
+# Git Ignore Configuration - Satellite Thermal Anomaly Classification Research
+# ==============================================================================
+
+# --- Environment & Sensitive Credentials ---
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.secret
+credentials.json
+secrets/
+# Explicitly keep the template
+!.env.example
+
+# --- Python & Bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Jupyter & Notebooks ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints/
+
+# --- Testing & Code Quality ---
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# --- Datasets & Raw Files ---
+# Never commit raw or processed datasets, CSV files, or large data artifacts
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+# Generated image copies and embeddings are reproducible from the project data
+# pipeline and make the Git history too large for ordinary GitHub pushes.
+data/reference/**/*.png
+data/derived/**/*.png
+data/embeddings/**/*.npy
+data/operational.db
+*.csv
+*.tsv
+*.parquet
+*.h5
+*.hdf5
+*.nc
+*.tif
+*.tiff
+*.geotiff
+*.tar
+*.tar.gz
+*.zip
+*.7z
+
+# --- Model Checkpoints & Large Artifacts ---
+checkpoints/*
+!checkpoints/.gitkeep
+models/weights/*
+!models/weights/.gitkeep
+runs/
+*.pt
+*.pth
+*.bin
+*.onnx
+*.engine
+*.weights
+
+# --- Logging & Experiment Tracking ---
+logs/*
+!logs/.gitkeep
+wandb/
+tensorboard/
+mlruns/
+*.log
+
+# --- IDEs & OS Files ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+desktop.ini

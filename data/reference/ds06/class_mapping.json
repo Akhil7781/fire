@@ -1,0 +1,39 @@
+{
+  "dataset": "DIOR",
+  "benchmark_purpose": "Base visual pretraining for YOLOv8n-Infra (Industrial Infrastructure)",
+  "semantic_separation_statement": "Infrastructure detection != industrial fire. Structural asset presence is spatial/contextual prior evidence, NOT an active combustion label.",
+  "num_classes": 2,
+  "classes": {
+    "0": "Storage_Tank",
+    "1": "Chimney"
+  },
+  "original_to_internal_mapping": {
+    "storage tank": 0,
+    "storage-tank": 0,
+    "storage_tank": 0,
+    "storagetank": 0,
+    "chimney": 1,
+    "chimney stack": 1,
+    "chimney_stack": 1
+  },
+  "excluded_dior_classes": [
+    "airplane",
+    "airport",
+    "baseballfield",
+    "basketballcourt",
+    "bridge",
+    "dam",
+    "expressway-service-area",
+    "expressway-toll-station",
+    "golffield",
+    "groundtrackfield",
+    "harbor",
+    "overpass",
+    "ship",
+    "stadium",
+    "tenniscourt",
+    "trainstation",
+    "vehicle",
+    "windmill"
+  ]
+}

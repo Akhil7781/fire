@@ -1,0 +1,21 @@
+{
+  "model_architecture": "YOLOv8n-Fire/Smoke (Ultralytics)",
+  "base_weights": "yolov8n.pt",
+  "epochs": 15,
+  "batch_size": 8,
+  "image_size": 640,
+  "random_seed": 42,
+  "device": "cpu",
+  "pytorch_version": "2.14.0+cpu",
+  "ultralytics_version": "8.4.163",
+  "training_duration_seconds": 543.51,
+  "num_classes": 2,
+  "classes": {
+    "0": "Flame",
+    "1": "Smoke"
+  },
+  "train_images": 80,
+  "val_images": 20,
+  "test_images": 20,
+  "dataset_yaml": "D:/DATA PREPROCESSING/data/derived/ds07_yolo/ds07_yolo.yaml"
+}

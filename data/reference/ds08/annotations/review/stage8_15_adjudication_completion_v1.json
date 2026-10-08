@@ -1,0 +1,226 @@
+{
+  "stage": "STAGE_8.15",
+  "title": "Stage 8.15 Final Human Adjudication Persistence Audit",
+  "audit_version": "v1.0",
+  "audit_timestamp_utc": "2026-09-30T16:58:30.000000+00:00",
+  "overall_status": "FAIL",
+  "failure_summary": "All 6 adjudication files failed the mandatory Human Rationale Quality Check (Section 3). Each file contains prohibited generic rationales ('I saw the fire on the image' / 'i saw the fire in the image') without chip-specific observable visual basis. Furthermore, all 6 files contain unaligned dummy/placeholder bounding box coordinates [200, 200, 300, 300] repeated multiple times.",
+  "adjudication_workspace": {
+    "directory": "data/reference/ds08/annotations/adjudication/review/",
+    "expected_files_count": 6,
+    "actual_files_count": 6,
+    "extra_files_count": 0,
+    "all_expected_files_present": true
+  },
+  "per_chip_audit": {
+    "PILOT_03_NORTH": {
+      "file": "PILOT_03_NORTH_adjudicated_v1.json",
+      "exists": true,
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "human_verified": true,
+      "adjudication_timestamp": "2026-09-30T16:48:59.010832+00:00",
+      "final_observation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 4,
+      "final_classes": [
+        "Forest Fire"
+      ],
+      "boxes": [
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300}
+      ],
+      "rationale": "I saw the fire on the image",
+      "rationale_validation": "FAIL — Prohibited generic statement ('I saw the fire on the image'); lacks chip-specific observable evidence details",
+      "geometry_validation": "FAIL — Placeholder dummy coordinates [200, 200, 300, 300] repeated 4 times; unaligned with actual fire features",
+      "chip_audit_status": "FLAGGED_REJECTED"
+    },
+    "PILOT_06_CENTRAL": {
+      "file": "PILOT_06_CENTRAL_adjudicated_v1.json",
+      "exists": true,
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "human_verified": true,
+      "adjudication_timestamp": "2026-09-30T16:49:32.012187+00:00",
+      "final_observation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "final_classes": [
+        "Forest Fire"
+      ],
+      "boxes": [
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300}
+      ],
+      "rationale": "i saw the fire in the image",
+      "rationale_validation": "FAIL — Prohibited generic statement ('i saw the fire in the image'); lacks chip-specific observable evidence details",
+      "geometry_validation": "FAIL — Placeholder dummy coordinates [200, 200, 300, 300]; unaligned with actual fire features",
+      "chip_audit_status": "FLAGGED_REJECTED"
+    },
+    "PILOT_08_CENTRAL": {
+      "file": "PILOT_08_CENTRAL_adjudicated_v1.json",
+      "exists": true,
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "human_verified": true,
+      "adjudication_timestamp": "2026-09-30T16:49:45.656920+00:00",
+      "final_observation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 2,
+      "final_classes": [
+        "Forest Fire"
+      ],
+      "boxes": [
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300}
+      ],
+      "rationale": "i saw the fire in the image",
+      "rationale_validation": "FAIL — Prohibited generic statement ('i saw the fire in the image'); lacks chip-specific observable evidence details",
+      "geometry_validation": "FAIL — Placeholder dummy coordinates [200, 200, 300, 300] repeated 2 times; misclassified as Forest Fire in cropland scene",
+      "chip_audit_status": "FLAGGED_REJECTED"
+    },
+    "PILOT_15_EAST": {
+      "file": "PILOT_15_EAST_adjudicated_v1.json",
+      "exists": true,
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "human_verified": true,
+      "adjudication_timestamp": "2026-09-30T16:49:59.976482+00:00",
+      "final_observation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 4,
+      "final_classes": [
+        "Forest Fire"
+      ],
+      "boxes": [
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300}
+      ],
+      "rationale": "i saw the fire in the image",
+      "rationale_validation": "FAIL — Prohibited generic statement ('i saw the fire in the image'); lacks chip-specific observable evidence details",
+      "geometry_validation": "FAIL — Placeholder dummy coordinates [200, 200, 300, 300] repeated 4 times; unaligned with actual fire features",
+      "chip_audit_status": "FLAGGED_REJECTED"
+    },
+    "PILOT_16_EAST": {
+      "file": "PILOT_16_EAST_adjudicated_v1.json",
+      "exists": true,
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "human_verified": true,
+      "adjudication_timestamp": "2026-09-30T16:50:17.544120+00:00",
+      "final_observation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 8,
+      "final_classes": [
+        "Forest Fire"
+      ],
+      "boxes": [
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300}
+      ],
+      "rationale": "i saw the fire in the image",
+      "rationale_validation": "FAIL — Prohibited generic statement ('i saw the fire in the image'); lacks chip-specific observable evidence details",
+      "geometry_validation": "FAIL — Placeholder dummy coordinates [200, 200, 300, 300] repeated 8 times; unaligned with actual fire features",
+      "chip_audit_status": "FLAGGED_REJECTED"
+    },
+    "PILOT_18_WEST": {
+      "file": "PILOT_18_WEST_adjudicated_v1.json",
+      "exists": true,
+      "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+      "human_verified": true,
+      "adjudication_timestamp": "2026-09-30T16:51:05.826415+00:00",
+      "final_observation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 4,
+      "final_classes": [
+        "Forest Fire"
+      ],
+      "boxes": [
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300},
+        {"x_min": 200, "y_min": 200, "x_max": 300, "y_max": 300}
+      ],
+      "rationale": "i saw the fire in the image",
+      "rationale_validation": "FAIL — Prohibited generic statement ('i saw the fire in the image'); lacks chip-specific observable evidence details",
+      "geometry_validation": "FAIL — Placeholder dummy coordinates [200, 200, 300, 300] repeated 4 times; unaligned with actual fire features",
+      "chip_audit_status": "FLAGGED_REJECTED"
+    }
+  },
+  "original_source_integrity": {
+    "all_12_disputed_files_verified": true,
+    "hashes": {
+      "PILOT_03_NORTH": {
+        "A1": {"expected": "4ea58e129deacc36660c26527cd4e235ccda250d0a0dcb344e3a5e82ea6a79dd", "actual": "4ea58e129deacc36660c26527cd4e235ccda250d0a0dcb344e3a5e82ea6a79dd", "verified": true},
+        "A2": {"expected": "d464b2f542071ea100ffedf73de863f12e1377c4fe300345af626d7ea1848f00", "actual": "d464b2f542071ea100ffedf73de863f12e1377c4fe300345af626d7ea1848f00", "verified": true}
+      },
+      "PILOT_06_CENTRAL": {
+        "A1": {"expected": "88acb76ba6b4c1ee7805a476a07fea307bc1c5440208f5b94c8afc4ab2822615", "actual": "88acb76ba6b4c1ee7805a476a07fea307bc1c5440208f5b94c8afc4ab2822615", "verified": true},
+        "A2": {"expected": "46d6dc9efa99c94d43f4eaac5d8fccec06dfc081166d4f14e5436588032242d9", "actual": "46d6dc9efa99c94d43f4eaac5d8fccec06dfc081166d4f14e5436588032242d9", "verified": true}
+      },
+      "PILOT_08_CENTRAL": {
+        "A1": {"expected": "643a579d93e4d2ce88ab03ad3d01790f9c322b8f12ebb1ca5ca7e0216eae69c7", "actual": "643a579d93e4d2ce88ab03ad3d01790f9c322b8f12ebb1ca5ca7e0216eae69c7", "verified": true},
+        "A2": {"expected": "b3acc39e10c4bdf760949066bd0b263bd78e226b803883d27cc4e0a2fffd844e", "actual": "b3acc39e10c4bdf760949066bd0b263bd78e226b803883d27cc4e0a2fffd844e", "verified": true}
+      },
+      "PILOT_15_EAST": {
+        "A1": {"expected": "a68f9383dccecb93dbd9755e0d629be0ddc685da555d9132c7297e446eae5759", "actual": "a68f9383dccecb93dbd9755e0d629be0ddc685da555d9132c7297e446eae5759", "verified": true},
+        "A2": {"expected": "c21eb67c1b0b1852a4b4892fb0ce07d779918fd3ccf792c25543050cae6b029d", "actual": "c21eb67c1b0b1852a4b4892fb0ce07d779918fd3ccf792c25543050cae6b029d", "verified": true}
+      },
+      "PILOT_16_EAST": {
+        "A1": {"expected": "7d7f079047c191a8ff315298554e7b56a2a5e065627349a5b8a8e9ff4b5c9939", "actual": "7d7f079047c191a8ff315298554e7b56a2a5e065627349a5b8a8e9ff4b5c9939", "verified": true},
+        "A2": {"expected": "eabd01e9dccb1ce0b0c46145b32d061c63e69fa2328d053066940cfe5d04d9fd", "actual": "eabd01e9dccb1ce0b0c46145b32d061c63e69fa2328d053066940cfe5d04d9fd", "verified": true}
+      },
+      "PILOT_18_WEST": {
+        "A1": {"expected": "8714e286dbad7610e7a79b6ee6e1ef1cae30deef33ad04244fdc3aacf943c257", "actual": "8714e286dbad7610e7a79b6ee6e1ef1cae30deef33ad04244fdc3aacf943c257", "verified": true},
+        "A2": {"expected": "54ba4215c080fe79eae0a3200db971a7e4b04f7820fa2f2950d5c95e5988b4f6", "actual": "54ba4215c080fe79eae0a3200db971a7e4b04f7820fa2f2950d5c95e5988b4f6", "verified": true}
+      }
+    }
+  },
+  "protected_file_integrity": {
+    "file": "data/reference/ds08/annotations/manual/annotator_1/PILOT_02_NORTH_annotator1.json",
+    "expected": "a7b3e2a1796c64ba4b2d6e1afdfae23c2144b0b1effe223597b100fa1bdf1d50",
+    "actual": "a7b3e2a1796c64ba4b2d6e1afdfae23c2144b0b1effe223597b100fa1bdf1d50",
+    "verified": true
+  },
+  "frozen_predecessors": {
+    "models/tcn/best_tcn.pt": {
+      "expected": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+      "actual": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+      "verified": true
+    },
+    "models/deep_sad/best_deep_sad.pt": {
+      "expected": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+      "actual": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+      "verified": true
+    },
+    "models/yolo/infrastructure/best_infrastructure.pt": {
+      "expected": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+      "actual": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+      "verified": true
+    },
+    "models/yolo/fire_smoke/best_fire_smoke.pt": {
+      "expected": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+      "actual": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+      "verified": true
+    },
+    "data/embeddings/fusion/india_2025_tcn_sad_aligned.parquet": {
+      "expected": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+      "actual": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+      "verified": true
+    }
+  },
+  "modification_audit": {
+    "model_files_modified": 0,
+    "embeddings_modified": 0,
+    "fusion_parquet_modified": 0,
+    "a1_files_modified": 0,
+    "a2_files_modified": 0,
+    "quarantine_files_modified": 0,
+    "annotation_guidelines_modified": 0
+  },
+  "test_execution_summary": {
+    "test_ds08_stage8_14_agreement_v2": "5 passed, 0 failed",
+    "test_ds08_adjudication": "12 passed, 0 failed",
+    "test_ds08_annotation_schema": "14 passed, 0 failed",
+    "total_relevant_tests_passed": 31,
+    "total_relevant_tests_failed": 0
+  }
+}

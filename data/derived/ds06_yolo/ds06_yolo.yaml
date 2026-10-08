@@ -1,0 +1,7 @@
+path: D:/DATA PREPROCESSING/data/derived/ds06_yolo
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: Storage_Tank
+  1: Chimney

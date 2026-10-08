@@ -1,0 +1,69 @@
+{
+  "manifest_name": "ds08_stage8_21_replacement_manifest",
+  "stage": "8.21",
+  "version": "1.0.0",
+  "created_at_utc": "2026-10-03T08:45:00Z",
+  "purpose": "Replace rejected Stage 8.20 industrial fire scenes with verified clean candidate scenes from approved V4 roster",
+  "rejected_samples": [
+    {
+      "original_sample_id": "DS08_EXP_S1_002",
+      "stratum_id": "STR-1",
+      "assigned_fold": "Fold 4",
+      "incident_id": "NGT_2025_VIZAG_PHARMA_03",
+      "facility_name": "Active Pharmaceutical Ingredient (API) Bulk Drug Unit, Jawaharlal Nehru Pharma City",
+      "rejection_reason": "Central 1 km target evaluation area is 100.00% occluded by dense cloud/shadow (SCL classes 8,9,10,3). Target facility is visually obstructed.",
+      "replacement_sample_id": "S8_001"
+    },
+    {
+      "original_sample_id": "DS08_EXP_S1_004",
+      "stratum_id": "STR-1",
+      "assigned_fold": "Fold 3",
+      "incident_id": "SPCB_2025_TARAPUR_CHEM_10",
+      "facility_name": "Industrial Solvents and Hazardous Waste Recovery Unit, MIDC Tarapur",
+      "rejection_reason": "Central 1 km target evaluation area has 29.70% cloud contamination (SCL classes 8,9,10), exceeding 10.0% limit. Target facility is cloud-contaminated.",
+      "replacement_sample_id": "S8_002"
+    }
+  ],
+  "replacement_records": [
+    {
+      "replacement_sample_id": "S8_001",
+      "replaces_sample_id": "DS08_EXP_S1_002",
+      "v4_candidate_id": "DS08_EXP_S1_005",
+      "candidate_stratum_id": "STR-1",
+      "candidate_stratum_name": "Confirmed Acute Industrial Fires",
+      "expected_target_class": "Industrial Fire",
+      "incident_id": "NEWS_2025_BADDI_PHARMA_11",
+      "facility_name": "Pharmaceutical Formulation and Packaging Unit, Baddi Industrial Area",
+      "state": "Himachal Pradesh",
+      "latitude": 30.9578,
+      "longitude": 76.7912,
+      "assigned_fold": "Fold 4",
+      "mgrs_tile": "T43RFQ",
+      "stac_scene_id": "S2C_MSIL2A_20251114T053111_N0511_R105_T43RFQ_20251114T092011.SAFE",
+      "cdse_product_uuid": "562c70a9-f17a-400c-8631-43002dc27ab9",
+      "sensing_time_utc": "2025-11-14T05:31:11Z",
+      "cloud_cover_pct": 0.0,
+      "human_confirmed_label": null
+    },
+    {
+      "replacement_sample_id": "S8_002",
+      "replaces_sample_id": "DS08_EXP_S1_004",
+      "v4_candidate_id": "DS08_EXP_S1_007",
+      "candidate_stratum_id": "STR-1",
+      "candidate_stratum_name": "Confirmed Acute Industrial Fires",
+      "expected_target_class": "Industrial Fire",
+      "incident_id": "SEBI_2025_HEUBACH_ROHA_13",
+      "facility_name": "Heubach Colorants India Ltd Plant Fire, Dhatav MIDC, Roha",
+      "state": "Maharashtra",
+      "latitude": 18.4208,
+      "longitude": 73.1577,
+      "assigned_fold": "Fold 1",
+      "mgrs_tile": "T43QBA",
+      "stac_scene_id": "S2A_MSIL2A_20250101T054231_N0511_R005_T43QBA_20250101T085751.SAFE",
+      "cdse_product_uuid": "39d0a2cc-a758-442a-948b-4df150e25516",
+      "sensing_time_utc": "2025-01-01T05:42:31Z",
+      "cloud_cover_pct": 0.0,
+      "human_confirmed_label": null
+    }
+  ]
+}

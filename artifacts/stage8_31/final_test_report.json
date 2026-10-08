@@ -1,0 +1,156 @@
+{
+  "evaluation_protocol": {
+    "test_evaluation_count": 1,
+    "test_cohort_size": 28,
+    "test_split_calendar_year": 2026,
+    "strictly_causal_h0": true,
+    "registry_free": true,
+    "persistent_manifest_dependency": false
+  },
+  "performance_metrics": {
+    "accuracy": 0.8571,
+    "macro_f1": 0.8231,
+    "balanced_accuracy": 0.8333,
+    "correct_predictions": 24,
+    "total_test_events": 28,
+    "target_85_met": false
+  },
+  "uncertainty_quantification": {
+    "single_event_shift_percentage": 3.57,
+    "accuracy_95_bootstrap_ci": [
+      0.7143,
+      0.9643
+    ],
+    "macro_f1_95_bootstrap_ci": [
+      0.6378,
+      0.953
+    ],
+    "balanced_acc_95_bootstrap_ci": [
+      0.6667,
+      0.9583
+    ],
+    "accuracy_95_wilson_ci": [
+      0.6851,
+      0.943
+    ],
+    "sample_size_qualification": "Small test support (N=28) means each misclassification changes overall accuracy by 3.57%."
+  },
+  "per_class_breakdown": {
+    "Industrial Fire": {
+      "class_id": 0,
+      "support": 6,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "f1": 0.9231,
+      "true_positives": 6,
+      "false_positives": 1,
+      "false_negatives": 0
+    },
+    "Forest Fire": {
+      "class_id": 1,
+      "support": 6,
+      "precision": 0.7143,
+      "recall": 0.8333,
+      "f1": 0.7692,
+      "true_positives": 5,
+      "false_positives": 2,
+      "false_negatives": 1
+    },
+    "Agricultural Fire": {
+      "class_id": 2,
+      "support": 6,
+      "precision": 0.75,
+      "recall": 0.5,
+      "f1": 0.6,
+      "true_positives": 3,
+      "false_positives": 1,
+      "false_negatives": 3
+    },
+    "Other / Persistent": {
+      "class_id": 3,
+      "support": 10,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "true_positives": 10,
+      "false_positives": 0,
+      "false_negatives": 0
+    }
+  },
+  "confusion_matrix": [
+    [
+      6,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      5,
+      1,
+      0
+    ],
+    [
+      1,
+      2,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      10
+    ]
+  ],
+  "error_analysis": {
+    "total_errors": 4,
+    "errors": [
+      {
+        "event_id": "EVT_825_FOR_FOR_EVT_2026_UK_CHAMOLI",
+        "true_class": "Forest Fire",
+        "predicted_class": "Agricultural Fire",
+        "p_true": 0.26956532063148797,
+        "p_pred": 0.7041802652358152,
+        "dist_to_fac_km": 207.9709643472193,
+        "current_frp": 4.95,
+        "hist_count_2km": 0.0
+      },
+      {
+        "event_id": "EVT_825_AGR_AGR_EVT_2026_MP_HARDA_RABI",
+        "true_class": "Agricultural Fire",
+        "predicted_class": "Industrial Fire",
+        "p_true": 0.4045414414089337,
+        "p_pred": 0.4270496873125264,
+        "dist_to_fac_km": 310.36894870280156,
+        "current_frp": 1.71,
+        "hist_count_2km": 0.0
+      },
+      {
+        "event_id": "EVT_825_AGR_AGR_EVT_2026_RJ_KOTA_RABI",
+        "true_class": "Agricultural Fire",
+        "predicted_class": "Forest Fire",
+        "p_true": 0.35202710298419637,
+        "p_pred": 0.5800464033511885,
+        "dist_to_fac_km": 307.5273194650594,
+        "current_frp": 24.837544982369057,
+        "hist_count_2km": 0.0
+      },
+      {
+        "event_id": "EVT_825_AGR_AGR_EVT_2026_TN_THANJAVUR_KHARIF",
+        "true_class": "Agricultural Fire",
+        "predicted_class": "Forest Fire",
+        "p_true": 0.2758026217914915,
+        "p_pred": 0.4514535124493917,
+        "dist_to_fac_km": 124.04742354468247,
+        "current_frp": 13.66096852144493,
+        "hist_count_2km": 0.0
+      }
+    ]
+  },
+  "validation_2025_metrics": {
+    "accuracy": 0.8333,
+    "macro_f1": 0.8269,
+    "balanced_acc": 0.8571
+  }
+}

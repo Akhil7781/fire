@@ -1,0 +1,164 @@
+{
+  "01_dataset_identifier": "DS_08_Indian_Domain_Optical_Adaptation",
+  "02_dataset_version": "1.0",
+  "03_creation_date": "2026-09-25T21:23:21.023190",
+  "04_source_satellite": "Sentinel-2 L2A (Copernicus)",
+  "05_source_resolution_m": 10.0,
+  "06_chip_dimensions": [
+    512,
+    512
+  ],
+  "07_channel_count": 3,
+  "08_number_of_images": 250,
+  "09_number_of_scenes": 50,
+  "10_number_of_annotations": 1299,
+  "11_class_distribution": {
+    "Storage_Tank": 408,
+    "Chimney_Stack": 138,
+    "Industrial_Shed": 195,
+    "Flame_Front": 279,
+    "Smoke_Plume": 279
+  },
+  "12_domain_distribution": {
+    "INDUSTRIAL": 100,
+    "AGRICULTURAL": 100,
+    "FOREST": 50
+  },
+  "13_bounding_box_statistics": {
+    "total_boxes": 1299,
+    "per_class": {
+      "Storage_Tank": 408,
+      "Chimney_Stack": 138,
+      "Industrial_Shed": 195,
+      "Flame_Front": 279,
+      "Smoke_Plume": 279
+    },
+    "min_width_px": 7.420928,
+    "max_width_px": 258.950656,
+    "mean_width_px": 66.4079454595843,
+    "min_height_px": 9.458176,
+    "max_height_px": 252.450816,
+    "mean_height_px": 51.01715333025404
+  },
+  "14_invalid_or_corrupt_records": 0,
+  "15_duplicate_findings": {
+    "exact_duplicates": 0,
+    "status": "PASSED_ZERO_DUPLICATES"
+  },
+  "16_train_val_test_counts": {
+    "train": {
+      "num_scenes": 34,
+      "num_images": 170,
+      "num_boxes": 900,
+      "num_storage_tanks": 285,
+      "num_chimney_stacks": 96,
+      "num_industrial_sheds": 142,
+      "num_flame_fronts": 190,
+      "num_smoke_plumes": 187,
+      "domain_distribution": {
+        "INDUSTRIAL": 70,
+        "AGRICULTURAL": 75,
+        "FOREST": 25
+      }
+    },
+    "val": {
+      "num_scenes": 8,
+      "num_images": 40,
+      "num_boxes": 205,
+      "num_storage_tanks": 63,
+      "num_chimney_stacks": 19,
+      "num_industrial_sheds": 31,
+      "num_flame_fronts": 43,
+      "num_smoke_plumes": 49,
+      "domain_distribution": {
+        "INDUSTRIAL": 15,
+        "AGRICULTURAL": 10,
+        "FOREST": 15
+      }
+    },
+    "test": {
+      "num_scenes": 8,
+      "num_images": 40,
+      "num_boxes": 194,
+      "num_storage_tanks": 60,
+      "num_chimney_stacks": 23,
+      "num_industrial_sheds": 22,
+      "num_flame_fronts": 46,
+      "num_smoke_plumes": 43,
+      "domain_distribution": {
+        "INDUSTRIAL": 15,
+        "AGRICULTURAL": 15,
+        "FOREST": 10
+      }
+    }
+  },
+  "17_leakage_checks": {
+    "scene_level_isolation": "PASSED_STRICT_SCENE_ISOLATION",
+    "train_scenes": 34,
+    "val_scenes": 8,
+    "test_scenes": 8
+  },
+  "18_geographic_coverage": {
+    "states_covered": [
+      "Gujarat",
+      "Maharashtra",
+      "Tamil Nadu",
+      "West Bengal",
+      "Andhra Pradesh",
+      "Uttar Pradesh",
+      "Odisha",
+      "Kerala",
+      "Madhya Pradesh",
+      "Rajasthan",
+      "Bihar",
+      "Punjab",
+      "Haryana",
+      "Uttarakhand",
+      "Himachal Pradesh"
+    ],
+    "latitude_range": [
+      9.942635,
+      32.227378
+    ],
+    "longitude_range": [
+      69.848328,
+      88.064409
+    ]
+  },
+  "19_temporal_coverage": {
+    "earliest_acquisition": "2025-01-18",
+    "latest_acquisition": "2025-11-12"
+  },
+  "20_license": "Copernicus Open Access (CC-BY-4.0 compatible)",
+  "21_storage_footprint": {
+    "manifest_parquet_bytes": 49430,
+    "boxes_parquet_bytes": 95449,
+    "total_reference_bytes": 132624829
+  },
+  "22_preprocessing_performed": "Generated 250 Indian-domain optical chips (512x512x3 RGB PNG) across 50 geographic scenes. Annotations in YOLO format with 5 target classes spanning two branches (Infra: Storage_Tank, Chimney_Stack, Industrial_Shed; Fire/Smoke: Flame_Front, Smoke_Plume). Scene-level train/val/test splitting with zero geographic leakage.",
+  "23_semantic_separation_warnings": [
+    "CRITICAL: Infrastructure detection != industrial fire.",
+    "CRITICAL: Flame/smoke detection != fire-source class.",
+    "CRITICAL: Annotations are visually grounded, NOT FIRMS-derived."
+  ],
+  "24_frozen_artifact_integrity": "VERIFIED_NOT_MODIFIED",
+  "25_annotation_grounding": "VISUALLY_GROUNDED_NOT_FIRMS_DERIVED",
+  "26_materialization_verification": {
+    "metadata_records": 250,
+    "actual_image_files": 250,
+    "actual_annotation_files": 250,
+    "readable_image_files": 250,
+    "annotated_images": 250,
+    "images_with_zero_annotations": 0,
+    "image_format": "PNG",
+    "image_dimensions": [
+      512,
+      512
+    ],
+    "channel_count": 3,
+    "annotation_to_image_mapping": "1:1_EXACT_MATCH",
+    "orphan_images": 0,
+    "orphan_annotations": 0,
+    "denormalization_validation": "PASSED_ALL_BOUNDS_IN_IMAGE"
+  }
+}

@@ -1,0 +1,712 @@
+<USER_REQUEST>
+STAGE 8.28 — FORENSIC VERIFICATION AND REPAIR OF REAL-TIME CAUSAL 4-CLASS CLASSIFICATION
+
+You are working on the frozen industrial-fire multimodal project.
+
+IMPORTANT:
+Stage 8.27 reported 89.29% accuracy / 0.8741 macro-F1 for H0, H1, H2, H3, H6, H12, H24 AND retrospective evaluation. 
+Do NOT accept this result as scientifically valid yet.
+
+This stage is a strict forensic audit and repair stage.
+
+DO NOT:
+- change the frozen Stage 8.25 independent test manifest
+- change the test event identities
+- add new test labels
+- tune on the test set
+- change the original Stage 8.26 evaluation to make Stage 8.27 look better
+- use future observations
+- use post-event information
+- use retrospective event statistics in causal inference
+- silently replace failed tests with assumptions
+- declare success merely because accuracy >= 85%
+
+OBJECTIVE
+
+Verify that the claimed real-time H0–H24 performance is genuinely produced from progressively available causal prefixes.
+
+The fundamental requirement is:
+
+At horizon H, the model may use ONLY information available at or before:
+    t_first_detection + H hours
+
+For H0:
+    only the first detection / information available at alert time.
+
+For H1:
+    only information <= 1 hour after first detection.
+
+For H2:
+    only information <= 2 hours.
+
+For H3:
+    only information <= 3 hours.
+
+For H6:
+    only information <= 6 hours.
+
+For H12:
+    only information <= 12 hours.
+
+For H24:
+    only information <= 24 hours.
+
+Retrospective is allowed only as a non-causal comparison.
+
+==================================================
+1. FREEZE AND AUDIT ALL INPUT ARTIFACTS
+==================================================
+
+Before modifying anything, identify and print:
+
+- Stage 8.25 frozen independent test manifest
+- Stage 8.26 clean evaluation artifacts
+- Stage 8.27 causal dataset
+- Stage 8.27 model/checkpoint
+- feature-generation scripts
+- sequence-generation scripts
+- training script
+- inference/evaluation script
+- label-generation script
+- all scalers/encoders
+- dataset hashes
+- model hashes
+
+Verify that the Stage 8.25 independent test event identities are unchanged.
+
+Hard requirement:
+The test set must remain exactly the frozen independent test set.
+
+Store an audit report:
+
+artifacts/stage8_28/stage8_28_artifact_audit.json
+
+==================================================
+2. FORENSICALLY VERIFY THAT THE HORIZONS ARE ACTUALLY DIFFERENT
+==================================================
+
+This is the highest-priority audit.
+
+For every test event and every horizon:
+
+H0, H1, H2, H3, H6, H12, H24
+
+report:
+
+- event_id
+- first_detection_time
+- cutoff_time
+- number of FIRMS detections available
+- number of unique timestamps available
+- sequence length
+- earliest timestamp
+- latest timestamp
+- feature tensor shape
+- feature tensor hash
+- raw prefix-data hash
+
+Verify monotonicity:
+
+H0 observations ⊆ H1 observations ⊆ H2 observations ⊆ H3 observations
+⊆ H6 observations ⊆ H12 observations ⊆ H24 observations
+
+The number of available observations must never decrease as horizon increases.
+
+For each event:
+
+assert max_timestamp(Hk) <= first_detection_time + k hours
+
+No feature may contain any observation after its horizon cutoff.
+
+Also calculate:
+
+- mean sequence length per horizon
+- median sequence length per horizon
+- min/max sequence length
+- number of events whose prefix actually changes between adjacent horizons
+- percentage of event prefixes that are identical between adjacent horizons
+
+CRITICAL TEST:
+
+For every adjacent pair:
+
+H0 vs H1
+H1 vs H2
+H2 vs H3
+H3 vs H6
+H6 vs H12
+H12 vs H24
+
+verify that the input tensors are genuinely different whenever additional observations exist.
+
+If all tensors/hashes are identical across horizons despite additional observations existing:
+STOP and mark Stage 8.27 invalid.
+
+Do not continue to a success declaration.
+
+==================================================
+3. VERIFY PREDICTION DIFFERENTIATION
+==================================================
+
+For each test event and each horizon record:
+
+- predicted class
+- class probabilities
+- confidence
+- embedding hash
+- logit hash
+
+Calculate:
+
+- percentage of predictions identical across all horizons
+- percentage of events changing prediction at least once
+- mean absolute probability change between adjacent horizons
+- maximum probability change
+- confidence change
+
+Do not assume that different inputs must always produce different predictions.
+
+However:
+
+If the inputs demonstrably differ but embeddings, logits and probabilities are byte-for-byte identical across all horizons, inspect the inference pipeline for a bug.
+
+Possible causes to investigate:
+
+- horizon argument ignored
+- same cached tensor reused
+- wrong dataframe reused
+- cutoff applied after aggregation
+- sequence padding bug
+- model receives retrospective features
+- prefix dataset accidentally overwritten
+- deterministic fallback prediction
+- test features loaded from one static file
+
+Create a prediction-difference audit.
+
+==================================================
+4. AUDIT THE CAUSAL FEATURE ENGINEERING
+==================================================
+
+Trace every feature used by the causal model back to its raw source.
+
+For every feature classify it as:
+
+A. strictly causal
+B. potentially future-contaminated
+C. definitely future-contaminated
+D. static and valid
+E. label-derived
+F. ambiguous / cannot verify
+
+Reject:
+
+- total final event duration
+- final event detection count
+- final event spatial extent
+- future FRP
+- future brightness temperature
+- future persistence
+- future satellite imagery
+- post-event facility statistics
+- post-event land-cover/context updates
+- target-event aggregate statistics calculated using the complete event
+- any feature generated using the final event label
+
+A causal feature may use historical information only when its timestamp is <= the prediction cutoff.
+
+==================================================
+5. AUDIT INDUSTRIAL FACILITY BASELINES
+==================================================
+
+The current causal design uses historical industrial-facility behavior.
+
+Verify that the facility baseline for an alert is constructed ONLY from observations strictly before the current target event cutoff.
+
+The target event itself must NOT contribute to:
+
+- facility mean FRP
+- facility standard deviation
+- facility detection count
+- recurrence rate
+- thermal baseline
+- anomaly score
+- historical event frequency
+
+Explicitly test for:
+
+TARGET EVENT CONTRIBUTION == 0
+
+For each industrial-related causal feature, report:
+
+- historical observation window
+- latest timestamp included
+- target cutoff
+- number of historical observations
+- whether target-event rows are included
+
+The feature generator must contain a hard causal assertion.
+
+==================================================
+6. AUDIT THE TEMPORAL ENCODER TRAINING OBJECTIVE
+==================================================
+
+Inspect the actual Stage 8.27 training code.
+
+The reported architecture claims a causal temporal representation with auxiliary forecasting behavior.
+
+Verify that the implemented loss actually trains the intended temporal task.
+
+A loss that only constrains embedding magnitude, such as:
+
+    (embedding.pow(2).mean() - 1)^2
+
+is NOT sufficient as temporal forecasting/self-supervised learning.
+
+If the implementation is only optimizing embedding magnitude or another non-temporal surrogate:
+
+MARK IMPLEMENTATION MISMATCH
+
+Then repair the training objective.
+
+Use a genuinely causal temporal objective.
+
+Preferred design:
+
+CausalEarlyTemporalEncoder
+- 2-layer unidirectional GRU
+- hidden size consistent with frozen design unless there is a documented reason to change it
+- no bidirectional recurrence
+- no future timestep access
+
+Add explicit next-step forecasting heads:
+
+1. next-FRP prediction
+2. next-DeltaT prediction
+
+For each valid timestep t:
+
+input:
+    x_<=t
+
+target:
+    x_(t+1)
+
+Training must ensure target t+1 is not fed into the encoder input at timestep t.
+
+Loss:
+
+L_total =
+    L_FRP
+    + lambda_delta * L_DeltaT
+    + lambda_rep * L_representation
+
+Use documented, reproducible weights.
+
+Do NOT use the independent test set for selecting those weights.
+
+Report each loss separately:
+
+- FRP forecasting loss
+- DeltaT forecasting loss
+- representation loss
+- total loss
+
+If another causal self-supervised objective is already correctly implemented, preserve it instead of replacing it.
+
+The report must match the actual code.
+
+==================================================
+7. TRAINING / VALIDATION / TEST SEPARATION
+==================================================
+
+The model may be trained using:
+
+TRAIN ONLY
+
+Validation may be used for:
+
+- early stopping
+- model selection
+- hyperparameter selection
+
+Test may ONLY be used for final evaluation.
+
+No test-driven threshold tuning.
+
+No test-driven architecture changes.
+
+Use the same frozen independent test events from Stage 8.25.
+
+==================================================
+8. CONSTRUCT TRUE CAUSAL PREFIX DATASETS
+==================================================
+
+Build separate causal prefix datasets:
+
+H0
+H1
+H2
+H3
+H6
+H12
+H24
+
+Each sample must contain only observations available before the horizon cutoff.
+
+The prefix construction must be deterministic.
+
+For every sample store:
+
+- event_id
+- detection_id(s)
+- first_detection_time
+- cutoff_time
+- horizon_hours
+- detection timestamps included
+- source dataset hash
+
+Add assertions:
+
+assert latest_observation <= cutoff
+
+assert no observation timestamp > cutoff
+
+assert no future satellite timestamp > cutoff
+
+assert no future aggregate statistics
+
+assert no target-label-derived feature
+
+assert H(k) subset of H(k+1)
+
+==================================================
+9. RETRO-LOOKING FEATURE PURGE
+==================================================
+
+Explicitly search the entire causal feature pipeline for features with names or semantics similar to:
+
+duration
+event_duration
+total_duration
+final_duration
+event_count
+total_detections
+final_detections
+spatial_extent
+final_extent
+event_size
+future
+post_event
+postevent
+complete_event
+full_event
+all_event
+event_total
+final_frp
+max_frp
+mean_frp_event
+peak_frp
+final_temperature
+future_s2
+future_landsat
+
+Do not blindly delete valid historical features.
+
+Instead:
+
+- identify source
+- determine timestamp semantics
+- classify causal validity
+- retain only verifiably causal features
+
+Produce:
+
+artifacts/stage8_28/causal_feature_audit.csv
+
+Columns:
+
+feature
+source
+definition
+time_reference
+causal_status
+reason
+action
+
+==================================================
+10. REBUILD THE CAUSAL MODEL IF REQUIRED
+==================================================
+
+If the Stage 8.27 implementation is invalid:
+
+rebuild only the causal-prefix pipeline.
+
+Do NOT modify:
+
+- Stage 8.25 independent test identities
+- frozen multimodal artifacts
+- Stage 8.26 clean retrospective baseline
+
+Preserve prior artifacts for comparison.
+
+Create:
+
+models/stage8_28/
+
+and never overwrite Stage 8.27 artifacts.
+
+==================================================
+11. RUN ALL HORIZONS
+==================================================
+
+Evaluate:
+
+H0
+H1
+H2
+H3
+H6
+H12
+H24
+RETROSPECTIVE
+
+For every horizon calculate:
+
+- accuracy
+- macro precision
+- macro recall
+- macro F1
+- balanced accuracy
+- per-class precision
+- per-class recall
+- per-class F1
+- confusion matrix
+- mean confidence
+- coverage
+- selective accuracy at tau=0.85
+
+Also report bootstrap 95% confidence intervals at EVENT LEVEL.
+
+Bootstrap unit MUST be physical event, not detection.
+
+==================================================
+12. REQUIRED COMPARISONS
+==================================================
+
+Compare against:
+
+A. Stage 8.26 clean retrospective baseline
+B. Stage 8.26 alert-time baseline
+C. Stage 8.26 chronological 2025 holdout
+D. Stage 8.27 reported results
+E. repaired Stage 8.28 results
+
+Do not hide degraded performance.
+
+Explicitly explain:
+
+- what caused any improvement
+- what caused any degradation
+- whether the previous 89.29% result was reproducible
+- whether the improvement came from true causal information or leakage/implementation error
+
+==================================================
+13. REQUIRED SANITY / ADVERSARIAL TESTS
+==================================================
+
+Run:
+
+1. Label permutation test
+   Shuffle class labels and retrain/evaluate using train only.
+
+2. Metadata-only baseline
+   Use only non-DL metadata features.
+
+3. Timestamp-shuffle test
+   Destroy temporal ordering and measure performance.
+
+4. Feature permutation importance
+   Measure performance drop for:
+   - temporal features
+   - industrial facility features
+   - spatial/geographic features
+
+5. Alert-time only evaluation
+   H0 must use no later observations.
+
+6. 2025 chronological holdout
+   Evaluate on the frozen 2025 chronological holdout.
+
+7. Horizon-collapse test
+   Confirm that the exact same prefix is not accidentally used for all horizons.
+
+8. Prefix monotonicity test
+   Confirm that later horizons contain only additional information.
+
+==================================================
+14. REQUIRED MODEL BEHAVIOR TEST
+==================================================
+
+Construct controlled paired samples:
+
+Sample A:
+    H0 prefix only
+
+Sample B:
+    H24 prefix
+
+where B contains strictly more observations than A.
+
+Verify the actual model input tensors differ.
+
+Then inspect:
+
+- embedding
+- logits
+- probabilities
+- prediction
+
+This test is diagnostic only.
+
+It must not be used as a performance optimization trick.
+
+==================================================
+15. EXPECTED OUTPUT FILES
+==================================================
+
+Create:
+
+artifacts/stage8_28/
+    stage8_28_final_report.md
+    stage8_28_summary.json
+    causal_feature_audit.csv
+    horizon_prefix_audit.csv
+    horizon_prediction_audit.csv
+    confusion_matrices.json
+    bootstrap_metrics.json
+    leakage_audit.json
+    artifact_hashes.json
+
+Model artifacts:
+
+models/stage8_28/
+    causal_temporal_encoder.pt
+    causal_classifier.pt
+    scaler.*
+    metadata.json
+
+==================================================
+16. MANDATORY FINAL TABLE
+==================================================
+
+Produce exactly this comparison table:
+
+Horizon | Accuracy | Macro-F1 | Balanced Acc | Coverage | 95% CI | #Events | Causal Validity
+
+Rows:
+
+H0
+H1
+H2
+H3
+H6
+H12
+H24
+Retrospective
+
+Also produce:
+
+Stage 8.26 Alert-Time
+Stage 8.26 2025 Holdout
+Stage 8.26 Retrospective
+Stage 8.27 Reported
+Stage 8.28 Verified
+
+==================================================
+17. SCIENTIFIC ACCEPTANCE GATES
+==================================================
+
+Stage 8.28 may ONLY be marked:
+
+REAL_TIME_4_CLASS_TARGET_VERIFIED
+
+when ALL of the following hold:
+
+1. No future leakage detected.
+2. Every horizon uses a true causal prefix.
+3. Prefixes are demonstrably constructed according to cutoff.
+4. Stage 8.27 identical-horizon behavior is explained.
+5. Training objective matches the written methodology.
+6. Test set remains frozen.
+7. No test tuning occurred.
+8. Event-level bootstrap evaluation is complete.
+9. H0/H1/etc metrics are produced from their actual prefixes.
+10. The target >=85% accuracy is achieved on the intended real-time evaluation horizon.
+11. Performance is not solely produced by a suspicious retrospective or target-derived feature.
+12. The 2025 chronological holdout is explicitly reported.
+13. All negative/uncertain semantics remain unchanged.
+
+Otherwise use one of:
+
+CAUSAL_MODEL_VALID_BUT_TARGET_NOT_MET
+
+or
+
+STAGE_8_28_BLOCKED_BY_IMPLEMENTATION_ERROR
+
+or
+
+STAGE_8_28_BLOCKED_BY_DATA_LEAKAGE
+
+or
+
+STAGE_8_28_REQUIRES_MORE_REAL_CAUSAL_DATA
+
+==================================================
+18. DO NOT OPTIMIZE FOR THE NUMBER
+==================================================
+
+The objective is NOT to preserve 89.29%.
+
+The objective is to determine whether 89.29% is real.
+
+If the verified accuracy becomes 70%, 60%, or lower after removing leakage or implementation bugs, report that honestly.
+
+A lower but valid causal result is scientifically preferable to a higher contaminated result.
+
+==================================================
+19. FINAL REPORT REQUIREMENT
+==================================================
+
+The final report must contain these sections:
+
+1. Executive verdict
+2. Stage 8.27 reproducibility audit
+3. Horizon construction audit
+4. Causal feature audit
+5. Industrial facility baseline audit
+6. Temporal encoder implementation audit
+7. Leakage findings
+8. Repaired methodology
+9. Horizon-wise results
+10. Comparison with Stage 8.26
+11. Bootstrap confidence intervals
+12. Sanity/adversarial tests
+13. Limitations
+14. Frozen artifacts and hashes
+15. Final acceptance status
+
+At the very end print exactly one status:
+
+STAGE_8_28_STATUS=<value>
+
+and:
+
+SCIENTIFIC_CLAIM=<one sentence>
+
+Do not claim the 85% target is met unless the acceptance gates above pass.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-04T10:15:07+05:30.
+</ADDITIONAL_METADATA>

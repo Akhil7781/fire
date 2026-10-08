@@ -1,0 +1,23 @@
+{
+  "train": {
+    "num_scenes": 16,
+    "num_images": 80,
+    "num_boxes": 255,
+    "num_flames": 141,
+    "num_smokes": 114
+  },
+  "val": {
+    "num_scenes": 4,
+    "num_images": 20,
+    "num_boxes": 63,
+    "num_flames": 38,
+    "num_smokes": 25
+  },
+  "test": {
+    "num_scenes": 4,
+    "num_images": 20,
+    "num_boxes": 59,
+    "num_flames": 30,
+    "num_smokes": 29
+  }
+}

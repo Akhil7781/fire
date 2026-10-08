@@ -1,0 +1,53 @@
+{
+  "chip_id": "PILOT_17_WEST",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_17_WEST_ANN_01",
+      "class_id": 3,
+      "class_name": "Agricultural Fire",
+      "bbox": {
+        "x_min": 168,
+        "y_min": 245,
+        "x_max": 198,
+        "y_max": 268
+      },
+      "geometry_confidence": "HIGH",
+      "source_class_confidence": "HIGH",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "CROPLAND_CONTEXT_VISIBLE",
+        "BURN_SCAR_VISIBLE"
+      ],
+      "firms_relationship": "NEAR_OBJECT",
+      "review_status": "PENDING",
+      "annotator_id": "HUMAN_ANNOTATOR_01",
+      "annotation_timestamp": "2026-09-29T15:37:28.632389+00:00",
+      "notes": "Compact active crop residue burning within clearly delineated agricultural field parcel."
+    }
+  ],
+  "context_metadata": {
+    "firms_detection_id": "0c589fed330ba817b19d007c466ee47c9dddca13c4340815fa7887c43820c6e7",
+    "firms_latitude": 24.86252,
+    "firms_longitude": 68.06516,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 5.42,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2C_MSIL2A_20250318T055701_N0511_R091_T42RVN_20250318T091613.SAFE",
+    "tile_id": "T42RVN",
+    "cloud_cover_pct": 4.49,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

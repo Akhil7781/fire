@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "stage": "8.25",
+    "count": 31
+  },
+  "facilities": [
+    {
+      "facility_id": "FAC_PET_01",
+      "name": "IOCL Panipat Refinery & Petrochemical Complex",
+      "sector": "Refining & Petrochemicals",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 29.474,
+      "longitude": 76.885,
+      "state": "Haryana",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_02",
+      "name": "IOCL Mathura Refinery",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 27.382,
+      "longitude": 77.695,
+      "state": "Uttar Pradesh",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_03",
+      "name": "IOCL Koyali Gujarat Refinery",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 22.365,
+      "longitude": 73.132,
+      "state": "Gujarat",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_04",
+      "name": "IOCL Barauni Refinery",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 25.467,
+      "longitude": 86.014,
+      "state": "Bihar",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_05",
+      "name": "IOCL Paradip Refinery",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 20.281,
+      "longitude": 86.643,
+      "state": "Odisha",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_06",
+      "name": "BPCL Mumbai Refinery (Mahul)",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 19.0086,
+      "longitude": 72.8942,
+      "state": "Maharashtra",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_07",
+      "name": "HPCL Mumbai Refinery (Mahul)",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 19.002,
+      "longitude": 72.889,
+      "state": "Maharashtra",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_08",
+      "name": "HPCL Visakh Refinery",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 17.6883,
+      "longitude": 83.2562,
+      "state": "Andhra Pradesh",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_09",
+      "name": "BPCL Kochi Refinery (Ambalamugal)",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 9.986,
+      "longitude": 76.368,
+      "state": "Kerala",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_10",
+      "name": "RIL Jamnagar Refinery Complex (SEZ)",
+      "sector": "Refining & Petrochemicals",
+      "facility_type": "Mega Refinery",
+      "latitude": 22.355,
+      "longitude": 69.865,
+      "state": "Gujarat",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_11",
+      "name": "Nayara Energy Vadinar Refinery",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 22.382,
+      "longitude": 69.722,
+      "state": "Gujarat",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_12",
+      "name": "CPCL Manali Refinery",
+      "sector": "Refining",
+      "facility_type": "Petroleum Refinery",
+      "latitude": 13.165,
+      "longitude": 80.262,
+      "state": "Tamil Nadu",
+      "source": "GEM / MoPNG",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_13",
+      "name": "Haldia Petrochemicals Complex",
+      "sector": "Petrochemicals",
+      "facility_type": "Naphtha Cracker",
+      "latitude": 22.062,
+      "longitude": 88.086,
+      "state": "West Bengal",
+      "source": "GEM / WBPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_14",
+      "name": "ONGC Petro additions Limited (OPaL Dahej)",
+      "sector": "Petrochemicals",
+      "facility_type": "Dual Feed Cracker",
+      "latitude": 21.708,
+      "longitude": 72.568,
+      "state": "Gujarat",
+      "source": "GEM / GPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_PET_15",
+      "name": "GAIL Pata Petrochemical Complex",
+      "sector": "Petrochemicals",
+      "facility_type": "Gas Cracker",
+      "latitude": 26.602,
+      "longitude": 79.525,
+      "state": "Uttar Pradesh",
+      "source": "GEM / GAIL",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_01",
+      "name": "Dahej GIDC Chemical Estate Zone 1",
+      "sector": "Specialty Chemicals",
+      "facility_type": "Chemical Hub",
+      "latitude": 21.712,
+      "longitude": 72.585,
+      "state": "Gujarat",
+      "source": "GIDC / GPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_02",
+      "name": "Ankleshwar GIDC Industrial Estate",
+      "sector": "Chemicals & Agrochemicals",
+      "facility_type": "Chemical Hub",
+      "latitude": 21.625,
+      "longitude": 73.012,
+      "state": "Gujarat",
+      "source": "GIDC / GPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_03",
+      "name": "Jhagadia GIDC Chemical Complex",
+      "sector": "Agrochemicals & Dyes",
+      "facility_type": "Chemical Hub",
+      "latitude": 21.662,
+      "longitude": 73.15,
+      "state": "Gujarat",
+      "source": "GIDC / GPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_04",
+      "name": "Dombivli MIDC Phase II Chemical Zone",
+      "sector": "Specialty Chemicals",
+      "facility_type": "Chemical Hub",
+      "latitude": 19.209,
+      "longitude": 73.112,
+      "state": "Maharashtra",
+      "source": "MIDC / MPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_05",
+      "name": "Tarapur MIDC Chemical Industrial Area",
+      "sector": "Bulk Drugs & Chemicals",
+      "facility_type": "Chemical Hub",
+      "latitude": 19.821,
+      "longitude": 72.709,
+      "state": "Maharashtra",
+      "source": "MIDC / MPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_06",
+      "name": "Roha Dhatav MIDC Chemical Estate",
+      "sector": "Dyes & Pigments",
+      "facility_type": "Chemical Hub",
+      "latitude": 18.44,
+      "longitude": 73.117,
+      "state": "Maharashtra",
+      "source": "MIDC / MPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_07",
+      "name": "Baddi Industrial Area Sector 1-4",
+      "sector": "Pharmaceuticals",
+      "facility_type": "Pharma Hub",
+      "latitude": 30.945,
+      "longitude": 76.788,
+      "state": "Himachal Pradesh",
+      "source": "HPSIDC",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_08",
+      "name": "Atchutapuram APSEZ Pharma Zone",
+      "sector": "Bulk Drugs & APIs",
+      "facility_type": "Pharma Hub",
+      "latitude": 17.522,
+      "longitude": 82.97,
+      "state": "Andhra Pradesh",
+      "source": "APPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_09",
+      "name": "Nandesari GIDC Industrial Estate",
+      "sector": "Inorganic & Organic Chemicals",
+      "facility_type": "Chemical Hub",
+      "latitude": 22.415,
+      "longitude": 73.088,
+      "state": "Gujarat",
+      "source": "GIDC",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_CHM_10",
+      "name": "Sachin GIDC Industrial Area",
+      "sector": "Dyes, Chemicals & Textiles",
+      "facility_type": "Chemical Hub",
+      "latitude": 21.075,
+      "longitude": 72.87,
+      "state": "Gujarat",
+      "source": "GIDC",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_TEST_01",
+      "name": "Chincholi MIDC Industrial Park, Solapur",
+      "sector": "Textiles & Engineering",
+      "facility_type": "Regional Industrial Hub",
+      "latitude": 17.659,
+      "longitude": 75.906,
+      "state": "Maharashtra",
+      "source": "MIDC / MPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_TEST_02",
+      "name": "Cuddalore SIPCOT Phase II Chemical Estate",
+      "sector": "Specialty Chemicals",
+      "facility_type": "Industrial Chemical Estate",
+      "latitude": 11.705,
+      "longitude": 79.765,
+      "state": "Tamil Nadu",
+      "source": "SIPCOT / TNPCB",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_TEST_03",
+      "name": "Bhopa Road Industrial Belt, Muzaffarnagar",
+      "sector": "Paper & Kraft Mills",
+      "facility_type": "Agro-Based Industrial Area",
+      "latitude": 29.472,
+      "longitude": 77.705,
+      "state": "Uttar Pradesh",
+      "source": "UPSIDA",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_TEST_04",
+      "name": "Richhai Industrial Growth Centre, Jabalpur",
+      "sector": "Heavy Engineering",
+      "facility_type": "State Industrial Centre",
+      "latitude": 23.212,
+      "longitude": 79.995,
+      "state": "Madhya Pradesh",
+      "source": "MPIDC",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_TEST_05",
+      "name": "Kurichi SIDCO Industrial Estate, Coimbatore",
+      "sector": "Foundry & Metallurgy",
+      "facility_type": "State Small Industries Estate",
+      "latitude": 10.952,
+      "longitude": 76.975,
+      "state": "Tamil Nadu",
+      "source": "TANSIDCO",
+      "confidence": "VERIFIED"
+    },
+    {
+      "facility_id": "FAC_TEST_06",
+      "name": "Waluj MIDC Industrial Area, Aurangabad",
+      "sector": "Automotive & Engineering",
+      "facility_type": "Regional Mega Hub",
+      "latitude": 19.845,
+      "longitude": 75.242,
+      "state": "Maharashtra",
+      "source": "MIDC",
+      "confidence": "VERIFIED"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "audit_timestamp": "2026-10-04T10:38:00Z",
+  "stage": "8.28",
+  "purged_leaked_features": [
+    {
+      "feature_name": "is_known_persistent",
+      "stage8_27_implementation": "1.0 if cid == 3 else 0.0",
+      "defect_classification": "E. label-derived",
+      "leakage_mechanism": "Directly inspected ground truth class ID cid == 3",
+      "repaired_action": "PURGED. Replaced with static objective Haversine distance dist_to_persistent_registry_km to 52 registered persistent sources."
+    },
+    {
+      "feature_name": "prior_recurrence_count (Stage 8.27)",
+      "stage8_27_implementation": "5.0 if cid == 3 else 0.0",
+      "defect_classification": "E. label-derived",
+      "leakage_mechanism": "Assigned historical recurrence count using cid == 3",
+      "repaired_action": "PURGED. Replaced with objective spatial query prior_historical_recurrence_count strictly prior to t0 - 7 days."
+    }
+  ],
+  "facility_baseline_audit": {
+    "target_event_contribution": 0,
+    "assertion_verified": true,
+    "baseline_window": "2021-01-05 to t0",
+    "number_audited_facilities": 31
+  },
+  "temporal_encoder_audit": {
+    "stage8_27_defect": "Loss optimized (emb.pow(2).mean() - 1)^2 only; encoder was never passed into classifier",
+    "stage8_28_repair": "2-layer unidirectional GRU trained with explicit next-step FRP and Delta-T forecasting loss (L_frp + 0.1*L_dt + 0.05*L_rep)",
+    "input_dimension": 94
+  },
+  "horizon_differentiation_explanation": {
+    "cause_of_identical_stage8_27_metrics": "In 2026 test set, 27/28 events are single-overpass events (acute fires captured in 1 satellite pass; persistent source had t0 in 2018 so 2020-2026 detections were past t0+24h). Only 1 event (Harda) gained observations at H24. In Stage 8.27, leaked features dominated the classifier, producing identical predictions across all horizons."
+  }
+}

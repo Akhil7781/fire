@@ -1,0 +1,90 @@
+[
+  {
+    "chip_id": "DS08_EXP_S1_003",
+    "stratum": "STR-1",
+    "product_name": "S2B_MSIL2A_20250413T052649_N0511_R105_T43RFN_20250413T074009.SAFE",
+    "catalog_status": "EXISTS_VERIFIED",
+    "cdse_uuid": "34ce33d0-75a0-4c86-b3c8-d7904711640b",
+    "content_length_bytes": 1239010302,
+    "origin_date": "2025-04-13T08:21:06.000000Z",
+    "manifest_match": true,
+    "error": null
+  },
+  {
+    "chip_id": "DS08_EXP_S1_002",
+    "stratum": "STR-1",
+    "product_name": "S2B_MSIL2A_20250325T045659_N0511_R119_T44QQE_20250325T074633.SAFE",
+    "catalog_status": "EXISTS_VERIFIED",
+    "cdse_uuid": "e7f0da0d-942d-48ba-a267-07b385c7ca80",
+    "content_length_bytes": 341013671,
+    "origin_date": "2025-03-25T08:12:25.000000Z",
+    "manifest_match": true,
+    "error": null
+  },
+  {
+    "chip_id": "DS08_EXP_S1_004",
+    "stratum": "STR-1",
+    "product_name": "S2C_MSIL2A_20251028T053951_N0511_R005_T42QZH_20251028T084920.SAFE",
+    "catalog_status": "EXISTS_VERIFIED",
+    "cdse_uuid": "80fd0f38-b426-4206-abc1-eaed217643f3",
+    "content_length_bytes": 892524107,
+    "origin_date": "2025-10-28T09:41:14.000000Z",
+    "manifest_match": true,
+    "error": null
+  },
+  {
+    "chip_id": "DS08_EXP_S2_001",
+    "stratum": "STR-2",
+    "product_name": "S2A_MSIL2A_20250611T215200_N0511_R063_T43TBB_20250612T010722.SAFE",
+    "catalog_status": "NOT_FOUND_IN_CATALOG",
+    "cdse_uuid": null,
+    "content_length_bytes": null,
+    "origin_date": null,
+    "manifest_match": false,
+    "error": "0 matches returned by CDSE OData filter"
+  },
+  {
+    "chip_id": "DS08_EXP_S3_001",
+    "stratum": "STR-3",
+    "product_name": "S2B_MSIL2A_20250516T073500_N0511_R106_T43SEM_20250516T105022.SAFE",
+    "catalog_status": "NOT_FOUND_IN_CATALOG",
+    "cdse_uuid": null,
+    "content_length_bytes": null,
+    "origin_date": null,
+    "manifest_match": false,
+    "error": "0 matches returned by CDSE OData filter"
+  },
+  {
+    "chip_id": "DS08_EXP_S4_001",
+    "stratum": "STR-4",
+    "product_name": "S2A_MSIL2A_20241023T081900_N0511_R006_T43SIN_20241023T113422.SAFE",
+    "catalog_status": "NOT_FOUND_IN_CATALOG",
+    "cdse_uuid": null,
+    "content_length_bytes": null,
+    "origin_date": null,
+    "manifest_match": false,
+    "error": "0 matches returned by CDSE OData filter"
+  },
+  {
+    "chip_id": "DS08_EXP_S5_001",
+    "stratum": "STR-5",
+    "product_name": "S2C_MSIL2A_20250115T054807_N0511_R006_T43SKI_20250115T090329.SAFE",
+    "catalog_status": "NOT_FOUND_IN_CATALOG",
+    "cdse_uuid": null,
+    "content_length_bytes": null,
+    "origin_date": null,
+    "manifest_match": false,
+    "error": "0 matches returned by CDSE OData filter"
+  },
+  {
+    "chip_id": "DS08_EXP_S6_001",
+    "stratum": "STR-6",
+    "product_name": "S2B_MSIL2A_20250212T051909_N0511_R063_T44SAI_20250212T083431.SAFE",
+    "catalog_status": "NOT_FOUND_IN_CATALOG",
+    "cdse_uuid": null,
+    "content_length_bytes": null,
+    "origin_date": null,
+    "manifest_match": false,
+    "error": "0 matches returned by CDSE OData filter"
+  }
+]

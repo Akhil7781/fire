@@ -1,0 +1,776 @@
+{
+  "package_name": "ds08_pilot_v1",
+  "package_version": "1.0.0",
+  "stage": "STAGE_8_17",
+  "created_at_utc": "2026-10-02T06:47:44.781291+00:00",
+  "total_chips": 15,
+  "unanimous_chips_count": 9,
+  "adjudicated_chips_count": 6,
+  "excluded_chips_count": 5,
+  "excluded_chips": [
+    {
+      "chip_id": "PILOT_01_NORTH",
+      "reason": "Reserved for Stage 8.10A single-annotation screening / test calibration"
+    },
+    {
+      "chip_id": "PILOT_05_CENTRAL",
+      "reason": "Reserved for Stage 8.10A single-annotation screening / test calibration"
+    },
+    {
+      "chip_id": "PILOT_09_SOUTH",
+      "reason": "Reserved for Stage 8.10A single-annotation screening / test calibration"
+    },
+    {
+      "chip_id": "PILOT_13_EAST",
+      "reason": "Reserved for Stage 8.10A single-annotation screening / test calibration"
+    },
+    {
+      "chip_id": "PILOT_17_WEST",
+      "reason": "Reserved for Stage 8.10A single-annotation screening / test calibration"
+    }
+  ],
+  "summary": {
+    "total_positive_chips": 6,
+    "total_negative_chips": 9,
+    "total_boxes": 10,
+    "class_distribution": {
+      "Forest Fire": 9,
+      "Agricultural Fire": 1,
+      "Industrial Fire": 0,
+      "Other Thermal Source": 0
+    }
+  },
+  "chips": [
+    {
+      "chip_id": "PILOT_02_NORTH",
+      "status": "NO_VISIBLE_TARGET",
+      "box_count": 0,
+      "classes": [
+        "NO_VISIBLE_TARGET"
+      ],
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "tile_id": "T43RGM",
+      "product_id": "S2B_MSIL2A_20250324T052649_N0511_R105_T43RGM_20250324T074123.SAFE",
+      "acquisition_datetime_utc": "2025-03-24T05:41:06.496Z",
+      "geographic_region": "NORTH",
+      "firms_latitude": 28.80476,
+      "firms_longitude": 77.26028,
+      "firms_frp": 4.07,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_02_NORTH.json",
+          "sha256": "8ca0eb98dc53f38d37dabf7d729dd32a8c693e8af3b38ad96dbdd369adca2160"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_02_NORTH_chip.tif",
+          "sha256": "433807a696a3c831bcb4cee632f6ee4bb0642faa5c3c7ef74777d7dbef0b2882"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_02_NORTH_rgb.png",
+          "sha256": "775f14f12e4aff510f01cfce6b538786bbd6397dffb0eb87f167f752015afea4"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_02_NORTH_swir.png",
+          "sha256": "3680d8bb171ce6a6224b53ddb408b1e2d2affc510dfb4c57debc64c5db59b309"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_02_NORTH_metadata.json",
+          "sha256": "5ad3341542c9497371c2c79bad661e79141ad23fac03908613922bb04381d6ed"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_14",
+        "source_cohort": "UNANIMOUS_AGREEMENT",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_02_NORTH_annotator1.json",
+        "primary_source_sha256": "a7b3e2a1796c64ba4b2d6e1afdfae23c2144b0b1effe223597b100fa1bdf1d50",
+        "secondary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_02_NORTH_annotator2.json",
+        "secondary_source_sha256": "5ee4ed35293d0444ea194579bfe6819e44e012b2986726b93399971b6645348f"
+      }
+    },
+    {
+      "chip_id": "PILOT_03_NORTH",
+      "status": "HAS_ANNOTATIONS",
+      "box_count": 1,
+      "classes": [
+        "Forest Fire"
+      ],
+      "visual_evidence": [
+        "BURN_SCAR_VISIBLE",
+        "DIRECT_FIRE_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE"
+      ],
+      "tile_id": "T45RWL",
+      "product_id": "S2B_MSIL2A_20250329T043659_N0511_R033_T45RWL_20250329T072509.SAFE",
+      "acquisition_datetime_utc": "2025-03-29T04:51:06.494Z",
+      "geographic_region": "NORTH",
+      "firms_latitude": 27.19986,
+      "firms_longitude": 87.72781,
+      "firms_frp": 8.67,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_03_NORTH.json",
+          "sha256": "6cfb05fc17b0507fce6964846e6a286bb2be8fd4335bfe2ae63df1b72e0cd387"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_03_NORTH_chip.tif",
+          "sha256": "cde543a0f001e049a8323a529ddf9043f85c623f1778f201c9021f5f0634a623"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_03_NORTH_rgb.png",
+          "sha256": "c4fe684bfe74db4c60008b5ddac7eb2e90c875865c480e0927c08f1a3267c47d"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_03_NORTH_swir.png",
+          "sha256": "b97e233b493401406fa628e9dff45e8cc73a9f3381ddd7c425dc50ac931aa573"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_03_NORTH_metadata.json",
+          "sha256": "34c23ac68a8aef4c2fea1afbf1d6bc0670bd4c6c0103c39d0c49d9ee8039b69c"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_16",
+        "source_cohort": "HUMAN_ADJUDICATED_CONSENSUS",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\adjudication\\corrections\\PILOT_03_NORTH_corrected_v2.json",
+        "primary_source_sha256": "73972474d6a86605595d5273e0aac0ea77fc448b3a73b93fdfefe0b6b04e1daf",
+        "secondary_source_path": "data/reference/ds08/annotations/adjudication/review/PILOT_03_NORTH_adjudicated_v1.json",
+        "secondary_source_sha256": "dd1d1b427796a1bda6903d71a2d17841c215d2b6978463fb0560900b049aafaa"
+      }
+    },
+    {
+      "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+      "status": "NO_VISIBLE_TARGET",
+      "box_count": 0,
+      "classes": [
+        "NO_VISIBLE_TARGET"
+      ],
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "tile_id": "T43RGP",
+      "product_id": "S2C_MSIL2A_20250319T052711_N0511_R105_T43RGP_20250319T104817.SAFE",
+      "acquisition_datetime_utc": "2025-03-19T05:40:58.075Z",
+      "geographic_region": "NORTH",
+      "firms_latitude": 29.76735,
+      "firms_longitude": 77.66902,
+      "firms_frp": 3.05,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_04_NORTH_REPLACEMENT.json",
+          "sha256": "219b4acc5fdd03e9f6f51da78b06a7e332ec30de624e8c3990f1e4064c32c4a2"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_04_NORTH_REPLACEMENT_chip.tif",
+          "sha256": "ee895491e936fb90f9be3bb14369b366a612f690842b492d6b89e3e3c1a4caaf"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_04_NORTH_REPLACEMENT_rgb.png",
+          "sha256": "b033ee46cc741ae619b687774a0171c762422d90b8e81d6addf7cfe91e76ae08"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_04_NORTH_REPLACEMENT_swir.png",
+          "sha256": "9958e52a590baefd4c317717ff7f34a2967896e9347a827dce2e22e15d268628"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_04_NORTH_REPLACEMENT_metadata.json",
+          "sha256": "61b25a1cf87b01ca1514cf8b65c0809da35f1ecec26bfdd5aa6df04bde15cb13"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_14",
+        "source_cohort": "UNANIMOUS_AGREEMENT",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_04_NORTH_REPLACEMENT_annotator1.json",
+        "primary_source_sha256": "d2e1650cb75bdcf829ae0158a32494ebeb57ee52c5354c85f58b605834c3c1bf",
+        "secondary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_04_NORTH_REPLACEMENT_annotator2.json",
+        "secondary_source_sha256": "69d141e6ef09da3bc70b13bfabf7c2251fe4e6b003c78e2f61a8fa65382cbf2f"
+      }
+    },
+    {
+      "chip_id": "PILOT_06_CENTRAL",
+      "status": "HAS_ANNOTATIONS",
+      "box_count": 2,
+      "classes": [
+        "Forest Fire"
+      ],
+      "visual_evidence": [
+        "BURN_SCAR_VISIBLE",
+        "DIRECT_FIRE_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE"
+      ],
+      "tile_id": "T44QPM",
+      "product_id": "S2A_MSIL2A_20250401T050231_N0511_R119_T44QPM_20250401T102700.SAFE",
+      "acquisition_datetime_utc": "2025-04-01T05:12:22.459Z",
+      "geographic_region": "CENTRAL",
+      "firms_latitude": 23.64083,
+      "firms_longitude": 82.85873,
+      "firms_frp": 0.43,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_06_CENTRAL.json",
+          "sha256": "bfea4ea822e77ffb62b93f5f4a43363c8ae656d93d2b271fb32629227a3bc1ef"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_06_CENTRAL_chip.tif",
+          "sha256": "5e215ce117d3fa29a1102498bf63d4cdcf61f948a43f71d0813e62f66be5f5fa"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_06_CENTRAL_rgb.png",
+          "sha256": "8b9fd0e95cefb09db0cd22181ebbd0302bd54afdecbe977d5c3b872cb5bdfbc8"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_06_CENTRAL_swir.png",
+          "sha256": "7bbf17d57a321285b8069436b06493a3ab4bde897a54e380072ce758cf203903"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_06_CENTRAL_metadata.json",
+          "sha256": "51654cafa736a19ace9b8579d6b8c27791a031546e6100e9f0d209cbdb4ecebf"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_16",
+        "source_cohort": "HUMAN_ADJUDICATED_CONSENSUS",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\adjudication\\corrections\\PILOT_06_CENTRAL_corrected_v2.json",
+        "primary_source_sha256": "0de08b2be1a568a4ba00ef22a925d7e7f2270d641c24908151ba3abf98e89dbf",
+        "secondary_source_path": "data/reference/ds08/annotations/adjudication/review/PILOT_06_CENTRAL_adjudicated_v1.json",
+        "secondary_source_sha256": "7b0cbb8eac28d2387c6f197e175f39f4653148d0e41006637864280138a949c9"
+      }
+    },
+    {
+      "chip_id": "PILOT_07_CENTRAL",
+      "status": "NO_VISIBLE_TARGET",
+      "box_count": 0,
+      "classes": [
+        "NO_VISIBLE_TARGET"
+      ],
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "tile_id": "T43QHG",
+      "product_id": "S2C_MSIL2A_20250326T051711_N0511_R062_T43QHG_20250326T103119.SAFE",
+      "acquisition_datetime_utc": "2025-03-26T05:32:38.827Z",
+      "geographic_region": "CENTRAL",
+      "firms_latitude": 24.15625,
+      "firms_longitude": 78.77988,
+      "firms_frp": 10.16,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_07_CENTRAL.json",
+          "sha256": "ee56f2c6cbd2d4223340000916114ba7bedb3c9563c935f0d591390a17cdb89d"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_07_CENTRAL_chip.tif",
+          "sha256": "8cde3b52ba173aad9d59712a46fe60fb35e7681dbe976029d2de0949adc6551c"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_07_CENTRAL_rgb.png",
+          "sha256": "886e55a2ad37e246cd45d4ac943fb7d842bc431810e59947481a6d3268fa7d85"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_07_CENTRAL_swir.png",
+          "sha256": "47490f42a351ad4e18ee59251f3fd370377dff305452bfc8612cd1571e2285bc"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_07_CENTRAL_metadata.json",
+          "sha256": "0a30a3e6f022e5eadaf009a47139a2fa2fc6e42f07c2e08b16beafe00ab40a72"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_14",
+        "source_cohort": "UNANIMOUS_AGREEMENT",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_07_CENTRAL_annotator1.json",
+        "primary_source_sha256": "3d59be9d40bdeeb81bda22cebf380ca70ef83686904561f007fcb86999c26902",
+        "secondary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_07_CENTRAL_annotator2.json",
+        "secondary_source_sha256": "2779a84a61c2514760b5d0093c433730c2f11cc7e3bf1321bd424f4917289ca1"
+      }
+    },
+    {
+      "chip_id": "PILOT_08_CENTRAL",
+      "status": "HAS_ANNOTATIONS",
+      "box_count": 1,
+      "classes": [
+        "Agricultural Fire"
+      ],
+      "visual_evidence": [
+        "BURN_SCAR_VISIBLE",
+        "CROPLAND_CONTEXT_VISIBLE"
+      ],
+      "tile_id": "T44QNL",
+      "product_id": "S2A_MSIL2A_20250315T051241_N0511_R019_T44QNL_20250315T113317.SAFE",
+      "acquisition_datetime_utc": "2025-03-15T05:22:37.61Z",
+      "geographic_region": "CENTRAL",
+      "firms_latitude": 22.76134,
+      "firms_longitude": 81.88918,
+      "firms_frp": 4.58,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_08_CENTRAL.json",
+          "sha256": "e05ab9ef51a0d3cd243b8aa7319ec13b53e19fc1bc0274ded2d184e14a9c344b"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_08_CENTRAL_chip.tif",
+          "sha256": "1418367b13f33dce8876a680474c5c10a58158dbcc02843a896089e038f767b0"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_08_CENTRAL_rgb.png",
+          "sha256": "2a1703521ca80f666b885c17a036329d7fbacc1fa1eeeb6450bae75f83ab05d1"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_08_CENTRAL_swir.png",
+          "sha256": "537785088c9d05dbc2c9ea46f2312f68e0d5794cf2b1945de1fa14deb0a9c180"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_08_CENTRAL_metadata.json",
+          "sha256": "72f68dbec7d3a9ce9a98415421dcbdfbc57035270eb7d792c1d8129a97a7c498"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_16",
+        "source_cohort": "HUMAN_ADJUDICATED_CONSENSUS",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\adjudication\\corrections\\PILOT_08_CENTRAL_corrected_v2.json",
+        "primary_source_sha256": "f84a731ee8b4db925542591109c8b275a9ef10f0170ce2fa9a114ebc6fb107df",
+        "secondary_source_path": "data/reference/ds08/annotations/adjudication/review/PILOT_08_CENTRAL_adjudicated_v1.json",
+        "secondary_source_sha256": "3ad0384f37a4121950f1523ca711ca030f2028c20091934e7495d99b97a214d7"
+      }
+    },
+    {
+      "chip_id": "PILOT_10_SOUTH",
+      "status": "NO_VISIBLE_TARGET",
+      "box_count": 0,
+      "classes": [
+        "NO_VISIBLE_TARGET"
+      ],
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "tile_id": "T44PKC",
+      "product_id": "S2A_MSIL2A_20250315T051241_N0511_R019_T44PKC_20250315T113317.SAFE",
+      "acquisition_datetime_utc": "2025-03-15T05:24:44.1Z",
+      "geographic_region": "SOUTH",
+      "firms_latitude": 15.98137,
+      "firms_longitude": 79.07265,
+      "firms_frp": 0.77,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_10_SOUTH.json",
+          "sha256": "a374f5567cc4614125a40530bd3344b7e1b3867e95ab57227d4342b98f95426c"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_10_SOUTH_chip.tif",
+          "sha256": "ff28839145490b4282ee4be28c58d4b64a574478cf957aca56809bf5dfcc7ed4"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_10_SOUTH_rgb.png",
+          "sha256": "a810bea6fa833e6d947636d1bdad0e3c80bfa1922b665d5f6c15d1d1f7058446"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_10_SOUTH_swir.png",
+          "sha256": "2c243891721cd49e4d0589df051c1fbafa7d88b9b21ac45c3412a836dd357fc7"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_10_SOUTH_metadata.json",
+          "sha256": "21c52ae361b2ab436a9987f30c01d35e0a0ec746b7f3960ce7d8d650844eb62b"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_14",
+        "source_cohort": "UNANIMOUS_AGREEMENT",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_10_SOUTH_annotator1.json",
+        "primary_source_sha256": "90f910db69b8796f46fe69b2ff9b0a8a6c76c06d7484492f69f528c1a1747fde",
+        "secondary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_10_SOUTH_annotator2.json",
+        "secondary_source_sha256": "b540bd638178571bc97a547a54cccab90b901018c8c4b133634d05f75e4260ce"
+      }
+    },
+    {
+      "chip_id": "PILOT_11_SOUTH",
+      "status": "NO_VISIBLE_TARGET",
+      "box_count": 0,
+      "classes": [
+        "NO_VISIBLE_TARGET"
+      ],
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "tile_id": "T43PHR",
+      "product_id": "S2B_MSIL2A_20250328T050659_N0511_R019_T43PHR_20250328T075231.SAFE",
+      "acquisition_datetime_utc": "2025-03-28T05:25:04.041Z",
+      "geographic_region": "SOUTH",
+      "firms_latitude": 13.51262,
+      "firms_longitude": 78.41198,
+      "firms_frp": 6.07,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_11_SOUTH.json",
+          "sha256": "e2ec1a82743363c3c48046e737a57edc1fce3b62cc912f1ccb7feb4a92249904"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_11_SOUTH_chip.tif",
+          "sha256": "5eaba41a4c81e5ce199e985f2c799bcaf6fe88eb41651810f954c2bcbb65ac08"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_11_SOUTH_rgb.png",
+          "sha256": "afca9267eebeaf2646c48f35f71fcb1128dead62d4b6497b7b51b2913c334e43"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_11_SOUTH_swir.png",
+          "sha256": "c7e866022f20e8fe94afcd7362275601705008a636ac0861f44fa973ddd7d2be"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_11_SOUTH_metadata.json",
+          "sha256": "6d98a3f30001a649f46f30b7b2c7596c99d2ed5f4bf5eb5ba9443f0d815cf2b2"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_14",
+        "source_cohort": "UNANIMOUS_AGREEMENT",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_11_SOUTH_annotator1.json",
+        "primary_source_sha256": "52843e3e2d721041f053c96ea0d2fc98351f77393b591c43b411563f68c0de3c",
+        "secondary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_11_SOUTH_annotator2.json",
+        "secondary_source_sha256": "2cbb053549a052d158ae53607233752fdb1d5c2b55bf081f6f88ef9e693e6b01"
+      }
+    },
+    {
+      "chip_id": "PILOT_12_SOUTH",
+      "status": "NO_VISIBLE_TARGET",
+      "box_count": 0,
+      "classes": [
+        "NO_VISIBLE_TARGET"
+      ],
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "tile_id": "T43PGR",
+      "product_id": "S2B_MSIL2A_20250318T050659_N0511_R019_T43PGR_20250318T080831.SAFE",
+      "acquisition_datetime_utc": "2025-03-18T05:25:07.566Z",
+      "geographic_region": "SOUTH",
+      "firms_latitude": 14.30642,
+      "firms_longitude": 77.81279,
+      "firms_frp": 20.16,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_12_SOUTH.json",
+          "sha256": "ad217b6f1c81609d9e25e1fdec796bcba2a64f087f651d738ad2eb9d2604d55f"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_12_SOUTH_chip.tif",
+          "sha256": "0b0b362bf58aece6f226a5a01c33b290e0afcdc4d82abb606c53bace47aaed03"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_12_SOUTH_rgb.png",
+          "sha256": "1919bbaf6ed2675e26be76438cf0b8e9612e099406eeb046ce35a15b11ff58b7"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_12_SOUTH_swir.png",
+          "sha256": "b6e6dbe207ad98948b4076cd74b7f7cb02191018f137be77af639829598d8a10"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_12_SOUTH_metadata.json",
+          "sha256": "9522b5591ffbe7f88bb66ebf8dd3d4965304df44037b1167e95c68f423ee1bad"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_14",
+        "source_cohort": "UNANIMOUS_AGREEMENT",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_12_SOUTH_annotator1.json",
+        "primary_source_sha256": "c27cbc0186d3e9552627d50fcbc863e5abf2138231940dc269cd9f7291028eaa",
+        "secondary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_12_SOUTH_annotator2.json",
+        "secondary_source_sha256": "32bdbb5f6fe36c37a07a8fc369dc1249ad6852d9114fc56aa8479ebde7989173"
+      }
+    },
+    {
+      "chip_id": "PILOT_14_EAST",
+      "status": "NO_VISIBLE_TARGET",
+      "box_count": 0,
+      "classes": [
+        "NO_VISIBLE_TARGET"
+      ],
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "tile_id": "T46QGF",
+      "product_id": "S2A_MSIL2A_20250317T041211_N0511_R047_T46QGF_20250317T072917.SAFE",
+      "acquisition_datetime_utc": "2025-03-17T04:23:29.617Z",
+      "geographic_region": "EAST",
+      "firms_latitude": 18.62757,
+      "firms_longitude": 95.67833,
+      "firms_frp": 4.86,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_14_EAST.json",
+          "sha256": "c811afe504d5b876e05866134198da45c041ea10a4efae0738ac2f21145f1b36"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_14_EAST_chip.tif",
+          "sha256": "cc32fedba9f60c57425865066f858c812ff5e5aec78b0e27845e20de4060e55e"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_14_EAST_rgb.png",
+          "sha256": "05a280b82af4c6ed0aa3c44ee012c26f03dc768ba2b8c13e9a8a95b3e1580b57"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_14_EAST_swir.png",
+          "sha256": "afcf95a8cb0fd60687648436bb5ca6ad7e6d971a06edff90a39d2b471c02e45d"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_14_EAST_metadata.json",
+          "sha256": "c3962b9c1dbb799bc678ebbbd127dc01d1e1ce24d4f3bdd030d1a35ea51fc97d"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_14",
+        "source_cohort": "UNANIMOUS_AGREEMENT",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_14_EAST_annotator1.json",
+        "primary_source_sha256": "d6afbd35e9faa13104f806505e7ded1f0ec8aebfd861a4814f2a86d81629a0ff",
+        "secondary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_14_EAST_annotator2.json",
+        "secondary_source_sha256": "c170258392cdc2051382f37c000557e08bd46eedbf1ba7066558c3290cc313dd"
+      }
+    },
+    {
+      "chip_id": "PILOT_15_EAST",
+      "status": "HAS_ANNOTATIONS",
+      "box_count": 2,
+      "classes": [
+        "Forest Fire"
+      ],
+      "visual_evidence": [
+        "BURN_SCAR_VISIBLE",
+        "DIRECT_FIRE_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE"
+      ],
+      "tile_id": "T47QLB",
+      "product_id": "S2B_MSIL2A_20250317T035539_N0511_R004_T47QLB_20250317T063905.SAFE",
+      "acquisition_datetime_utc": "2025-03-17T04:13:01.659Z",
+      "geographic_region": "EAST",
+      "firms_latitude": 19.75968,
+      "firms_longitude": 97.69302,
+      "firms_frp": 2.28,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_15_EAST.json",
+          "sha256": "693114d36dd02a7a00e116c2990d759f7327242329ae1818e4c2f9b248793cf6"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_15_EAST_chip.tif",
+          "sha256": "1a33956b14fb542045ba67eba7fa2341a7c50c4e070a81f5568df5c533723d8d"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_15_EAST_rgb.png",
+          "sha256": "0bcaa5b3fd49115240167b97670000a79724403edb7f29e684d098f50f169618"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_15_EAST_swir.png",
+          "sha256": "1a6cccf344359bb643dce1e978bb43bbd71962d2de9e102b01484d4de74c1330"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_15_EAST_metadata.json",
+          "sha256": "ad0f86dc237ea1c53b0e140bf988e15668515c8b97c64d276eae46986b00ea59"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_16",
+        "source_cohort": "HUMAN_ADJUDICATED_CONSENSUS",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\adjudication\\corrections\\PILOT_15_EAST_corrected_v2.json",
+        "primary_source_sha256": "f7ca4d4c28ace5a1efc7910780232eb9ffc54d94970e19eb6567ae0912f8f9d5",
+        "secondary_source_path": "data/reference/ds08/annotations/adjudication/review/PILOT_15_EAST_adjudicated_v1.json",
+        "secondary_source_sha256": "1d4ba7f5ee6e16402533a58d6910503af13abffeca51de83e44015cda60abe3c"
+      }
+    },
+    {
+      "chip_id": "PILOT_16_EAST",
+      "status": "HAS_ANNOTATIONS",
+      "box_count": 3,
+      "classes": [
+        "Forest Fire"
+      ],
+      "visual_evidence": [
+        "BURN_SCAR_VISIBLE",
+        "DIRECT_FIRE_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE"
+      ],
+      "tile_id": "T47QKD",
+      "product_id": "S2C_MSIL2A_20250401T035601_N0511_R004_T47QKD_20250401T091413.SAFE",
+      "acquisition_datetime_utc": "2025-04-01T04:12:56.647Z",
+      "geographic_region": "EAST",
+      "firms_latitude": 21.63108,
+      "firms_longitude": 97.15075,
+      "firms_frp": 1.15,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_16_EAST.json",
+          "sha256": "f97bc6584550004c13baba915b73af63b5cb31fdfb6853c63636dcc85196d179"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_16_EAST_chip.tif",
+          "sha256": "07a391bf8823b41cede0006a29623b20bf764c392ffd238e8f46ef0f85a43f07"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_16_EAST_rgb.png",
+          "sha256": "5c989905a18b4c174443fcacfbcf61014194ff5df05d519e56abc47ae2fd631c"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_16_EAST_swir.png",
+          "sha256": "9d3d1e7872276f5e5c9dfff0096dc0013302d9a4aa766c42ede0fdf52c3bb0c1"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_16_EAST_metadata.json",
+          "sha256": "505628703aec5c7395c4454d73a62420c0d6537bb443bbf512f770eb82431927"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_16",
+        "source_cohort": "HUMAN_ADJUDICATED_CONSENSUS",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\adjudication\\corrections\\PILOT_16_EAST_corrected_v2.json",
+        "primary_source_sha256": "ebca03664859553600341d0e57590ceed5ed4578333519a25877aa6b932434ba",
+        "secondary_source_path": "data/reference/ds08/annotations/adjudication/review/PILOT_16_EAST_adjudicated_v1.json",
+        "secondary_source_sha256": "5986b43675904a91d53184e3b57b67d8e759e2d6f8b7be3af483b3400af02264"
+      }
+    },
+    {
+      "chip_id": "PILOT_18_WEST",
+      "status": "HAS_ANNOTATIONS",
+      "box_count": 1,
+      "classes": [
+        "Forest Fire"
+      ],
+      "visual_evidence": [
+        "BURN_SCAR_VISIBLE",
+        "DIRECT_FIRE_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE"
+      ],
+      "tile_id": "T42QWL",
+      "product_id": "S2C_MSIL2A_20250305T054741_N0511_R048_T42QWL_20250305T090156.SAFE",
+      "acquisition_datetime_utc": "2025-03-05T06:03:13.127Z",
+      "geographic_region": "WEST",
+      "firms_latitude": 23.41807,
+      "firms_longitude": 69.78631,
+      "firms_frp": 5.4,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_18_WEST.json",
+          "sha256": "71dfd2f9294560aaf72ddec06d5e15d8179aec80476150d5bb18aac36d4e2de2"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_18_WEST_chip.tif",
+          "sha256": "4c5cc1769539359a94d4f56f7dca2dbbd4a8680efaf62c476f705ab37e5c7e27"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_18_WEST_rgb.png",
+          "sha256": "ced1cf44bd96fbde2c7b69f04562bfa701c563ec9707141e0a1749bf1052f8f4"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_18_WEST_swir.png",
+          "sha256": "84ccff1c5cecde54c1d59fbfe48a9c7905d0ae0ad865c9f092856dbd59227206"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_18_WEST_metadata.json",
+          "sha256": "83df3281e4f4e44ab7e612be66a5fb7741ea85e78cab7592589eba65ed916a85"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_16",
+        "source_cohort": "HUMAN_ADJUDICATED_CONSENSUS",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\adjudication\\corrections\\PILOT_18_WEST_corrected_v2.json",
+        "primary_source_sha256": "1c92e980ab9221bfdd2f6b7bf9380af14e630c3be66ff9a46b1ac68581d65279",
+        "secondary_source_path": "data/reference/ds08/annotations/adjudication/review/PILOT_18_WEST_adjudicated_v1.json",
+        "secondary_source_sha256": "a88d245b12e0e6eddc833926d4928927b8835ee3b25ccbbb963fc9e844f51674"
+      }
+    },
+    {
+      "chip_id": "PILOT_19_WEST",
+      "status": "NO_VISIBLE_TARGET",
+      "box_count": 0,
+      "classes": [
+        "NO_VISIBLE_TARGET"
+      ],
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "tile_id": "T43QCU",
+      "product_id": "S2C_MSIL2A_20250319T052711_N0511_R105_T43QCU_20250319T104817.SAFE",
+      "acquisition_datetime_utc": "2025-03-19T05:44:49.119Z",
+      "geographic_region": "WEST",
+      "firms_latitude": 16.98486,
+      "firms_longitude": 73.86073,
+      "firms_frp": 5.89,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_19_WEST.json",
+          "sha256": "06cb72d5759abfafb7891399d5180b5530e59fb796544dbd50920ac2e454239f"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_19_WEST_chip.tif",
+          "sha256": "09771b1cb7e0bbeaed65f0b26941de0c90339194129d08bc7db40b609aad69a5"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_19_WEST_rgb.png",
+          "sha256": "447ca729c784a11d493ee258f5f9563bd45d030dfab9a15548a141708161298b"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_19_WEST_swir.png",
+          "sha256": "fe05f55ad5783e96923ef056da85ba39f3e0c13c396d97b30dc43e6f9aea13e8"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_19_WEST_metadata.json",
+          "sha256": "548f46277e8436a3d32108fbf47d2309b09887c108a157071c5bcfd34255322a"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_14",
+        "source_cohort": "UNANIMOUS_AGREEMENT",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_19_WEST_annotator1.json",
+        "primary_source_sha256": "d63ec6ed9bf2e1790bc6fa37334fef5208eece12e929d7f484d8ac8d48f2438b",
+        "secondary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_19_WEST_annotator2.json",
+        "secondary_source_sha256": "6656d5b8ebfd21bbcb1c469459887a3d431df22af3dc72c90e5fabcd9616e1a5"
+      }
+    },
+    {
+      "chip_id": "PILOT_20_WEST",
+      "status": "NO_VISIBLE_TARGET",
+      "box_count": 0,
+      "classes": [
+        "NO_VISIBLE_TARGET"
+      ],
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "tile_id": "T43QCD",
+      "product_id": "S2A_MSIL2A_20250314T054241_N0511_R005_T43QCD_20250314T103620.SAFE",
+      "acquisition_datetime_utc": "2025-03-14T05:53:20.508Z",
+      "geographic_region": "WEST",
+      "firms_latitude": 21.39935,
+      "firms_longitude": 73.64595,
+      "firms_frp": 5.7,
+      "files": {
+        "annotation": {
+          "path": "annotations/PILOT_20_WEST.json",
+          "sha256": "44c16222c7b25b9ad6ac68eb4a5235ec63d486080730d7886aa74df932ea7e57"
+        },
+        "raster_geotiff": {
+          "path": "chips/PILOT_20_WEST_chip.tif",
+          "sha256": "43e1c0c28ad44af87ba186c86adb005689023637e35b1d70b358d5df2e43a60d"
+        },
+        "preview_rgb": {
+          "path": "previews/PILOT_20_WEST_rgb.png",
+          "sha256": "8a80ce9cb38e203b448beccfe5a5f27341b324c2260456608fb8ff76be93974b"
+        },
+        "preview_swir": {
+          "path": "previews/PILOT_20_WEST_swir.png",
+          "sha256": "43ab93562a113f416c4d4475d926406858f3cd99b4ad9cfabf78ab56494eb650"
+        },
+        "metadata": {
+          "path": "metadata/PILOT_20_WEST_metadata.json",
+          "sha256": "a48a14085ffb24d8ebf2f149d75670d0809722ccc9fc2def1b2933ab081e33c4"
+        }
+      },
+      "source_provenance": {
+        "source_stage": "STAGE_8_14",
+        "source_cohort": "UNANIMOUS_AGREEMENT",
+        "primary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_20_WEST_annotator1.json",
+        "primary_source_sha256": "4c62053dfbe38db39449280853516b5c6c7fdbc87f5f4e4b57e4cf66a98e8ade",
+        "secondary_source_path": "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_20_WEST_annotator2.json",
+        "secondary_source_sha256": "12fbf2de2833364999328685e563a7020b42d30de961531b4c175a13a41162ce"
+      }
+    }
+  ]
+}

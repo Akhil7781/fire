@@ -1,0 +1,55 @@
+# ==============================================================================
+# Project Dependencies: Satellite Thermal Anomaly Classification
+#
+# NOTE: Stage 1 dependencies are active for installation.
+# Future stage dependencies (Stages 2-5) remain commented out until required.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# STAGE 1: CURRENT PREPROCESSING & CAUSAL FEATURE ENGINEERING
+# (Required for ingesting 1,024,996 detections, Parquet generation, and H3 indexing)
+# ------------------------------------------------------------------------------
+numpy>=1.24.0
+pandas>=2.0.0
+pyarrow>=14.0.0
+scipy>=1.10.0
+h3>=4.0.0,<5.0.0
+shapely>=2.0.0
+python-dotenv>=1.0.0
+pyyaml>=6.0
+tqdm>=4.65.0
+
+# ------------------------------------------------------------------------------
+# STAGE 2: EXTERNAL GEOSPATIAL & GIS BRANCHES (FUTURE - DO NOT INSTALL YET)
+# (Required for industrial GIS layers, OSM, and gas flare databases)
+# ------------------------------------------------------------------------------
+# geopandas>=0.14.0
+# pyproj>=3.6.0
+# requests>=2.31.0
+
+# ------------------------------------------------------------------------------
+# STAGE 3: DEEP LEARNING & SEQUENCE ARCHITECTURES (FUTURE - DO NOT INSTALL YET)
+# (Required for TCN and Deep SAD models)
+# ------------------------------------------------------------------------------
+# torch>=2.0.0
+# torchvision>=0.15.0
+# torchaudio>=2.0.0
+
+# ------------------------------------------------------------------------------
+# STAGE 4: COMPUTER VISION / SPATIAL BRANCH (FUTURE - DO NOT INSTALL YET)
+# (Required for YOLOv8 spatial thermal patch detection)
+# ------------------------------------------------------------------------------
+# ultralytics>=8.0.0
+
+# ------------------------------------------------------------------------------
+# STAGE 5: EVALUATION, BENCHMARKING & VISUALIZATION (FUTURE - DO NOT INSTALL YET)
+# (Required for validation metrics, PR curves, and experiment tracking)
+# ------------------------------------------------------------------------------
+# scikit-learn>=1.3.0
+# matplotlib>=3.7.0
+# seaborn>=0.12.0
+
+# ------------------------------------------------------------------------------
+# DEVELOPMENT & QUALITY ASSURANCE
+# ------------------------------------------------------------------------------
+# pytest>=7.4.0

@@ -1,0 +1,102 @@
+{
+  "chip_id": "PILOT_03_NORTH",
+  "annotation_version": "v2.0_adjudicated",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_03_NORTH_CORR_01",
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 110,
+        "y_min": 262,
+        "x_max": 196,
+        "y_max": 376
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "BURN_SCAR_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "interaction_audit": {
+        "manual_interaction_recorded": true,
+        "event_type": "CANVAS_DRAW",
+        "coordinates": [
+          110,
+          262,
+          196,
+          376
+        ],
+        "timestamp": "2026-10-02T05:13:10.748Z"
+      },
+      "class_id": 2,
+      "annotator_id": "HUMAN_ADJUDICATOR_CORRECTION",
+      "review_status": "CORRECTED_V2",
+      "annotation_timestamp": "2026-10-02T05:13:57.870022+00:00"
+    }
+  ],
+  "source_classes": [
+    "Forest Fire"
+  ],
+  "visual_evidence": [
+    "BURN_SCAR_VISIBLE",
+    "DIRECT_FIRE_VISIBLE",
+    "FOREST_CONTEXT_VISIBLE"
+  ],
+  "visibility_status": "CLEAR",
+  "geometry_confidence": "MEDIUM",
+  "source_class_confidence": "MEDIUM",
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "772e0726e362b0d26bda66e2ea8bc8931e81babe7f425cc18c14c3a36d50078c",
+    "firms_latitude": 27.19986,
+    "firms_longitude": 87.72781,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 8.67,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2B_MSIL2A_20250329T043659_N0511_R033_T45RWL_20250329T072509.SAFE",
+    "tile_id": "T45RWL",
+    "cloud_cover_pct": 7.89,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "consensus_provenance": {
+    "cohort_type": "HUMAN_ADJUDICATED_CONSENSUS",
+    "stage": "STAGE_8_16",
+    "correction_version": "v2.0",
+    "correction_status": "COMPLETED_HUMAN_CORRECTION",
+    "correction_rationale": "The two Forest Fire candidate regions were reviewed using the available Sentinel-2 SWIR imagery. A1's proposed bounding boxes were considered as the reference for the consensus review. The final annotations should be retained only where the visible spectral patterns and spatial characteristics support identifiable fire-related features. FIRMS thermal detections were treated as contextual evidence rather than ground truth.",
+    "human_confirmation": {
+      "confirmed": true,
+      "method": "HUMAN_CHECKBOX_CONFIRMATION",
+      "statement": "I confirm that I have reviewed the Sentinel-2 imagery and explicitly approve these corrections."
+    },
+    "changed_fields": [
+      "annotations[0].visual_evidence"
+    ],
+    "diff_summary": [
+      "Box #1 Evidence: removed ['NO_CLEAR_VISUAL_EVIDENCE']"
+    ],
+    "source_files": [
+      "data\\reference\\ds08\\annotations\\adjudication\\corrections\\PILOT_03_NORTH_corrected_v2.json",
+      "data/reference/ds08/annotations/adjudication/review/PILOT_03_NORTH_adjudicated_v1.json"
+    ],
+    "source_hashes": {
+      "stage8_16_corrected_sha256": "73972474d6a86605595d5273e0aac0ea77fc448b3a73b93fdfefe0b6b04e1daf",
+      "stage8_15_source_sha256": "dd1d1b427796a1bda6903d71a2d17841c215d2b6978463fb0560900b049aafaa"
+    }
+  }
+}

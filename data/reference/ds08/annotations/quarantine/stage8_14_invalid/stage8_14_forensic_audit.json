@@ -1,0 +1,1229 @@
+{
+  "stage": "STAGE_8.14_INVALIDATION",
+  "title": "Stage 8.14 Invalidation + Forensic Cleanup and Strict Provenance Recovery",
+  "status": "INVALID \u2014 HUMAN PROVENANCE NOT ESTABLISHED",
+  "timestamp_utc": "2026-09-30T15:40:54.614188+00:00",
+  "protected_genuine_artifact": {
+    "chip_id": "PILOT_02_NORTH",
+    "annotator": "annotator_1",
+    "path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_02_NORTH_annotator1.json",
+    "protected_copy_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/protected_genuine_pilot02/PILOT_02_NORTH_annotator1.json",
+    "sha256": "a7b3e2a1796c64ba4b2d6e1afdfae23c2144b0b1effe223597b100fa1bdf1d50",
+    "status": "PROTECTED_GENUINE_HUMAN_ANNOTATION",
+    "chip_annotation_status": "NO_VISIBLE_TARGET",
+    "task_status": "COMPLETED_HUMAN_ANNOTATION",
+    "human_verified": true
+  },
+  "quarantine_summary": {
+    "total_annotation_files_quarantined": 29,
+    "questionable_a1_files_count": 14,
+    "questionable_a2_files_count": 15,
+    "quarantined_review_artifacts_count": 7,
+    "quarantine_directory": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/"
+  },
+  "quarantined_a1_files": [
+    {
+      "chip_id": "PILOT_03_NORTH",
+      "filename": "PILOT_03_NORTH_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_03_NORTH_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_03_NORTH_annotator1.json",
+      "sha256": "f8daadfe20e958f7fbe74c146dd1f1b5e02917af24c38103ea8b1fb56f11fa3d",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 3,
+      "annotation_completion_timestamp": "2026-09-30T15:01:59.424Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+      "filename": "PILOT_04_NORTH_REPLACEMENT_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_04_NORTH_REPLACEMENT_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_04_NORTH_REPLACEMENT_annotator1.json",
+      "sha256": "faf2db85acf148b33ce825283196e62e18d9aa79d96e5a2df529b749bd36e614",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:08:19.362Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_06_CENTRAL",
+      "filename": "PILOT_06_CENTRAL_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_06_CENTRAL_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_06_CENTRAL_annotator1.json",
+      "sha256": "7ac6208c292f9449f664a1a7faae04a1558a61da7ebdc3fab96d08114010d7a7",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 3,
+      "annotation_completion_timestamp": "2026-09-30T15:04:40.984Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_07_CENTRAL",
+      "filename": "PILOT_07_CENTRAL_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_07_CENTRAL_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_07_CENTRAL_annotator1.json",
+      "sha256": "a604e93af20f2b1b959c340aee1a1812ad42342d6ccc44da4d3083c6396a16bd",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:05:13.852Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_08_CENTRAL",
+      "filename": "PILOT_08_CENTRAL_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_08_CENTRAL_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_08_CENTRAL_annotator1.json",
+      "sha256": "0c2ff9544c65683006e39aa9434e53cbd0ad79a0a78eee6fb5472547cea2c72e",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "UNRESOLVED",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:09:42.258Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_10_SOUTH",
+      "filename": "PILOT_10_SOUTH_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_10_SOUTH_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_10_SOUTH_annotator1.json",
+      "sha256": "571132e72d0c530178fea79c09ef47f3a8b113ca438bc35202e554cd5674cd67",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:05:38.342Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_11_SOUTH",
+      "filename": "PILOT_11_SOUTH_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_11_SOUTH_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_11_SOUTH_annotator1.json",
+      "sha256": "908eff2afd5c1b7ebe8733fe830c1795764a7705a749802fc42dfcb93aafd3b1",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:05:45.716Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_12_SOUTH",
+      "filename": "PILOT_12_SOUTH_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_12_SOUTH_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_12_SOUTH_annotator1.json",
+      "sha256": "04bf1cfdd9f99d8dcc54f4fb34814bccdf7183a2a692d37a65749fe299e3159e",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:05:51.310Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_14_EAST",
+      "filename": "PILOT_14_EAST_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_14_EAST_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_14_EAST_annotator1.json",
+      "sha256": "4b7935dda12c280f885a4f6949d743ec76c30de2399be294564e62dca20c827e",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:08:44.294Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_15_EAST",
+      "filename": "PILOT_15_EAST_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_15_EAST_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_15_EAST_annotator1.json",
+      "sha256": "4887928c6a22ceb89614b9083f8c1911badfd14681b12de1dc4f3e2cab11ccbb",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 3,
+      "annotation_completion_timestamp": "2026-09-30T15:06:44.540Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_16_EAST",
+      "filename": "PILOT_16_EAST_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_16_EAST_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_16_EAST_annotator1.json",
+      "sha256": "6e1db85150dcff1f219962591e68074a8a6192d7f39719ba6bfb3ede3119b9f0",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 2,
+      "annotation_completion_timestamp": "2026-09-30T15:07:17.790Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_18_WEST",
+      "filename": "PILOT_18_WEST_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_18_WEST_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_18_WEST_annotator1.json",
+      "sha256": "dc60e77d271b1fd41470886081e6575c837ad5d0d4bbc83073e27dda40a244a5",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:07:38.500Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_19_WEST",
+      "filename": "PILOT_19_WEST_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_19_WEST_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_19_WEST_annotator1.json",
+      "sha256": "2997222a092bf4034c3a9d34d8c6edd5aebdfff4b2ae2b2443b9d2ee46e41e8a",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:08:59.022Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    },
+    {
+      "chip_id": "PILOT_20_WEST",
+      "filename": "PILOT_20_WEST_annotator1.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_20_WEST_annotator1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_1/PILOT_20_WEST_annotator1.json",
+      "sha256": "cfc12a0fa828679ec21d787179209e5b35c3f380c2c0497d9bb1b7d5e66bcfbd",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:08:09.280Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Automated script execution within seconds; genuine human interaction provenance cannot be verified."
+    }
+  ],
+  "quarantined_a2_files": [
+    {
+      "chip_id": "PILOT_02_NORTH",
+      "filename": "PILOT_02_NORTH_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_02_NORTH_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_02_NORTH_annotator2.json",
+      "sha256": "7525f8f2fd22e368a5ba5b3d1f3418f62b65ad0463d11322f04d3dd0d277c4bd",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:13:47.596Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_03_NORTH",
+      "filename": "PILOT_03_NORTH_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_03_NORTH_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_03_NORTH_annotator2.json",
+      "sha256": "f45017478b0716e0aa62c2e8cbd17034939b6cfd4e1af4137bf14a19b7b87f7c",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:14:11.454Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+      "filename": "PILOT_04_NORTH_REPLACEMENT_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_04_NORTH_REPLACEMENT_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_04_NORTH_REPLACEMENT_annotator2.json",
+      "sha256": "135cf44084eba135561886b50fe5d3f06fc144b231ddbb2379438fdfdf715909",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:20:49.722Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_06_CENTRAL",
+      "filename": "PILOT_06_CENTRAL_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_06_CENTRAL_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_06_CENTRAL_annotator2.json",
+      "sha256": "ed85fbd652e107cb2e3cb2966c311125044ff56cd4dc2b6c8e4007b362439ad0",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 3,
+      "annotation_completion_timestamp": "2026-09-30T15:16:14.136Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_07_CENTRAL",
+      "filename": "PILOT_07_CENTRAL_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_07_CENTRAL_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_07_CENTRAL_annotator2.json",
+      "sha256": "2f9ef824e90fc9c76f69f135afad1f79e68e4ce77312f405e37ce61fabdca33f",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:16:31.008Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_08_CENTRAL",
+      "filename": "PILOT_08_CENTRAL_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_08_CENTRAL_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_08_CENTRAL_annotator2.json",
+      "sha256": "dc7ee5d5b406b0327e466dcf9d8e02e65ad3983e438479e3d4b5a8465157a2f3",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:16:44.992Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_10_SOUTH",
+      "filename": "PILOT_10_SOUTH_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_10_SOUTH_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_10_SOUTH_annotator2.json",
+      "sha256": "a58808cf5a106c3edcf2741a1ed82b260bd84456ec636069dd475986ad501065",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:16:56.736Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_11_SOUTH",
+      "filename": "PILOT_11_SOUTH_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_11_SOUTH_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_11_SOUTH_annotator2.json",
+      "sha256": "312be4c0dae89064b18cb7d46f2012fdf14431797139965436d9a1a3c35f093b",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:17:59.625Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_12_SOUTH",
+      "filename": "PILOT_12_SOUTH_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_12_SOUTH_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_12_SOUTH_annotator2.json",
+      "sha256": "9533571726d5ed6b1c037122405be92d3712fa7633ba4c487caa11e9cf0cdbed",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:18:08.563Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_14_EAST",
+      "filename": "PILOT_14_EAST_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_14_EAST_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_14_EAST_annotator2.json",
+      "sha256": "0d6c87ad39a1a9f0595d19db224cd4b03ad4528ec65220b45cec25650fe3351c",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:18:13.480Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_15_EAST",
+      "filename": "PILOT_15_EAST_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_15_EAST_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_15_EAST_annotator2.json",
+      "sha256": "442cf3c8e0509d22a40490e5d25c939e9477ccf09e9b97ac0e254ccd5e48a473",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 3,
+      "annotation_completion_timestamp": "2026-09-30T15:19:04.738Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_16_EAST",
+      "filename": "PILOT_16_EAST_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_16_EAST_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_16_EAST_annotator2.json",
+      "sha256": "5df29f55978e0bcbb489a5dad9ee7a1b4ef958a53f0e4de8ec33fdae42dfc44a",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 2,
+      "annotation_completion_timestamp": "2026-09-30T15:19:38.232Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_18_WEST",
+      "filename": "PILOT_18_WEST_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_18_WEST_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_18_WEST_annotator2.json",
+      "sha256": "3eefc8cd6687d477d52eb3014d8b083ddc55c5611436b7067527f9b9aae0aca5",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:20:24.828Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_19_WEST",
+      "filename": "PILOT_19_WEST_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_19_WEST_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_19_WEST_annotator2.json",
+      "sha256": "1274df3fe96e9d00acb96881bee501e84fbda4f1f7616e1296e9472bb795406b",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "HAS_ANNOTATIONS",
+      "annotation_count": 1,
+      "annotation_completion_timestamp": "2026-09-30T15:20:40.610Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    },
+    {
+      "chip_id": "PILOT_20_WEST",
+      "filename": "PILOT_20_WEST_annotator2.json",
+      "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_20_WEST_annotator2.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/manual/annotator_2/PILOT_20_WEST_annotator2.json",
+      "sha256": "8355639f074e013995ceff087909d21aa7cf39a51ad42fda8afbaf699ad604ad",
+      "task_status": "COMPLETED_HUMAN_ANNOTATION",
+      "chip_annotation_status": "NO_VISIBLE_TARGET",
+      "annotation_count": 0,
+      "annotation_completion_timestamp": "2026-09-30T15:20:45.766Z",
+      "quarantine_reason": "INVALID_SCRIPT_GENERATED_OR_UNSUPPORTED_PROVENANCE: Annotator 2 was not genuinely completed by a human prior to automated processing; unverified provenance."
+    }
+  ],
+  "quarantined_review_artifacts": [
+    {
+      "filename": "stage8_14_agreement_analysis_v1.json",
+      "original_path": "data/reference/ds08/annotations/review/stage8_14_agreement_analysis_v1.json",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/review_artifacts/stage8_14_agreement_analysis_v1.json",
+      "sha256": "8cd465b5bc082a5a49888c080638d62e6480b23c808796041530e1def2107232",
+      "label": "INVALID_STAGE8_14_OUTPUT_DO_NOT_USE_AS_HUMAN_AGREEMENT"
+    },
+    {
+      "filename": "stage8_14_agreement_analysis_v1.md",
+      "original_path": "data/reference/ds08/annotations/review/stage8_14_agreement_analysis_v1.md",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/review_artifacts/stage8_14_agreement_analysis_v1.md",
+      "sha256": "042ce6cc386700dcac963d18ebab386107cccb3f16a290f853afde3048ec037f",
+      "label": "INVALID_STAGE8_14_OUTPUT_DO_NOT_USE_AS_HUMAN_AGREEMENT"
+    },
+    {
+      "filename": "compute_stage8_14.py",
+      "original_path": "scratch/compute_stage8_14.py",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/review_artifacts/compute_stage8_14.py",
+      "sha256": "d51355851f9f0e11dfdb6c5f7f4306d87ce0de3f618056739f9b9e6095d8d65a",
+      "label": "INVALID_STAGE8_14_OUTPUT_DO_NOT_USE_AS_HUMAN_AGREEMENT"
+    },
+    {
+      "filename": "check_boxes.py",
+      "original_path": "scratch/check_boxes.py",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/review_artifacts/check_boxes.py",
+      "sha256": "0daf06d5acbd29d462ed5fd64e84f698172d30c816ce8822b68dc757083d08e4",
+      "label": "INVALID_STAGE8_14_OUTPUT_DO_NOT_USE_AS_HUMAN_AGREEMENT"
+    },
+    {
+      "filename": "generate_stage8_14_review.py",
+      "original_path": "scratch/generate_stage8_14_review.py",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/review_artifacts/generate_stage8_14_review.py",
+      "sha256": "257c98302b754a0824708ff84419a4278554704d156315ffae72f6768ac52bfc",
+      "label": "INVALID_STAGE8_14_OUTPUT_DO_NOT_USE_AS_HUMAN_AGREEMENT"
+    },
+    {
+      "filename": "audit_a1.py",
+      "original_path": "scratch/audit_a1.py",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/review_artifacts/audit_a1.py",
+      "sha256": "04d8f678dac3784b63445958a388cd3da7162fb0c4c9522af1c0af9c4d54d901",
+      "label": "INVALID_STAGE8_14_OUTPUT_DO_NOT_USE_AS_HUMAN_AGREEMENT"
+    },
+    {
+      "filename": "test_ds08_stage8_14_agreement.py",
+      "original_path": "tests/test_ds08_stage8_14_agreement.py",
+      "quarantine_path": "data/reference/ds08/annotations/quarantine/stage8_14_invalid/review_artifacts/test_ds08_stage8_14_agreement.py",
+      "sha256": "b0c4de7d1f35d41aff59edf907339f4bea22871a3af9ae4d2afe7c606ab39d02",
+      "label": "INVALID_STAGE8_14_OUTPUT_DO_NOT_USE_AS_HUMAN_AGREEMENT"
+    }
+  ],
+  "pre_quarantine_audit_records": {
+    "annotator_1": [
+      {
+        "chip_id": "PILOT_02_NORTH",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_02_NORTH_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T13:56:08.514Z",
+        "annotation_completion_timestamp": "2026-09-30T13:58:13.886Z",
+        "mtime_utc": "2026-09-30T13:58:13.891925+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.718510+00:00",
+        "sha256_before_quarantine": "a7b3e2a1796c64ba4b2d6e1afdfae23c2144b0b1effe223597b100fa1bdf1d50",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_03_NORTH",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_03_NORTH_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 3,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 3,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 4,
+          "save_events": 5
+        },
+        "annotation_start_timestamp": "2026-09-30T14:59:04.117Z",
+        "annotation_completion_timestamp": "2026-09-30T15:01:59.424Z",
+        "mtime_utc": "2026-09-30T15:01:59.427815+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.727027+00:00",
+        "sha256_before_quarantine": "f8daadfe20e958f7fbe74c146dd1f1b5e02917af24c38103ea8b1fb56f11fa3d",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_04_NORTH_REPLACEMENT_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:08:11.872Z",
+        "annotation_completion_timestamp": "2026-09-30T15:08:19.362Z",
+        "mtime_utc": "2026-09-30T15:08:19.366373+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.819211+00:00",
+        "sha256_before_quarantine": "faf2db85acf148b33ce825283196e62e18d9aa79d96e5a2df529b749bd36e614",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_06_CENTRAL",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_06_CENTRAL_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 3,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 5,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 3,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:03:27.100Z",
+        "annotation_completion_timestamp": "2026-09-30T15:04:40.984Z",
+        "mtime_utc": "2026-09-30T15:04:40.987410+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.735043+00:00",
+        "sha256_before_quarantine": "7ac6208c292f9449f664a1a7faae04a1558a61da7ebdc3fab96d08114010d7a7",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_07_CENTRAL",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_07_CENTRAL_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:04:44.140Z",
+        "annotation_completion_timestamp": "2026-09-30T15:05:13.852Z",
+        "mtime_utc": "2026-09-30T15:05:13.855571+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.742040+00:00",
+        "sha256_before_quarantine": "a604e93af20f2b1b959c340aee1a1812ad42342d6ccc44da4d3083c6396a16bd",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_08_CENTRAL",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_08_CENTRAL_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "UNRESOLVED",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 4
+        },
+        "annotation_start_timestamp": "2026-09-30T15:09:30.739Z",
+        "annotation_completion_timestamp": "2026-09-30T15:09:42.258Z",
+        "mtime_utc": "2026-09-30T15:09:42.262046+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.748574+00:00",
+        "sha256_before_quarantine": "0c2ff9544c65683006e39aa9434e53cbd0ad79a0a78eee6fb5472547cea2c72e",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_10_SOUTH",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_10_SOUTH_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:05:33.798Z",
+        "annotation_completion_timestamp": "2026-09-30T15:05:38.342Z",
+        "mtime_utc": "2026-09-30T15:05:38.344272+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.756582+00:00",
+        "sha256_before_quarantine": "571132e72d0c530178fea79c09ef47f3a8b113ca438bc35202e554cd5674cd67",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_11_SOUTH",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_11_SOUTH_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:05:41.140Z",
+        "annotation_completion_timestamp": "2026-09-30T15:05:45.716Z",
+        "mtime_utc": "2026-09-30T15:05:45.719417+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.763574+00:00",
+        "sha256_before_quarantine": "908eff2afd5c1b7ebe8733fe830c1795764a7705a749802fc42dfcb93aafd3b1",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_12_SOUTH",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_12_SOUTH_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:05:47.137Z",
+        "annotation_completion_timestamp": "2026-09-30T15:05:51.310Z",
+        "mtime_utc": "2026-09-30T15:05:51.313880+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.770113+00:00",
+        "sha256_before_quarantine": "04bf1cfdd9f99d8dcc54f4fb34814bccdf7183a2a692d37a65749fe299e3159e",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_14_EAST",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_14_EAST_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:08:19.981Z",
+        "annotation_completion_timestamp": "2026-09-30T15:08:44.294Z",
+        "mtime_utc": "2026-09-30T15:08:44.297283+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.778119+00:00",
+        "sha256_before_quarantine": "4b7935dda12c280f885a4f6949d743ec76c30de2399be294564e62dca20c827e",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_15_EAST",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_15_EAST_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 3,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 3,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 3,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:05:58.855Z",
+        "annotation_completion_timestamp": "2026-09-30T15:06:44.540Z",
+        "mtime_utc": "2026-09-30T15:06:44.543841+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.786131+00:00",
+        "sha256_before_quarantine": "4887928c6a22ceb89614b9083f8c1911badfd14681b12de1dc4f3e2cab11ccbb",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_16_EAST",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_16_EAST_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 2,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 2,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 3,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:06:47.450Z",
+        "annotation_completion_timestamp": "2026-09-30T15:07:17.790Z",
+        "mtime_utc": "2026-09-30T15:07:17.793798+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.793125+00:00",
+        "sha256_before_quarantine": "6e1db85150dcff1f219962591e68074a8a6192d7f39719ba6bfb3ede3119b9f0",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_18_WEST",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_18_WEST_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:07:19.465Z",
+        "annotation_completion_timestamp": "2026-09-30T15:07:38.500Z",
+        "mtime_utc": "2026-09-30T15:07:38.503590+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.799669+00:00",
+        "sha256_before_quarantine": "dc60e77d271b1fd41470886081e6575c837ad5d0d4bbc83073e27dda40a244a5",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_19_WEST",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_19_WEST_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:08:45.133Z",
+        "annotation_completion_timestamp": "2026-09-30T15:08:59.022Z",
+        "mtime_utc": "2026-09-30T15:08:59.025484+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.806669+00:00",
+        "sha256_before_quarantine": "2997222a092bf4034c3a9d34d8c6edd5aebdfff4b2ae2b2443b9d2ee46e41e8a",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_20_WEST",
+        "annotator": "annotator_1",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_1/PILOT_20_WEST_annotator1.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:08:00.986Z",
+        "annotation_completion_timestamp": "2026-09-30T15:08:09.280Z",
+        "mtime_utc": "2026-09-30T15:08:09.283534+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.813186+00:00",
+        "sha256_before_quarantine": "cfc12a0fa828679ec21d787179209e5b35c3f380c2c0497d9bb1b7d5e66bcfbd",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      }
+    ],
+    "annotator_2": [
+      {
+        "chip_id": "PILOT_02_NORTH",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_02_NORTH_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:13:11.747Z",
+        "annotation_completion_timestamp": "2026-09-30T15:13:47.596Z",
+        "mtime_utc": "2026-09-30T15:13:47.600857+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.720016+00:00",
+        "sha256_before_quarantine": "7525f8f2fd22e368a5ba5b3d1f3418f62b65ad0463d11322f04d3dd0d277c4bd",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_03_NORTH",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_03_NORTH_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:13:49.136Z",
+        "annotation_completion_timestamp": "2026-09-30T15:14:11.454Z",
+        "mtime_utc": "2026-09-30T15:14:11.457047+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.728024+00:00",
+        "sha256_before_quarantine": "f45017478b0716e0aa62c2e8cbd17034939b6cfd4e1af4137bf14a19b7b87f7c",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_04_NORTH_REPLACEMENT_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:20:46.530Z",
+        "annotation_completion_timestamp": "2026-09-30T15:20:49.722Z",
+        "mtime_utc": "2026-09-30T15:20:49.724781+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.820208+00:00",
+        "sha256_before_quarantine": "135cf44084eba135561886b50fe5d3f06fc144b231ddbb2379438fdfdf715909",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_06_CENTRAL",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_06_CENTRAL_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 3,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 4,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 3,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:14:36.835Z",
+        "annotation_completion_timestamp": "2026-09-30T15:16:14.136Z",
+        "mtime_utc": "2026-09-30T15:16:14.140374+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.736047+00:00",
+        "sha256_before_quarantine": "ed85fbd652e107cb2e3cb2966c311125044ff56cd4dc2b6c8e4007b362439ad0",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_07_CENTRAL",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_07_CENTRAL_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:16:15.246Z",
+        "annotation_completion_timestamp": "2026-09-30T15:16:31.008Z",
+        "mtime_utc": "2026-09-30T15:16:31.012253+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.743034+00:00",
+        "sha256_before_quarantine": "2f9ef824e90fc9c76f69f135afad1f79e68e4ce77312f405e37ce61fabdca33f",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_08_CENTRAL",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_08_CENTRAL_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:16:31.531Z",
+        "annotation_completion_timestamp": "2026-09-30T15:16:44.992Z",
+        "mtime_utc": "2026-09-30T15:16:44.995797+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.749573+00:00",
+        "sha256_before_quarantine": "dc7ee5d5b406b0327e466dcf9d8e02e65ad3983e438479e3d4b5a8465157a2f3",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_10_SOUTH",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_10_SOUTH_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:16:46.379Z",
+        "annotation_completion_timestamp": "2026-09-30T15:16:56.736Z",
+        "mtime_utc": "2026-09-30T15:16:56.738889+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.757568+00:00",
+        "sha256_before_quarantine": "a58808cf5a106c3edcf2741a1ed82b260bd84456ec636069dd475986ad501065",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_11_SOUTH",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_11_SOUTH_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:16:58.196Z",
+        "annotation_completion_timestamp": "2026-09-30T15:17:59.625Z",
+        "mtime_utc": "2026-09-30T15:17:59.627776+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.763574+00:00",
+        "sha256_before_quarantine": "312be4c0dae89064b18cb7d46f2012fdf14431797139965436d9a1a3c35f093b",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_12_SOUTH",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_12_SOUTH_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:18:01.549Z",
+        "annotation_completion_timestamp": "2026-09-30T15:18:08.563Z",
+        "mtime_utc": "2026-09-30T15:18:08.565884+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.770113+00:00",
+        "sha256_before_quarantine": "9533571726d5ed6b1c037122405be92d3712fa7633ba4c487caa11e9cf0cdbed",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_14_EAST",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_14_EAST_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:18:09.271Z",
+        "annotation_completion_timestamp": "2026-09-30T15:18:13.480Z",
+        "mtime_utc": "2026-09-30T15:18:13.483238+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.778119+00:00",
+        "sha256_before_quarantine": "0d6c87ad39a1a9f0595d19db224cd4b03ad4528ec65220b45cec25650fe3351c",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_15_EAST",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_15_EAST_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 3,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 3,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 3,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:18:14.295Z",
+        "annotation_completion_timestamp": "2026-09-30T15:19:04.738Z",
+        "mtime_utc": "2026-09-30T15:19:04.742008+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.787134+00:00",
+        "sha256_before_quarantine": "442cf3c8e0509d22a40490e5d25c939e9477ccf09e9b97ac0e254ccd5e48a473",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_16_EAST",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_16_EAST_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 2,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 2,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 2,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:19:05.528Z",
+        "annotation_completion_timestamp": "2026-09-30T15:19:38.232Z",
+        "mtime_utc": "2026-09-30T15:19:38.235840+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.793125+00:00",
+        "sha256_before_quarantine": "5df29f55978e0bcbb489a5dad9ee7a1b4ef958a53f0e4de8ec33fdae42dfc44a",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_18_WEST",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_18_WEST_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 3
+        },
+        "annotation_start_timestamp": "2026-09-30T15:19:38.811Z",
+        "annotation_completion_timestamp": "2026-09-30T15:20:24.828Z",
+        "mtime_utc": "2026-09-30T15:20:24.831368+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.799669+00:00",
+        "sha256_before_quarantine": "3eefc8cd6687d477d52eb3014d8b083ddc55c5611436b7067527f9b9aae0aca5",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_19_WEST",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_19_WEST_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "human_verified": true,
+        "annotation_count": 1,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 1,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 1,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:20:25.719Z",
+        "annotation_completion_timestamp": "2026-09-30T15:20:40.610Z",
+        "mtime_utc": "2026-09-30T15:20:40.611903+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.806669+00:00",
+        "sha256_before_quarantine": "1274df3fe96e9d00acb96881bee501e84fbda4f1f7616e1296e9472bb795406b",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      },
+      {
+        "chip_id": "PILOT_20_WEST",
+        "annotator": "annotator_2",
+        "original_path": "data/reference/ds08/annotations/manual/annotator_2/PILOT_20_WEST_annotator2.json",
+        "task_status": "COMPLETED_HUMAN_ANNOTATION",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "human_verified": true,
+        "annotation_count": 0,
+        "interaction_audit": {
+          "interface_version": "v1.0_manual",
+          "bbox_creation_actions": 0,
+          "bbox_edit_actions": 0,
+          "class_selection_actions": 0,
+          "save_events": 2
+        },
+        "annotation_start_timestamp": "2026-09-30T15:20:41.352Z",
+        "annotation_completion_timestamp": "2026-09-30T15:20:45.766Z",
+        "mtime_utc": "2026-09-30T15:20:45.769262+00:00",
+        "ctime_utc": "2026-09-29T17:05:25.813186+00:00",
+        "sha256_before_quarantine": "8355639f074e013995ceff087909d21aa7cf39a51ad42fda8afbaf699ad604ad",
+        "corresponds_to_blank_template": false,
+        "has_substantive_annotations": true
+      }
+    ]
+  },
+  "stage8_11_quarantine_status": {
+    "preserved": true,
+    "manifest_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/quarantine_manifest.json",
+    "independent": true
+  },
+  "frozen_predecessor_integrity": {
+    "models/tcn/best_tcn.pt": {
+      "expected": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+      "actual": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+      "verified": true
+    },
+    "models/deep_sad/best_deep_sad.pt": {
+      "expected": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+      "actual": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+      "verified": true
+    },
+    "models/yolo/infrastructure/best_infrastructure.pt": {
+      "expected": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+      "actual": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+      "verified": true
+    },
+    "models/yolo/fire_smoke/best_fire_smoke.pt": {
+      "expected": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+      "actual": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+      "verified": true
+    },
+    "data/embeddings/fusion/india_2025_tcn_sad_aligned.parquet": {
+      "expected": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+      "actual": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+      "verified": true
+    }
+  },
+  "frozen_810_adjudicated_integrity": {
+    "PILOT_01_NORTH_adjudicated_v1.json": {
+      "expected": "cad036e10fd48bfd54f3d55c11a645eef0a0ddfa53f30c23dee3bff6ef84f489",
+      "actual": "cad036e10fd48bfd54f3d55c11a645eef0a0ddfa53f30c23dee3bff6ef84f489",
+      "verified": true
+    },
+    "PILOT_13_EAST_adjudicated_v1.json": {
+      "expected": "73bc30817d059a8f138625033680f81c226ef4936c71dea9cccb4ce40a495922",
+      "actual": "73bc30817d059a8f138625033680f81c226ef4936c71dea9cccb4ce40a495922",
+      "verified": true
+    },
+    "PILOT_17_WEST_adjudicated_v1.json": {
+      "expected": "3f5e311c9a88e37b70b78a5ba0623508c8144395c0c1493f13cf7e1975aa473b",
+      "actual": "3f5e311c9a88e37b70b78a5ba0623508c8144395c0c1493f13cf7e1975aa473b",
+      "verified": true
+    }
+  },
+  "final_authoritative_annotation_state": {
+    "annotator_1": {
+      "total_chips": 15,
+      "genuine_completed_human_annotations": 1,
+      "pending_manual_input_blank_templates": 14,
+      "completed_chip_ids": [
+        "PILOT_02_NORTH"
+      ],
+      "pending_chip_ids": [
+        "PILOT_03_NORTH",
+        "PILOT_06_CENTRAL",
+        "PILOT_07_CENTRAL",
+        "PILOT_08_CENTRAL",
+        "PILOT_10_SOUTH",
+        "PILOT_11_SOUTH",
+        "PILOT_12_SOUTH",
+        "PILOT_14_EAST",
+        "PILOT_15_EAST",
+        "PILOT_16_EAST",
+        "PILOT_18_WEST",
+        "PILOT_19_WEST",
+        "PILOT_20_WEST",
+        "PILOT_04_NORTH_REPLACEMENT"
+      ]
+    },
+    "annotator_2": {
+      "total_chips": 15,
+      "genuine_completed_human_annotations": 0,
+      "pending_manual_input_blank_templates": 15,
+      "completed_chip_ids": [],
+      "pending_chip_ids": [
+        "PILOT_02_NORTH",
+        "PILOT_03_NORTH",
+        "PILOT_06_CENTRAL",
+        "PILOT_07_CENTRAL",
+        "PILOT_08_CENTRAL",
+        "PILOT_10_SOUTH",
+        "PILOT_11_SOUTH",
+        "PILOT_12_SOUTH",
+        "PILOT_14_EAST",
+        "PILOT_15_EAST",
+        "PILOT_16_EAST",
+        "PILOT_18_WEST",
+        "PILOT_19_WEST",
+        "PILOT_20_WEST",
+        "PILOT_04_NORTH_REPLACEMENT"
+      ]
+    },
+    "adjudication_status": "BLOCKED",
+    "fabricated_annotations_count": 0,
+    "stage8_15_outputs_count": 0
+  },
+  "authoritative_statements": [
+    "No Stage 8.14 agreement metric is valid for downstream scientific use.",
+    "Stage 8.15 is BLOCKED until genuine independent human annotation is completed."
+  ],
+  "next_legitimate_step": "Genuine manual annotation of the remaining 14 A1 chips via the DS08 annotation UI, followed independently by genuine manual annotation of all 15 A2 chips."
+}

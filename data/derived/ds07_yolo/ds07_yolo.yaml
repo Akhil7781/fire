@@ -1,0 +1,7 @@
+path: D:/DATA PREPROCESSING/data/derived/ds07_yolo
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: Flame
+  1: Smoke

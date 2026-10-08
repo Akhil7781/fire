@@ -1,0 +1,53 @@
+{
+  "chip_id": "PILOT_11_SOUTH",
+  "annotation_version": "v1.0_consensus",
+  "chip_annotation_status": "NO_VISIBLE_TARGET",
+  "annotations": [],
+  "source_classes": [
+    "NO_VISIBLE_TARGET"
+  ],
+  "visual_evidence": [
+    "NO_CLEAR_VISUAL_EVIDENCE"
+  ],
+  "visibility_status": "CLEAR",
+  "geometry_confidence": "HIGH",
+  "source_class_confidence": "HIGH",
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "481d3329d6cd95602ef8b537ca4e63c3202e213475c3d16ab98d7fe56083ae81",
+    "firms_latitude": 13.51262,
+    "firms_longitude": 78.41198,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 6.07,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2B_MSIL2A_20250328T050659_N0511_R019_T43PHR_20250328T075231.SAFE",
+    "tile_id": "T43PHR",
+    "cloud_cover_pct": 3.62,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "consensus_provenance": {
+    "cohort_type": "UNANIMOUS_AGREEMENT",
+    "stage": "STAGE_8_14",
+    "agreement_status": "CONCORDANT",
+    "disagreement_count": 0,
+    "source_files": [
+      "data\\reference\\ds08\\annotations\\manual\\annotator_1\\PILOT_11_SOUTH_annotator1.json",
+      "data\\reference\\ds08\\annotations\\manual\\annotator_2\\PILOT_11_SOUTH_annotator2.json"
+    ],
+    "source_hashes": {
+      "annotator_1_sha256": "52843e3e2d721041f053c96ea0d2fc98351f77393b591c43b411563f68c0de3c",
+      "annotator_2_sha256": "2cbb053549a052d158ae53607233752fdb1d5c2b55bf081f6f88ef9e693e6b01"
+    }
+  }
+}

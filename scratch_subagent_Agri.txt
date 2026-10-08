@@ -1,0 +1,1 @@
+I have completed the in-depth research on independent reference datasets and sources for agricultural fires (crop residue / stubble burning) in India for 2025 across all 10 requested categories and forwarded the full dossier to the caller agent via `send_message`.

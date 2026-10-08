@@ -1,0 +1,1318 @@
+{
+  "status": "INCOMPLETE_ARCHIVE",
+  "indexed_files": [
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-01-01",
+        "2025-01-05"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-01-01_to_2025-01-05.csv",
+      "file_hash_sha256": "8b5316862635ae4b9d7dd196dd6f94e28aabda5d25cbd04549bd0ed04398ef10",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-01-06",
+        "2025-01-10"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-01-06_to_2025-01-10.csv",
+      "file_hash_sha256": "0e53c885aa586f9aa1f7ef65a05b89c25f377afada9240f25e8389875405c7de",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-01-11",
+        "2025-01-15"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-01-11_to_2025-01-15.csv",
+      "file_hash_sha256": "66c5df97ebe956a01bb9ae080f8fc64142748da6f4644fdfff0800b41093fe68",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-01-16",
+        "2025-01-20"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-01-16_to_2025-01-20.csv",
+      "file_hash_sha256": "ff03747b527d70aa24b7ad052159657951977443ced8a30f87d4639093ffb814",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-01-21",
+        "2025-01-25"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-01-21_to_2025-01-25.csv",
+      "file_hash_sha256": "39b805b015258f4a4d52f301785e07fcd65f67cf68f86dcb52ff29e24f7f3332",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-01-26",
+        "2025-01-30"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-01-26_to_2025-01-30.csv",
+      "file_hash_sha256": "bbd61a9588e9ad3759b9e3e67872733d5f355e60ef5753618070ef7804349e57",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-01-31",
+        "2025-02-04"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-01-31_to_2025-02-04.csv",
+      "file_hash_sha256": "2699e5819037013db55270f34c7573e6d967265b2c07f6e00013287a87715b4c",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-02-05",
+        "2025-02-09"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-02-05_to_2025-02-09.csv",
+      "file_hash_sha256": "8d5a5ca455fc9036dfb00601584eb5a92d8ca4fb8da511d494866fcb43e85492",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-02-10",
+        "2025-02-14"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-02-10_to_2025-02-14.csv",
+      "file_hash_sha256": "f9ba7644d33fb8e61eecd34cdd8dde0c9c833e9372b26326ede6aeea99854202",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-02-15",
+        "2025-02-19"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-02-15_to_2025-02-19.csv",
+      "file_hash_sha256": "ce8f2df14bc686535f586d9f564fad5546308d3a7a7c7cb7e81c84bfc55ca1fe",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-02-20",
+        "2025-02-24"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-02-20_to_2025-02-24.csv",
+      "file_hash_sha256": "6c5baa1966bedd668b7016dfd9381f3d62a153e09d35466e131d951bdcc986bf",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-02-25",
+        "2025-03-01"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-02-25_to_2025-03-01.csv",
+      "file_hash_sha256": "10979a93a9430799c4136bf1cb7103785fdd6afcf5268eb5386b2e435da8a623",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-03-02",
+        "2025-03-06"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-03-02_to_2025-03-06.csv",
+      "file_hash_sha256": "81a10af732ed650e2aa0f5630e1c2424228550fdff4b6138313130ba516bc029",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-03-07",
+        "2025-03-11"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-03-07_to_2025-03-11.csv",
+      "file_hash_sha256": "5e704324c909f129d5489ebc3353cd857dc77012c21590eec910c04a4b83ac3f",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-03-12",
+        "2025-03-16"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-03-12_to_2025-03-16.csv",
+      "file_hash_sha256": "1a852a7e5333447a5838ab091ff3507f7b153a4e878ba53b0b02ddb25f8d793b",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-03-17",
+        "2025-03-21"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-03-17_to_2025-03-21.csv",
+      "file_hash_sha256": "a51781420a8c9f06d355b0d3f7cb8a9af54ffe9e3f4e1ee2f5685c9424871737",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-03-22",
+        "2025-03-26"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-03-22_to_2025-03-26.csv",
+      "file_hash_sha256": "791ff14e3681c381e4a206b54df0497e24a60f1983878a93407869d8cdb54fd8",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-03-27",
+        "2025-03-31"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-03-27_to_2025-03-31.csv",
+      "file_hash_sha256": "af1ba3a8b626b3b5a31b8bfa69e9628795c4fdbbc581151e2747ad1e89ed07c8",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-04-01",
+        "2025-04-05"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-04-01_to_2025-04-05.csv",
+      "file_hash_sha256": "2a4ce3dc35fe1f5bed59b914f2c47c1518e60bda3a82370331a50cc4c533169a",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-04-06",
+        "2025-04-10"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-04-06_to_2025-04-10.csv",
+      "file_hash_sha256": "990e7d540da3d152475d8895b3dd9708970db23f0b8122562f719fca12003542",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-04-11",
+        "2025-04-15"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-04-11_to_2025-04-15.csv",
+      "file_hash_sha256": "b20d4eba9100d0023878bbbacb83226b36d77b1eca62be1c499db235ead9f7e0",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-04-16",
+        "2025-04-20"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-04-16_to_2025-04-20.csv",
+      "file_hash_sha256": "045b7c8ccdc0fcfd46b3430e65626ee55b21cbeb63976ccb28c8a10b26c8ffac",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-04-21",
+        "2025-04-25"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-04-21_to_2025-04-25.csv",
+      "file_hash_sha256": "6949aa4689389d05a49464cb733632b09c5d98d7d1f06c3b9a528a1a6754ae39",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-04-26",
+        "2025-04-30"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-04-26_to_2025-04-30.csv",
+      "file_hash_sha256": "20df1b6809fd6106d549200856ec19b44ec26fd5251a53a8f8bf984827118d94",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-05-01",
+        "2025-05-05"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-05-01_to_2025-05-05.csv",
+      "file_hash_sha256": "6a51465f3ab1b18b0b1c0222818f0c4fd86deb1355c7ce58c768db64a708f5b5",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-05-06",
+        "2025-05-10"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-05-06_to_2025-05-10.csv",
+      "file_hash_sha256": "f176d1dbf242d0210c141d7df934d071e3f71702eca5a5a2a65fadfbe86fa2a4",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-05-11",
+        "2025-05-15"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-05-11_to_2025-05-15.csv",
+      "file_hash_sha256": "1e6d404b6d645362d23259a71fe56154ce5b637519901c3cb80258e45a8a3ea5",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-05-16",
+        "2025-05-20"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-05-16_to_2025-05-20.csv",
+      "file_hash_sha256": "e07d8e54449243c8340c7435d24d472554bf4431ec7c5f077e420793ba26b7b2",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-05-21",
+        "2025-05-25"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-05-21_to_2025-05-25.csv",
+      "file_hash_sha256": "5b98eb916b9a515553243f8d5d5735ba792b1df9cf5479adb32d1e4293f43d99",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-05-26",
+        "2025-05-30"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-05-26_to_2025-05-30.csv",
+      "file_hash_sha256": "5d72d644fedd96affb0d1eb8188b193545a3e8154ef003ad23d8fbde12e974fe",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-05-31",
+        "2025-06-04"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-05-31_to_2025-06-04.csv",
+      "file_hash_sha256": "3a0e699f92b081d895cc5e495418419a13fdff96dcd416075989f46606469ee0",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-06-05",
+        "2025-06-09"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-06-05_to_2025-06-09.csv",
+      "file_hash_sha256": "61e44686780b793b3c89df28b8ca8fe69267cc70215d26f6ab39a460d21acd21",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-06-10",
+        "2025-06-14"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-06-10_to_2025-06-14.csv",
+      "file_hash_sha256": "eb1e45b06d67047c8567e1caf3a43fbaab4ccb382cf708430f243a0adb8bfb22",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-06-15",
+        "2025-06-19"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-06-15_to_2025-06-19.csv",
+      "file_hash_sha256": "efb5c3ff4950cc4e7d140e3cbb24172cfaaade38019169d511e1caaa16cbdfe5",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-06-20",
+        "2025-06-24"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-06-20_to_2025-06-24.csv",
+      "file_hash_sha256": "c7d4fcff25b34712b902fa072853a7f409f6a920c34d985661e0ebf187841cfc",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-06-25",
+        "2025-06-29"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-06-25_to_2025-06-29.csv",
+      "file_hash_sha256": "1c7d31fc1783b0cc634182220178576b17f45cc7099babfccb718d07f4aa5d81",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-06-30",
+        "2025-07-04"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-06-30_to_2025-07-04.csv",
+      "file_hash_sha256": "b0cd1bfac8e677deb1ff6fa3354c7e185a266c00d31b0a98f55a3b778e758ee8",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-07-05",
+        "2025-07-09"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-07-05_to_2025-07-09.csv",
+      "file_hash_sha256": "3dc5b6862881c1d8cc340c8c0c8871ff337277188130cc5ada7c8303041ebff0",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-07-10",
+        "2025-07-14"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-07-10_to_2025-07-14.csv",
+      "file_hash_sha256": "16778a5c9d7e5d67568cd0645842da97381540c6bcda674881dc87e47bbd364d",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-07-15",
+        "2025-07-19"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-07-15_to_2025-07-19.csv",
+      "file_hash_sha256": "9e54d86dc99337de081daa5c15f5f9eb51548e2a7bfa78402a27d7cb813356d8",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-07-20",
+        "2025-07-24"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-07-20_to_2025-07-24.csv",
+      "file_hash_sha256": "99ef6b67d1d684780f1cb3712c557b7de76168e940a6c8ae329eba4bdd418ce6",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-07-25",
+        "2025-07-29"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-07-25_to_2025-07-29.csv",
+      "file_hash_sha256": "6c8c30e0b81620df4ba08527e4137dcea8ab4c4df93e8b255da20b48e20b0de5",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-07-30",
+        "2025-08-03"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-07-30_to_2025-08-03.csv",
+      "file_hash_sha256": "ae0d42db2888a1cc2fc090003035f4962cea6704c55b9e08de3fb8277fb51f76",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-08-04",
+        "2025-08-08"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-08-04_to_2025-08-08.csv",
+      "file_hash_sha256": "c9954a3498f746a12e9bb9417a38d65a61342da5e2b868b93c6c8338e920728d",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-08-09",
+        "2025-08-13"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-08-09_to_2025-08-13.csv",
+      "file_hash_sha256": "ff5ee314c849a2a0ca9801ec15c25c1976fedf2cc36ff4c58252644602e496e7",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-08-14",
+        "2025-08-18"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-08-14_to_2025-08-18.csv",
+      "file_hash_sha256": "b5a89b156df6accf5f8cd151bc41af5cecbf349980bb84c12bd67789de4d22e6",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-08-19",
+        "2025-08-23"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-08-19_to_2025-08-23.csv",
+      "file_hash_sha256": "201b097d9ffa1c0ae42378ed0f73c64b4f1d418e7797300d51b63d52a2d6ac84",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-08-24",
+        "2025-08-28"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-08-24_to_2025-08-28.csv",
+      "file_hash_sha256": "41e490336233963eada48224c1bc5a774d1813bff7aba9fc266394e4c0c10637",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-08-29",
+        "2025-09-02"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-08-29_to_2025-09-02.csv",
+      "file_hash_sha256": "1e5af910f297a91b7cba1277e8a646caef8e751225516935242e3bfc8efe7a49",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-09-03",
+        "2025-09-07"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-09-03_to_2025-09-07.csv",
+      "file_hash_sha256": "7bf41559754d92393ec4cc81c86624ad750bb480fa418259cc2851e26eab9ae4",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-09-08",
+        "2025-09-12"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-09-08_to_2025-09-12.csv",
+      "file_hash_sha256": "c305704b1b63b2a9ebb97a5a9e06fd5b45cfb6182c98da1d27cd7fb70b7ff8b0",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-09-13",
+        "2025-09-17"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-09-13_to_2025-09-17.csv",
+      "file_hash_sha256": "9cdf8fb4b77280e1bc8fd7e15ae2ea7237e7e0c242742b2b1d3529df6807d87b",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-09-18",
+        "2025-09-22"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-09-18_to_2025-09-22.csv",
+      "file_hash_sha256": "dd7aed4ed527a448b2b3bf4b5e98e1ffa89d9a8a6055f1d37121e2e74e311846",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-09-23",
+        "2025-09-27"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-09-23_to_2025-09-27.csv",
+      "file_hash_sha256": "76bd5da3cc6e34f4ccecee322009ab4bcbe0095b212a1af8ccee4d9b61ab15a3",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-09-28",
+        "2025-10-02"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-09-28_to_2025-10-02.csv",
+      "file_hash_sha256": "8fb1d518a604d92313060d7bcf54448e6cc1ba3c464248176694a61e6b7cfd21",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-10-03",
+        "2025-10-07"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-10-03_to_2025-10-07.csv",
+      "file_hash_sha256": "6b123433d498f627e4a8871ef74df3d43f00287bfe5fa40e485761de4099684a",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-10-08",
+        "2025-10-12"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-10-08_to_2025-10-12.csv",
+      "file_hash_sha256": "ccddffb9ae89706869daed8234706c7d2881d4526b986dbc116da3968037805c",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-10-13",
+        "2025-10-17"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-10-13_to_2025-10-17.csv",
+      "file_hash_sha256": "1b9a3ba6b9b004ba3aa451a05c368ce0da395d85f14a41de515791b074742f68",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-10-18",
+        "2025-10-22"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-10-18_to_2025-10-22.csv",
+      "file_hash_sha256": "aa47712999d9c293fd31a9e4b1c37de2cb48e8be5540286021d1ad51a94da385",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-10-23",
+        "2025-10-27"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-10-23_to_2025-10-27.csv",
+      "file_hash_sha256": "dcc92642a139dbf0a38f686bd72f764e5038bf39584427d0ca406ad13f064a2c",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-10-28",
+        "2025-11-01"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-10-28_to_2025-11-01.csv",
+      "file_hash_sha256": "340148f6a6d96503a666ce0ce6ea7405e8d5933719c8a189d55cd2338f2d2808",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-11-02",
+        "2025-11-06"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-11-02_to_2025-11-06.csv",
+      "file_hash_sha256": "421f5d8a052b563696f18113f2a2d20c39a6740c8dedeed8a6d2760b19924977",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-11-07",
+        "2025-11-11"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-11-07_to_2025-11-11.csv",
+      "file_hash_sha256": "4a8021d77ee079be3a22d549a70d08d6d2283e017a05c23c5c233e7300ba8447",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-11-12",
+        "2025-11-16"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-11-12_to_2025-11-16.csv",
+      "file_hash_sha256": "24a58720ceee2863ed5f67ace990226d3e38602d58b16694c31b57c7a096d7be",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-11-17",
+        "2025-11-21"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-11-17_to_2025-11-21.csv",
+      "file_hash_sha256": "7da5a832a229b6b83437eeee301b4b0be95061d17e4c247431fecaf993c4c0a6",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-11-22",
+        "2025-11-26"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-11-22_to_2025-11-26.csv",
+      "file_hash_sha256": "dab1afbcf40b17a0ded6f799099777effce2f99be92499abfedc96a19cfa11f5",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-11-27",
+        "2025-12-01"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-11-27_to_2025-12-01.csv",
+      "file_hash_sha256": "0bdca942f2443c35306b3317a195a78a3825ab0d7f4795b44344034147634e85",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-12-02",
+        "2025-12-06"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-12-02_to_2025-12-06.csv",
+      "file_hash_sha256": "7dbaade9021c79cf5d7beb563e160c4819d00966c7bba1a1cbaeb544a5f7634f",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-12-07",
+        "2025-12-11"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-12-07_to_2025-12-11.csv",
+      "file_hash_sha256": "5b0f7cf6a25c0fa802222292cb958fd8d2dd264eb82761a77aa1832eea482ed7",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-12-12",
+        "2025-12-16"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-12-12_to_2025-12-16.csv",
+      "file_hash_sha256": "1295ab6c1c7c17be41a69cb53d4f4c1ae0f468ec6c07d928a11c0da1fc35c939",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-12-17",
+        "2025-12-21"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-12-17_to_2025-12-21.csv",
+      "file_hash_sha256": "8f5c6a619a87cafa0a64ff756c891ddfd3ed7a05c3cac6a71c6844741986b53a",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-12-22",
+        "2025-12-26"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-12-22_to_2025-12-26.csv",
+      "file_hash_sha256": "ec37e7e7d569dc2181ceaa62dee131b3381ca54f839ae5024c7997806da57e0d",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2025-12-27",
+        "2025-12-31"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw/2025/VIIRS_NOAA20_SP_2025-12-27_to_2025-12-31.csv",
+      "file_hash_sha256": "dfc2032d161dccf71f2de727922d1c77ac239f3e83e706a66fe63027931cb85d",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "annual_2025"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-10-01",
+        "2024-10-05"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-10-01_to_2024-10-05.csv",
+      "file_hash_sha256": "f16d5ec8499479791eaf312f835e0ae9fc908b04564d7f6a079d3c73f44c0d5b",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-10-06",
+        "2024-10-10"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-10-06_to_2024-10-10.csv",
+      "file_hash_sha256": "659c4567e942599ebf681e7a758e53d17f5471d5465142882584ded562669f01",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-10-11",
+        "2024-10-15"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-10-11_to_2024-10-15.csv",
+      "file_hash_sha256": "cd1c0315104940f5521616b5769407797ab7288423132bbee395bcd7a323833d",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-10-16",
+        "2024-10-20"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-10-16_to_2024-10-20.csv",
+      "file_hash_sha256": "e257873e214438105c6cb527f9e3abe4326fe57400488661148db68c9d08a29f",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-10-21",
+        "2024-10-25"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-10-21_to_2024-10-25.csv",
+      "file_hash_sha256": "2c6e4c61470d88825c994345f9ca24fadd6ebd20ecf9d52ea6159897ed2bb66c",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-10-26",
+        "2024-10-30"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-10-26_to_2024-10-30.csv",
+      "file_hash_sha256": "cf7352020ee38d1c167ee5e9212301b6ebced60cba3fc31c2383968c43e8dfa8",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-10-31",
+        "2024-11-04"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-10-31_to_2024-11-04.csv",
+      "file_hash_sha256": "8596c8b348ea42c61a6e7b1eda830d3e1317eda9a404f2968f00edc0ad47ca15",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-11-05",
+        "2024-11-09"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-11-05_to_2024-11-09.csv",
+      "file_hash_sha256": "5054eec61aa620ec1ab4b9722af1201be4e4b1ec49af59d963d5a6f7c8083be6",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-11-10",
+        "2024-11-14"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-11-10_to_2024-11-14.csv",
+      "file_hash_sha256": "24f83a33c6ea92cc707accea54075c4b839279058e4ce5018e5037aae53e0ab4",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-11-15",
+        "2024-11-19"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-11-15_to_2024-11-19.csv",
+      "file_hash_sha256": "36b2872da5f95bbcae02b30bb56d811d8f04eda1d60e132e49081bcf0d7d2e39",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-11-20",
+        "2024-11-24"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-11-20_to_2024-11-24.csv",
+      "file_hash_sha256": "a057c158136bf82237f9dfd90678491c28189172aff8bf156d6987b4cc9052b6",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-11-25",
+        "2024-11-29"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-11-25_to_2024-11-29.csv",
+      "file_hash_sha256": "f2fe6c9dcdefbb90c5376009ca09ba2ced7403e41f74453298c7660016dd3f72",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-11-30",
+        "2024-12-04"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-11-30_to_2024-12-04.csv",
+      "file_hash_sha256": "ce8893a33ad923b4e5ca0e33f7ba5418ca371c705bbb3d9b860d66198f816eb5",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-12-05",
+        "2024-12-09"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-12-05_to_2024-12-09.csv",
+      "file_hash_sha256": "fba78ef9523c75181925bfd560dc24e30b8c19971e73d003ef3689f0039702e1",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-12-10",
+        "2024-12-14"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-12-10_to_2024-12-14.csv",
+      "file_hash_sha256": "01650a4875217ff428468362a9cefa9827d03ac91a1e6294506e5bedf25a6015",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-12-15",
+        "2024-12-19"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-12-15_to_2024-12-19.csv",
+      "file_hash_sha256": "200c860f4277c6346c7b7de0463519e67f908b4fdb28c465ee646618b92901f6",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-12-20",
+        "2024-12-24"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-12-20_to_2024-12-24.csv",
+      "file_hash_sha256": "ff57c02287cf20c539ce55c8c3f93622c5c93f4f2810ef4291bd4ae95598c41e",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-12-25",
+        "2024-12-29"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-12-25_to_2024-12-29.csv",
+      "file_hash_sha256": "b8a9567514258cc2bf34ad65d481744ae2faccd892c4c4d20d6c6ce7e992bd43",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    },
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "processing_level": "SP (standard science product; according to product name)",
+      "date_range": [
+        "2024-12-30",
+        "2024-12-31"
+      ],
+      "source_url": "Local NASA FIRMS Area API acquisition; original request URL redacted/not retained",
+      "download_timestamp": "Unavailable in existing chunk filename metadata",
+      "relative_path": "data/raw_context/2024_Q4/VIIRS_NOAA20_SP_2024-12-30_to_2024-12-31.csv",
+      "file_hash_sha256": "2b341415c173064c2765ba699bce8c5f250a606c24224f98e70a46951de198c0",
+      "coverage_scope": "India bbox; contiguous chunks only",
+      "coverage_kind": "2024_Q4"
+    }
+  ],
+  "continuous_local_coverage": [
+    {
+      "sensor": "VIIRS_NOAA20_SP",
+      "start": "2024-10-01",
+      "end": "2025-12-31",
+      "scope": "India bbox"
+    }
+  ],
+  "event_window_extracts_excluded_from_zero-coverage_proof": true,
+  "local_continuous_coverage_days": 457,
+  "index_fields_requested": [
+    "date",
+    "latitude",
+    "longitude",
+    "sensor",
+    "acq_datetime",
+    "FRP",
+    "BT4",
+    "BT5",
+    "daynight",
+    "confidence",
+    "source_file"
+  ],
+  "index_status": "Raw files catalogued; observation-level index not represented as complete because full required archive is unavailable.",
+  "note": "No file download timestamp or original API URL was embedded in the available raw chunk files."
+}

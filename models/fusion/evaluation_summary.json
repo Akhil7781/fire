@@ -1,0 +1,2120 @@
+{
+  "stage": "Stage 8.22: Multimodal Late Fusion",
+  "training_metrics": {
+    "best_epoch": 3,
+    "best_val_loss": 0.6063,
+    "epochs": 15,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.914911802927653,
+        "val_loss": 0.6589402545900905
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.653056017756462,
+        "val_loss": 0.6152444558985093
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.4114221758445104,
+        "val_loss": 0.6063186508767745
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.404025332570076,
+        "val_loss": 0.6418208374696619
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.3099514020284017,
+        "val_loss": 0.7737021512844984
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.27795494357744854,
+        "val_loss": 0.669701797471327
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.2596826652487119,
+        "val_loss": 0.72107994240873
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.20478147873282432,
+        "val_loss": 0.7311243600705091
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.17618903164068858,
+        "val_loss": 0.746807696538813
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.14290161859989167,
+        "val_loss": 0.7185111224651337
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.08032723851998647,
+        "val_loss": 0.6941233130062328
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.05266888974606991,
+        "val_loss": 0.7218979958225699
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.04135983474055926,
+        "val_loss": 0.7468301853712868
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.08028657771150272,
+        "val_loss": 0.7291805986095877
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.10383471787162125,
+        "val_loss": 0.7137547485968646
+      }
+    ],
+    "train_samples": 750,
+    "val_samples": 170,
+    "test_samples": 642,
+    "class_weights": [
+      46.875,
+      26.785714285714285,
+      1.0,
+      0.25372124492557513
+    ]
+  },
+  "baselines": {
+    "1. FIRMS Geospatial Only": {
+      "val": {
+        "overall_accuracy": 0.0118,
+        "balanced_accuracy": 0.0042,
+        "macro_f1": 0.0081,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 166,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 4,
+            "precision": 0.5,
+            "recall": 0.0125,
+            "f1": 0.0244
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            1
+          ],
+          [
+            0,
+            158,
+            0,
+            2
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 0.0031,
+        "balanced_accuracy": 0.0031,
+        "macro_f1": 0.0062,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 640,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 2,
+            "precision": 1.0,
+            "recall": 0.0031,
+            "f1": 0.0062
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            640,
+            0,
+            2
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "2. TCN + FIRMS": {
+      "val": {
+        "overall_accuracy": 0.9353,
+        "balanced_accuracy": 0.3312,
+        "macro_f1": 0.3302,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 9,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 161,
+            "precision": 0.9876,
+            "recall": 0.9938,
+            "f1": 0.9907
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            159
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 642,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            642
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "3. FIRMS + TCN + Deep SAD": {
+      "val": {
+        "overall_accuracy": 0.9353,
+        "balanced_accuracy": 0.3312,
+        "macro_f1": 0.3323,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 11,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 159,
+            "precision": 1.0,
+            "recall": 0.9938,
+            "f1": 0.9969
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            9,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            159
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 642,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            642
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "4. FIRMS + TCN + YOLO": {
+      "val": {
+        "overall_accuracy": 0.9353,
+        "balanced_accuracy": 0.3312,
+        "macro_f1": 0.3302,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 9,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 161,
+            "precision": 0.9876,
+            "recall": 0.9938,
+            "f1": 0.9907
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            159
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 642,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            642
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "5. FIRMS + TCN + Sentinel-2": {
+      "val": {
+        "overall_accuracy": 0.9412,
+        "balanced_accuracy": 0.6646,
+        "macro_f1": 0.5545,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 2,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 9,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 159,
+            "precision": 1.0,
+            "recall": 0.9938,
+            "f1": 0.9969
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            159
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 642,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            642
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "6. Full Multimodal Fusion": {
+      "val": {
+        "overall_accuracy": 0.9412,
+        "balanced_accuracy": 0.6646,
+        "macro_f1": 0.5545,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 2,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 9,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 159,
+            "precision": 1.0,
+            "recall": 0.9938,
+            "f1": 0.9969
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            159
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 642,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            642
+          ]
+        ],
+        "total_samples": 642
+      }
+    }
+  },
+  "ablations": {
+    "Geometry / Thermal Only": {
+      "val": {
+        "overall_accuracy": 0.0118,
+        "balanced_accuracy": 0.0042,
+        "macro_f1": 0.0081,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 166,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 4,
+            "precision": 0.5,
+            "recall": 0.0125,
+            "f1": 0.0244
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            1
+          ],
+          [
+            0,
+            158,
+            0,
+            2
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 0.0031,
+        "balanced_accuracy": 0.0031,
+        "macro_f1": 0.0062,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 640,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 2,
+            "precision": 1.0,
+            "recall": 0.0031,
+            "f1": 0.0062
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            640,
+            0,
+            2
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "Temporal Only": {
+      "val": {
+        "overall_accuracy": 0.9353,
+        "balanced_accuracy": 0.3312,
+        "macro_f1": 0.3292,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 8,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 162,
+            "precision": 0.9815,
+            "recall": 0.9938,
+            "f1": 0.9876
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            7,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            0,
+            159
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 642,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            642
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "Anomaly Only": {
+      "val": {
+        "overall_accuracy": 0.5647,
+        "balanced_accuracy": 0.2,
+        "macro_f1": 0.25,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 74,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 96,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            9,
+            0,
+            0
+          ],
+          [
+            0,
+            64,
+            0,
+            96
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 0.7368,
+        "balanced_accuracy": 0.7368,
+        "macro_f1": 0.8484,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 169,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 473,
+            "precision": 1.0,
+            "recall": 0.7368,
+            "f1": 0.8484
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            169,
+            0,
+            473
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "Optical Only (S2)": {
+      "val": {
+        "overall_accuracy": 0.0059,
+        "balanced_accuracy": 0.3333,
+        "macro_f1": 0.0039,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 170,
+            "precision": 0.0059,
+            "recall": 1.0,
+            "f1": 0.0117
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            9,
+            0,
+            0,
+            0
+          ],
+          [
+            160,
+            0,
+            0,
+            0
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 0.0,
+        "balanced_accuracy": 0.0,
+        "macro_f1": 0.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 642,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            642,
+            0,
+            0,
+            0
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "Infrastructure Visual Only": {
+      "val": {
+        "overall_accuracy": 0.0059,
+        "balanced_accuracy": 0.3333,
+        "macro_f1": 0.0039,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 170,
+            "precision": 0.0059,
+            "recall": 1.0,
+            "f1": 0.0117
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            9,
+            0,
+            0,
+            0
+          ],
+          [
+            160,
+            0,
+            0,
+            0
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 0.0,
+        "balanced_accuracy": 0.0,
+        "macro_f1": 0.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 642,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            642,
+            0,
+            0,
+            0
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "Fire / Smoke Visual Only": {
+      "val": {
+        "overall_accuracy": 0.9412,
+        "balanced_accuracy": 0.3333,
+        "macro_f1": 0.3232,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 170,
+            "precision": 0.9412,
+            "recall": 1.0,
+            "f1": 0.9697
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            0,
+            160
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 642,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            642
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "Temporal + Geospatial": {
+      "val": {
+        "overall_accuracy": 0.9353,
+        "balanced_accuracy": 0.3312,
+        "macro_f1": 0.3302,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 9,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 161,
+            "precision": 0.9876,
+            "recall": 0.9938,
+            "f1": 0.9907
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            159
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 642,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            642
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "Geospatial + Sentinel-2": {
+      "val": {
+        "overall_accuracy": 0.0176,
+        "balanced_accuracy": 0.3375,
+        "macro_f1": 0.2305,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 2,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 166,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 2,
+            "precision": 1.0,
+            "recall": 0.0125,
+            "f1": 0.0247
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            158,
+            0,
+            2
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 0.0031,
+        "balanced_accuracy": 0.0031,
+        "macro_f1": 0.0062,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 640,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 2,
+            "precision": 1.0,
+            "recall": 0.0031,
+            "f1": 0.0062
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            640,
+            0,
+            2
+          ]
+        ],
+        "total_samples": 642
+      }
+    },
+    "Full Fusion": {
+      "val": {
+        "overall_accuracy": 0.9412,
+        "balanced_accuracy": 0.6646,
+        "macro_f1": 0.5545,
+        "supported_classes_count": 3,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 1,
+            "predicted": 2,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6667
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 9,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 9,
+            "predicted": 0,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 160,
+            "predicted": 159,
+            "precision": 1.0,
+            "recall": 0.9938,
+            "f1": 0.9969
+          }
+        },
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            159
+          ]
+        ],
+        "total_samples": 170
+      },
+      "test": {
+        "overall_accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "supported_classes_count": 1,
+        "per_class": {
+          "Industrial Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Forest Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Agricultural Fire": {
+            "support": 0,
+            "predicted": 0,
+            "precision": "N/A",
+            "recall": "N/A",
+            "f1": "N/A"
+          },
+          "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+            "support": 642,
+            "predicted": 642,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            642
+          ]
+        ],
+        "total_samples": 642
+      }
+    }
+  },
+  "modality_importance_lomo": {
+    "tcn": 0.1376,
+    "sad": 0.0,
+    "yolo_infra": 0.0,
+    "yolo_fire": 0.0,
+    "s2": 0.2222,
+    "geo": 0.0
+  },
+  "sample_prediction_explanations": [
+    {
+      "observation_id": "be964232de1507731fd75bf1d2aa458ed4ab35e5cdfc92147f7fe0769e768ece",
+      "predicted_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "predicted_class_id": 3,
+      "confidence": 0.8969,
+      "class_probabilities": {
+        "Industrial Fire": 0.0741,
+        "Forest Fire": 0.024,
+        "Agricultural Fire": 0.005,
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 0.8969
+      },
+      "modality_availability": {
+        "tcn": true,
+        "sad": true,
+        "yolo_infra": false,
+        "yolo_fire": false,
+        "s2": false,
+        "geo": true
+      },
+      "persistence_score": 0.0,
+      "acute_likelihood": 1.0,
+      "explanation": "Attributed Class: 'Other Thermal Source/Persistent Non-Biomass Thermal Source' (Confidence: 89.7%)\nSupported by:\n- Causal TCN 64D temporal cooling kinetics sequence active\n- Deep SAD anomaly latent projection active (dim=32)\n- FIRMS physical observations (FRP=2.3 MW, BT4=331.0 K)\n- Low historical cluster recurrence indicating acute episodic combustion"
+    },
+    {
+      "observation_id": "e6c25c66e63ca3de161b985d88f8975343ab230945b2b24479bf0d0d51aff7d4",
+      "predicted_class": "Forest Fire",
+      "predicted_class_id": 1,
+      "confidence": 0.9396,
+      "class_probabilities": {
+        "Industrial Fire": 0.0242,
+        "Forest Fire": 0.9396,
+        "Agricultural Fire": 0.0054,
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 0.0308
+      },
+      "modality_availability": {
+        "tcn": true,
+        "sad": true,
+        "yolo_infra": false,
+        "yolo_fire": false,
+        "s2": false,
+        "geo": true
+      },
+      "persistence_score": 0.0,
+      "acute_likelihood": 1.0,
+      "explanation": "Attributed Class: 'Forest Fire' (Confidence: 94.0%)\nSupported by:\n- Causal TCN 64D temporal cooling kinetics sequence active\n- Deep SAD anomaly latent projection active (dim=32)\n- FIRMS physical observations (FRP=1.7 MW, BT4=331.7 K)\n- Low historical cluster recurrence indicating acute episodic combustion"
+    },
+    {
+      "observation_id": "bfa7be650c6056a861bd8a646372ecc90ac1bcd5580ce86fb63bf836f2f55332",
+      "predicted_class": "Forest Fire",
+      "predicted_class_id": 1,
+      "confidence": 0.8587,
+      "class_probabilities": {
+        "Industrial Fire": 0.027,
+        "Forest Fire": 0.8587,
+        "Agricultural Fire": 0.0036,
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 0.1106
+      },
+      "modality_availability": {
+        "tcn": true,
+        "sad": true,
+        "yolo_infra": false,
+        "yolo_fire": false,
+        "s2": false,
+        "geo": true
+      },
+      "persistence_score": 0.0,
+      "acute_likelihood": 1.0,
+      "explanation": "Attributed Class: 'Forest Fire' (Confidence: 85.9%)\nSupported by:\n- Causal TCN 64D temporal cooling kinetics sequence active\n- Deep SAD anomaly latent projection active (dim=32)\n- FIRMS physical observations (FRP=2.6 MW, BT4=333.4 K)\n- Low historical cluster recurrence indicating acute episodic combustion"
+    },
+    {
+      "observation_id": "bea9cb677105f6ea74007f0eb6d95658fd125645a94fd3e84753a2f8fefb28d4",
+      "predicted_class": "Other Thermal Source/Persistent Non-Biomass Thermal Source",
+      "predicted_class_id": 3,
+      "confidence": 0.9176,
+      "class_probabilities": {
+        "Industrial Fire": 0.0571,
+        "Forest Fire": 0.0202,
+        "Agricultural Fire": 0.0051,
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 0.9176
+      },
+      "modality_availability": {
+        "tcn": true,
+        "sad": true,
+        "yolo_infra": false,
+        "yolo_fire": false,
+        "s2": false,
+        "geo": true
+      },
+      "persistence_score": 0.6,
+      "acute_likelihood": 0.4,
+      "explanation": "Attributed Class: 'Other Thermal Source/Persistent Non-Biomass Thermal Source' (Confidence: 91.8%)\nSupported by:\n- Causal TCN 64D temporal cooling kinetics sequence active\n- Deep SAD anomaly latent projection active (dim=32)\n- FIRMS physical observations (FRP=1.1 MW, BT4=306.6 K)\n- High historical detection density (6 hits in prior 24h within 2 km) indicating stationary thermal emitter"
+    }
+  ]
+}

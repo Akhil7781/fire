@@ -1,0 +1,181 @@
+{
+  "audit_timestamp": "2026-09-23T18:27:29.519995+00:00",
+  "total_records_audited": 1175795,
+  "overall_status": "PASS",
+  "criteria": {
+    "Criterion_01_duplicate_detection_id": {
+      "criterion_id": 1,
+      "name": "duplicate_detection_id",
+      "status": "PASS",
+      "detail": "0 duplicates found",
+      "metrics": {
+        "duplicates": 0
+      }
+    },
+    "Criterion_02_duplicate_evidence_id": {
+      "criterion_id": 2,
+      "name": "duplicate_evidence_id",
+      "status": "PASS",
+      "detail": "0 duplicate evidence IDs found across 41 reference records",
+      "metrics": {
+        "total_evidence": 41,
+        "duplicates": 0
+      }
+    },
+    "Criterion_03_invalid_labels": {
+      "criterion_id": 3,
+      "name": "invalid_labels",
+      "status": "PASS",
+      "detail": "Classes present: {np.int64(0), np.int64(1), np.int64(2), np.int64(4)}, invalid: set()",
+      "metrics": {
+        "actual_classes": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "invalid": []
+      }
+    },
+    "Criterion_04_missing_confidence": {
+      "criterion_id": 4,
+      "name": "missing_confidence",
+      "status": "PASS",
+      "detail": "0 null confidence scores",
+      "metrics": {
+        "null_confidence": 0
+      }
+    },
+    "Criterion_05_invalid_confidence_range": {
+      "criterion_id": 5,
+      "name": "invalid_confidence_range",
+      "status": "PASS",
+      "detail": "Confidence range: [0.0000, 0.8500]",
+      "metrics": {
+        "min": 0.0,
+        "max": 0.85
+      }
+    },
+    "Criterion_06_tier_confidence_consistency": {
+      "criterion_id": 6,
+      "name": "tier_confidence_consistency",
+      "status": "PASS",
+      "detail": "Tier D non-zero: 0, Tier A low: 0",
+      "metrics": {
+        "tier_d_nonzero": 0,
+        "tier_a_low": 0
+      }
+    },
+    "Criterion_07_labeled_with_zero_evidence": {
+      "criterion_id": 7,
+      "name": "labeled_with_zero_evidence",
+      "status": "PASS",
+      "detail": "0 labeled detections have 0 evidence",
+      "metrics": {
+        "labeled_with_0_evidence": 0
+      }
+    },
+    "Criterion_08_evidence_without_provenance": {
+      "criterion_id": 8,
+      "name": "evidence_without_provenance",
+      "status": "PASS",
+      "detail": "0 labeled detections missing primary_source",
+      "metrics": {
+        "missing_primary_source": 0
+      }
+    },
+    "Criterion_09_impossible_timestamps": {
+      "criterion_id": 9,
+      "name": "impossible_timestamps",
+      "status": "PASS",
+      "detail": "0 evidence records where start > end",
+      "metrics": {
+        "impossible_timestamps": 0
+      }
+    },
+    "Criterion_10_invalid_coordinates": {
+      "criterion_id": 10,
+      "name": "invalid_coordinates",
+      "status": "PASS",
+      "detail": "All coordinates within India bounding box (68-98 E, 8-37 N)",
+      "metrics": {
+        "lat_valid": true,
+        "lon_valid": true
+      }
+    },
+    "Criterion_11_conflict_resolution_violations": {
+      "criterion_id": 11,
+      "name": "conflict_resolution_violations",
+      "status": "PASS",
+      "detail": "0 unresolved conflicts forced into positive classes",
+      "metrics": {
+        "bad_conflicts": 0
+      }
+    },
+    "Criterion_12_class_source_rule_violations": {
+      "criterion_id": 12,
+      "name": "class_source_rule_violations",
+      "status": "PASS",
+      "detail": "0 industrial labels sourced from forestry/agricultural bulletins",
+      "metrics": {
+        "bad_industrial_sources": 0
+      }
+    },
+    "Criterion_13_accidental_use_of_firms_type": {
+      "criterion_id": 13,
+      "name": "accidental_use_of_firms_type",
+      "status": "PASS",
+      "detail": "FIRMS type=2 count (108477) != Label Class 1 count (2). Zero leakage.",
+      "metrics": {
+        "firms_type_2": 108477,
+        "label_class_1": 2
+      }
+    },
+    "Criterion_14_test_set_leakage_into_parameters": {
+      "criterion_id": 14,
+      "name": "test_set_leakage_into_parameters",
+      "status": "PASS",
+      "detail": "Matching parameters are defined in label_config.yaml. Zero test set fitting.",
+      "metrics": {}
+    },
+    "Criterion_15_train_val_test_id_integrity": {
+      "criterion_id": 15,
+      "name": "train_val_test_id_integrity",
+      "status": "PASS",
+      "detail": "All 578,465 Train, 29,409 Val, and 47,881 Test IDs are present in label table",
+      "metrics": {
+        "train_present": 578465,
+        "val_present": 29409,
+        "test_present": 47881
+      }
+    },
+    "Criterion_16_label_table_row_integrity": {
+      "criterion_id": 16,
+      "name": "label_table_row_integrity",
+      "status": "PASS",
+      "detail": "1175795 label rows exactly match 1175795 FIRMS rows (1:1 preservation)",
+      "metrics": {
+        "labels_rows": 1175795,
+        "firms_rows": 1175795
+      }
+    },
+    "Criterion_17_unexplained_forced_labels": {
+      "criterion_id": 17,
+      "name": "unexplained_forced_labels",
+      "status": "PASS",
+      "detail": "0 unexplained forced labels found",
+      "metrics": {
+        "forced_labels": 0
+      }
+    },
+    "Criterion_18_unlabeled_mapped_to_class_4": {
+      "criterion_id": 18,
+      "name": "unlabeled_mapped_to_class_4",
+      "status": "PASS",
+      "detail": "0 detections with zero evidence mapped to Class 4",
+      "metrics": {
+        "unlabeled_as_class_4": 0
+      }
+    }
+  }
+}

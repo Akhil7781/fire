@@ -1,0 +1,174 @@
+{
+  "base_metrics": {
+    "accuracy": 0.875,
+    "macro_f1": 0.8756105006105006,
+    "balanced_acc": 0.8928571428571429,
+    "f1_ind": 0.888888888888889,
+    "f1_for": 0.8333333333333333,
+    "f1_agr": 0.923076923076923,
+    "f1_per": 0.8571428571428571
+  },
+  "group_importance": [
+    {
+      "group_name": "CURRENT_ALERT_OBSERVATION",
+      "num_features": 14,
+      "macro_f1_drop": 0.2856,
+      "accuracy_drop": 0.2583,
+      "sample_features": [
+        "current_frp",
+        "current_bright_ti4",
+        "current_bright_ti5"
+      ]
+    },
+    {
+      "group_name": "ECOREGION_GEOGRAPHY",
+      "num_features": 4,
+      "macro_f1_drop": 0.1652,
+      "accuracy_drop": 0.1583,
+      "sample_features": [
+        "centroid_lat",
+        "centroid_lon",
+        "forest_biome_score"
+      ]
+    },
+    {
+      "group_name": "HISTORICAL_THERMAL_PROPERTIES",
+      "num_features": 21,
+      "macro_f1_drop": 0.1581,
+      "accuracy_drop": 0.15,
+      "sample_features": [
+        "hist_night_ratio_30d",
+        "hist_mean_delta_ti_30d",
+        "hist_var_delta_ti_30d"
+      ]
+    },
+    {
+      "group_name": "HISTORICAL_FRP_STATS",
+      "num_features": 38,
+      "macro_f1_drop": 0.0812,
+      "accuracy_drop": 0.0833,
+      "sample_features": [
+        "mean_frp_observed_so_far",
+        "max_frp_observed_so_far",
+        "std_frp_observed_so_far"
+      ]
+    },
+    {
+      "group_name": "HISTORICAL_TEMPORAL_DYNAMICS",
+      "num_features": 36,
+      "macro_f1_drop": 0.0574,
+      "accuracy_drop": 0.05,
+      "sample_features": [
+        "hist_days_since_latest",
+        "hist_active_days_30d",
+        "hist_active_months_30d"
+      ]
+    },
+    {
+      "group_name": "INDUSTRIAL_FACILITY_CONTEXT",
+      "num_features": 5,
+      "macro_f1_drop": 0.0536,
+      "accuracy_drop": 0.05,
+      "sample_features": [
+        "dist_to_fac_km",
+        "within_1km_fac",
+        "within_5km_fac"
+      ]
+    },
+    {
+      "group_name": "HISTORICAL_RECURRENCE_COUNTS",
+      "num_features": 10,
+      "macro_f1_drop": 0.0455,
+      "accuracy_drop": 0.0417,
+      "sample_features": [
+        "hist_count_1km",
+        "hist_count_2km",
+        "hist_count_5km"
+      ]
+    }
+  ],
+  "top_10_features": [
+    {
+      "feature": "current_bright_ti4",
+      "macro_f1_drop": 0.161
+    },
+    {
+      "feature": "current_bright_ti5",
+      "macro_f1_drop": 0.1243
+    },
+    {
+      "feature": "centroid_lon",
+      "macro_f1_drop": 0.0992
+    },
+    {
+      "feature": "dist_to_fac_km",
+      "macro_f1_drop": 0.0776
+    },
+    {
+      "feature": "centroid_lat",
+      "macro_f1_drop": 0.0737
+    },
+    {
+      "feature": "mean_frp_observed_so_far",
+      "macro_f1_drop": 0.0645
+    },
+    {
+      "feature": "std_frp_observed_so_far",
+      "macro_f1_drop": 0.0611
+    },
+    {
+      "feature": "hist_night_ratio_365d",
+      "macro_f1_drop": 0.061
+    },
+    {
+      "feature": "hist_max_frp_365d",
+      "macro_f1_drop": 0.0609
+    },
+    {
+      "feature": "current_frp",
+      "macro_f1_drop": 0.054
+    }
+  ],
+  "bottom_10_features": [
+    {
+      "feature": "hist_std_frp_full",
+      "macro_f1_drop": 0.0
+    },
+    {
+      "feature": "hist_cv_frp_full",
+      "macro_f1_drop": 0.0
+    },
+    {
+      "feature": "hist_active_days_full",
+      "macro_f1_drop": 0.0
+    },
+    {
+      "feature": "hist_active_months_full",
+      "macro_f1_drop": 0.0
+    },
+    {
+      "feature": "hist_median_gap_h_full",
+      "macro_f1_drop": 0.0
+    },
+    {
+      "feature": "hist_min_gap_h_full",
+      "macro_f1_drop": 0.0
+    },
+    {
+      "feature": "spatial_extent_observed_so_far",
+      "macro_f1_drop": -0.0002
+    },
+    {
+      "feature": "hist_var_delta_ti_full",
+      "macro_f1_drop": -0.0039
+    },
+    {
+      "feature": "agri_heartland_score",
+      "macro_f1_drop": -0.0113
+    },
+    {
+      "feature": "hist_median_gap_h_180d",
+      "macro_f1_drop": -0.0167
+    }
+  ]
+}

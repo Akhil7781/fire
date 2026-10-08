@@ -1,0 +1,261 @@
+{
+  "chip_id": "PILOT_06_CENTRAL",
+  "annotation_version": "v1.0",
+  "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+  "adjudicator": "HUMAN_ADJUDICATOR_01",
+  "adjudication_timestamp": "2026-09-30T16:49:32.012187+00:00",
+  "human_verified": true,
+  "adjudication_rationale": "i saw the fire in the image",
+  "dispute_category": "Evidence nuance (A1 omitted FOREST_CONTEXT_VISIBLE vs A2 included it). Both agree 2 Forest Fire boxes.",
+  "source_annotation_hashes": {
+    "annotator_1": "88acb76ba6b4c1ee7805a476a07fea307bc1c5440208f5b94c8afc4ab2822615",
+    "annotator_2": "46d6dc9efa99c94d43f4eaac5d8fccec06dfc081166d4f14e5436588032242d9"
+  },
+  "A1_original": {
+    "chip_annotation_status": "HAS_ANNOTATIONS",
+    "annotations": [
+      {
+        "annotation_id": "PILOT_06_CENTRAL_ANN_01",
+        "class_id": 2,
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 52,
+          "y_min": 328,
+          "x_max": 127,
+          "y_max": 397
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "BURN_SCAR_VISIBLE",
+          "NO_CLEAR_VISUAL_EVIDENCE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "review_status": "PENDING",
+        "notes": "",
+        "annotator_id": "HUMAN_ANNOTATOR_01",
+        "annotation_timestamp": "2026-09-30T16:00:09.916523+00:00"
+      },
+      {
+        "annotation_id": "PILOT_06_CENTRAL_ANN_02",
+        "class_id": 2,
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 181,
+          "y_min": 304,
+          "x_max": 363,
+          "y_max": 412
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "BURN_SCAR_VISIBLE",
+          "NO_CLEAR_VISUAL_EVIDENCE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "review_status": "PENDING",
+        "notes": "",
+        "annotator_id": "HUMAN_ANNOTATOR_01",
+        "annotation_timestamp": "2026-09-30T16:00:09.916523+00:00"
+      }
+    ],
+    "visual_evidence": [
+      "BURN_SCAR_VISIBLE",
+      "DIRECT_FIRE_VISIBLE",
+      "NO_CLEAR_VISUAL_EVIDENCE"
+    ],
+    "visibility_status": "CLEAR",
+    "confidence": {
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM"
+    }
+  },
+  "A2_original": {
+    "chip_annotation_status": "HAS_ANNOTATIONS",
+    "annotations": [
+      {
+        "annotation_id": "PILOT_06_CENTRAL_ANN_01",
+        "class_id": 2,
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 186,
+          "y_min": 297,
+          "x_max": 350,
+          "y_max": 385
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "BURN_SCAR_VISIBLE",
+          "FOREST_CONTEXT_VISIBLE",
+          "NO_CLEAR_VISUAL_EVIDENCE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "review_status": "PENDING",
+        "notes": "",
+        "annotator_id": "HUMAN_ANNOTATOR_02",
+        "annotation_timestamp": "2026-09-30T16:16:01.534028+00:00"
+      },
+      {
+        "annotation_id": "PILOT_06_CENTRAL_ANN_02",
+        "class_id": 2,
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 63,
+          "y_min": 320,
+          "x_max": 114,
+          "y_max": 392
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "BURN_SCAR_VISIBLE",
+          "FOREST_CONTEXT_VISIBLE",
+          "NO_CLEAR_VISUAL_EVIDENCE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "review_status": "PENDING",
+        "notes": "",
+        "annotator_id": "HUMAN_ANNOTATOR_02",
+        "annotation_timestamp": "2026-09-30T16:16:01.534028+00:00"
+      }
+    ],
+    "visual_evidence": [
+      "BURN_SCAR_VISIBLE",
+      "DIRECT_FIRE_VISIBLE",
+      "FOREST_CONTEXT_VISIBLE",
+      "NO_CLEAR_VISUAL_EVIDENCE"
+    ],
+    "visibility_status": "CLEAR",
+    "confidence": {
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM"
+    }
+  },
+  "final_consensus": {
+    "chip_annotation_status": "HAS_ANNOTATIONS",
+    "annotations": [
+      {
+        "annotation_id": "PILOT_06_CENTRAL_ADJ_1",
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 200,
+          "y_min": 200,
+          "x_max": 300,
+          "y_max": 300
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "BURN_SCAR_VISIBLE",
+          "FOREST_CONTEXT_VISIBLE",
+          "NO_CLEAR_VISUAL_EVIDENCE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "class_id": 2,
+        "annotator_id": "HUMAN_ADJUDICATOR_01",
+        "review_status": "ADJUDICATED",
+        "annotation_timestamp": "2026-09-30T16:49:32.012187+00:00"
+      }
+    ],
+    "chip_id": "PILOT_06_CENTRAL",
+    "annotation_version": "v1.0",
+    "source_classes": [
+      "Forest Fire"
+    ],
+    "visual_evidence": [
+      "BURN_SCAR_VISIBLE",
+      "DIRECT_FIRE_VISIBLE",
+      "FOREST_CONTEXT_VISIBLE",
+      "NO_CLEAR_VISUAL_EVIDENCE"
+    ],
+    "visibility_status": "CLEAR",
+    "geometry_confidence": "MEDIUM",
+    "source_class_confidence": "MEDIUM",
+    "context_metadata": {
+      "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+      "firms_detection_id": "f6988c6247c2036a9a1fdfe2f9885cf20e2f4bba6eb79bddad8756ab98575702",
+      "firms_latitude": 23.64083,
+      "firms_longitude": 82.85873,
+      "firms_acq_datetime_utc": null,
+      "firms_frp": 0.43,
+      "firms_brightness_kelvin": null,
+      "firms_pixel_coord": {
+        "row": 256,
+        "col": 256
+      },
+      "product_id": "S2A_MSIL2A_20250401T050231_N0511_R119_T44QPM_20250401T102700.SAFE",
+      "tile_id": "T44QPM",
+      "cloud_cover_pct": 0,
+      "authoritative_bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+    }
+  },
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_06_CENTRAL_ADJ_1",
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 200,
+        "y_min": 200,
+        "x_max": 300,
+        "y_max": 300
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "BURN_SCAR_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "class_id": 2,
+      "annotator_id": "HUMAN_ADJUDICATOR_01",
+      "review_status": "ADJUDICATED",
+      "annotation_timestamp": "2026-09-30T16:49:32.012187+00:00"
+    }
+  ],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "f6988c6247c2036a9a1fdfe2f9885cf20e2f4bba6eb79bddad8756ab98575702",
+    "firms_latitude": 23.64083,
+    "firms_longitude": 82.85873,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 0.43,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2A_MSIL2A_20250401T050231_N0511_R119_T44QPM_20250401T102700.SAFE",
+    "tile_id": "T44QPM",
+    "cloud_cover_pct": 0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

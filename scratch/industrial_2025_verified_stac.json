@@ -1,0 +1,230 @@
+{
+  "total_viable_scenes": 13,
+  "results": [
+    {
+      "incident_id": "SEBI_2025_BSE_DAHEJ_CHEM_01",
+      "facility_name": "Specialty Chemicals Manufacturing Unit, GIDC Dahej",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-01-14T04:30:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "SPCB_2025_MPCB_DOMBIVLI_02",
+      "facility_name": "Chemical Intermediate Synthesis Plant, MIDC Phase II",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-02-18T08:15:00Z",
+      "viable_scenes_count": 2,
+      "scenes": [
+        {
+          "scene_id": "S2C_MSIL2A_20250220T054811_N0511_R005_T43QBB_20250220T160800.SAFE",
+          "cloud_cover": 6.65,
+          "s2_datetime": "2025-02-20T05:54:02.439Z",
+          "delta_hours": 45.65,
+          "mgrs_tile": "T43QBB"
+        },
+        {
+          "scene_id": "S2C_MSIL2A_20250220T054811_N0511_R005_T43QCB_20250220T160800.SAFE",
+          "cloud_cover": 1.08,
+          "s2_datetime": "2025-02-20T05:53:58.727Z",
+          "delta_hours": 45.65,
+          "mgrs_tile": "T43QCB"
+        }
+      ]
+    },
+    {
+      "incident_id": "NGT_2025_VIZAG_PHARMA_03",
+      "facility_name": "Active Pharmaceutical Ingredient (API) Bulk Drug Unit, Jawaharlal Nehru Pharma City",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-03-24T10:00:00Z",
+      "viable_scenes_count": 1,
+      "scenes": [
+        {
+          "scene_id": "S2B_MSIL2A_20250325T045659_N0511_R119_T44QQE_20250325T074633.SAFE",
+          "cloud_cover": 14.74,
+          "s2_datetime": "2025-03-25T05:13:52.527Z",
+          "delta_hours": 19.23,
+          "mgrs_tile": "T44QQE"
+        }
+      ]
+    },
+    {
+      "incident_id": "SEBI_2025_PANIPAT_POLYMER_04",
+      "facility_name": "Textile Polymer & Synthetic Yarn Warehouse Complex, Industrial Area",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-04-12T14:30:00Z",
+      "viable_scenes_count": 1,
+      "scenes": [
+        {
+          "scene_id": "S2B_MSIL2A_20250413T052649_N0511_R105_T43RFN_20250413T074009.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2025-04-13T05:40:54.811Z",
+          "delta_hours": 15.18,
+          "mgrs_tile": "T43RFN"
+        }
+      ]
+    },
+    {
+      "incident_id": "NEWS_2025_MANALI_PETROCHEM_05",
+      "facility_name": "Petrochemical Additives & Polymer Processing Facility, Manali Industrial Belt",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-05-09T03:00:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "SPCB_2025_ANKLESHWAR_DYES_06",
+      "facility_name": "Dyes and Pigment Intermediates Plant, GIDC Ankleshwar",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-06-03T07:45:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "SEBI_2025_SIPCOT_RANIPET_07",
+      "facility_name": "Leather Chemicals and Polymer Finishing Complex, SIPCOT Industrial Park",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-07-19T11:00:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "NEWS_2025_BHIWANDI_GODOWN_08",
+      "facility_name": "Logistics & Chemical Storage Godown Cluster, Rahnal",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-08-22T16:00:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "SEBI_2025_TALOJA_SPECIALTY_09",
+      "facility_name": "Specialty Resins and Adhesives Plant, MIDC Taloja",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-09-15T05:30:00Z",
+      "viable_scenes_count": 0,
+      "scenes": []
+    },
+    {
+      "incident_id": "SPCB_2025_TARAPUR_CHEM_10",
+      "facility_name": "Industrial Solvents and Hazardous Waste Recovery Unit, MIDC Tarapur",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-10-28T09:00:00Z",
+      "viable_scenes_count": 1,
+      "scenes": [
+        {
+          "scene_id": "S2C_MSIL2A_20251028T053951_N0511_R005_T42QZH_20251028T084920.SAFE",
+          "cloud_cover": 19.32,
+          "s2_datetime": "2025-10-28T05:53:40.646Z",
+          "delta_hours": 3.11,
+          "mgrs_tile": "T42QZH"
+        }
+      ]
+    },
+    {
+      "incident_id": "NEWS_2025_BADDI_PHARMA_11",
+      "facility_name": "Pharmaceutical Formulation and Packaging Unit, Baddi Industrial Area",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-11-14T02:00:00Z",
+      "viable_scenes_count": 1,
+      "scenes": [
+        {
+          "scene_id": "S2C_MSIL2A_20251114T053111_N0511_R105_T43RFQ_20251114T092011.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2025-11-14T05:40:32.328Z",
+          "delta_hours": 3.68,
+          "mgrs_tile": "T43RFQ"
+        }
+      ]
+    },
+    {
+      "incident_id": "SEBI_2025_HALOL_AUTO_PARTS_12",
+      "facility_name": "Automotive Sheet Metal & Paint Shop Complex, GIDC Halol",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-12-05T13:00:00Z",
+      "viable_scenes_count": 2,
+      "scenes": [
+        {
+          "scene_id": "S2C_MSIL2A_20251207T054231_N0511_R005_T43QCE_20251207T092711.SAFE",
+          "cloud_cover": 0.65,
+          "s2_datetime": "2025-12-07T05:53:01.426Z",
+          "delta_hours": 40.88,
+          "mgrs_tile": "T43QCE"
+        },
+        {
+          "scene_id": "S2C_MSIL2A_20251207T054231_N0511_R005_T43QCF_20251207T092711.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2025-12-07T05:52:47.216Z",
+          "delta_hours": 40.88,
+          "mgrs_tile": "T43QCF"
+        }
+      ]
+    },
+    {
+      "incident_id": "SEBI_2025_HEUBACH_ROHA_13",
+      "facility_name": "Heubach Colorants India Ltd Plant Fire, Dhatav MIDC",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-01-01T20:30:00Z",
+      "viable_scenes_count": 4,
+      "scenes": [
+        {
+          "scene_id": "S2B_MSIL2A_20250103T053129_N0511_R105_T43QBA_20250103T090824.SAFE",
+          "cloud_cover": 5.75,
+          "s2_datetime": "2025-01-03T05:44:00.42Z",
+          "delta_hours": 33.23,
+          "mgrs_tile": "T43QBA"
+        },
+        {
+          "scene_id": "S2B_MSIL2A_20250103T053129_N0511_R105_T43QCA_20250103T090824.SAFE",
+          "cloud_cover": 0.97,
+          "s2_datetime": "2025-01-03T05:43:56.333Z",
+          "delta_hours": 33.23,
+          "mgrs_tile": "T43QCA"
+        },
+        {
+          "scene_id": "S2A_MSIL2A_20250101T054231_N0511_R005_T43QBA_20250101T085751.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2025-01-01T05:53:55.431Z",
+          "delta_hours": 14.6,
+          "mgrs_tile": "T43QBA"
+        },
+        {
+          "scene_id": "S2A_MSIL2A_20250101T054231_N0511_R005_T43QCA_20250101T085751.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2025-01-01T05:53:50.73Z",
+          "delta_hours": 14.6,
+          "mgrs_tile": "T43QCA"
+        }
+      ]
+    },
+    {
+      "incident_id": "MOD_2025_BHANDARA_ORDNANCE_14",
+      "facility_name": "Munitions India Ltd / Bhandara Ordnance Factory Explosion",
+      "state": null,
+      "event_year": 2025,
+      "event_start": "2025-01-24T05:00:00Z",
+      "viable_scenes_count": 1,
+      "scenes": [
+        {
+          "scene_id": "S2C_MSIL2A_20250122T051151_N0511_R019_T44QLJ_20250122T084110.SAFE",
+          "cloud_cover": 0.0,
+          "s2_datetime": "2025-01-22T05:23:29.753Z",
+          "delta_hours": 47.61,
+          "mgrs_tile": "T44QLJ"
+        }
+      ]
+    }
+  ]
+}

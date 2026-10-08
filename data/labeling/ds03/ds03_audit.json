@@ -1,0 +1,69 @@
+{
+  "num_source_events": 16,
+  "num_india_events": 16,
+  "num_valid_geometry": 16,
+  "num_valid_dates": 16,
+  "num_matched_to_firms": 1046,
+  "num_passing_forest_gate": 11,
+  "num_diverted_to_agri": 2,
+  "num_ambiguous": 2,
+  "num_excluded": 1,
+  "firms_detections_generated": 19,
+  "unique_fire_event_id_count": 6,
+  "detections_per_event_distribution": {
+    "counts_by_event": {
+      "EVT_2025_IND_MP_BANDHAVGARH_004": 7,
+      "EVT_2025_IND_MH_MELGHAT_005": 6,
+      "EVT_2025_IND_OD_SIMILIPAL_003": 2,
+      "EVT_2025_IND_UK_NAINITAL_001": 2,
+      "EVT_2025_IND_TN_MUDUMALAI_006": 1,
+      "EVT_2025_IND_CG_BASTAR_007": 1
+    },
+    "min": 1,
+    "max": 7,
+    "mean": 3.17,
+    "median": 2.0
+  },
+  "spatial_distance_distribution_km": {
+    "min": 0.0033,
+    "max": 1.9938,
+    "mean": 0.8384,
+    "median": 0.5793
+  },
+  "temporal_offset_distribution_hours": {
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  "train_val_test_event_grouping": {
+    "derived_ds03_train": {
+      "event_count": 4,
+      "detection_count": 16,
+      "event_ids": [
+        "EVT_2025_IND_CG_BASTAR_007",
+        "EVT_2025_IND_MH_MELGHAT_005",
+        "EVT_2025_IND_MP_BANDHAVGARH_004",
+        "EVT_2025_IND_OD_SIMILIPAL_003"
+      ]
+    },
+    "derived_ds03_val": {
+      "event_count": 1,
+      "detection_count": 1,
+      "event_ids": [
+        "EVT_2025_IND_TN_MUDUMALAI_006"
+      ]
+    },
+    "derived_ds03_test": {
+      "event_count": 1,
+      "detection_count": 2,
+      "event_ids": [
+        "EVT_2025_IND_UK_NAINITAL_001"
+      ]
+    }
+  },
+  "licensing_limitations": {
+    "GLOBAL_FIRE_ATLAS": "Creative Commons Attribution 4.0 International (CC-BY-4.0). Andela et al. 2019 / Zenodo DOI: 10.5281/zenodo.17669692.",
+    "FSI_VAN_AGNI": "Forest Survey of India, Ministry of Environment, Forest and Climate Change, Government of India. Open Access / Departmental Research Use.",
+    "MODIS_MCD64A1": "NASA LP DAAC / EOSDIS Open Data Policy. Giglio et al. 2018."
+  }
+}

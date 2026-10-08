@@ -1,0 +1,250 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DS08 Sentinel-2 Annotation Schema",
+  "description": "Formal JSON Schema for DS08 real Sentinel-2 Level-2A optical fire and thermal source region annotations (Stage 8.9).",
+  "type": "object",
+  "required": [
+    "chip_id",
+    "annotation_version",
+    "chip_annotation_status",
+    "annotations",
+    "context_metadata"
+  ],
+  "properties": {
+    "chip_id": {
+      "type": "string",
+      "description": "Identifier of the chip (e.g. PILOT_01_NORTH, PILOT_04_NORTH_REPLACEMENT)."
+    },
+    "annotation_version": {
+      "type": "string",
+      "description": "Version of the annotation specification (e.g. v1.0)."
+    },
+    "chip_annotation_status": {
+      "type": "string",
+      "enum": [
+        "HAS_ANNOTATIONS",
+        "NO_VISIBLE_TARGET",
+        "UNRESOLVED"
+      ],
+      "description": "High-level chip observation status. NO_VISIBLE_TARGET indicates image was clear but no target was identified. UNRESOLVED indicates evidence was insufficient."
+    },
+    "annotations": {
+      "type": "array",
+      "description": "List of independent source region or object annotations within the chip.",
+      "items": {
+        "type": "object",
+        "required": [
+          "annotation_id",
+          "class_id",
+          "class_name",
+          "bbox",
+          "geometry_confidence",
+          "source_class_confidence",
+          "visibility_status",
+          "visual_evidence",
+          "firms_relationship",
+          "review_status",
+          "annotator_id",
+          "annotation_timestamp"
+        ],
+        "properties": {
+          "annotation_id": {
+            "type": "string",
+            "description": "Unique identifier for this annotation bounding box."
+          },
+          "class_id": {
+            "type": "integer",
+            "enum": [0, 1, 2, 3, 4],
+            "description": "Class identifier: 1=Industrial Fire, 2=Forest Fire, 3=Agricultural Fire, 4=Other Thermal Source, 0=UNRESOLVED."
+          },
+          "class_name": {
+            "type": "string",
+            "enum": [
+              "Industrial Fire",
+              "Forest Fire",
+              "Agricultural Fire",
+              "Other Thermal Source",
+              "UNRESOLVED"
+            ],
+            "description": "Assigned target class. UNRESOLVED is used when visual evidence is insufficient or ambiguous."
+          },
+          "bbox": {
+            "type": "object",
+            "description": "Bounding box coordinates in 512x512 pixel space.",
+            "required": ["x_min", "y_min", "x_max", "y_max"],
+            "properties": {
+              "x_min": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 511,
+                "description": "Left column index in pixel coordinates (0 <= x_min < 512)."
+              },
+              "y_min": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 511,
+                "description": "Top row index in pixel coordinates (0 <= y_min < 512)."
+              },
+              "x_max": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 512,
+                "description": "Right column index in pixel coordinates (x_min < x_max <= 512)."
+              },
+              "y_max": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 512,
+                "description": "Bottom row index in pixel coordinates (y_min < y_max <= 512)."
+              }
+            },
+            "additionalProperties": false
+          },
+          "geometry_confidence": {
+            "type": "string",
+            "enum": ["HIGH", "MEDIUM", "LOW"],
+            "description": "Confidence in the spatial extent and boundary of the bounding box."
+          },
+          "source_class_confidence": {
+            "type": "string",
+            "enum": ["HIGH", "MEDIUM", "LOW"],
+            "description": "Confidence in the assigned fire/thermal source class."
+          },
+          "visibility_status": {
+            "type": "string",
+            "enum": ["CLEAR", "PARTIALLY_OBSCURED", "HEAVILY_OBSCURED"],
+            "description": "Atmospheric/cloud obstruction status over the target region. HEAVILY_OBSCURED mandates class_name=UNRESOLVED."
+          },
+          "visual_evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "enum": [
+                "DIRECT_FIRE_VISIBLE",
+                "SMOKE_VISIBLE",
+                "BURN_SCAR_VISIBLE",
+                "INDUSTRIAL_INFRASTRUCTURE_VISIBLE",
+                "FOREST_CONTEXT_VISIBLE",
+                "CROPLAND_CONTEXT_VISIBLE",
+                "PERSISTENT_THERMAL_SOURCE_CONTEXT",
+                "NO_CLEAR_VISUAL_EVIDENCE"
+              ]
+            },
+            "description": "List of observable visual evidence tags supporting the annotation."
+          },
+          "firms_relationship": {
+            "type": "string",
+            "enum": [
+              "INSIDE_OBJECT",
+              "TOUCHING_OBJECT",
+              "NEAR_OBJECT",
+              "OUTSIDE_VISIBLE_OBJECT",
+              "NO_VISIBLE_TARGET"
+            ],
+            "description": "Spatial relationship between the associated FIRMS thermal point and this bounding box."
+          },
+          "review_status": {
+            "type": "string",
+            "enum": ["PENDING", "APPROVED", "REJECTED", "DISPUTED", "ADJUDICATED"],
+            "description": "Workflow verification status."
+          },
+          "annotator_id": {
+            "type": "string",
+            "description": "Identifier of the annotator who created this record."
+          },
+          "annotation_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO 8601 UTC timestamp of creation."
+          },
+          "notes": {
+            "type": "string",
+            "description": "Optional annotator notes or rationale."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "context_metadata": {
+      "type": "object",
+      "description": "Contextual metadata stored strictly separately from ground-truth visual annotations.",
+      "required": [
+        "firms_detection_id",
+        "firms_latitude",
+        "firms_longitude",
+        "firms_acq_datetime_utc",
+        "product_id",
+        "authoritative_bands"
+      ],
+      "properties": {
+        "firms_detection_id": {
+          "type": "string",
+          "description": "FIRMS thermal detection identifier (context only)."
+        },
+        "firms_latitude": {
+          "type": "number",
+          "description": "FIRMS detection latitude."
+        },
+        "firms_longitude": {
+          "type": "number",
+          "description": "FIRMS detection longitude."
+        },
+        "firms_acq_datetime_utc": {
+          "type": ["string", "null"],
+          "description": "FIRMS acquisition timestamp in UTC."
+        },
+        "firms_frp": {
+          "type": "number",
+          "description": "Fire Radiative Power in MW."
+        },
+        "firms_brightness_kelvin": {
+          "type": "number",
+          "description": "FIRMS sensor brightness temperature."
+        },
+        "firms_pixel_coord": {
+          "type": "object",
+          "properties": {
+            "row": {"type": "number"},
+            "col": {"type": "number"}
+          },
+          "description": "Projected pixel coordinates (row, col) of FIRMS point on the 512x512 grid."
+        },
+        "distance_to_nearest_infrastructure_m": {
+          "type": "number",
+          "description": "Proximity to industrial infrastructure in meters (contextual only; does not determine class)."
+        },
+        "temporal_difference_hours": {
+          "type": "number",
+          "description": "Time difference in hours between FIRMS detection and Sentinel-2 acquisition."
+        },
+        "product_id": {
+          "type": "string",
+          "description": "Sentinel-2 Level-2A product SAFE identifier."
+        },
+        "tile_id": {
+          "type": "string",
+          "description": "MGRS tile ID."
+        },
+        "cloud_cover_pct": {
+          "type": "number",
+          "description": "Scene-level cloud cover percentage from metadata."
+        },
+        "authoritative_bands": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["B02", "B03", "B04", "B11", "B12"]
+          },
+          "description": "Authoritative 5-band set. B08 is strictly excluded; NDVI is unavailable."
+        },
+        "data_provenance": {
+          "type": "string",
+          "description": "Source dataset provenance and pipeline audit tracking."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

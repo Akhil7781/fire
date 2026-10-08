@@ -1,0 +1,892 @@
+<USER_REQUEST>
+You are the implementation engineer for Stage 8.24 of the industrial thermal-source attribution project.
+
+STAGE NAME
+Stage 8.24 — Independent Acute-Event Expansion, Real Multimodal Coverage, and Scientific Validation
+
+============================================================
+PRIMARY OBJECTIVE
+============================================================
+
+Stage 8.23 established that the engineering pipeline is functioning, but scientific validation of the 4-class classifier is still gated.
+
+Current situation:
+
+- 18 eligible acute events audited:
+  - Industrial: 4
+  - Forest: 7
+  - Agricultural: 7
+- Held-out acute test support:
+  - Industrial: 0
+  - Forest: 0
+  - Agricultural: 0
+- Persistent thermal-source test support exists.
+- Sentinel-2 is available for only a very small number of event associations.
+- Existing DIOR/FASDD YOLO embeddings have no legitimate event-level relationship to 2025 India FIRMS observations.
+
+Therefore this stage MUST focus on obtaining and validating additional REAL independent acute events and genuine event-linked visual evidence.
+
+DO NOT compensate by:
+- changing the test split
+- moving existing events from train to test
+- duplicating detections
+- copying embeddings
+- creating synthetic imagery
+- creating synthetic labels
+- assigning generic DIOR/FASDD embeddings to FIRMS rows
+- increasing model complexity
+
+The purpose of Stage 8.24 is to make the evaluation cohort scientifically defensible.
+
+============================================================
+1. FROZEN ARTIFACTS
+============================================================
+
+Do not modify:
+
+- models/tcn/best_tcn.pt
+- models/deep_sad/best_deep_sad.pt
+- models/s2_encoder/best_s2_encoder.pt
+- models/yolo/infrastructure/best_infrastructure.pt
+- models/yolo/fire_smoke/best_fire_smoke.pt
+- models/fusion/best_multimodal_fusion.pt
+- data/interim/causal_features_2025.parquet
+- Stage 7 partition definitions
+- DS08 V3 manifest
+- DS08 V4 manifest
+- Stage 8.20 quality policy
+- Stage 8.21 quality policy
+- existing class taxonomy
+- existing label semantics
+
+Any new data or manifests MUST live under Stage 8.24 paths.
+
+============================================================
+2. REQUIRED FINAL CLASSES
+============================================================
+
+0 = Industrial Fire
+1 = Forest Fire
+2 = Agricultural Fire
+3 = Other Thermal Source/Persistent Non-Biomass Thermal Source
+
+Preserve:
+
+acute fire != persistent source
+
+Do not relabel persistent sources as acute fires.
+
+============================================================
+3. PHASE A — BUILD THE CURRENT ACUTE EVENT MASTER TABLE
+============================================================
+
+Combine the authoritative existing event sources:
+
+- DS03 forest events/matches
+- DS04 agricultural events/matches
+- DS05 industrial incidents/matches
+- master_labels_2025
+- Stage 8.23 label audit
+- Stage 8.23 adjudication results
+
+Create:
+
+data/interim/ds08_stage8_24_current_acute_event_master.parquet
+
+Required fields:
+
+event_id
+incident_id
+class
+source_dataset
+evidence_source
+evidence_status
+label_status
+supervised_eligibility
+firms_detection_ids
+event_start
+event_end
+latitude
+longitude
+existing_partition
+
+Produce exact counts by:
+- class
+- physical event
+- FIRMS detection
+- partition
+- evidence status
+
+============================================================
+4. PHASE B — SEARCH FOR NEW INDEPENDENT ACUTE EVENTS
+============================================================
+
+The objective is to expand the acute-event evidence pool.
+
+Search the existing repository FIRST.
+
+Only if repository evidence is insufficient, use additional external documented sources permitted by the project.
+
+Potential evidence categories:
+
+- official incident reports
+- government/public-sector fire reports
+- forestry/fire department records
+- agricultural burn records
+- company/event disclosures
+- reputable timestamped news reports
+- publicly documented industrial incidents
+- publicly documented forest fires
+- publicly documented agricultural burning events
+
+For every candidate event, require enough information to establish:
+
+1. source type
+2. approximate location
+3. event date/time or defensible time window
+4. event type
+5. evidence provenance
+
+Do NOT accept a candidate because a webpage merely contains words such as:
+"fire", "plant", "forest", or "burning".
+
+The evidence must support the intended source class.
+
+Create:
+
+data/reference/ds08/manifests/stage8_24/acute_event_candidates.json
+
+Each record must contain:
+
+candidate_event_id
+proposed_class
+location
+date/time
+evidence_source
+source_type
+source_reference
+evidence_summary
+confidence
+status
+
+============================================================
+5. PHASE C — CANDIDATE → FIRMS EVENT ASSOCIATION
+============================================================
+
+For each new candidate:
+
+Search the actual FIRMS observations for the documented event period and location.
+
+Association must be event-based.
+
+Require explicit:
+
+- spatial distance
+- temporal difference
+- observation date/time
+- FIRMS detection ID
+- event ID
+- evidence source
+
+Do NOT use a loose proximity-only match.
+
+Report:
+
+candidate_event_id
+matched_detection_ids
+minimum_spatial_distance_km
+minimum_temporal_difference_hours
+association_status
+association_quality
+
+Preserve all rejected candidates.
+
+Create:
+
+data/interim/ds08_stage8_24_firms_event_associations.parquet
+
+============================================================
+6. PHASE D — EVENT-LEVEL GROUND-TRUTH ADJUDICATION
+============================================================
+
+Every new candidate must pass an explicit adjudication gate.
+
+Possible decisions:
+
+CONFIRMED
+PROBABLE
+REJECTED
+AMBIGUOUS
+
+Only CONFIRMED events may become supervised ground truth for the independent test.
+
+PROBABLE must remain separate.
+
+AMBIGUOUS must remain separate.
+
+REJECTED must remain excluded.
+
+Do not silently upgrade labels.
+
+Create:
+
+data/interim/ds08_stage8_24_adjudicated_events.parquet
+
+============================================================
+7. PHASE E — INDEPENDENT TEST DESIGN
+============================================================
+
+The critical requirement is INDEPENDENCE.
+
+Do not randomly split detections.
+
+Split at physical-event level.
+
+A physical event must belong to exactly one split:
+
+TRAIN
+VALIDATION
+INDEPENDENT_TEST
+
+Enforce:
+
+- no incident overlap
+- no physical-event overlap
+- no duplicate FIRMS detections
+- no overlapping event identity
+- existing spatial separation policy
+- existing temporal holdout policy
+- no Sentinel-2 scene leakage
+- no duplicated acquisition
+- no spatially overlapping test/train chips
+
+Create:
+
+data/reference/ds08/manifests/stage8_24/independent_test_manifest.json
+
+Before final evaluation, freeze this manifest.
+
+============================================================
+8. PHASE F — TARGET TEST SUPPORT GATE
+============================================================
+
+Compute:
+
+CLASS | TRAIN EVENTS | VAL EVENTS | TEST EVENTS
+
+Required classes:
+
+Industrial Fire
+Forest Fire
+Agricultural Fire
+Other Thermal Source/Persistent Non-Biomass Thermal Source
+
+A class is "supported" only if the independent test contains legitimate confirmed physical events.
+
+Do NOT count:
+- detections from the same event as separate independent samples.
+
+Print both:
+
+unique physical events
+
+and:
+
+FIRMS detections
+
+The physical-event count is the independence statistic.
+
+If a class still has zero independent test events:
+
+- do not fabricate metrics
+- report N/A
+- continue only with supported classes
+
+============================================================
+9. PHASE G — REAL SENTINEL-2 EXPANSION
+============================================================
+
+For every newly confirmed independent event:
+
+Search for Sentinel-2 L2A acquisitions.
+
+Require:
+
+- real Sentinel-2 product
+- valid geographic coverage
+- valid temporal relationship
+- existing SCL quality policy
+- candidate point inside the processed chip
+- no spatial split leakage
+- no duplicate scene reuse across independent events where prohibited
+
+Use the existing preprocessing exactly:
+
+Bands:
+B02
+B03
+B04
+B11
+B12
+
+Resolution:
+10 m
+
+Chip:
+512 × 512
+
+B02/B03/B04:
+native 10 m
+
+B11/B12:
+20 m → 10 m
+
+SCL:
+nearest-neighbor
+
+Do not modify the Stage 8.20/8.21 quality thresholds.
+
+Create:
+
+data/interim/ds08_stage8_24_s2_event_associations.parquet
+
+and:
+
+data/reference/ds08/manifests/stage8_24/s2_expansion_manifest.json
+
+============================================================
+10. PHASE H — HUMAN REVIEW OF NEW S2 CHIPS
+============================================================
+
+Every newly acquired S2 chip must have:
+
+sample_id
+event_id
+incident_id
+expected_target_class
+human_observed_class
+reviewer_decision
+reviewer_confidence
+evidence_tags
+evidence_rationale
+is_valid_supervised_sample
+
+Never equate:
+
+expected_target_class
+
+with:
+
+human_observed_class
+
+A human reviewer may reject the expected class.
+
+Valid supervised classes:
+
+Industrial Fire
+Forest Fire
+Agricultural Fire
+Other Thermal Source/Persistent Non-Biomass Thermal Source
+
+Uncertain is not a supervised class.
+
+============================================================
+11. PHASE I — USE EXISTING S2 ENCODER
+============================================================
+
+Do NOT retrain the Stage 8.21 Sentinel-2 encoder in this stage unless a separate explicitly justified experiment is created.
+
+Use:
+
+models/s2_encoder/best_s2_encoder.pt
+
+to extract the existing 128D embeddings.
+
+For every accepted new chip verify:
+
+- 128 dimensions
+- no NaN
+- no Inf
+- deterministic extraction
+- provenance
+- event/sample ID integrity
+
+Create:
+
+data/interim/ds08_stage8_24_s2_embeddings.parquet
+
+============================================================
+12. PHASE J — YOLO BRANCH: STRICT DECISION
+============================================================
+
+Audit whether genuine event-linked imagery exists.
+
+The following are NOT valid event links by themselves:
+
+- same country
+- same date
+- same general fire type
+- similar coordinates
+- similar scene
+- same image dimensions
+
+Valid association requires an actual image tied to the same event/scene.
+
+If legitimate event-specific imagery exists:
+
+1. preserve provenance
+2. run frozen YOLO inference
+3. extract existing embedding
+4. store association metadata
+
+If none exists:
+
+KEEP YOLO COVERAGE = 0
+
+Do not fabricate.
+
+The report must explicitly distinguish:
+
+MODEL EXISTS
+
+from:
+
+EVENT-LINKED INFERENCE EXISTS
+
+============================================================
+13. PHASE K — ACTUAL MULTIMODAL COVERAGE
+============================================================
+
+For every independent event calculate:
+
+TCN available?
+Deep SAD available?
+Geospatial available?
+Sentinel-2 available?
+YOLO infrastructure available?
+YOLO fire/smoke available?
+
+Produce:
+
+modality
+available physical events
+available detections
+coverage percentage
+
+Also produce:
+
+number of events with exactly:
+2 modalities
+3 modalities
+4 modalities
+5 modalities
+6 modalities
+
+IMPORTANT:
+
+TCN + Deep SAD alone counts as two learned representations, but do not describe the entire deployment dataset as "fully multimodal" when visual branches are unavailable.
+
+Report:
+
+FULL ARCHITECTURAL CAPABILITY
+
+and:
+
+ACTUAL EVENT-LEVEL MULTIMODAL COVERAGE
+
+separately.
+
+============================================================
+14. PHASE L — BUILD VALIDATED MULTIMODAL TEST COHORT
+============================================================
+
+Only events passing ALL of these conditions may enter the final independent multimodal test:
+
+1. confirmed ground truth
+2. independent physical event
+3. valid FIRMS association
+4. no train/validation leakage
+5. valid feature representation
+6. valid S2 association where claimed
+7. valid YOLO association where claimed
+8. complete provenance
+9. no synthetic data
+
+Create:
+
+data/interim/ds08_stage8_24_independent_multimodal_test.parquet
+
+============================================================
+15. PHASE M — RETRAINING DECISION
+============================================================
+
+Do NOT automatically retrain the fusion model.
+
+First determine:
+
+- number of training events per class
+- number of validation events per class
+- number of independent test events per class
+- multimodal coverage
+- modality overlap
+
+Decision:
+
+CASE A:
+Adequate training, validation, and independent test support.
+
+→ Train/evaluate the existing fusion architecture.
+
+CASE B:
+Independent test support exists, but training support is still small.
+
+→ perform constrained evaluation or report data limitation.
+
+CASE C:
+Independent test support remains zero for acute classes.
+
+→ NO scientific 4-class evaluation.
+
+Continue data expansion only.
+
+============================================================
+16. PHASE N — EVALUATION
+============================================================
+
+For each genuinely supported class compute:
+
+- precision
+- recall
+- F1
+- macro F1
+- balanced accuracy
+- confusion matrix
+
+Report:
+
+detection-level metrics
+
+AND:
+
+event-level metrics
+
+Do not treat detections from the same physical event as independent test observations.
+
+Event-level aggregation method must be fixed BEFORE final test scoring.
+
+Use the already selected:
+
+MEAN PROBABILITY AGGREGATION
+
+unless there is a documented pre-test reason to change it.
+
+Do not tune the aggregation method on the independent test.
+
+============================================================
+17. PHASE O — BASELINES
+============================================================
+
+For the legitimate independent cohort compare:
+
+1. FIRMS/geospatial
+2. TCN + FIRMS
+3. TCN + Deep SAD + FIRMS
+4. FIRMS + Sentinel-2
+5. TCN + Sentinel-2 + FIRMS
+6. full available multimodal model
+
+Only evaluate a baseline where the required modality actually exists.
+
+Do not silently treat an unavailable modality as an experimental ablation.
+
+============================================================
+18. PHASE P — MODALITY ABLATION
+============================================================
+
+Run:
+
+- remove TCN
+- remove Deep SAD
+- remove Sentinel-2
+- remove YOLO infrastructure
+- remove YOLO fire/smoke
+- remove geospatial
+- full available fusion
+
+For every ablation record:
+
+available events
+test events
+missing modalities
+metric support
+
+Do not compare incompatible cohorts as if they were identical experiments.
+
+============================================================
+19. PHASE Q — PERSISTENCE
+============================================================
+
+Keep these separate:
+
+persistence_score
+acute_likelihood
+source_attribution_probability
+
+Persistent source evidence does not itself imply:
+
+Industrial Fire
+
+or:
+
+acute fire.
+
+For every prediction retain:
+
+- persistence evidence
+- temporal evidence
+- source attribution
+- modality availability
+
+============================================================
+20. PHASE R — FALSE-POSITIVE / FALSE-NEGATIVE ANALYSIS
+============================================================
+
+For the independent test cohort inspect every error.
+
+Create:
+
+data/interim/ds08_stage8_24_error_analysis.parquet
+
+Required fields:
+
+event_id
+true_class
+predicted_class
+probabilities
+available_modalities
+persistence_score
+acute_likelihood
+error_category
+review_notes
+
+Possible error categories:
+
+- thermal ambiguity
+- insufficient visual evidence
+- industrial-vs-other confusion
+- agriculture-vs-forest confusion
+- persistent-source confusion
+- spatial association uncertainty
+- temporal association uncertainty
+- missing modality
+- annotation uncertainty
+
+Do not invent explanations.
+
+============================================================
+21. PHASE S — CALIBRATION
+============================================================
+
+If the independent test is large enough:
+
+calculate probability calibration metrics.
+
+Otherwise:
+
+state explicitly that calibration analysis is underpowered.
+
+Do not optimize thresholds on the independent test.
+
+============================================================
+22. PHASE T — LEAKAGE AND INTEGRITY TESTS
+============================================================
+
+Create:
+
+tests/test_stage8_24_validation.py
+
+At minimum test:
+
+1. no physical event crosses splits
+2. no incident crosses splits
+3. no detection crosses splits
+4. no S2 scene leakage
+5. no overlapping S2 chips across prohibited splits
+6. no future temporal features
+7. expected labels never become ground truth automatically
+8. no synthetic data
+9. no unrelated YOLO joins
+10. no repeated S2 embedding inflation
+11. all supervised labels are confirmed
+12. class support is accurately counted
+13. event-level aggregation is deterministic
+14. no NaN/Inf
+15. frozen predecessor hashes unchanged
+16. independent test manifest is frozen
+17. train/validation statistics are isolated from test
+18. unsupported test classes are reported N/A
+19. provenance exists for every test event
+20. no duplicate event IDs
+
+Run all previous regression suites.
+
+============================================================
+23. PHASE U — FROZEN TEST MANIFEST
+============================================================
+
+Once the independent test cohort is constructed and validated:
+
+freeze:
+
+data/reference/ds08/manifests/stage8_24/independent_test_manifest.json
+
+Calculate SHA-256.
+
+After freezing:
+
+DO NOT modify it while tuning the model.
+
+If the model needs improvement:
+
+change training/model configuration,
+NOT the independent test membership.
+
+============================================================
+24. PHASE V — FINAL REPORT
+============================================================
+
+Create:
+
+reports/stage8_24_report.md
+
+Include:
+
+1. Objective
+2. Stage 8.23 findings
+3. Acute-event expansion methodology
+4. Evidence sources
+5. Candidate-event rejection analysis
+6. FIRMS association methodology
+7. Final confirmed acute events
+8. Class counts
+9. independent test construction
+10. S2 expansion
+11. YOLO provenance audit
+12. actual modality coverage
+13. split integrity
+14. leakage audit
+15. training decision
+16. baseline results
+17. fusion results
+18. event-level results
+19. detection-level results
+20. error analysis
+21. persistence analysis
+22. calibration analysis
+23. limitations
+24. artifact hashes
+25. final scientific readiness decision
+
+============================================================
+25. FINAL STATUS TABLE
+============================================================
+
+Print:
+
+ITEM | STATUS | COUNT / EVIDENCE
+
+Current confirmed Industrial events
+Current confirmed Forest events
+Current confirmed Agricultural events
+Current confirmed Persistent events
+
+New candidate events
+New confirmed events
+New rejected events
+
+Independent Industrial test events
+Independent Forest test events
+Independent Agricultural test events
+Independent Persistent test events
+
+S2-linked independent events
+YOLO-infrastructure-linked independent events
+YOLO-fire-linked independent events
+
+2-modality events
+3-modality events
+4-modality events
+5-modality events
+6-modality events
+
+Train/test event leakage
+Temporal leakage
+Synthetic-data leakage
+Image provenance violations
+
+Training decision
+Independent evaluation
+Event-level evaluation
+Detection-level evaluation
+Regression tests
+
+FINAL STAGE STATUS
+
+============================================================
+26. FINAL DECISION STATES
+============================================================
+
+Use exactly one:
+
+A. SCIENTIFICALLY_VALIDATED_MULTIMODAL_PROTOTYPE
+
+Only if:
+
+- all required acute classes have legitimate independent test-event support
+- multimodal coverage is genuine
+- no leakage
+- ground truth is independently supported
+- evaluation is performed on frozen independent test data
+- metrics are actually supported by test population
+
+B. MULTIMODAL_INTEGRATION_READY_BUT_DATA_GATED
+
+If engineering is valid but acute independent support remains insufficient.
+
+C. BLOCKED
+
+If associations, labels, provenance, or leakage controls fail.
+
+============================================================
+27. ABSOLUTE RULES
+============================================================
+
+DO NOT:
+
+- move existing events into test merely to create class support
+- duplicate one event to look like multiple events
+- duplicate Sentinel-2 chips
+- attach generic YOLO embeddings to FIRMS rows
+- call expected labels ground truth
+- call probable labels confirmed
+- turn persistent sources into acute fires
+- fabricate negative samples
+- fabricate class balance
+- fabricate metrics
+- tune against the frozen independent test
+- modify frozen predecessor artifacts
+- change existing SCL policy for convenience
+- silently change split definitions
+- use arbitrary proximity as proof of event identity
+
+The central objective of Stage 8.24 is not "get a better score".
+
+The central objective is:
+
+BUILD A REAL, INDEPENDENT, EVENT-LEVEL TEST SET ON WHICH THE 4-CLASS SOURCE-ATTRIBUTION CLAIM CAN ACTUALLY BE TESTED.
+
+Only after that condition is satisfied may a performance number be interpreted scientifically.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-03T21:10:33+05:30.
+</ADDITIONAL_METADATA>

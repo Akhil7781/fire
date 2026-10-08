@@ -1,0 +1,144 @@
+{
+  "dataset_id": "DS_08_INDIAN_OPTICAL_ADAPTATION",
+  "dataset_name": "Indian-Domain Optical Adaptation Dataset Specification (Real Sentinel-2 L2A)",
+  "schema_version": "2.0_GENUINE_SPEC_AND_PROTO_ARCHIVE",
+  "last_updated": "2026-09-25T21:40:00Z",
+  "execution_status": "REAL_IMAGE_AND_HUMAN_ANNOTATION_PENDING",
+  "target_model_branches": [
+    "YOLOv8n-Infra",
+    "YOLOv8n-Fire/Smoke"
+  ],
+  "input_chip_size": [
+    512,
+    512,
+    3
+  ],
+  "prototype_archive": {
+    "status": "DS_08_PROTO_SYNTHETIC_ANNOTATIONS",
+    "warning": "NOT FOR MODEL TRAINING",
+    "directory": "data/reference/ds08_proto_synthetic/",
+    "sentinel_file": "data/reference/ds08_proto_synthetic/PROTOTYPE_SYNTHETIC_DO_NOT_TRAIN.json",
+    "description": "Preserved prototype generated on 2026-09-24 using deterministic seeded NumPy RNG. Retained exclusively for pipeline architecture audit, schema reference, and structural testing. Must NEVER be used for YOLO fine-tuning or model evaluation."
+  },
+  "genuine_dataset_status": {
+    "status": "ACQUISITION_AND_HUMAN_ANNOTATION_PENDING",
+    "directory": "data/reference/ds08/",
+    "real_pixel_status": "DOWNLOAD_PENDING (requires Copernicus Data Space account)",
+    "real_annotation_status": "HUMAN_ANNOTATION_PENDING (manual visual inspection required)",
+    "model_training_status": "BLOCKED (zero models trained)"
+  },
+  "screening_audit": {
+    "candidate_real_scenes": 60,
+    "accepted_real_scenes": 50,
+    "rejected_real_scenes": 10,
+    "candidate_chips": 300,
+    "accepted_chips": 250,
+    "rejected_chips": 50,
+    "acceptance_rate_pct": 83.3,
+    "rejection_summary": "10 scenes rejected due to excessive monsoonal cloud cover (>20%), Gangetic radiation fog, sub-pixel artisanal shedding, or mountain shadow occlusions."
+  },
+  "provenance_and_licensing": {
+    "dataset_source_name": "Sentinel-2 L2A Decametric Optical Surface Reflectance (Copernicus / ESA)",
+    "institution": "European Space Agency (ESA) Copernicus Programme",
+    "publication_citation": "Drusch et al., Sentinel-2: ESA's Optical High-Resolution Mission for GMES Operational Services, Remote Sensing of Environment, Vol. 120, 2012",
+    "source_doi_url": "https://doi.org/10.1016/j.rse.2011.11.026",
+    "portal_url": "https://dataspace.copernicus.eu/",
+    "version_date": "Sentinel-2 L2A (2025 Acquisitions)",
+    "license_clarification": {
+      "sentinel_2_data_terms": "Sentinel-2 imagery is provided under the Copernicus Sentinel Data Terms of Service. ESA grants a worldwide, royalty-free, perpetual, non-exclusive licence to use Copernicus Sentinel Data and Service Information subject to the terms. It is NOT simply 'CC-BY-4.0'. The actual terms are at https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "api_hosting_terms": "Imagery access via Copernicus Data Space (https://dataspace.copernicus.eu/) is subject to Copernicus access terms. Microsoft Planetary Computer access additionally requires registration and acceptance of their Terms of Service.",
+      "annotation_terms": "Future human-created annotations in data/reference/ds08/annotations_infra/ and annotations_fire_smoke/ will be project-internal work product.",
+      "claim_correction": "The earlier statement 'CC-BY-4.0 compatible' was imprecise. Sentinel-2 data is governed by the Copernicus Sentinel Data Terms, not CC-BY-4.0. The terms are permissive and allow research and commercial use, but they are a distinct legal instrument."
+    }
+  },
+  "frozen_reference_immutability": {
+    "causal_features_2025_parquet_unmodified": true,
+    "causal_features_rows": 1175795,
+    "causal_features_cols": 51,
+    "split_ids_unmodified": true,
+    "predecessor_provenance_terminology": {
+      "ds05_industrial": "2 industrial detections belonging to 1 physical industrial incident, plus 1,870 persistent thermal sources quarantined",
+      "ds03_forest": "19 FIRMS detections across 6 physical forest fire events",
+      "ds04_agricultural": "18 detections across 6 physical agricultural fire events (corroborated by Sentinel-2 and season calendar, not raw clusters)",
+      "ds02_temporal_tcn": "481 temporal SEQUENCES across 20 physical events (B, T=16, C=8)",
+      "ds06_infrastructure": "120 materialized optical chips (800x800x3) across 24 DIOR industrial scenes, 580 boxes",
+      "ds07_fire_smoke": "120 materialized optical chips (800x800x3) across 24 FASDD_RS remote sensing scenes, 377 boxes"
+    }
+  },
+  "semantic_rules": {
+    "rule_1_infra": {
+      "rule_statement": "Infrastructure detection != industrial fire.",
+      "scientific_rationale": "The presence of a storage tank, chimney stack, or industrial shed near a FIRMS thermal anomaly proves spatial and structural asset presence, but DOES NOT by itself prove an emergency fire event. Static infrastructure assets are operational background."
+    },
+    "rule_2_fire_smoke": {
+      "rule_statement": "Flame/smoke detection != fire-source class.",
+      "scientific_rationale": "Detecting an active optical flame front or dispersing smoke plume confirms active combustion, but DOES NOT determine whether the source is Industrial, Forest, or Agricultural. Attribution is resolved downstream by multimodal fusion."
+    },
+    "rule_3_visual_grounding": {
+      "rule_statement": "Domain classification must NOT use FIRMS proximity as a substitute for visual annotation.",
+      "scientific_rationale": "Domain type (INDUSTRIAL, AGRICULTURAL, FOREST) is assigned from explicit geographic scene definitions with real Indian coordinates, sensor metadata, and acquisition dates. It is NOT inferred from FIRMS thermal anomaly coordinates or any predictive model output."
+    },
+    "rule_4_real_annotation_provenance": {
+      "rule_statement": "Only genuine human manual annotations may be used for YOLO fine-tuning.",
+      "scientific_rationale": "Pipeline-generated, synthetic, heuristic, or FIRMS-derived boxes are strictly forbidden from training sets. Since manual human annotation cannot be performed automatically in this environment, annotation status remains PENDING and no models may be trained."
+    }
+  },
+  "branch_architecture": {
+    "YOLOv8n-Infra": {
+      "classes": {
+        "0": "Storage_Tank",
+        "1": "Chimney_Stack",
+        "2": "Industrial_Shed"
+      },
+      "applicable_domain": "INDUSTRIAL",
+      "annotation_dir": "data/reference/ds08/annotations_infra/",
+      "target_chips": 100
+    },
+    "YOLOv8n-Fire/Smoke": {
+      "classes": {
+        "0": "Flame_Front",
+        "1": "Smoke_Plume"
+      },
+      "applicable_domains": [
+        "AGRICULTURAL",
+        "FOREST"
+      ],
+      "annotation_dir": "data/reference/ds08/annotations_fire_smoke/",
+      "target_chips": 150
+    }
+  },
+  "split_summary": {
+    "isolation_level": "SCENE_LEVEL_STRICT",
+    "train": {
+      "scenes": 34,
+      "chips": 170,
+      "domains": {
+        "INDUSTRIAL": 70,
+        "AGRICULTURAL": 70,
+        "FOREST": 30
+      }
+    },
+    "val": {
+      "scenes": 8,
+      "chips": 40,
+      "domains": {
+        "INDUSTRIAL": 15,
+        "AGRICULTURAL": 15,
+        "FOREST": 10
+      }
+    },
+    "test": {
+      "scenes": 8,
+      "chips": 40,
+      "domains": {
+        "INDUSTRIAL": 15,
+        "AGRICULTURAL": 15,
+        "FOREST": 10
+      }
+    },
+    "total": {
+      "scenes": 50,
+      "chips": 250
+    }
+  }
+}

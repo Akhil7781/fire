@@ -1,0 +1,102 @@
+{
+  "chip_id": "PILOT_08_CENTRAL",
+  "annotation_version": "v2.0_adjudicated",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_08_CENTRAL_CORR_01",
+      "class_name": "Agricultural Fire",
+      "bbox": {
+        "x_min": 222,
+        "y_min": 233,
+        "x_max": 260,
+        "y_max": 295
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "BURN_SCAR_VISIBLE",
+        "CROPLAND_CONTEXT_VISIBLE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "interaction_audit": {
+        "manual_interaction_recorded": true,
+        "event_type": "CANVAS_DRAW",
+        "coordinates": [
+          222,
+          233,
+          260,
+          295
+        ]
+      },
+      "class_id": 3,
+      "annotator_id": "HUMAN_ADJUDICATOR_CORRECTION",
+      "review_status": "CORRECTED_V2"
+    }
+  ],
+  "source_classes": [
+    "Agricultural Fire"
+  ],
+  "visual_evidence": [
+    "BURN_SCAR_VISIBLE",
+    "CROPLAND_CONTEXT_VISIBLE"
+  ],
+  "visibility_status": "CLEAR",
+  "geometry_confidence": "MEDIUM",
+  "source_class_confidence": "MEDIUM",
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "879bbfd3059940f269945d35e03c60f8219e5f8699d0971dc568b42b564d0e32",
+    "firms_latitude": 22.76134,
+    "firms_longitude": 81.88918,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 4.58,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2A_MSIL2A_20250315T051241_N0511_R019_T44QNL_20250315T113317.SAFE",
+    "tile_id": "T44QNL",
+    "cloud_cover_pct": 0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "consensus_provenance": {
+    "cohort_type": "HUMAN_ADJUDICATED_CONSENSUS",
+    "stage": "STAGE_8_16",
+    "correction_version": "v2.0",
+    "correction_status": "COMPLETED_HUMAN_CORRECTION",
+    "correction_rationale": "The proposed agricultural fire region was reviewed using the available Sentinel-2 SWIR imagery. Although Annotator 1 marked a candidate region, the visible image evidence is insufficient to confidently distinguish an active agricultural fire or burn scar from other surface features. Annotator 2 reported no visible target. The FIRMS detection was considered contextual evidence only and was not treated as ground truth. The observation remains unresolved pending stronger visual evidence.",
+    "human_confirmation": {
+      "confirmed": true,
+      "method": "HUMAN_CHECKBOX_CONFIRMATION",
+      "statement": "I confirm that I have reviewed the Sentinel-2 imagery and explicitly approve these corrections."
+    },
+    "changed_fields": [
+      "chip_annotation_status",
+      "annotations.count",
+      "annotations[0].added"
+    ],
+    "diff_summary": [
+      "Observation Status: 'UNRESOLVED' -> 'HAS_ANNOTATIONS'",
+      "Bounding Box Count: 0 -> 1",
+      "Added Box #1: Agricultural Fire {'x_min': 222, 'y_min': 233, 'x_max': 260, 'y_max': 295}"
+    ],
+    "source_files": [
+      "data\\reference\\ds08\\annotations\\adjudication\\corrections\\PILOT_08_CENTRAL_corrected_v2.json",
+      "data/reference/ds08/annotations/adjudication/review/PILOT_08_CENTRAL_adjudicated_v1.json"
+    ],
+    "source_hashes": {
+      "stage8_16_corrected_sha256": "f84a731ee8b4db925542591109c8b275a9ef10f0170ce2fa9a114ebc6fb107df",
+      "stage8_15_source_sha256": "3ad0384f37a4121950f1523ca711ca030f2028c20091934e7495d99b97a214d7"
+    }
+  }
+}

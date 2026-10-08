@@ -1,0 +1,137 @@
+{
+  "review_timestamp": "2026-09-23T18:10:24.832012+00:00",
+  "total_firms_corpus": 1175795,
+  "total_labeled": 1875,
+  "total_unlabeled": 1173920,
+  "unlabeled_percentage": 99.8405,
+  "source_by_source_audit": {
+    "INDIA_INDUSTRIAL_INCIDENTS_2025": {
+      "source_name": "INDIA_INDUSTRIAL_INCIDENTS_2025",
+      "category": "EVENT_EVIDENCE",
+      "total_evidence_records": 12,
+      "EVENT_EVIDENCE": 12,
+      "STATIC_SOURCE_EVIDENCE": 0,
+      "REMOTE_SENSING_CORROBORATION": 0,
+      "CONTEXT_ONLY": 0,
+      "matched_firms_detections": 2,
+      "promoted_to_confirmed_tier_a": 0,
+      "promoted_to_probable_tier_b": 2,
+      "ambiguous_tier_c": 0,
+      "unlabeled": 0,
+      "description": "Specific documented industrial fires, deflagrations, and warehouse blazes with exact dates and facility names (SEBI Reg 30 filings, SPCB/NGT orders, verified news).",
+      "scientific_limitation": "Satellite temporal gap: NOAA-20 has only 2 overpasses/day (~13:20 and ~01:20 local time); fires extinguished within hours outside overpass window produce no thermal anomaly."
+    },
+    "FSI_VAN_AGNI_LFF_2025": {
+      "source_name": "FSI_VAN_AGNI_LFF_2025",
+      "category": "EVENT_EVIDENCE",
+      "total_evidence_records": 8,
+      "EVENT_EVIDENCE": 8,
+      "STATIC_SOURCE_EVIDENCE": 0,
+      "REMOTE_SENSING_CORROBORATION": 0,
+      "CONTEXT_ONLY": 0,
+      "matched_firms_detections": 2,
+      "promoted_to_confirmed_tier_a": 0,
+      "promoted_to_probable_tier_b": 2,
+      "ambiguous_tier_c": 0,
+      "unlabeled": 0,
+      "description": "Forest Survey of India (FSI) Large Forest Fire (LFF) multi-pixel clusters and state forest department beat verification logs with start/end dates.",
+      "scientific_limitation": "Without automated 10m/20m Sentinel-2 dNBR burn-scar raster overlay, point cluster radius represents a coarse spatial centroid."
+    },
+    "ICAR_IARI_CREAMS_2025": {
+      "source_name": "ICAR_IARI_CREAMS_2025",
+      "category": "CONTEXT_ONLY",
+      "total_evidence_records": 10,
+      "EVENT_EVIDENCE": 0,
+      "STATIC_SOURCE_EVIDENCE": 0,
+      "REMOTE_SENSING_CORROBORATION": 0,
+      "CONTEXT_ONLY": 10,
+      "matched_firms_detections": 1,
+      "promoted_to_confirmed_tier_a": 0,
+      "promoted_to_probable_tier_b": 1,
+      "ambiguous_tier_c": 0,
+      "unlabeled": 0,
+      "description": "Daily agricultural crop residue burning monitoring bulletins reporting active burning at revenue village and tehsil block centroids.",
+      "scientific_limitation": "Village centroids (~3 to 5 km span) provide regional agricultural context only; they do NOT prove an individual 375m VIIRS pixel was an active stubble burn on a specific farm parcel."
+    },
+    "INDIA_OTHER_THERMAL_SOURCES_2025": {
+      "source_name": "INDIA_OTHER_THERMAL_SOURCES_2025",
+      "category": "STATIC_SOURCE_EVIDENCE",
+      "total_evidence_records": 11,
+      "EVENT_EVIDENCE": 0,
+      "STATIC_SOURCE_EVIDENCE": 11,
+      "REMOTE_SENSING_CORROBORATION": 0,
+      "CONTEXT_ONLY": 0,
+      "matched_firms_detections": 1870,
+      "promoted_to_confirmed_tier_a": 1357,
+      "promoted_to_probable_tier_b": 513,
+      "ambiguous_tier_c": 0,
+      "unlabeled": 0,
+      "description": "Stationary, multi-year, and persistent thermal emitters: continuous gas flare stacks, active brick kilns, Barren Island volcanic vent, coal seam fire fields, and thermal power stations.",
+      "scientific_limitation": "Static asset inventories do NOT represent discrete fire disaster events. Proximity to a known source over a 15-month window indicates operational thermal infrastructure, not an acute emergency."
+    }
+  },
+  "per_class_evidence_matrix": [
+    {
+      "class_code": 1,
+      "class_name": "Class 1: Industrial Fire",
+      "event_evidence_count": 12,
+      "static_source_evidence_count": 0,
+      "confirmed_detections_tier_a": 0,
+      "probable_detections_tier_b": 2,
+      "ambiguous_detections_tier_c": 0,
+      "unlabeled_detections": 0,
+      "total_detections": 2
+    },
+    {
+      "class_code": 2,
+      "class_name": "Class 2: Forest Fire",
+      "event_evidence_count": 8,
+      "static_source_evidence_count": 0,
+      "confirmed_detections_tier_a": 0,
+      "probable_detections_tier_b": 2,
+      "ambiguous_detections_tier_c": 0,
+      "unlabeled_detections": 0,
+      "total_detections": 2
+    },
+    {
+      "class_code": 3,
+      "class_name": "Class 3: Agricultural Fire",
+      "event_evidence_count": 0,
+      "static_source_evidence_count": 10,
+      "confirmed_detections_tier_a": 0,
+      "probable_detections_tier_b": 1,
+      "ambiguous_detections_tier_c": 0,
+      "unlabeled_detections": 0,
+      "total_detections": 1
+    },
+    {
+      "class_code": 4,
+      "class_name": "Class 4: Other Thermal Source",
+      "event_evidence_count": 0,
+      "static_source_evidence_count": 11,
+      "confirmed_detections_tier_a": 1357,
+      "probable_detections_tier_b": 513,
+      "ambiguous_detections_tier_c": 0,
+      "unlabeled_detections": 0,
+      "total_detections": 1870
+    },
+    {
+      "class_code": 0,
+      "class_name": "Class 0: Unlabeled Background",
+      "event_evidence_count": 0,
+      "static_source_evidence_count": 0,
+      "confirmed_detections_tier_a": 0,
+      "probable_detections_tier_b": 0,
+      "ambiguous_detections_tier_c": 0,
+      "unlabeled_detections": 1173920,
+      "total_detections": 1173920
+    }
+  ],
+  "critical_findings": {
+    "event_vs_static_source_conflation": "1,870 out of 1,875 labeled detections (99.73%) were generated by 11 static infrastructure locations (coalfield, volcano, flare, power station) rather than discrete disaster events.",
+    "false_tier_a_promotion": "1,357 detections were promoted to Tier A Confirmed purely because colliery shapefiles were issued by statutory authorities (CMPDI/BCCL). Proximity to a multi-year mining boundary is static asset context, NOT proof of an acute thermal disaster event.",
+    "agricultural_spatial_coarseness": "The 1 matched agricultural detection occurred at 3.47 km from a village centroid. Village-level bulletins are CONTEXT_ONLY and cannot prove parcel-level stubble burning.",
+    "supervised_class_imbalance": "Real discrete event evidence yielded only 2 Industrial, 2 Forest, 0 Agricultural, and 0 Other events. A supervised 4-class classifier cannot be trained on this sample.",
+    "validation_of_deep_sad_paradigm": "This severe sparsity confirms that semi-supervised anomaly detection (Deep SAD) is scientifically necessary. The 1,173,920 unlabeled detections form the authentic background distribution, while industrial fires represent an extreme anomaly tail."
+  }
+}

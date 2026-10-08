@@ -1,0 +1,92 @@
+{
+  "dataset_partition": "train",
+  "train_rows_evaluated": 578465,
+  "spatial_sensitivity_sweep": [
+    {
+      "spatial_tol_km": 0.25,
+      "total_matches": 0,
+      "class_distribution": {}
+    },
+    {
+      "spatial_tol_km": 0.5,
+      "total_matches": 1,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 1
+      }
+    },
+    {
+      "spatial_tol_km": 1.0,
+      "total_matches": 32,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 32
+      }
+    },
+    {
+      "spatial_tol_km": 1.5,
+      "total_matches": 123,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 123
+      }
+    },
+    {
+      "spatial_tol_km": 2.0,
+      "total_matches": 604,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 604
+      }
+    },
+    {
+      "spatial_tol_km": 3.0,
+      "total_matches": 2470,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 2470
+      }
+    },
+    {
+      "spatial_tol_km": 5.0,
+      "total_matches": 3354,
+      "class_distribution": {
+        "FOREST_FIRE": 6,
+        "AGRICULTURAL_FIRE": 1,
+        "OTHER_THERMAL_SOURCE": 3347
+      }
+    }
+  ],
+  "temporal_sensitivity_sweep": [
+    {
+      "temporal_tol_hours": 12.0,
+      "total_matches": 30,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 30
+      }
+    },
+    {
+      "temporal_tol_hours": 24.0,
+      "total_matches": 30,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 30
+      }
+    },
+    {
+      "temporal_tol_hours": 48.0,
+      "total_matches": 30,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 30
+      }
+    },
+    {
+      "temporal_tol_hours": 72.0,
+      "total_matches": 30,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 30
+      }
+    },
+    {
+      "temporal_tol_hours": 96.0,
+      "total_matches": 30,
+      "class_distribution": {
+        "OTHER_THERMAL_SOURCE": 30
+      }
+    }
+  ]
+}

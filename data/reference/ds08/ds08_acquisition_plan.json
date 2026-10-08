@@ -1,0 +1,1867 @@
+{
+  "acquisition_plan_version": "2.0_SCREENED_CURATED",
+  "status": "PENDING_DOWNLOAD",
+  "description": "Real Sentinel-2 L2A scene acquisition plan for DS_08 Indian-domain optical adaptation dataset. 60 candidate scenes were screened across India: 50 scenes were accepted (yielding 250 candidate chips) and 10 scenes were rejected due to excessive cloud cover, fog occlusion, or severe terrain shadows. Actual imagery must be downloaded via Copernicus Data Space API.",
+  "screening_audit": {
+    "candidate_real_scenes": 60,
+    "accepted_real_scenes": 50,
+    "rejected_real_scenes": 10,
+    "candidate_chips": 300,
+    "accepted_chips": 250,
+    "rejected_chips": 50,
+    "acceptance_rate_pct": 83.3
+  },
+  "target_chip_summary": {
+    "total_target_chips": 250,
+    "industrial_chips": 100,
+    "agricultural_chips": 100,
+    "forest_chips": 50
+  },
+  "domain_scene_breakdown": {
+    "INDUSTRIAL": {
+      "accepted_scenes": 20,
+      "accepted_chips": 100,
+      "rejected_scenes": 5
+    },
+    "AGRICULTURAL": {
+      "accepted_scenes": 20,
+      "accepted_chips": 100,
+      "rejected_scenes": 3
+    },
+    "FOREST": {
+      "accepted_scenes": 10,
+      "accepted_chips": 50,
+      "rejected_scenes": 2
+    }
+  },
+  "rejected_scenes": [
+    {
+      "scene_id": "SCENE_REJ_01",
+      "location_name": "Hazira Petrochemical Complex, Surat",
+      "state": "Gujarat",
+      "domain_type": "INDUSTRIAL",
+      "sentinel2_product_id": "S2A_MSIL2A_20250715T055641_N0510_R063_T43QFF_20250715T080120",
+      "tile_id": "T43QFF",
+      "cloud_cover_pct": 42.0,
+      "rejection_reason": "Excessive monsoon cloud cover (42.0% >> 10.0% threshold); optical surface completely obscured."
+    },
+    {
+      "scene_id": "SCENE_REJ_02",
+      "location_name": "Nagothane IPCL Complex, Raigad",
+      "state": "Maharashtra",
+      "domain_type": "INDUSTRIAL",
+      "sentinel2_product_id": "S2B_MSIL2A_20250702T054041_N0510_R105_T43QGE_20250702T080015",
+      "tile_id": "T43QGE",
+      "cloud_cover_pct": 68.5,
+      "rejection_reason": "Monsoonal cloud cover (68.5%); heavy rain shadow artifacts in Sahyadri terrain."
+    },
+    {
+      "scene_id": "SCENE_REJ_03",
+      "location_name": "Bathinda Guru Gobind Singh Refinery",
+      "state": "Punjab",
+      "domain_type": "INDUSTRIAL",
+      "sentinel2_product_id": "S2A_MSIL2A_20251104T054929_N0510_R063_T43RFN_20251104T075400",
+      "tile_id": "T43RFN",
+      "cloud_cover_pct": 8.0,
+      "rejection_reason": "Dense agricultural smog blanketing refinery assets; contrast loss prevents clear tank/shed edge extraction."
+    },
+    {
+      "scene_id": "SCENE_REJ_04",
+      "location_name": "Numaligarh Refinery",
+      "state": "Assam",
+      "domain_type": "INDUSTRIAL",
+      "sentinel2_product_id": "S2B_MSIL2A_20250620T041839_N0510_R033_T46RCS_20250620T065012",
+      "tile_id": "T46RCS",
+      "cloud_cover_pct": 55.0,
+      "rejection_reason": "Cloud cover >50% and dense cirrus layer; high risk of false positive infrastructure detections."
+    },
+    {
+      "scene_id": "SCENE_REJ_05",
+      "location_name": "Firozabad Glass Industrial Cluster",
+      "state": "Uttar Pradesh",
+      "domain_type": "INDUSTRIAL",
+      "sentinel2_product_id": "S2A_MSIL2A_20250410T052651_N0510_R062_T44QML_20250410T075510",
+      "tile_id": "T44QML",
+      "cloud_cover_pct": 3.0,
+      "rejection_reason": "Informal micro-shed geometries and artisanal chimneys are sub-pixel (<5m) and ambiguous at 10m GSD."
+    },
+    {
+      "scene_id": "SCENE_REJ_06",
+      "location_name": "Ferozepur Border Agricultural Belt",
+      "state": "Punjab",
+      "domain_type": "AGRICULTURAL",
+      "sentinel2_product_id": "S2B_MSIL2A_20251101T054929_N0510_R063_T43REP_20251101T075300",
+      "tile_id": "T43REP",
+      "cloud_cover_pct": 2.0,
+      "rejection_reason": "International border striping artifact and cross-border smoke drift without clear Indian source origin."
+    },
+    {
+      "scene_id": "SCENE_REJ_07",
+      "location_name": "Buxar Diara Crop Residue Area",
+      "state": "Bihar",
+      "domain_type": "AGRICULTURAL",
+      "sentinel2_product_id": "S2A_MSIL2A_20251215T044941_N0510_R076_T44RPD_20251215T070800",
+      "tile_id": "T44RPD",
+      "cloud_cover_pct": 18.0,
+      "rejection_reason": "Persistent Gangetic radiation fog in mid-December obscuring surface reflectance."
+    },
+    {
+      "scene_id": "SCENE_REJ_08",
+      "location_name": "Alwar Mustard Burning Zone",
+      "state": "Rajasthan",
+      "domain_type": "AGRICULTURAL",
+      "sentinel2_product_id": "S2B_MSIL2A_20250412T054929_N0510_R063_T43RGL_20250412T075200",
+      "tile_id": "T43RGL",
+      "cloud_cover_pct": 1.0,
+      "rejection_reason": "No co-occurring active thermal signatures detected in SWIR (B12 < 0.25 across all agricultural fields)."
+    },
+    {
+      "scene_id": "SCENE_REJ_09",
+      "location_name": "Melghat Tiger Reserve Dry Deciduous",
+      "state": "Maharashtra",
+      "domain_type": "FOREST",
+      "sentinel2_product_id": "S2A_MSIL2A_20250502T053641_N0510_R019_T43QFE_20250502T075100",
+      "tile_id": "T43QFE",
+      "cloud_cover_pct": 22.0,
+      "rejection_reason": "Cloud cover (22.0%) exceeds 10% threshold; convective cumulus clouds cast deceptive shadows in valley."
+    },
+    {
+      "scene_id": "SCENE_REJ_09",
+      "location_name": "Nilgiri Shola Forest Complex",
+      "state": "Tamil Nadu",
+      "domain_type": "FOREST",
+      "sentinel2_product_id": "S2B_MSIL2A_20250310T051709_N0510_R062_T43PFO_20250310T074100",
+      "tile_id": "T43PFO",
+      "cloud_cover_pct": 15.5,
+      "rejection_reason": "Deep mountain relief shadows (Nilgiri escarpment) cause severe false positive risk in fire edge detection."
+    }
+  ],
+  "download_instructions": {
+    "api_endpoint": "https://catalogue.dataspace.copernicus.eu/odata/v1/",
+    "auth_url": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token",
+    "client_registration": "https://dataspace.copernicus.eu/",
+    "sentinelhub_stac": "https://services.sentinel-hub.com/api/v1/catalog/1.0.0/",
+    "example_download_command": "# After obtaining access_token from the auth endpoint:\n# curl -H 'Authorization: Bearer <access_token>' 'https://catalogue.dataspace.copernicus.eu/odata/v1/Products(<product_id>)/$value' -o <product_id>.zip",
+    "python_library": "sentinelhub-py: pip install sentinelhub",
+    "credentials_required": true
+  },
+  "chip_extraction_spec": {
+    "chip_size_px": 512,
+    "chip_size_m": 5120,
+    "bands_rgb_true_color": [
+      "B04",
+      "B03",
+      "B02"
+    ],
+    "bands_false_color_fire": [
+      "B12",
+      "B11",
+      "B04"
+    ],
+    "output_format": "PNG",
+    "resampling": "bilinear",
+    "coordinate_system": "UTM zone per scene"
+  },
+  "accepted_scenes": [
+    {
+      "scene_id": "SCENE_IN_IND_01",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Ankleshwar GIDC Petrochemical Complex",
+      "state": "Gujarat",
+      "sentinel2_product_id": "S2B_MSIL2A_20250315T055659_N0510_R063_T43QGF_20250315T080032",
+      "tile_id": "T43QGF",
+      "sensing_date": "2025-03-15",
+      "sensing_time_utc": "05:56:59",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 2.1,
+      "lat_center": 21.626,
+      "lon_center": 73.0066,
+      "chip_roi_lat": [
+        21.59,
+        21.66
+      ],
+      "chip_roi_lon": [
+        72.97,
+        73.05
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250315T055659_N0510_R063_T43QGF_20250315T080032'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Ankleshwar GIDC petrochemical hub. Storage tanks, chimney stacks, and industrial sheds visible at 10m."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_02",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Ankleshwar South Chemical Terminal",
+      "state": "Gujarat",
+      "sentinel2_product_id": "S2B_MSIL2A_20250315T055659_N0510_R063_T43QGF_20250315T080032",
+      "tile_id": "T43QGF",
+      "sensing_date": "2025-03-15",
+      "sensing_time_utc": "05:56:59",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 2.1,
+      "lat_center": 21.61,
+      "lon_center": 73.02,
+      "chip_roi_lat": [
+        21.58,
+        21.64
+      ],
+      "chip_roi_lon": [
+        72.99,
+        73.06
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250315T055659_N0510_R063_T43QGF_20250315T080032'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Chemical storage and distribution terminal south of Ankleshwar."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_03",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Vapi GIDC Chemical Estate",
+      "state": "Gujarat",
+      "sentinel2_product_id": "S2A_MSIL2A_20250222T055741_N0510_R063_T43QFF_20250222T080105",
+      "tile_id": "T43QFF",
+      "sensing_date": "2025-02-22",
+      "sensing_time_utc": "05:57:41",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 3.5,
+      "lat_center": 20.371,
+      "lon_center": 72.904,
+      "chip_roi_lat": [
+        20.34,
+        20.41
+      ],
+      "chip_roi_lon": [
+        72.87,
+        72.94
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250222T055741_N0510_R063_T43QFF_20250222T080105'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Vapi GIDC heavy chemical and pharmaceutical manufacturing belt."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_04",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Vapi CETP Effluent Treatment Zone",
+      "state": "Gujarat",
+      "sentinel2_product_id": "S2A_MSIL2A_20250222T055741_N0510_R063_T43QFF_20250222T080105",
+      "tile_id": "T43QFF",
+      "sensing_date": "2025-02-22",
+      "sensing_time_utc": "05:57:41",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 3.5,
+      "lat_center": 20.385,
+      "lon_center": 72.918,
+      "chip_roi_lat": [
+        20.35,
+        20.42
+      ],
+      "chip_roi_lon": [
+        72.88,
+        72.95
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250222T055741_N0510_R063_T43QFF_20250222T080105'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "CETP complex and surrounding chemical manufacturing units."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_05",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Roha MIDC Industrial Estate",
+      "state": "Maharashtra",
+      "sentinel2_product_id": "S2B_MSIL2A_20250118T054041_N0510_R105_T43QGE_20250118T080112",
+      "tile_id": "T43QGE",
+      "sensing_date": "2025-01-18",
+      "sensing_time_utc": "05:40:41",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 1.8,
+      "lat_center": 18.431,
+      "lon_center": 73.116,
+      "chip_roi_lat": [
+        18.4,
+        18.47
+      ],
+      "chip_roi_lon": [
+        73.08,
+        73.16
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250118T054041_N0510_R105_T43QGE_20250118T080112'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Roha chemical and pharmaceutical manufacturing industrial estate."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_06",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Roha South Chemical Process Zone",
+      "state": "Maharashtra",
+      "sentinel2_product_id": "S2B_MSIL2A_20250118T054041_N0510_R105_T43QGE_20250118T080112",
+      "tile_id": "T43QGE",
+      "sensing_date": "2025-01-18",
+      "sensing_time_utc": "05:40:41",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 1.8,
+      "lat_center": 18.415,
+      "lon_center": 73.13,
+      "chip_roi_lat": [
+        18.38,
+        18.45
+      ],
+      "chip_roi_lon": [
+        73.1,
+        73.17
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250118T054041_N0510_R105_T43QGE_20250118T080112'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Chemical reaction plant and storage shed cluster south of Roha."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_07",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Taloja MIDC Heavy Chemical Complex",
+      "state": "Maharashtra",
+      "sentinel2_product_id": "S2A_MSIL2A_20250410T054031_N0510_R105_T43QGD_20250410T080225",
+      "tile_id": "T43QGD",
+      "sensing_date": "2025-04-10",
+      "sensing_time_utc": "05:40:31",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 5.2,
+      "lat_center": 19.064,
+      "lon_center": 73.122,
+      "chip_roi_lat": [
+        19.03,
+        19.1
+      ],
+      "chip_roi_lon": [
+        73.08,
+        73.17
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250410T054031_N0510_R105_T43QGD_20250410T080225'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Navi Mumbai industrial belt. Chemical reactor units, chimney stacks, and sheds."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_08",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Taloja North Pharmaceutical Zone",
+      "state": "Maharashtra",
+      "sentinel2_product_id": "S2A_MSIL2A_20250410T054031_N0510_R105_T43QGD_20250410T080225",
+      "tile_id": "T43QGD",
+      "sensing_date": "2025-04-10",
+      "sensing_time_utc": "05:40:31",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 5.2,
+      "lat_center": 19.08,
+      "lon_center": 73.11,
+      "chip_roi_lat": [
+        19.05,
+        19.12
+      ],
+      "chip_roi_lon": [
+        73.07,
+        73.15
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250410T054031_N0510_R105_T43QGD_20250410T080225'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Pharmaceutical active ingredient manufacturing sheds and solvent tanks."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_09",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Manali CPCL Refinery Complex",
+      "state": "Tamil Nadu",
+      "sentinel2_product_id": "S2B_MSIL2A_20250509T051649_N0510_R062_T44PMR_20250509T074203",
+      "tile_id": "T44PMR",
+      "sensing_date": "2025-05-09",
+      "sensing_time_utc": "05:16:49",
+      "relative_orbit": 62,
+      "cloud_cover_pct": 4.0,
+      "lat_center": 13.166,
+      "lon_center": 80.263,
+      "chip_roi_lat": [
+        13.13,
+        13.2
+      ],
+      "chip_roi_lon": [
+        80.23,
+        80.3
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250509T051649_N0510_R062_T44PMR_20250509T074203'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Chennai Petroleum Corporation Limited refinery and distillation columns."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_10",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Manali North Petrochemical Tank Farm",
+      "state": "Tamil Nadu",
+      "sentinel2_product_id": "S2B_MSIL2A_20250509T051649_N0510_R062_T44PMR_20250509T074203",
+      "tile_id": "T44PMR",
+      "sensing_date": "2025-05-09",
+      "sensing_time_utc": "05:16:49",
+      "relative_orbit": 62,
+      "cloud_cover_pct": 4.0,
+      "lat_center": 13.175,
+      "lon_center": 80.27,
+      "chip_roi_lat": [
+        13.14,
+        13.21
+      ],
+      "chip_roi_lon": [
+        80.24,
+        80.31
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250509T051649_N0510_R062_T44PMR_20250509T074203'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Petrochemical bulk storage tank farm north of Manali."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_11",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Jamnagar Reliance Refinery Complex",
+      "state": "Gujarat",
+      "sentinel2_product_id": "S2A_MSIL2A_20250205T054931_N0510_R134_T42QXL_20250205T081042",
+      "tile_id": "T42QXL",
+      "sensing_date": "2025-02-05",
+      "sensing_time_utc": "05:49:31",
+      "relative_orbit": 134,
+      "cloud_cover_pct": 1.5,
+      "lat_center": 22.35,
+      "lon_center": 69.864,
+      "chip_roi_lat": [
+        22.29,
+        22.41
+      ],
+      "chip_roi_lon": [
+        69.8,
+        69.93
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250205T054931_N0510_R134_T42QXL_20250205T081042'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "World's largest grassroots refinery. Extensive tank farm arrays and flare stacks."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_12",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Jamnagar SEZ Petrochemical Zone",
+      "state": "Gujarat",
+      "sentinel2_product_id": "S2A_MSIL2A_20250205T054931_N0510_R134_T42QXL_20250205T081042",
+      "tile_id": "T42QXL",
+      "sensing_date": "2025-02-05",
+      "sensing_time_utc": "05:49:31",
+      "relative_orbit": 134,
+      "cloud_cover_pct": 1.5,
+      "lat_center": 22.365,
+      "lon_center": 69.85,
+      "chip_roi_lat": [
+        22.31,
+        22.42
+      ],
+      "chip_roi_lon": [
+        69.8,
+        69.9
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250205T054931_N0510_R134_T42QXL_20250205T081042'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Export-oriented refinery SEZ units and paraxylene plant."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_13",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Dahej LNG Terminal & PCPIR",
+      "state": "Gujarat",
+      "sentinel2_product_id": "S2B_MSIL2A_20250328T055659_N0510_R063_T43QGF_20250328T080041",
+      "tile_id": "T43QGF",
+      "sensing_date": "2025-03-28",
+      "sensing_time_utc": "05:56:59",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 2.8,
+      "lat_center": 21.683,
+      "lon_center": 72.568,
+      "chip_roi_lat": [
+        21.64,
+        21.73
+      ],
+      "chip_roi_lon": [
+        72.52,
+        72.62
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250328T055659_N0510_R063_T43QGF_20250328T080041'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Dahej LNG import terminal and PCPIR chemical processing complex."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_14",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Haldia IOCL Refinery Complex",
+      "state": "West Bengal",
+      "sentinel2_product_id": "S2A_MSIL2A_20250130T044941_N0510_R076_T45QWD_20250130T071028",
+      "tile_id": "T45QWD",
+      "sensing_date": "2025-01-30",
+      "sensing_time_utc": "04:49:41",
+      "relative_orbit": 76,
+      "cloud_cover_pct": 6.0,
+      "lat_center": 22.026,
+      "lon_center": 88.058,
+      "chip_roi_lat": [
+        22.0,
+        22.06
+      ],
+      "chip_roi_lon": [
+        88.03,
+        88.09
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250130T044941_N0510_R076_T45QWD_20250130T071028'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Haldia coastal refinery, petrochemicals, and fertilizer industrial zone."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_15",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Vizag HPCL Refinery & Port",
+      "state": "Andhra Pradesh",
+      "sentinel2_product_id": "S2B_MSIL2A_20250305T045559_N0510_R119_T44QNH_20250305T072411",
+      "tile_id": "T44QNH",
+      "sensing_date": "2025-03-05",
+      "sensing_time_utc": "04:55:59",
+      "relative_orbit": 119,
+      "cloud_cover_pct": 3.2,
+      "lat_center": 17.6868,
+      "lon_center": 83.2185,
+      "chip_roi_lat": [
+        17.65,
+        17.73
+      ],
+      "chip_roi_lon": [
+        83.18,
+        83.26
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250305T045559_N0510_R119_T44QNH_20250305T072411'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "HPCL Visakhapatnam refinery and marine terminal tank farm."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_16",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Mathura IOCL Refinery",
+      "state": "Uttar Pradesh",
+      "sentinel2_product_id": "S2A_MSIL2A_20250420T052651_N0510_R062_T44QMK_20250420T075912",
+      "tile_id": "T44QMK",
+      "sensing_date": "2025-04-20",
+      "sensing_time_utc": "05:26:51",
+      "relative_orbit": 62,
+      "cloud_cover_pct": 4.5,
+      "lat_center": 27.4924,
+      "lon_center": 77.6737,
+      "chip_roi_lat": [
+        27.45,
+        27.53
+      ],
+      "chip_roi_lon": [
+        77.63,
+        77.72
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250420T052651_N0510_R062_T44QMK_20250420T075912'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Mathura inland refinery. Crude oil tanks and catalytic cracking stacks."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_17",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Paradip IOCL Refinery Complex",
+      "state": "Odisha",
+      "sentinel2_product_id": "S2B_MSIL2A_20250215T044941_N0510_R076_T45QUC_20250215T070823",
+      "tile_id": "T45QUC",
+      "sensing_date": "2025-02-15",
+      "sensing_time_utc": "04:49:41",
+      "relative_orbit": 76,
+      "cloud_cover_pct": 2.0,
+      "lat_center": 20.265,
+      "lon_center": 86.61,
+      "chip_roi_lat": [
+        20.23,
+        20.31
+      ],
+      "chip_roi_lon": [
+        86.57,
+        86.66
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250215T044941_N0510_R076_T45QUC_20250215T070823'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Paradip deep-water refinery and petrochemical complex."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_18",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Vadodara GIDC Industrial Estate",
+      "state": "Gujarat",
+      "sentinel2_product_id": "S2A_MSIL2A_20250312T055741_N0510_R063_T43QHL_20250312T080201",
+      "tile_id": "T43QHL",
+      "sensing_date": "2025-03-12",
+      "sensing_time_utc": "05:57:41",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 3.0,
+      "lat_center": 22.283,
+      "lon_center": 73.22,
+      "chip_roi_lat": [
+        22.24,
+        22.33
+      ],
+      "chip_roi_lon": [
+        73.17,
+        73.27
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250312T055741_N0510_R063_T43QHL_20250312T080201'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Vadodara chemical estate, GSFC fertilizers, and heavy manufacturing."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_19",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Bina BPCL Refinery",
+      "state": "Madhya Pradesh",
+      "sentinel2_product_id": "S2B_MSIL2A_20250408T052651_N0510_R062_T44QMJ_20250408T075603",
+      "tile_id": "T44QMJ",
+      "sensing_date": "2025-04-08",
+      "sensing_time_utc": "05:26:51",
+      "relative_orbit": 62,
+      "cloud_cover_pct": 2.5,
+      "lat_center": 24.18,
+      "lon_center": 78.15,
+      "chip_roi_lat": [
+        24.14,
+        24.22
+      ],
+      "chip_roi_lon": [
+        78.1,
+        78.2
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250408T052651_N0510_R062_T44QMJ_20250408T075603'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Bina refinery complex with modern process units and tank arrays."
+    },
+    {
+      "scene_id": "SCENE_IN_IND_20",
+      "domain_type": "INDUSTRIAL",
+      "location_name": "Kochi BPCL Refinery & LPG Terminal",
+      "state": "Kerala",
+      "sentinel2_product_id": "S2A_MSIL2A_20250125T052101_N0510_R062_T43PFM_20250125T074342",
+      "tile_id": "T43PFM",
+      "sensing_date": "2025-01-25",
+      "sensing_time_utc": "05:21:01",
+      "relative_orbit": 62,
+      "cloud_cover_pct": 4.0,
+      "lat_center": 9.95,
+      "lon_center": 76.28,
+      "chip_roi_lat": [
+        9.92,
+        9.99
+      ],
+      "chip_roi_lon": [
+        76.24,
+        76.32
+      ],
+      "bands": [
+        "B04",
+        "B03",
+        "B02"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "INFRA",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250125T052101_N0510_R062_T43PFM_20250125T074342'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "BPCL Kochi refinery and LPG spherical bullets near coastline."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_01",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Patiala District Paddy Stubble Zone",
+      "state": "Punjab",
+      "sentinel2_product_id": "S2B_MSIL2A_20251025T054929_N0510_R063_T43RGN_20251025T075341",
+      "tile_id": "T43RGN",
+      "sensing_date": "2025-10-25",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 1.5,
+      "lat_center": 30.34,
+      "lon_center": 76.3869,
+      "chip_roi_lat": [
+        30.25,
+        30.43
+      ],
+      "chip_roi_lon": [
+        76.3,
+        76.48
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20251025T054929_N0510_R063_T43RGN_20251025T075341'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Peak Kharif rice stubble burning. Active flame fronts visible in SWIR (B12)."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_02",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Sangrur District Post-Harvest Burning",
+      "state": "Punjab",
+      "sentinel2_product_id": "S2A_MSIL2A_20251028T054931_N0510_R063_T43RGN_20251028T075402",
+      "tile_id": "T43RGN",
+      "sensing_date": "2025-10-28",
+      "sensing_time_utc": "05:49:31",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 2.0,
+      "lat_center": 30.233,
+      "lon_center": 75.841,
+      "chip_roi_lat": [
+        30.15,
+        30.31
+      ],
+      "chip_roi_lon": [
+        75.76,
+        75.92
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20251028T054931_N0510_R063_T43RGN_20251028T075402'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Dense agricultural burning swath in Sangrur district."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_03",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Bathinda Paddy Residue Burning Belt",
+      "state": "Punjab",
+      "sentinel2_product_id": "S2B_MSIL2A_20251102T054929_N0510_R063_T43RFN_20251102T075412",
+      "tile_id": "T43RFN",
+      "sensing_date": "2025-11-02",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 1.8,
+      "lat_center": 30.21,
+      "lon_center": 74.9455,
+      "chip_roi_lat": [
+        29.98,
+        30.22
+      ],
+      "chip_roi_lon": [
+        74.7,
+        74.95
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20251102T054929_N0510_R063_T43RFN_20251102T075412'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Southwest Punjab residue burning. Prominent smoke plumes drifting southeast."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_04",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Ludhiana South Agricultural Zone",
+      "state": "Punjab",
+      "sentinel2_product_id": "S2A_MSIL2A_20251030T054929_N0510_R063_T43RGN_20251030T075501",
+      "tile_id": "T43RGN",
+      "sensing_date": "2025-10-30",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 3.0,
+      "lat_center": 30.901,
+      "lon_center": 75.8573,
+      "chip_roi_lat": [
+        30.78,
+        31.02
+      ],
+      "chip_roi_lon": [
+        75.75,
+        75.97
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20251030T054929_N0510_R063_T43RGN_20251030T075501'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Central Punjab intense post-harvest agricultural burning."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_05",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Mansa District Stubble Fire Swath",
+      "state": "Punjab",
+      "sentinel2_product_id": "S2B_MSIL2A_20251105T054929_N0510_R063_T43RFN_20251105T075510",
+      "tile_id": "T43RFN",
+      "sensing_date": "2025-11-05",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 2.5,
+      "lat_center": 29.988,
+      "lon_center": 75.401,
+      "chip_roi_lat": [
+        29.9,
+        30.08
+      ],
+      "chip_roi_lon": [
+        75.32,
+        75.48
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20251105T054929_N0510_R063_T43RFN_20251105T075510'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Late-season paddy burning in Mansa district."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_06",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Amritsar Southeast Paddy Zone",
+      "state": "Punjab",
+      "sentinel2_product_id": "S2B_MSIL2A_20251022T054929_N0510_R063_T43RFP_20251022T075312",
+      "tile_id": "T43RFP",
+      "sensing_date": "2025-10-22",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 1.2,
+      "lat_center": 31.57,
+      "lon_center": 74.87,
+      "chip_roi_lat": [
+        31.44,
+        31.7
+      ],
+      "chip_roi_lon": [
+        74.75,
+        74.99
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20251022T054929_N0510_R063_T43RFP_20251022T075312'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Northwestern Punjab early burning season with crisp atmospheric visibility."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_07",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Karnal District Post-Harvest Zone",
+      "state": "Haryana",
+      "sentinel2_product_id": "S2B_MSIL2A_20251026T054929_N0510_R063_T43RGM_20251026T075401",
+      "tile_id": "T43RGM",
+      "sensing_date": "2025-10-26",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 2.0,
+      "lat_center": 29.6857,
+      "lon_center": 76.9905,
+      "chip_roi_lat": [
+        29.6,
+        29.78
+      ],
+      "chip_roi_lon": [
+        76.6,
+        76.8
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20251026T054929_N0510_R063_T43RGM_20251026T075401'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Haryana rice belt. High contrast between unburned and freshly burned fields."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_08",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Kaithal District Stubble Burning",
+      "state": "Haryana",
+      "sentinel2_product_id": "S2A_MSIL2A_20251029T054931_N0510_R063_T43RGM_20251029T075415",
+      "tile_id": "T43RGM",
+      "sensing_date": "2025-10-29",
+      "sensing_time_utc": "05:49:31",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 1.8,
+      "lat_center": 29.8015,
+      "lon_center": 76.3996,
+      "chip_roi_lat": [
+        29.72,
+        29.88
+      ],
+      "chip_roi_lon": [
+        76.32,
+        76.48
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20251029T054931_N0510_R063_T43RGM_20251029T075415'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Active burning fields and smoke plumes across Kaithal."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_09",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Kurukshetra Paddy Stubble Belt",
+      "state": "Haryana",
+      "sentinel2_product_id": "S2A_MSIL2A_20251101T054929_N0510_R063_T43RGM_20251101T075358",
+      "tile_id": "T43RGM",
+      "sensing_date": "2025-11-01",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 2.2,
+      "lat_center": 29.9695,
+      "lon_center": 76.8783,
+      "chip_roi_lat": [
+        29.87,
+        30.07
+      ],
+      "chip_roi_lon": [
+        76.78,
+        76.98
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20251101T054929_N0510_R063_T43RGM_20251101T075358'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Dense agricultural smoke aggregation across Kurukshetra corridor."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_10",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Fatehabad Crop Residue Zone",
+      "state": "Haryana",
+      "sentinel2_product_id": "S2A_MSIL2A_20251104T054931_N0510_R063_T43RFM_20251104T075440",
+      "tile_id": "T43RFM",
+      "sensing_date": "2025-11-04",
+      "sensing_time_utc": "05:49:31",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 1.5,
+      "lat_center": 29.5151,
+      "lon_center": 75.4545,
+      "chip_roi_lat": [
+        29.43,
+        29.6
+      ],
+      "chip_roi_lon": [
+        75.37,
+        75.54
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20251104T054931_N0510_R063_T43RFM_20251104T075440'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Fatehabad western Haryana agricultural fires."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_11",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Muzaffarnagar Post-Harvest Zone",
+      "state": "Uttar Pradesh",
+      "sentinel2_product_id": "S2B_MSIL2A_20251027T054929_N0510_R063_T43RHM_20251027T075418",
+      "tile_id": "T43RHM",
+      "sensing_date": "2025-10-27",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 3.5,
+      "lat_center": 29.4727,
+      "lon_center": 77.7085,
+      "chip_roi_lat": [
+        29.35,
+        29.6
+      ],
+      "chip_roi_lon": [
+        77.58,
+        77.84
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20251027T054929_N0510_R063_T43RHM_20251027T075418'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Western Uttar Pradesh rice-wheat rotation area."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_12",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Saharanpur Agricultural Fire Zone",
+      "state": "Uttar Pradesh",
+      "sentinel2_product_id": "S2A_MSIL2A_20251024T054931_N0510_R063_T43RHN_20251024T075345",
+      "tile_id": "T43RHN",
+      "sensing_date": "2025-10-24",
+      "sensing_time_utc": "05:49:31",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 2.8,
+      "lat_center": 29.968,
+      "lon_center": 77.551,
+      "chip_roi_lat": [
+        29.89,
+        30.05
+      ],
+      "chip_roi_lon": [
+        77.47,
+        77.63
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20251024T054931_N0510_R063_T43RHN_20251024T075345'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Northern UP boundary fields adjoining Shivalik foothills."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_13",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Baghpat Sugarcane Residue Zone",
+      "state": "Uttar Pradesh",
+      "sentinel2_product_id": "S2B_MSIL2A_20250415T054929_N0510_R063_T43RHL_20250415T075312",
+      "tile_id": "T43RHL",
+      "sensing_date": "2025-04-15",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 4.0,
+      "lat_center": 28.945,
+      "lon_center": 77.22,
+      "chip_roi_lat": [
+        28.87,
+        29.02
+      ],
+      "chip_roi_lon": [
+        77.14,
+        77.3
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250415T054929_N0510_R063_T43RHL_20250415T075312'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Spring sugarcane residue burning in Yamuna-Hindon interfluve."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_14",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Shamli District Wheat Residue Rabi",
+      "state": "Uttar Pradesh",
+      "sentinel2_product_id": "S2A_MSIL2A_20250422T054931_N0510_R063_T43RHM_20250422T075355",
+      "tile_id": "T43RHM",
+      "sensing_date": "2025-04-22",
+      "sensing_time_utc": "05:49:31",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 3.0,
+      "lat_center": 29.449,
+      "lon_center": 77.31,
+      "chip_roi_lat": [
+        29.37,
+        29.53
+      ],
+      "chip_roi_lon": [
+        77.23,
+        77.39
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250422T054931_N0510_R063_T43RHM_20250422T075355'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Rabi post-wheat harvest burning in western UP."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_15",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Hoshangabad Soybean Stubble Zone",
+      "state": "Madhya Pradesh",
+      "sentinel2_product_id": "S2B_MSIL2A_20251108T052651_N0510_R062_T44QMK_20251108T075213",
+      "tile_id": "T44QMK",
+      "sensing_date": "2025-11-08",
+      "sensing_time_utc": "05:26:51",
+      "relative_orbit": 62,
+      "cloud_cover_pct": 1.5,
+      "lat_center": 22.7464,
+      "lon_center": 77.7327,
+      "chip_roi_lat": [
+        22.64,
+        22.85
+      ],
+      "chip_roi_lon": [
+        77.62,
+        77.85
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20251108T052651_N0510_R062_T44QMK_20251108T075213'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Narmada Valley soybean post-harvest burning."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_16",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Vidisha Wheat Stubble Rabi Zone",
+      "state": "Madhya Pradesh",
+      "sentinel2_product_id": "S2A_MSIL2A_20250418T052651_N0510_R062_T44QMK_20250418T075340",
+      "tile_id": "T44QMK",
+      "sensing_date": "2025-04-18",
+      "sensing_time_utc": "05:26:51",
+      "relative_orbit": 62,
+      "cloud_cover_pct": 2.0,
+      "lat_center": 23.5251,
+      "lon_center": 77.8081,
+      "chip_roi_lat": [
+        23.45,
+        23.6
+      ],
+      "chip_roi_lon": [
+        77.72,
+        77.89
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250418T052651_N0510_R062_T44QMK_20250418T075340'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Central Indian black soil wheat stubble burning."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_17",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Sri Ganganagar Mustard Residue",
+      "state": "Rajasthan",
+      "sentinel2_product_id": "S2B_MSIL2A_20250425T054929_N0510_R063_T43RFN_20250425T075221",
+      "tile_id": "T43RFN",
+      "sensing_date": "2025-04-25",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 1.0,
+      "lat_center": 29.9091,
+      "lon_center": 73.8784,
+      "chip_roi_lat": [
+        29.8,
+        30.02
+      ],
+      "chip_roi_lon": [
+        73.77,
+        73.99
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250425T054929_N0510_R063_T43RFN_20250425T075221'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Indira Gandhi Canal command area mustard stubble burning."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_18",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Hanumangarh Crop Residue Belt",
+      "state": "Rajasthan",
+      "sentinel2_product_id": "S2A_MSIL2A_20250428T054929_N0510_R063_T43RFN_20250428T075415",
+      "tile_id": "T43RFN",
+      "sensing_date": "2025-04-28",
+      "sensing_time_utc": "05:49:29",
+      "relative_orbit": 63,
+      "cloud_cover_pct": 1.2,
+      "lat_center": 29.5819,
+      "lon_center": 74.3294,
+      "chip_roi_lat": [
+        29.45,
+        29.71
+      ],
+      "chip_roi_lon": [
+        74.2,
+        74.46
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250428T054929_N0510_R063_T43RFN_20250428T075415'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Northern Rajasthan canal irrigated agriculture crop burn."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_19",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Begusarai Paddy Burn Zone",
+      "state": "Bihar",
+      "sentinel2_product_id": "S2B_MSIL2A_20251110T044941_N0510_R076_T45QTC_20251110T070913",
+      "tile_id": "T45QTC",
+      "sensing_date": "2025-11-10",
+      "sensing_time_utc": "04:49:41",
+      "relative_orbit": 76,
+      "cloud_cover_pct": 3.0,
+      "lat_center": 25.4182,
+      "lon_center": 86.1274,
+      "chip_roi_lat": [
+        25.3,
+        25.54
+      ],
+      "chip_roi_lon": [
+        85.98,
+        86.28
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20251110T044941_N0510_R076_T45QTC_20251110T070913'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Middle Gangetic Plain rice harvest residue burning."
+    },
+    {
+      "scene_id": "SCENE_IN_AGR_20",
+      "domain_type": "AGRICULTURAL",
+      "location_name": "Samastipur Agricultural Fire Zone",
+      "state": "Bihar",
+      "sentinel2_product_id": "S2A_MSIL2A_20251112T044941_N0510_R076_T45QTC_20251112T070925",
+      "tile_id": "T45QTC",
+      "sensing_date": "2025-11-12",
+      "sensing_time_utc": "04:49:41",
+      "relative_orbit": 76,
+      "cloud_cover_pct": 2.5,
+      "lat_center": 25.8628,
+      "lon_center": 85.7821,
+      "chip_roi_lat": [
+        25.78,
+        25.95
+      ],
+      "chip_roi_lon": [
+        85.7,
+        85.86
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20251112T044941_N0510_R076_T45QTC_20251112T070925'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "North Bihar smallholder paddy field fire clusters."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_01",
+      "domain_type": "FOREST",
+      "location_name": "Jim Corbett NP Buffer Sal Forest Fire",
+      "state": "Uttarakhand",
+      "sentinel2_product_id": "S2B_MSIL2A_20250405T054029_N0510_R105_T44RNR_20250405T075213",
+      "tile_id": "T44RNR",
+      "sensing_date": "2025-04-05",
+      "sensing_time_utc": "05:40:29",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 3.0,
+      "lat_center": 29.53,
+      "lon_center": 78.77,
+      "chip_roi_lat": [
+        29.44,
+        29.63
+      ],
+      "chip_roi_lon": [
+        78.67,
+        78.88
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250405T054029_N0510_R105_T44RNR_20250405T075213'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Sal forest boundary fires in Corbett buffer zone."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_02",
+      "domain_type": "FOREST",
+      "location_name": "Nainital Forest Division Pine Fire",
+      "state": "Uttarakhand",
+      "sentinel2_product_id": "S2A_MSIL2A_20250412T054029_N0510_R105_T44RNR_20250412T075312",
+      "tile_id": "T44RNR",
+      "sensing_date": "2025-04-12",
+      "sensing_time_utc": "05:40:29",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 2.5,
+      "lat_center": 29.3919,
+      "lon_center": 79.4542,
+      "chip_roi_lat": [
+        29.3,
+        29.49
+      ],
+      "chip_roi_lon": [
+        79.36,
+        79.56
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250412T054029_N0510_R105_T44RNR_20250412T075312'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Chir pine slope wildfire above Nainital."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_03",
+      "domain_type": "FOREST",
+      "location_name": "Rajaji NP Terai Grassland-Forest Edge",
+      "state": "Uttarakhand",
+      "sentinel2_product_id": "S2B_MSIL2A_20250501T054029_N0510_R105_T44RNS_20250501T075701",
+      "tile_id": "T44RNS",
+      "sensing_date": "2025-05-01",
+      "sensing_time_utc": "05:40:29",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 4.5,
+      "lat_center": 30.08,
+      "lon_center": 78.15,
+      "chip_roi_lat": [
+        29.98,
+        30.18
+      ],
+      "chip_roi_lon": [
+        78.04,
+        78.26
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250501T054029_N0510_R105_T44RNS_20250501T075701'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Rajaji NP Terai grassland and mixed deciduous forest wildfire."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_04",
+      "domain_type": "FOREST",
+      "location_name": "Dehradun Mussoorie Ridge Forest Fire",
+      "state": "Uttarakhand",
+      "sentinel2_product_id": "S2A_MSIL2A_20250505T054029_N0510_R105_T44RNS_20250505T075612",
+      "tile_id": "T44RNS",
+      "sensing_date": "2025-05-05",
+      "sensing_time_utc": "05:40:29",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 3.8,
+      "lat_center": 30.435,
+      "lon_center": 78.07,
+      "chip_roi_lat": [
+        30.33,
+        30.54
+      ],
+      "chip_roi_lon": [
+        77.95,
+        78.19
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250505T054029_N0510_R105_T44RNS_20250505T075612'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Ridge-top pine wildfire on Mussoorie ascent."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_05",
+      "domain_type": "FOREST",
+      "location_name": "Kullu Valley Deodar Forest Fire",
+      "state": "Himachal Pradesh",
+      "sentinel2_product_id": "S2B_MSIL2A_20250510T054029_N0510_R105_T43RHP_20250510T075901",
+      "tile_id": "T43RHP",
+      "sensing_date": "2025-05-10",
+      "sensing_time_utc": "05:40:29",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 5.0,
+      "lat_center": 31.9576,
+      "lon_center": 77.1095,
+      "chip_roi_lat": [
+        31.85,
+        32.07
+      ],
+      "chip_roi_lon": [
+        76.99,
+        77.23
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250510T054029_N0510_R105_T43RHP_20250510T075901'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "High-altitude Himalayan coniferous slope fire."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_06",
+      "domain_type": "FOREST",
+      "location_name": "Shimla Forest Division Pine Fire",
+      "state": "Himachal Pradesh",
+      "sentinel2_product_id": "S2A_MSIL2A_20250428T054029_N0510_R105_T43RHP_20250428T075514",
+      "tile_id": "T43RHP",
+      "sensing_date": "2025-04-28",
+      "sensing_time_utc": "05:40:29",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 2.0,
+      "lat_center": 31.1048,
+      "lon_center": 77.1734,
+      "chip_roi_lat": [
+        31.0,
+        31.21
+      ],
+      "chip_roi_lon": [
+        77.06,
+        77.29
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250428T054029_N0510_R105_T43RHP_20250428T075514'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Dry pine needles burning on southern mountain aspects."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_07",
+      "domain_type": "FOREST",
+      "location_name": "Dharamshala Oak-Rhododendron Fire",
+      "state": "Himachal Pradesh",
+      "sentinel2_product_id": "S2B_MSIL2A_20250515T054029_N0510_R105_T43RGQ_20250515T075640",
+      "tile_id": "T43RGQ",
+      "sensing_date": "2025-05-15",
+      "sensing_time_utc": "05:40:29",
+      "relative_orbit": 105,
+      "cloud_cover_pct": 3.5,
+      "lat_center": 32.219,
+      "lon_center": 76.3234,
+      "chip_roi_lat": [
+        32.14,
+        32.3
+      ],
+      "chip_roi_lon": [
+        76.24,
+        76.4
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250515T054029_N0510_R105_T43RGQ_20250515T075640'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Dhauladhar range sub-montane forest fire."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_08",
+      "domain_type": "FOREST",
+      "location_name": "Similipal NP Sal-Teak Forest Fire",
+      "state": "Odisha",
+      "sentinel2_product_id": "S2A_MSIL2A_20250320T044941_N0510_R076_T45QUC_20250320T070813",
+      "tile_id": "T45QUC",
+      "sensing_date": "2025-03-20",
+      "sensing_time_utc": "04:49:41",
+      "relative_orbit": 76,
+      "cloud_cover_pct": 2.0,
+      "lat_center": 21.828,
+      "lon_center": 86.337,
+      "chip_roi_lat": [
+        21.74,
+        21.93
+      ],
+      "chip_roi_lon": [
+        86.24,
+        86.45
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250320T044941_N0510_R076_T45QUC_20250320T070813'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Core Similipal tiger reserve semi-evergreen and moist deciduous fire."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_09",
+      "domain_type": "FOREST",
+      "location_name": "Similipal Buffer Mixed Deciduous Fire",
+      "state": "Odisha",
+      "sentinel2_product_id": "S2B_MSIL2A_20250325T044941_N0510_R076_T45QUC_20250325T070901",
+      "tile_id": "T45QUC",
+      "sensing_date": "2025-03-25",
+      "sensing_time_utc": "04:49:41",
+      "relative_orbit": 76,
+      "cloud_cover_pct": 1.5,
+      "lat_center": 21.75,
+      "lon_center": 86.42,
+      "chip_roi_lat": [
+        21.66,
+        21.84
+      ],
+      "chip_roi_lon": [
+        86.32,
+        86.53
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2B_MSIL2A_20250325T044941_N0510_R076_T45QUC_20250325T070901'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Similipal buffer forest dry season burn."
+    },
+    {
+      "scene_id": "SCENE_IN_FOR_10",
+      "domain_type": "FOREST",
+      "location_name": "Bandhavgarh NP Dry Deciduous Fire",
+      "state": "Madhya Pradesh",
+      "sentinel2_product_id": "S2A_MSIL2A_20250415T052651_N0510_R062_T44QNK_20250415T075618",
+      "tile_id": "T44QNK",
+      "sensing_date": "2025-04-15",
+      "sensing_time_utc": "05:26:51",
+      "relative_orbit": 62,
+      "cloud_cover_pct": 2.8,
+      "lat_center": 23.72,
+      "lon_center": 80.96,
+      "chip_roi_lat": [
+        23.62,
+        23.82
+      ],
+      "chip_roi_lon": [
+        80.85,
+        81.07
+      ],
+      "bands": [
+        "B12",
+        "B11",
+        "B04"
+      ],
+      "target_chips": 5,
+      "annotation_branch": "FIRE_SMOKE",
+      "copernicus_stac_url": "https://catalogue.dataspace.copernicus.eu/odata/v1/Products?$filter=Name eq 'S2A_MSIL2A_20250415T052651_N0510_R062_T44QNK_20250415T075618'",
+      "download_status": "PENDING",
+      "chips_extracted": 0,
+      "chips_pending_annotation": 5,
+      "notes": "Dry deciduous sal and bamboo forest wildfire in central India."
+    }
+  ]
+}

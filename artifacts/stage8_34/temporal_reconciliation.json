@@ -1,0 +1,86 @@
+{
+  "discrepancy_explanation": "The Stage 8.33 discrepancy between 83.33% and 47.62% was caused by pooling three chronological splits where Split 2 had an acute missing-class pathology. Specifically, the development dataset contains ZERO persistent thermal sources prior to 2024 (2016-2023 has 0 persistent events). In 2024, 36 persistent events were added to the catalog. When evaluating Split 2 (Train <= 2023 -> Test 2024), 36 of the 49 test events (73.5%) belong to Class 3 (Persistent), but the training set contained 0 examples of Class 3. A 4-class classifier trained without Class 3 cannot predict Class 3, resulting in 0% recall on 73.5% of the test partition and 24.49% accuracy (12/49). When Split 1 (8/11 = 72.7%), Split 2 (12/49 = 24.5%), and Split 3 (20/24 = 83.3%) were pooled: (8 + 12 + 20) / (11 + 49 + 24) = 40 / 84 = 47.62%.",
+  "protocol_a": {
+    "name": "Single Operational Temporal Holdout (Train <= 2024 -> Validate 2025)",
+    "accuracy": 0.8333,
+    "macro_f1": 0.8183,
+    "balanced_accuracy": 0.8304,
+    "test_n": 24,
+    "correct": 20,
+    "validity": "VALID. All 4 classes are well-represented in both train (N=107) and validation (N=24). This reflects genuine operational forward-deployment."
+  },
+  "protocol_b": {
+    "name": "Pooled Multi-Period Forward Chaining (2023, 2024, 2025)",
+    "accuracy": 0.47619047619047616,
+    "macro_f1": 0.484,
+    "test_n": 84,
+    "correct": 40,
+    "validity": "STRUCTURALLY INVALID FOR 4-CLASS COMPARISON. Split 1 has 3 classes; Split 2 has 0 training examples for Class 3 which comprises 73.5% of its test set."
+  },
+  "splits": [
+    {
+      "split_name": "Split 1 (<=2022 -> 2023)",
+      "train_n": 47,
+      "test_n": 11,
+      "train_classes": {
+        "Industrial Fire": 21,
+        "Forest Fire": 13,
+        "Agricultural Fire": 13
+      },
+      "test_classes": {
+        "Industrial Fire": 5,
+        "Forest Fire": 3,
+        "Agricultural Fire": 3
+      },
+      "has_persistent_in_train": 0,
+      "has_persistent_in_test": 0,
+      "reported_accuracy": 0.7273,
+      "reported_correct": 8,
+      "notes": "Neither train nor test contains persistent events (only 3 classes present). Evaluated on 3 classes."
+    },
+    {
+      "split_name": "Split 2 (<=2023 -> 2024)",
+      "train_n": 58,
+      "test_n": 49,
+      "train_classes": {
+        "Industrial Fire": 26,
+        "Forest Fire": 16,
+        "Agricultural Fire": 16
+      },
+      "test_classes": {
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 36,
+        "Industrial Fire": 5,
+        "Forest Fire": 4,
+        "Agricultural Fire": 4
+      },
+      "has_persistent_in_train": 0,
+      "has_persistent_in_test": 1,
+      "reported_accuracy": 0.2449,
+      "reported_correct": 12,
+      "notes": "Catastrophic class imbalance & missing class. Test set is 73.5% Persistent (36/49), but Train has 0 Persistent events. Model had zero training exposure to Class 3, yielding 0% recall on Persistent and collapsing split accuracy to 24.5%."
+    },
+    {
+      "split_name": "Split 3 (<=2024 -> 2025)",
+      "train_n": 107,
+      "test_n": 24,
+      "train_classes": {
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 36,
+        "Industrial Fire": 31,
+        "Forest Fire": 20,
+        "Agricultural Fire": 20
+      },
+      "test_classes": {
+        "Forest Fire": 7,
+        "Agricultural Fire": 7,
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 6,
+        "Industrial Fire": 4
+      },
+      "has_persistent_in_train": 1,
+      "has_persistent_in_test": 1,
+      "reported_accuracy": 0.8333,
+      "reported_correct": 20,
+      "notes": "Full 4-class representation in both train and test. Train contains 36 persistent events; Test contains 6 persistent events. High accuracy (83.33%, 20/24) and high Macro-F1 (0.8183)."
+    }
+  ],
+  "recommendation": "Adopt Protocol A (Train <= 2024 -> Validate 2025) as the CANONICAL_TEMPORAL_EVALUATION protocol. Mark multi-period forward chaining prior to 2024 as invalid due to historical absence of persistent source records in earlier years."
+}

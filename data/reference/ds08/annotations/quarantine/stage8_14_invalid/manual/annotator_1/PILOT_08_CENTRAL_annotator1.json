@@ -1,0 +1,65 @@
+{
+  "chip_id": "PILOT_08_CENTRAL",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "UNRESOLVED",
+  "human_verified": true,
+  "annotation_start_timestamp": "2026-09-30T15:09:30.739Z",
+  "annotation_completion_timestamp": "2026-09-30T15:09:42.258Z",
+  "interaction_audit": {
+    "interface_version": "v1.0_manual",
+    "bbox_creation_actions": 0,
+    "bbox_edit_actions": 0,
+    "class_selection_actions": 0,
+    "save_events": 4
+  },
+  "annotations": [
+    {
+      "annotation_id": "PILOT_08_CENTRAL_ANN_01",
+      "class_id": 0,
+      "class_name": "UNRESOLVED",
+      "bbox": {
+        "x_min": 223,
+        "y_min": 231,
+        "x_max": 263,
+        "y_max": 292
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "CROPLAND_CONTEXT_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "PENDING",
+      "notes": "",
+      "annotator_id": "HUMAN_ANNOTATOR_01",
+      "annotation_timestamp": "2026-09-30T15:05:32.712493+00:00"
+    }
+  ],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "879bbfd3059940f269945d35e03c60f8219e5f8699d0971dc568b42b564d0e32",
+    "firms_latitude": 22.76134,
+    "firms_longitude": 81.88918,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 4.58,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2A_MSIL2A_20250315T051241_N0511_R019_T44QNL_20250315T113317.SAFE",
+    "tile_id": "T44QNL",
+    "cloud_cover_pct": 0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "task_status": "COMPLETED_HUMAN_ANNOTATION"
+}

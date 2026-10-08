@@ -1,0 +1,236 @@
+{
+  "inventory": [
+    {
+      "artifact_name": "ds08_stage8_25_multiyear_firms.parquet",
+      "path": "data\\interim\\ds08_stage8_25_multiyear_firms.parquet",
+      "purpose": "Clean multi-year NASA VIIRS FIRMS thermal detections associated with events",
+      "row_count": 2583,
+      "column_count": 21,
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026
+      ],
+      "class_distribution": {},
+      "event_count": 2583,
+      "feature_count": 14,
+      "labels_present": false,
+      "target_linked_metadata_present": true,
+      "participates_in_training": false
+    },
+    {
+      "artifact_name": "ds08_stage8_25_physical_events.parquet",
+      "path": "data\\interim\\ds08_stage8_25_physical_events.parquet",
+      "purpose": "Canonical spatiotemporally clustered physical events with duration and extent",
+      "row_count": 131,
+      "column_count": 21,
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "class_distribution": {
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 42,
+        "Industrial Fire": 35,
+        "Forest Fire": 27,
+        "Agricultural Fire": 27
+      },
+      "event_count": 131,
+      "feature_count": 10,
+      "labels_present": true,
+      "target_linked_metadata_present": true,
+      "participates_in_training": false
+    },
+    {
+      "artifact_name": "ds08_stage8_25_multiyear_labels.parquet",
+      "path": "data\\interim\\ds08_stage8_25_multiyear_labels.parquet",
+      "purpose": "Ground truth event-level multiyear labels and statutory adjudication evidence",
+      "row_count": 131,
+      "column_count": 15,
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "class_distribution": {
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 42,
+        "Industrial Fire": 35,
+        "Forest Fire": 27,
+        "Agricultural Fire": 27
+      },
+      "event_count": 131,
+      "feature_count": 0,
+      "labels_present": true,
+      "target_linked_metadata_present": true,
+      "participates_in_training": false
+    },
+    {
+      "artifact_name": "ds08_stage8_25_multimodal_event_cohort.parquet",
+      "path": "data\\interim\\ds08_stage8_25_multimodal_event_cohort.parquet",
+      "purpose": "Multimodal event cohort with split assignments and optical availability flags",
+      "row_count": 131,
+      "column_count": 23,
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "class_distribution": {
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 42,
+        "Industrial Fire": 35,
+        "Forest Fire": 27,
+        "Agricultural Fire": 27
+      },
+      "event_count": 131,
+      "feature_count": 16,
+      "labels_present": true,
+      "target_linked_metadata_present": true,
+      "participates_in_training": false
+    },
+    {
+      "artifact_name": "ds08_stage8_30_causal_features.parquet",
+      "path": "data\\interim\\ds08_stage8_30_causal_features.parquet",
+      "purpose": "Strictly causal H0 prefix features and multi-scale historical recurrence statistics",
+      "row_count": 131,
+      "column_count": 137,
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "class_distribution": {
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 42,
+        "Industrial Fire": 35,
+        "Forest Fire": 27,
+        "Agricultural Fire": 27
+      },
+      "event_count": 131,
+      "feature_count": 129,
+      "labels_present": true,
+      "target_linked_metadata_present": false,
+      "participates_in_training": true
+    },
+    {
+      "artifact_name": "ds08_stage8_30_historical_sequences.parquet",
+      "path": "data\\interim\\ds08_stage8_30_historical_sequences.parquet",
+      "purpose": "Sequential FIRMS observations <= t0 - 7 days within 2km for temporal encoders",
+      "row_count": 131,
+      "column_count": 10,
+      "years": [],
+      "class_distribution": {
+        "Other Thermal Source/Persistent Non-Biomass Thermal Source": 42,
+        "Industrial Fire": 35,
+        "Forest Fire": 27,
+        "Agricultural Fire": 27
+      },
+      "event_count": 131,
+      "feature_count": 11,
+      "labels_present": true,
+      "target_linked_metadata_present": false,
+      "participates_in_training": true
+    },
+    {
+      "artifact_name": "industrial_facility_database.json",
+      "path": "data\\reference\\ds08\\manifests\\stage8_25\\industrial_facility_database.json",
+      "purpose": "Static coordinates and baseline FRP for registered factories/refineries",
+      "row_count": 2,
+      "column_count": 0,
+      "years": [],
+      "class_distribution": {},
+      "event_count": 2,
+      "feature_count": 0,
+      "labels_present": false,
+      "target_linked_metadata_present": false,
+      "participates_in_training": false
+    },
+    {
+      "artifact_name": "agricultural_event_manifest.json",
+      "path": "data\\reference\\ds08\\manifests\\stage8_25\\agricultural_event_manifest.json",
+      "purpose": "Crop burning incident universe with harvest season dates",
+      "row_count": 2,
+      "column_count": 0,
+      "years": [],
+      "class_distribution": {},
+      "event_count": 2,
+      "feature_count": 0,
+      "labels_present": false,
+      "target_linked_metadata_present": false,
+      "participates_in_training": false
+    },
+    {
+      "artifact_name": "forest_event_manifest.json",
+      "path": "data\\reference\\ds08\\manifests\\stage8_25\\forest_event_manifest.json",
+      "purpose": "Forest fire perimeter events and state forest records",
+      "row_count": 2,
+      "column_count": 0,
+      "years": [],
+      "class_distribution": {},
+      "event_count": 2,
+      "feature_count": 0,
+      "labels_present": false,
+      "target_linked_metadata_present": false,
+      "participates_in_training": false
+    },
+    {
+      "artifact_name": "persistent_source_manifest.json",
+      "path": "data\\reference\\ds08\\manifests\\stage8_25\\persistent_source_manifest.json",
+      "purpose": "Continuous thermal anomaly locations (FORBIDDEN FROM PRIMARY MODEL)",
+      "row_count": 2,
+      "column_count": 0,
+      "years": [],
+      "class_distribution": {},
+      "event_count": 2,
+      "feature_count": 0,
+      "labels_present": false,
+      "target_linked_metadata_present": true,
+      "participates_in_training": false
+    }
+  ],
+  "total_artifacts_audited": 10,
+  "development_events_universe": 131,
+  "frozen_test_events_universe": 28,
+  "data_lineage_trace": [
+    "1. Raw NASA VIIRS FIRMS detections (2,583 points across India 2016-2025)",
+    "2. Spatiotemporal clustering -> ds08_stage8_25_physical_events.parquet (131 dev physical events)",
+    "3. Statutory ground-truth cross-referencing -> ds08_stage8_25_multiyear_labels.parquet",
+    "4. Partition assignment (Train 2018-2024 N=107, Val 2025 N=24) -> ds08_stage8_25_multimodal_event_cohort.parquet",
+    "5. Causal H0 horizon truncation (t <= t0) and multi-scale historical aggregation (t <= t0 - 7d) -> ds08_stage8_30_causal_features.parquet",
+    "6. Sequential temporal extraction -> ds08_stage8_30_historical_sequences.parquet"
+  ]
+}

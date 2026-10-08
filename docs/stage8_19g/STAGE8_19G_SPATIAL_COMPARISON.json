@@ -1,0 +1,232 @@
+{
+  "manifest_version": "v4",
+  "chip_footprint_definition": "512x512 pixels @ 10m GSD = 5120m x 5120m square bounding box centered at candidate coordinates in native UTM CRS",
+  "reference_geometry_method": "True polygon-to-polygon Euclidean minimum separation (Shapely GEOS distance) on dense footprint boundaries",
+  "reference_crs_strategy": "Pair-specific Azimuthal Equidistant (AEQD) projection centered at geographic midpoint of each candidate pair (+proj=aeqd +lat_0=lat_mid +lon_0=lon_mid +datum=WGS84)",
+  "pairs_evaluated": 22090,
+  "stage8_19f_min_km": 50.101722,
+  "stage8_19g_min_km": 50.101722,
+  "stage8_19f_closest_pair": [
+    "DS08_EXP_S3_004",
+    "DS08_EXP_S4_004"
+  ],
+  "stage8_19g_closest_pair": [
+    "DS08_EXP_S3_004",
+    "DS08_EXP_S4_004"
+  ],
+  "stage8_19f_violations": 0,
+  "stage8_19g_violations": 0,
+  "margin_m": 101.72,
+  "pairs_under_55km": 13,
+  "detailed_pairs_under_55km": [
+    {
+      "pair": [
+        "DS08_EXP_S3_004",
+        "DS08_EXP_S4_004"
+      ],
+      "folds": [
+        "Fold 2",
+        "Fold 4"
+      ],
+      "distance_km": 50.101722,
+      "distance_m": 50101.72,
+      "zones": [
+        43,
+        43
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S3_001",
+        "DS08_EXP_S6_004"
+      ],
+      "folds": [
+        "Fold 4",
+        "Fold 3"
+      ],
+      "distance_km": 51.176847,
+      "distance_m": 51176.85,
+      "zones": [
+        43,
+        43
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S2_017",
+        "DS08_EXP_S6_019"
+      ],
+      "folds": [
+        "Fold 4",
+        "Fold 1"
+      ],
+      "distance_km": 51.50827,
+      "distance_m": 51508.27,
+      "zones": [
+        44,
+        44
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S5_028",
+        "DS08_EXP_S6_026"
+      ],
+      "folds": [
+        "Fold 5",
+        "Fold 1"
+      ],
+      "distance_km": 51.572741,
+      "distance_m": 51572.74,
+      "zones": [
+        45,
+        45
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S3_022",
+        "DS08_EXP_S6_010"
+      ],
+      "folds": [
+        "Fold 4",
+        "Fold 3"
+      ],
+      "distance_km": 52.394256,
+      "distance_m": 52394.26,
+      "zones": [
+        44,
+        44
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S1_004",
+        "DS08_EXP_S3_053"
+      ],
+      "folds": [
+        "Fold 3",
+        "Fold 4"
+      ],
+      "distance_km": 52.713782,
+      "distance_m": 52713.78,
+      "zones": [
+        42,
+        43
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S2_023",
+        "DS08_EXP_S3_034"
+      ],
+      "folds": [
+        "Fold 1",
+        "Fold 5"
+      ],
+      "distance_km": 52.737481,
+      "distance_m": 52737.48,
+      "zones": [
+        43,
+        43
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S3_006",
+        "DS08_EXP_S4_011"
+      ],
+      "folds": [
+        "Fold 3",
+        "Fold 2"
+      ],
+      "distance_km": 53.555523,
+      "distance_m": 53555.52,
+      "zones": [
+        42,
+        42
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S1_005",
+        "DS08_EXP_S4_001"
+      ],
+      "folds": [
+        "Fold 4",
+        "Fold 3"
+      ],
+      "distance_km": 53.646979,
+      "distance_m": 53646.98,
+      "zones": [
+        43,
+        43
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S3_055",
+        "DS08_EXP_S5_036"
+      ],
+      "folds": [
+        "Fold 2",
+        "Fold 1"
+      ],
+      "distance_km": 53.976233,
+      "distance_m": 53976.23,
+      "zones": [
+        43,
+        43
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S2_011",
+        "DS08_EXP_S5_010"
+      ],
+      "folds": [
+        "Fold 1",
+        "Fold 3"
+      ],
+      "distance_km": 54.105569,
+      "distance_m": 54105.57,
+      "zones": [
+        44,
+        44
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S4_005",
+        "DS08_EXP_S6_008"
+      ],
+      "folds": [
+        "Fold 5",
+        "Fold 1"
+      ],
+      "distance_km": 54.668989,
+      "distance_m": 54668.99,
+      "zones": [
+        43,
+        43
+      ]
+    },
+    {
+      "pair": [
+        "DS08_EXP_S2_032",
+        "DS08_EXP_S5_038"
+      ],
+      "folds": [
+        "Fold 1",
+        "Fold 2"
+      ],
+      "distance_km": 54.686238,
+      "distance_m": 54686.24,
+      "zones": [
+        43,
+        43
+      ]
+    }
+  ],
+  "status": "REFERENCE_METRIC_CONFIRMED"
+}

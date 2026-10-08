@@ -1,0 +1,170 @@
+{
+  "baseline_cohort_size": 131,
+  "class_counts": {
+    "Other Thermal Source/Persistent Non-Biomass Thermal Source": 42,
+    "Industrial Fire": 35,
+    "Forest Fire": 27,
+    "Agricultural Fire": 27
+  },
+  "region_by_class": {
+    "Agricultural Fire": {
+      "Central_East": 1,
+      "Central_West": 3,
+      "North": 23,
+      "South": 0
+    },
+    "Forest Fire": {
+      "Central_East": 8,
+      "Central_West": 2,
+      "North": 9,
+      "South": 8
+    },
+    "Industrial Fire": {
+      "Central_East": 4,
+      "Central_West": 8,
+      "North": 6,
+      "South": 17
+    },
+    "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+      "Central_East": 22,
+      "Central_West": 6,
+      "North": 7,
+      "South": 7
+    }
+  },
+  "year_by_class": {
+    "Agricultural Fire": {
+      "2016": 1,
+      "2017": 1,
+      "2018": 1,
+      "2019": 2,
+      "2020": 2,
+      "2021": 3,
+      "2022": 3,
+      "2023": 3,
+      "2024": 4,
+      "2025": 7
+    },
+    "Forest Fire": {
+      "2016": 2,
+      "2017": 0,
+      "2018": 1,
+      "2019": 2,
+      "2020": 2,
+      "2021": 3,
+      "2022": 3,
+      "2023": 3,
+      "2024": 4,
+      "2025": 7
+    },
+    "Industrial Fire": {
+      "2016": 1,
+      "2017": 1,
+      "2018": 2,
+      "2019": 3,
+      "2020": 5,
+      "2021": 5,
+      "2022": 4,
+      "2023": 5,
+      "2024": 5,
+      "2025": 4
+    },
+    "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+      "2016": 0,
+      "2017": 0,
+      "2018": 0,
+      "2019": 0,
+      "2020": 0,
+      "2021": 0,
+      "2022": 0,
+      "2023": 0,
+      "2024": 36,
+      "2025": 6
+    }
+  },
+  "month_by_class": {
+    "Agricultural Fire": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 9,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 13,
+      "11": 5,
+      "12": 0
+    },
+    "Forest Fire": {
+      "1": 0,
+      "2": 1,
+      "3": 13,
+      "4": 9,
+      "5": 4,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0
+    },
+    "Industrial Fire": {
+      "1": 6,
+      "2": 3,
+      "3": 2,
+      "4": 2,
+      "5": 7,
+      "6": 4,
+      "7": 1,
+      "8": 3,
+      "9": 3,
+      "10": 0,
+      "11": 3,
+      "12": 1
+    },
+    "Other Thermal Source/Persistent Non-Biomass Thermal Source": {
+      "1": 0,
+      "2": 0,
+      "3": 42,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0
+    }
+  },
+  "identified_gaps": {
+    "gap_1_agricultural_geography": {
+      "description": "Extreme concentration of Agricultural fires in North (Punjab/Haryana). Complete absence in South.",
+      "current_north_count": 23,
+      "current_north_percentage": 85.19,
+      "current_south_count": 0,
+      "current_central_west_count": 3,
+      "current_central_east_count": 1,
+      "target_expansion": "Acquire 15-20 independent agricultural fire events across South (AP, TN, Karnataka) and Central/West (Maharashtra, Gujarat, MP)."
+    },
+    "gap_2_persistent_chronology": {
+      "description": "Zero Persistent source events logged in 2016-2023. All 42 persistent events clustered in 2024-2025.",
+      "current_pre_2024_count": 0,
+      "current_2024_count": 36,
+      "current_2025_count": 6,
+      "target_expansion": "Retrospectively annotate 15-20 historical persistent source events across 2018, 2020, and 2022 from known physical facilities (refineries, coalfields, power stations) using historical FIRMS detections."
+    },
+    "gap_3_sample_size_per_spatial_fold": {
+      "description": "Certain folds have minority classes with as few as 0-1 training events.",
+      "target_expansion": "Raise total development cohort from N=131 to N >= 165 events, ensuring >= 5 examples per class in every outer spatial fold."
+    }
+  },
+  "acquisition_targets": {
+    "new_agricultural_events": 16,
+    "new_persistent_events": 18,
+    "target_total_events": 165
+  }
+}

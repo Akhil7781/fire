@@ -1,0 +1,145 @@
+{
+  "status": "VALIDATED_PILOT_CHIP_EXTRACTION",
+  "candidate_id": "PILOT_07_CENTRAL",
+  "label_status": "UNLABELED",
+  "pilot_phase": "STAGE_8.6_PILOT_ACQUISITION",
+  "firms_metadata": {
+    "detection_id": "36f34ca3494ca4271994da427be9ce680304ba3ac03dee6ab076ef7fd11b4799",
+    "latitude": 24.15625,
+    "longitude": 78.77988,
+    "acquisition_datetime_utc": null,
+    "frp": 10.16,
+    "association_status": "candidate_context_only",
+    "geographic_region": "CENTRAL"
+  },
+  "sentinel2_scene": {
+    "product_id": "S2C_MSIL2A_20250326T051711_N0511_R062_T43QHG_20250326T103119.SAFE",
+    "platform": "sentinel-2c",
+    "acquisition_datetime_utc": "2025-03-26T05:32:38.827Z",
+    "temporal_gap_hours": 46.094119,
+    "cloud_cover_pct": 0.0,
+    "collection": "sentinel-2-l2a",
+    "tile_id": "T43QHG"
+  },
+  "extraction": {
+    "processing_api_endpoint": "https://sh.dataspace.copernicus.eu/process/v1",
+    "aoi_geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            276984.88,
+            2670754.83
+          ],
+          [
+            276984.88,
+            2675874.83
+          ],
+          [
+            271864.88,
+            2675874.83
+          ],
+          [
+            271864.88,
+            2670754.83
+          ],
+          [
+            276984.88,
+            2670754.83
+          ]
+        ]
+      ]
+    },
+    "aoi_bbox_utm": [
+      271864.88,
+      2670754.83,
+      276984.88,
+      2675874.83
+    ],
+    "aoi_bbox_wgs84": [
+      78.755103,
+      24.132777,
+      78.804666,
+      24.17972
+    ],
+    "projected_crs": "EPSG:32644",
+    "output_crs": "EPSG:32644",
+    "output_width_pixels": 512,
+    "output_height_pixels": 512,
+    "output_resolution_meters": 10.0,
+    "band_order": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "input_units": "REFLECTANCE",
+    "resampling_method": "BILINEAR (native 20m B11/B12 resampled to 10m common grid)",
+    "output_dtype": "FLOAT32",
+    "extraction_timestamp_utc": "2026-09-29T13:48:51.859730+00:00",
+    "file_size_bytes": 2992034,
+    "sha256_checksum": "8cde3b52ba173aad9d59712a46fe60fb35e7681dbe976029d2de0949adc6551c",
+    "previews": {
+      "rgb_preview": "D:\\DATA PREPROCESSING\\data\\reference\\ds08\\pilot\\preview\\PILOT_07_CENTRAL_sentinel2_20250326_chip_rgb_preview.png",
+      "swir_preview": "D:\\DATA PREPROCESSING\\data\\reference\\ds08\\pilot\\preview\\PILOT_07_CENTRAL_sentinel2_20250326_chip_swir_preview.png"
+    },
+    "band_statistics": {
+      "B02": {
+        "band_index": 1,
+        "band_name": "B02",
+        "min": 0.0348,
+        "max": 0.197,
+        "mean": 0.066537,
+        "std": 0.008805,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B03": {
+        "band_index": 2,
+        "band_name": "B03",
+        "min": 0.045,
+        "max": 0.2537,
+        "mean": 0.085161,
+        "std": 0.011711,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B04": {
+        "band_index": 3,
+        "band_name": "B04",
+        "min": 0.0404,
+        "max": 0.3072,
+        "mean": 0.117607,
+        "std": 0.019502,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B11": {
+        "band_index": 4,
+        "band_name": "B11",
+        "min": 0.0411,
+        "max": 0.4745,
+        "mean": 0.309326,
+        "std": 0.049802,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      },
+      "B12": {
+        "band_index": 5,
+        "band_name": "B12",
+        "min": 0.0313,
+        "max": 0.3926,
+        "mean": 0.227433,
+        "std": 0.034446,
+        "valid_pixel_count": 262144,
+        "nodata_pixel_count": 0,
+        "total_pixel_count": 262144
+      }
+    }
+  }
+}

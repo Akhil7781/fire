@@ -1,0 +1,141 @@
+{
+  "dataset_summary": {
+    "total_development_events": 131,
+    "split_distribution": {
+      "train": 107,
+      "val": 24
+    },
+    "class_distribution": {
+      "Other Thermal Source/Persistent Non-Biomass Thermal Source": 42,
+      "Industrial Fire": 35,
+      "Forest Fire": 27,
+      "Agricultural Fire": 27
+    },
+    "year_distribution": {
+      "2016": 4,
+      "2017": 2,
+      "2018": 4,
+      "2019": 7,
+      "2020": 9,
+      "2021": 11,
+      "2022": 10,
+      "2023": 11,
+      "2024": 49,
+      "2025": 24
+    },
+    "spatial_region_distribution": {
+      "North": 45,
+      "Central_East": 35,
+      "South": 32,
+      "Central_West": 19
+    }
+  },
+  "spatial_correlation_analysis": {
+    "within_1km_event_pairs_count": 8,
+    "within_5km_event_pairs_count": 16,
+    "cross_split_within_5km_count": 10,
+    "explanation": "Events located within 1-5 km of each other share near-identical historical recurrence, facility distance, and ecoregion features. Random splitting allows these paired events to fall across train and test, producing artificially inflated random-split scores (100%)."
+  },
+  "temporal_and_geographic_skew": {
+    "regional_class_imbalance": {
+      "North": "Heavily Agricultural (23/45) and Forest (9/45). Only 6 Industrial.",
+      "South": "Dominated by Industrial (17/32) and Forest (8/32). 0 Agricultural fires.",
+      "Central_East": "Dominated by Persistent sources (22/35) due to eastern coalfields.",
+      "Central_West": "Balanced industrial and flaring centers (19 total)."
+    },
+    "year_concentration": "Over 55% of development events are from 2024 (N=49) and 2025 (N=24), with earlier years (2016-2020) having low counts.",
+    "impact_on_generalization": "A model evaluated on random splits learns to exploit geographic cluster co-occurrence. In true spatial block holdout or out-of-distribution evaluation, regional class shifts degrade performance if features rely on spatial memorization."
+  },
+  "key_feature_domain_shifts": {
+    "current_frp": {
+      "train_mean": 17.864,
+      "train_std": 16.943,
+      "val_mean": 16.74,
+      "val_std": 14.582,
+      "standardized_shift_d": -0.071
+    },
+    "current_delta_ti": {
+      "train_mean": 38.511,
+      "train_std": 8.661,
+      "val_mean": 39.238,
+      "val_std": 9.677,
+      "standardized_shift_d": 0.079
+    },
+    "dist_to_fac_km": {
+      "train_mean": 136.679,
+      "train_std": 173.654,
+      "val_mean": 101.222,
+      "val_std": 89.948,
+      "standardized_shift_d": -0.256
+    },
+    "within_1km_fac": {
+      "train_mean": 0.234,
+      "train_std": 0.425,
+      "val_mean": 0.083,
+      "val_std": 0.282,
+      "standardized_shift_d": -0.417
+    },
+    "hist_count_2km": {
+      "train_mean": 6.551,
+      "train_std": 12.218,
+      "val_mean": 7.458,
+      "val_std": 17.903,
+      "standardized_shift_d": 0.059
+    },
+    "hist_active_days_full": {
+      "train_mean": 6.028,
+      "train_std": 10.707,
+      "val_mean": 5.5,
+      "val_std": 12.283,
+      "standardized_shift_d": -0.046
+    },
+    "hist_distinct_calendar_months": {
+      "train_mean": 1.243,
+      "train_std": 1.878,
+      "val_mean": 0.917,
+      "val_std": 1.666,
+      "standardized_shift_d": -0.184
+    },
+    "forest_biome_score": {
+      "train_mean": 0.393,
+      "train_std": 0.491,
+      "val_mean": 0.583,
+      "val_std": 0.504,
+      "standardized_shift_d": 0.384
+    },
+    "agri_heartland_score": {
+      "train_mean": 0.196,
+      "train_std": 0.399,
+      "val_mean": 0.083,
+      "val_std": 0.282,
+      "standardized_shift_d": -0.327
+    }
+  },
+  "generalization_gap_causes": [
+    {
+      "cause": "Sample Size Support Asymmetry",
+      "severity": "HIGH",
+      "detail": "Test cohorts (N=28) are small. A single misclassified event shifts the accuracy metric by 3.57%. A drop of 6 events accounts for an immediate 21.43% gap."
+    },
+    {
+      "cause": "Spatial Cluster Leakage in Random Splits",
+      "severity": "CRITICAL",
+      "detail": "There are 8 pairs of events within 1km and 16 pairs within 5km. Random cross-validation places identical industrial parks or coalfield anomalies in both train and validation, creating optimistic 100% scores."
+    },
+    {
+      "cause": "Persistent vs Industrial Ambiguity Near Facilities",
+      "severity": "HIGH",
+      "detail": "Persistent flares located within 1km of petroleum/chemical refineries share high industrial proximity (within_1km_fac=1). Without strict historical recurrence gating, the model predicts Industrial Fire rather than Persistent Flare."
+    },
+    {
+      "cause": "Agricultural Diurnal and Thermal Overlap with Low-Intensity Forest Fires",
+      "severity": "MEDIUM",
+      "detail": "Both agricultural burning and mild winter understory forest fires exhibit moderate FRP (5-20 MW) and occur during daytime, leading to class confusion in transitional border zones."
+    },
+    {
+      "cause": "Regional Class Absence",
+      "severity": "HIGH",
+      "detail": "The South region contains 0 agricultural fires in development data. Spatial holdout of North isolates 85% of all agricultural training examples, challenging spatial generalization for that class."
+    }
+  ]
+}

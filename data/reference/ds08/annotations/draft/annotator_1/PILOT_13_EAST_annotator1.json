@@ -1,0 +1,52 @@
+{
+  "chip_id": "PILOT_13_EAST",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_13_EAST_ANN_01",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 230,
+        "y_min": 230,
+        "x_max": 285,
+        "y_max": 285
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "FOREST_CONTEXT_VISIBLE",
+        "BURN_SCAR_VISIBLE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "PENDING",
+      "annotator_id": "HUMAN_ANNOTATOR_01",
+      "annotation_timestamp": "2026-09-29T15:37:28.623223+00:00",
+      "notes": "Observable canopy burn scar in montane forest terrain coincident with FIRMS coordinate."
+    }
+  ],
+  "context_metadata": {
+    "firms_detection_id": "8275a8b5e6f793b25b39b6df40eaa05d270faf1aa76a8b4b93c67c4640e11dc5",
+    "firms_latitude": 23.51987,
+    "firms_longitude": 93.49424,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 9.26,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2C_MSIL2A_20250308T041641_N0511_R090_T46QEM_20250308T065415.SAFE",
+    "tile_id": "T46QEM",
+    "cloud_cover_pct": 0.0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

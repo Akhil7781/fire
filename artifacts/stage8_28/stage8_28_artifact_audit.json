@@ -1,0 +1,139 @@
+{
+  "stage": "8.28",
+  "description": "Artifact audit and frozen input verification",
+  "test_manifest_sha256": "5686345a1300282407d303c943e190867b63c0c5d5ea536973d4859cd8a95d6c",
+  "test_manifest_sha256_verified": true,
+  "total_test_events": 28,
+  "test_events": [
+    "EVT_825_IND_IND_INC_2026_SOLAPUR_MIDC",
+    "EVT_825_IND_IND_INC_2026_CUDDALORE_SIPCOT",
+    "EVT_825_IND_IND_INC_2026_NEELAM_MUZAFFARNAGAR",
+    "EVT_825_IND_IND_INC_2026_JABALPUR_RICHHAI",
+    "EVT_825_IND_IND_INC_2026_COIMBATORE_SIDCO",
+    "EVT_825_IND_IND_INC_2026_WALUJ_AURANGABAD",
+    "EVT_825_FOR_FOR_EVT_2026_UK_CHAMOLI",
+    "EVT_825_FOR_FOR_EVT_2026_HP_KULLU",
+    "EVT_825_FOR_FOR_EVT_2026_OD_KOTGARH",
+    "EVT_825_FOR_FOR_EVT_2026_MP_PENCH",
+    "EVT_825_FOR_FOR_EVT_2026_KA_NAGARHOLE",
+    "EVT_825_FOR_FOR_EVT_2026_MH_CHANDRAPUR",
+    "EVT_825_AGR_AGR_EVT_2026_MP_HARDA_RABI",
+    "EVT_825_AGR_AGR_EVT_2026_UP_RAMPUR_RABI",
+    "EVT_825_AGR_AGR_EVT_2026_AP_GUNTUR_RABI",
+    "EVT_825_AGR_AGR_EVT_2026_BR_BUXAR_RABI",
+    "EVT_825_AGR_AGR_EVT_2026_RJ_KOTA_RABI",
+    "EVT_825_AGR_AGR_EVT_2026_TN_THANJAVUR_KHARIF",
+    "EVT_825_PER_PER_SRC_01",
+    "EVT_825_PER_PER_SRC_02",
+    "EVT_825_PER_PER_SRC_03",
+    "EVT_825_PER_PER_SRC_06",
+    "EVT_825_PER_PER_SRC_21",
+    "EVT_825_PER_PER_SRC_25",
+    "EVT_825_PER_PER_SRC_26",
+    "EVT_825_PER_PER_SRC_47",
+    "EVT_825_PER_PER_SRC_49",
+    "EVT_825_PER_PER_SRC_52"
+  ],
+  "artifacts": {
+    "data/reference/ds08/manifests/stage8_25/independent_test_manifest.json": {
+      "exists": true,
+      "sha256": "5686345a1300282407d303c943e190867b63c0c5d5ea536973d4859cd8a95d6c",
+      "size_bytes": 11494
+    },
+    "data/interim/ds08_stage8_26_feature_leakage_audit.parquet": {
+      "exists": true,
+      "sha256": "0a708e55b95738010140102df4f9445a11787b83005649174aff8adc367f3824",
+      "size_bytes": 5959
+    },
+    "data/interim/ds08_stage8_26_temporal_leakage_audit.parquet": {
+      "exists": true,
+      "sha256": "37800e298369618c34a144320aacf66a52027ce7a3cf6d043df0d1d10d592106",
+      "size_bytes": 7202
+    },
+    "reports/stage8_26_audit_summary.json": {
+      "exists": true,
+      "sha256": "6caaa66b91693e1908b51e214f5730fb4fd0f4ea0403bf71dfbece8eeff6d76b",
+      "size_bytes": 56019
+    },
+    "reports/stage8_26_forensic_audit_report.md": {
+      "exists": true,
+      "sha256": "ee1f11484d2580d0a197fe48b1794ab76f18714fb524dc7af0a65155f7a5af1c",
+      "size_bytes": 23890
+    },
+    "data/interim/ds08_stage8_27_causal_prefix_dataset.parquet": {
+      "exists": true,
+      "sha256": "f25c00e3efbeb0ca8a60c11b63eeee48236db3b0cdad4bf7ed91589c59dc2f2f",
+      "size_bytes": 38995
+    },
+    "data/interim/ds08_stage8_27_causal_features.parquet": {
+      "exists": true,
+      "sha256": "54186f257c464ccabdcff55d4ba8420e945611c717d4ec69358f20725c004687",
+      "size_bytes": 59461
+    },
+    "data/interim/ds08_stage8_27_predictions.parquet": {
+      "exists": true,
+      "sha256": "540a92b465d1ac5771ecaef98eac6456c9a35fdc8eee70c1fa4a737116797119",
+      "size_bytes": 13164
+    },
+    "data/interim/ds08_stage8_27_error_analysis.parquet": {
+      "exists": true,
+      "sha256": "90b84a8634756a720028f91eb207a197463d6936e402606646e5f2638f58ff8d",
+      "size_bytes": 10020
+    },
+    "models/stage8_27/best_causal_temporal_encoder.pt": {
+      "exists": true,
+      "sha256": "e5e9693366c540afa0cbb164fc1e0fe58eb999c0b3c3ef221e007b593ce41862",
+      "size_bytes": 225473
+    },
+    "models/stage8_27/best_hierarchical_causal_classifier.pt": {
+      "exists": true,
+      "sha256": "3cef5fd7a10e21685a133391ec61ad773df96b204f8a7c1810e253cc7e4cae6b",
+      "size_bytes": 33805
+    },
+    "src/stage8_27/prefix_dataset.py": {
+      "exists": true,
+      "sha256": "7308d88928271dd0912beec4f067a4622aed996cd5949789de682a5e2ba93ccb",
+      "size_bytes": 12387
+    },
+    "src/stage8_27/train_and_evaluate.py": {
+      "exists": true,
+      "sha256": "d5cd1f4e220bfc95afd4582b534b3fc782a48b1f227ace5b365fcbae02fe9123",
+      "size_bytes": 21607
+    },
+    "src/stage8_27/models.py": {
+      "exists": true,
+      "sha256": "f47067b63182397a025360ad32790f12c1c0c374880535e61c98f555e4887582",
+      "size_bytes": 5395
+    },
+    "models/tcn/best_tcn.pt": {
+      "exists": true,
+      "sha256": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+      "size_bytes": 1488161
+    },
+    "models/deep_sad/best_deep_sad.pt": {
+      "exists": true,
+      "sha256": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+      "size_bytes": 59483
+    },
+    "models/s2_encoder/best_s2_encoder.pt": {
+      "exists": true,
+      "sha256": "5ec8a02dfe1064d77060c7fb04f08b03cf5a31c4ebf3007bc80d11f0e0f36b87",
+      "size_bytes": 17778953
+    },
+    "models/yolo/infrastructure/best_infrastructure.pt": {
+      "exists": true,
+      "sha256": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+      "size_bytes": 6245482
+    },
+    "models/yolo/fire_smoke/best_fire_smoke.pt": {
+      "exists": true,
+      "sha256": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+      "size_bytes": 6245482
+    },
+    "models/fusion/best_multimodal_fusion.pt": {
+      "exists": true,
+      "sha256": "7398b7f0539637091cac763eeca0c23be0e5f8cd99860872d3d9f75d84f1481c",
+      "size_bytes": 685333
+    }
+  }
+}

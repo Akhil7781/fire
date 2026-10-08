@@ -1,0 +1,66 @@
+{
+  "chip_id": "PILOT_19_WEST",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "human_verified": true,
+  "annotation_start_timestamp": "2026-09-30T15:08:45.133Z",
+  "annotation_completion_timestamp": "2026-09-30T15:08:59.022Z",
+  "interaction_audit": {
+    "interface_version": "v1.0_manual",
+    "bbox_creation_actions": 1,
+    "bbox_edit_actions": 0,
+    "class_selection_actions": 1,
+    "save_events": 2
+  },
+  "annotations": [
+    {
+      "annotation_id": "PILOT_19_WEST_ANN_01",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 150,
+        "y_min": 136,
+        "x_max": 446,
+        "y_max": 440
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "BURN_SCAR_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "PENDING",
+      "notes": "",
+      "annotator_id": "HUMAN_ANNOTATOR_01",
+      "annotation_timestamp": "2026-09-30T15:08:59.024487+00:00"
+    }
+  ],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "bf2799fc5cba3c51d8afce18b3b632280ead9ce580bd7ca706f806719e0cfacf",
+    "firms_latitude": 16.98486,
+    "firms_longitude": 73.86073,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 5.89,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2C_MSIL2A_20250319T052711_N0511_R105_T43QCU_20250319T104817.SAFE",
+    "tile_id": "T43QCU",
+    "cloud_cover_pct": 2.43,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "task_status": "COMPLETED_HUMAN_ANNOTATION"
+}

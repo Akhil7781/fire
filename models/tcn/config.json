@@ -1,0 +1,20 @@
+{
+  "in_channels": 8,
+  "hidden_channels": 64,
+  "dilations": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "latent_dim": 64,
+  "dropout": 0.2,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "max_epochs": 60,
+  "patience": 12,
+  "mask_ratio": 0.15,
+  "seed": 42
+}

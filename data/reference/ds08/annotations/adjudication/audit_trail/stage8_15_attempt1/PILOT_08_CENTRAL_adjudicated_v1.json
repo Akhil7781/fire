@@ -1,0 +1,124 @@
+{
+  "chip_id": "PILOT_08_CENTRAL",
+  "annotation_version": "v1.0",
+  "adjudication_status": "COMPLETED_HUMAN_ADJUDICATION",
+  "adjudicator": "HUMAN_ADJUDICATOR_01",
+  "adjudication_timestamp": "2026-10-02T05:17:24.732729+00:00",
+  "human_verified": true,
+  "adjudication_rationale": "The proposed agricultural fire region was reviewed using the available Sentinel-2 SWIR imagery. Although Annotator 1 marked a candidate region, the visible image evidence is insufficient to confidently distinguish an active agricultural fire or burn scar from other surface features. Annotator 2 reported no visible target. The FIRMS detection was considered contextual evidence only and was not treated as ground truth. The observation remains unresolved pending stronger visual evidence.",
+  "dispute_category": "Observation-status disagreement (A1: HAS_ANNOTATIONS / 1 Agricultural Fire box vs A2: NO_VISIBLE_TARGET). Fresh human review required.",
+  "source_annotation_hashes": {
+    "annotator_1": "643a579d93e4d2ce88ab03ad3d01790f9c322b8f12ebb1ca5ca7e0216eae69c7",
+    "annotator_2": "b3acc39e10c4bdf760949066bd0b263bd78e226b803883d27cc4e0a2fffd844e"
+  },
+  "A1_original": {
+    "chip_annotation_status": "HAS_ANNOTATIONS",
+    "annotations": [
+      {
+        "annotation_id": "PILOT_08_CENTRAL_ANN_01",
+        "class_id": 3,
+        "class_name": "Agricultural Fire",
+        "bbox": {
+          "x_min": 218,
+          "y_min": 228,
+          "x_max": 269,
+          "y_max": 296
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "CROPLAND_CONTEXT_VISIBLE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "review_status": "PENDING",
+        "notes": "",
+        "annotator_id": "HUMAN_ANNOTATOR_01",
+        "annotation_timestamp": "2026-09-30T16:00:43.479940+00:00"
+      }
+    ],
+    "visual_evidence": [
+      "CROPLAND_CONTEXT_VISIBLE"
+    ],
+    "visibility_status": "CLEAR",
+    "confidence": {
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM"
+    }
+  },
+  "A2_original": {
+    "chip_annotation_status": "NO_VISIBLE_TARGET",
+    "annotations": [],
+    "visual_evidence": [],
+    "visibility_status": "CLEAR",
+    "confidence": {
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM"
+    }
+  },
+  "final_consensus": {
+    "chip_annotation_status": "UNRESOLVED",
+    "annotations": [],
+    "chip_id": "PILOT_08_CENTRAL",
+    "annotation_version": "v1.0",
+    "source_classes": [
+      "UNRESOLVED"
+    ],
+    "visual_evidence": [
+      "NO_CLEAR_VISUAL_EVIDENCE"
+    ],
+    "visibility_status": "CLEAR",
+    "geometry_confidence": "MEDIUM",
+    "source_class_confidence": "MEDIUM",
+    "context_metadata": {
+      "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+      "firms_detection_id": "879bbfd3059940f269945d35e03c60f8219e5f8699d0971dc568b42b564d0e32",
+      "firms_latitude": 22.76134,
+      "firms_longitude": 81.88918,
+      "firms_acq_datetime_utc": null,
+      "firms_frp": 4.58,
+      "firms_brightness_kelvin": null,
+      "firms_pixel_coord": {
+        "row": 256,
+        "col": 256
+      },
+      "product_id": "S2A_MSIL2A_20250315T051241_N0511_R019_T44QNL_20250315T113317.SAFE",
+      "tile_id": "T44QNL",
+      "cloud_cover_pct": 0,
+      "authoritative_bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+    }
+  },
+  "chip_annotation_status": "UNRESOLVED",
+  "annotations": [],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "879bbfd3059940f269945d35e03c60f8219e5f8699d0971dc568b42b564d0e32",
+    "firms_latitude": 22.76134,
+    "firms_longitude": 81.88918,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 4.58,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2A_MSIL2A_20250315T051241_N0511_R019_T44QNL_20250315T113317.SAFE",
+    "tile_id": "T44QNL",
+    "cloud_cover_pct": 0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "chip_id": "PILOT_06_CENTRAL",
+  "correction_version": "v2.0",
+  "stage": "STAGE_8_16",
+  "correction_status": "COMPLETED_HUMAN_CORRECTION",
+  "original_record_path": "data/reference/ds08/annotations/adjudication/review/PILOT_06_CENTRAL_adjudicated_v1.json",
+  "original_record_sha256": "7b0cbb8eac28d2387c6f197e175f39f4653148d0e41006637864280138a949c9",
+  "corrected_consensus": {
+    "chip_id": "PILOT_06_CENTRAL",
+    "annotation_version": "v2.0",
+    "chip_annotation_status": "HAS_ANNOTATIONS",
+    "annotations": [
+      {
+        "annotation_id": "PILOT_06_CENTRAL_CORR_01",
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 186,
+          "y_min": 297,
+          "x_max": 351,
+          "y_max": 388
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "BURN_SCAR_VISIBLE",
+          "FOREST_CONTEXT_VISIBLE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "interaction_audit": {
+          "manual_interaction_recorded": true,
+          "event_type": "CANVAS_DRAW",
+          "coordinates": [
+            186,
+            297,
+            351,
+            388
+          ],
+          "timestamp": "2026-10-02T05:14:19.716Z"
+        },
+        "class_id": 2,
+        "annotator_id": "HUMAN_ADJUDICATOR_CORRECTION",
+        "review_status": "CORRECTED_V2",
+        "annotation_timestamp": "2026-10-02T05:15:40.882457+00:00"
+      },
+      {
+        "annotation_id": "PILOT_06_CENTRAL_CORR_02",
+        "class_name": "Forest Fire",
+        "bbox": {
+          "x_min": 53,
+          "y_min": 323,
+          "x_max": 126,
+          "y_max": 398
+        },
+        "geometry_confidence": "MEDIUM",
+        "source_class_confidence": "MEDIUM",
+        "visibility_status": "CLEAR",
+        "visual_evidence": [
+          "DIRECT_FIRE_VISIBLE",
+          "BURN_SCAR_VISIBLE",
+          "FOREST_CONTEXT_VISIBLE"
+        ],
+        "firms_relationship": "INSIDE_OBJECT",
+        "interaction_audit": {
+          "manual_interaction_recorded": true,
+          "event_type": "CANVAS_DRAW",
+          "coordinates": [
+            53,
+            323,
+            126,
+            398
+          ],
+          "timestamp": "2026-10-02T05:14:25.196Z"
+        },
+        "class_id": 2,
+        "annotator_id": "HUMAN_ADJUDICATOR_CORRECTION",
+        "review_status": "CORRECTED_V2",
+        "annotation_timestamp": "2026-10-02T05:15:40.882457+00:00"
+      }
+    ],
+    "source_classes": [
+      "Forest Fire"
+    ],
+    "visual_evidence": [
+      "BURN_SCAR_VISIBLE",
+      "DIRECT_FIRE_VISIBLE",
+      "FOREST_CONTEXT_VISIBLE"
+    ],
+    "visibility_status": "CLEAR",
+    "geometry_confidence": "MEDIUM",
+    "source_class_confidence": "MEDIUM",
+    "context_metadata": {
+      "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+      "firms_detection_id": "f6988c6247c2036a9a1fdfe2f9885cf20e2f4bba6eb79bddad8756ab98575702",
+      "firms_latitude": 23.64083,
+      "firms_longitude": 82.85873,
+      "firms_acq_datetime_utc": null,
+      "firms_frp": 0.43,
+      "firms_brightness_kelvin": null,
+      "firms_pixel_coord": {
+        "row": 256,
+        "col": 256
+      },
+      "product_id": "S2A_MSIL2A_20250401T050231_N0511_R119_T44QPM_20250401T102700.SAFE",
+      "tile_id": "T44QPM",
+      "cloud_cover_pct": 0,
+      "authoritative_bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+    }
+  },
+  "changed_fields": [
+    "annotations[0].visual_evidence",
+    "annotations[1].visual_evidence"
+  ],
+  "diff_summary": [
+    "Box #1 Evidence: removed ['NO_CLEAR_VISUAL_EVIDENCE']",
+    "Box #2 Evidence: removed ['NO_CLEAR_VISUAL_EVIDENCE']"
+  ],
+  "correction_rationale": "The Sentinel-2 SWIR imagery was inspected to assess the proposed Forest Fire annotations. The selected bounding boxes were reviewed in relation to the visible surface patterns and surrounding vegetation context. The FIRMS detection location was used only as supporting spatial context, not as confirmation of fire. The final annotations represent the regions selected for review, with their visibility and confidence attributes recorded according to the available visual evidence.",
+  "human_confirmation": {
+    "confirmed": true,
+    "method": "HUMAN_CHECKBOX_CONFIRMATION",
+    "statement": "I confirm that I have reviewed the Sentinel-2 imagery and explicitly approve these corrections."
+  },
+  "correction_timestamp": "2026-10-02T06:20:48.681041+00:00",
+  "record_sha256": "7eb9f9b93dfd918140e94df8ba64a851f9bd205fc3dba961eff7f303331239d4"
+}

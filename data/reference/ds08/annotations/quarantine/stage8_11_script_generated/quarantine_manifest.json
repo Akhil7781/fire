@@ -1,0 +1,228 @@
+{
+  "status": "INVALID_SCRIPT_GENERATED",
+  "reason": "substantive annotation decisions were generated programmatically",
+  "human_verified": false,
+  "eligible_for_training": false,
+  "eligible_for_validation": false,
+  "eligible_for_evaluation": false,
+  "eligible_for_agreement": false,
+  "eligible_for_adjudication": false,
+  "quarantined_at_utc": "2026-09-29T22:29:00+00:00",
+  "total_quarantined_files": 30,
+  "annotator_distribution": {
+    "annotator_1_files": 15,
+    "annotator_2_files": 15
+  },
+  "quarantined_files": [
+    {
+      "filename": "PILOT_02_NORTH_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_02_NORTH",
+      "sha256": "8db6c14246ca452a902bae6e2edef6de2cab8aca202829815eccf768a185eb85",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_02_NORTH_annotator1.json"
+    },
+    {
+      "filename": "PILOT_03_NORTH_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_03_NORTH",
+      "sha256": "ea5bc5c914cad01cc016911cdf18af25b52d160e38e6d2b748b9252f5f3e50b5",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_03_NORTH_annotator1.json"
+    },
+    {
+      "filename": "PILOT_04_NORTH_REPLACEMENT_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+      "sha256": "0a033246b9fabfe0dd66558a1568209c64514e3322b72c7618722290b81110c9",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_04_NORTH_REPLACEMENT_annotator1.json"
+    },
+    {
+      "filename": "PILOT_06_CENTRAL_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_06_CENTRAL",
+      "sha256": "43da024098c74d0cdf7f5377dfacd157a7e7373d0fdc950d424e20829f426be3",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_06_CENTRAL_annotator1.json"
+    },
+    {
+      "filename": "PILOT_07_CENTRAL_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_07_CENTRAL",
+      "sha256": "8e14b947f8ca7d730aede742403248c050ad466870090040f754df50620aa887",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_07_CENTRAL_annotator1.json"
+    },
+    {
+      "filename": "PILOT_08_CENTRAL_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_08_CENTRAL",
+      "sha256": "a81a19b05e6fa7ca8fa25c3740dab8b031fba2194f95ee9819e769ffe433ce75",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_08_CENTRAL_annotator1.json"
+    },
+    {
+      "filename": "PILOT_10_SOUTH_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_10_SOUTH",
+      "sha256": "b44f75dcdbcbaf3b63fce83d9100cea5ffc001a6a4f39d8fa6b252f350de5cd7",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_10_SOUTH_annotator1.json"
+    },
+    {
+      "filename": "PILOT_11_SOUTH_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_11_SOUTH",
+      "sha256": "49eba7328164a2c084afb4017518d7930cc079aa542dd24e5cd1274704798499",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_11_SOUTH_annotator1.json"
+    },
+    {
+      "filename": "PILOT_12_SOUTH_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_12_SOUTH",
+      "sha256": "6e1935a504913809cda1677b5d637e1b344e752922445c51e785c17d87e754cd",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_12_SOUTH_annotator1.json"
+    },
+    {
+      "filename": "PILOT_14_EAST_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_14_EAST",
+      "sha256": "ed9ee9cb7374eb2ae1466964043dc7f016c19531ab78c67997133396cedf9406",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_14_EAST_annotator1.json"
+    },
+    {
+      "filename": "PILOT_15_EAST_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_15_EAST",
+      "sha256": "15c8e0ae133701e3e2cb5b170e5837e0544fbd9f6bd6bb7f8225fa9a88a38be2",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_15_EAST_annotator1.json"
+    },
+    {
+      "filename": "PILOT_16_EAST_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_16_EAST",
+      "sha256": "1097ddb09342f3442ac15b90d0546a837df4462219c1dc2f4b5706b522e60e3f",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_16_EAST_annotator1.json"
+    },
+    {
+      "filename": "PILOT_18_WEST_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_18_WEST",
+      "sha256": "d94be6c572171ec7312bd39e0a4670f2b7391dc2d70afa0cb3dde66900a5a0a9",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_18_WEST_annotator1.json"
+    },
+    {
+      "filename": "PILOT_19_WEST_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_19_WEST",
+      "sha256": "1e7de640fe63fd3a0f2e878c8a8153a04fcc2e3226acfd9ba61f7c3e1c71342f",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_19_WEST_annotator1.json"
+    },
+    {
+      "filename": "PILOT_20_WEST_annotator1.json",
+      "annotator": "annotator_1",
+      "chip_id": "PILOT_20_WEST",
+      "sha256": "1180328d5629cc31df9a5c252d067bc0ac33a27dd245462e35b6b4651619dfdc",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_1/PILOT_20_WEST_annotator1.json"
+    },
+    {
+      "filename": "PILOT_02_NORTH_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_02_NORTH",
+      "sha256": "8db6c14246ca452a902bae6e2edef6de2cab8aca202829815eccf768a185eb85",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_02_NORTH_annotator2.json"
+    },
+    {
+      "filename": "PILOT_03_NORTH_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_03_NORTH",
+      "sha256": "1864a10e9684dec2a24b7e67e9d3c3d3c8dd6d32f1bd0bed52d22cc97b2a69d0",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_03_NORTH_annotator2.json"
+    },
+    {
+      "filename": "PILOT_04_NORTH_REPLACEMENT_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+      "sha256": "0a033246b9fabfe0dd66558a1568209c64514e3322b72c7618722290b81110c9",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_04_NORTH_REPLACEMENT_annotator2.json"
+    },
+    {
+      "filename": "PILOT_06_CENTRAL_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_06_CENTRAL",
+      "sha256": "e2ae6ac445f2d537c3ee718510dfba0f70117e8d423dde29974f52e81d735964",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_06_CENTRAL_annotator2.json"
+    },
+    {
+      "filename": "PILOT_07_CENTRAL_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_07_CENTRAL",
+      "sha256": "8e14b947f8ca7d730aede742403248c050ad466870090040f754df50620aa887",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_07_CENTRAL_annotator2.json"
+    },
+    {
+      "filename": "PILOT_08_CENTRAL_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_08_CENTRAL",
+      "sha256": "0e212e514c8f63e679c2d60db825a2b5b31dc58dbbdbb6c84903de9bdba0b7b5",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_08_CENTRAL_annotator2.json"
+    },
+    {
+      "filename": "PILOT_10_SOUTH_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_10_SOUTH",
+      "sha256": "b44f75dcdbcbaf3b63fce83d9100cea5ffc001a6a4f39d8fa6b252f350de5cd7",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_10_SOUTH_annotator2.json"
+    },
+    {
+      "filename": "PILOT_11_SOUTH_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_11_SOUTH",
+      "sha256": "49eba7328164a2c084afb4017518d7930cc079aa542dd24e5cd1274704798499",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_11_SOUTH_annotator2.json"
+    },
+    {
+      "filename": "PILOT_12_SOUTH_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_12_SOUTH",
+      "sha256": "6e1935a504913809cda1677b5d637e1b344e752922445c51e785c17d87e754cd",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_12_SOUTH_annotator2.json"
+    },
+    {
+      "filename": "PILOT_14_EAST_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_14_EAST",
+      "sha256": "52f836685666a71ee293ddbcfd0a2cccde9a49e0c38206b0779ce53f4f8ee6e6",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_14_EAST_annotator2.json"
+    },
+    {
+      "filename": "PILOT_15_EAST_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_15_EAST",
+      "sha256": "6f148b37175d164b5e36599870768ccf96de8c6b33ea648c46c0e4ad7f67f0bc",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_15_EAST_annotator2.json"
+    },
+    {
+      "filename": "PILOT_16_EAST_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_16_EAST",
+      "sha256": "5ee54acc1933af8ba433701788917c55156957cb10deeb7a8e821ab6a82f3423",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_16_EAST_annotator2.json"
+    },
+    {
+      "filename": "PILOT_18_WEST_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_18_WEST",
+      "sha256": "4bb7a8ce6435be6c250f05b987f93bcb336730fe435cd07113af723d1d213422",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_18_WEST_annotator2.json"
+    },
+    {
+      "filename": "PILOT_19_WEST_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_19_WEST",
+      "sha256": "38bcd828065112b3953227db555bc8e87c9ba87a7c8b41480e50b9c6c527a8de",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_19_WEST_annotator2.json"
+    },
+    {
+      "filename": "PILOT_20_WEST_annotator2.json",
+      "annotator": "annotator_2",
+      "chip_id": "PILOT_20_WEST",
+      "sha256": "1180328d5629cc31df9a5c252d067bc0ac33a27dd245462e35b6b4651619dfdc",
+      "relative_path": "data/reference/ds08/annotations/quarantine/stage8_11_script_generated/annotator_2/PILOT_20_WEST_annotator2.json"
+    }
+  ]
+}

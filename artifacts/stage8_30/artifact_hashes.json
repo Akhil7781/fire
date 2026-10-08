@@ -1,0 +1,127 @@
+{
+  "data/reference/ds08/manifests/stage8_25/independent_test_manifest.json": {
+    "exists": true,
+    "sha256": "5686345a1300282407d303c943e190867b63c0c5d5ea536973d4859cd8a95d6c",
+    "size_bytes": 11494
+  },
+  "data/reference/ds08/manifests/stage8_25/industrial_facility_database.json": {
+    "exists": true,
+    "sha256": "fc72086efeac7c8ea0e432acd01de49da5658d44d5186607cef6b4280a2a8696",
+    "size_bytes": 10385
+  },
+  "models/stage8_28/causal_temporal_encoder.pt": {
+    "exists": true,
+    "sha256": "fb650d33d5554cedfd38d469fc1d74b7fcc326dcccdab133b3b43e7af646f58f",
+    "size_bytes": 244795
+  },
+  "models/stage8_28/causal_classifier.pt": {
+    "exists": true,
+    "sha256": "ed7300a375a85cc9f7502d907ea17a9089ffd714826f876db3b2f676f3c5db35",
+    "size_bytes": 50205
+  },
+  "artifacts/stage8_28/causal_feature_audit.csv": {
+    "exists": true,
+    "sha256": "d248bb88fe8cfe297e55827f51f6abb00ba6affcc837425679b8e80192d7a982",
+    "size_bytes": 5987
+  },
+  "artifacts/stage8_29/stage8_29_summary.json": {
+    "exists": true,
+    "sha256": "7a8aa7a14d1dd833f65446c671d7fcb8ecce5eafea333b590df1631211ab8cf4",
+    "size_bytes": 12829
+  },
+  "artifacts/stage8_29/stage8_29_final_report.md": {
+    "exists": true,
+    "sha256": "34c797aeecd2c2be20fca495d54e0389caf2e4841169d400debfdeb68dc1e1e6",
+    "size_bytes": 16845
+  },
+  "artifacts/stage8_29/no_registry_horizon_results.csv": {
+    "exists": true,
+    "sha256": "5e3da6cc1a8d29421da5a9c09bee62fea7ba038fc421f57fa65d2549d0970959",
+    "size_bytes": 2169
+  },
+  "data/interim/ds08_stage8_30_causal_prefix_dataset.parquet": {
+    "exists": true,
+    "sha256": "336f0bf38ece68554b779cad5699e2ba739f78a68443bb374a601e3c9ea9f587",
+    "size_bytes": 49118
+  },
+  "data/interim/ds08_stage8_30_causal_features.parquet": {
+    "exists": true,
+    "sha256": "e72602e7c556ab31088c76a945223a32449d362ba9a9d4a20f1f5c756b57303d",
+    "size_bytes": 145944
+  },
+  "data/interim/ds08_stage8_30_historical_sequences.parquet": {
+    "exists": true,
+    "sha256": "fefc15d79e22ab3a4a77a20b0c55d91dd937a48173c761ff4f017841a35e2f70",
+    "size_bytes": 94902
+  },
+  "models/stage8_30/historical_recurrence_encoder.pt": {
+    "exists": true,
+    "sha256": "76df4aeac103c60d2ac74e7e2af58786a21d02f990aa814d63492f8815dfdcec",
+    "size_bytes": 219197
+  },
+  "models/stage8_30/registry_free_causal_classifier.pt": {
+    "exists": true,
+    "sha256": "a487cbbfd9d4c8baa73a314eda81d029e2b7293ba8e3ceb02ff28de648aefeae",
+    "size_bytes": 383291
+  },
+  "models/stage8_30/scaler.json": {
+    "exists": true,
+    "sha256": "72b91d74aefa166fc2aee162c87777bb1ff25c9dfc53c918bdd41f6fe904d9e4",
+    "size_bytes": 10025
+  },
+  "models/stage8_30/metadata.json": {
+    "exists": true,
+    "sha256": "fae2c83835341731fed436a6f01f3deca722c88765d00d4f550d6bddd8b046d6",
+    "size_bytes": 347
+  },
+  "artifacts/stage8_30/stage8_30_summary.json": {
+    "exists": true,
+    "sha256": "c60bad806e781e1571561312c2fa20ea286e852530647f6bc0975364253be70e",
+    "size_bytes": 1216
+  },
+  "artifacts/stage8_30/stage8_30_final_report.md": {
+    "exists": true,
+    "sha256": "65c4105675b3596b1b3f2ff690c331c5ede9bfd3d67dc451a02a3dec2e9fd16d",
+    "size_bytes": 15795
+  },
+  "artifacts/stage8_30/ablation_results.csv": {
+    "exists": true,
+    "sha256": "45ad2912493b7e46198320c57e17429a67b149acf13dd9de53a0a1a36b09c79b",
+    "size_bytes": 1315
+  },
+  "artifacts/stage8_30/multi_horizon_results.csv": {
+    "exists": true,
+    "sha256": "236700ccea7a99c8ba56830c7a8353d57ffb63d799b48f2d4704cb6389d93eed",
+    "size_bytes": 1022
+  },
+  "artifacts/stage8_30/prediction_flip_analysis.csv": {
+    "exists": true,
+    "sha256": "3d395180e5f1775d9526daa806b5478be39c0f2b41bda45b7272562dec9d0617",
+    "size_bytes": 4792
+  },
+  "artifacts/stage8_30/error_analysis.csv": {
+    "exists": true,
+    "sha256": "efaca8cdb48564232675acf241f2f8a169553c41c75f4ffd712dde6a37865dee",
+    "size_bytes": 7155
+  },
+  "artifacts/stage8_30/feature_provenance.csv": {
+    "exists": true,
+    "sha256": "146453d8c94cebe99f6125734ec7d6c38e8eaa80b843ecdfe94dc2a8255bab50",
+    "size_bytes": 38258
+  },
+  "artifacts/stage8_30/historical_feature_audit.csv": {
+    "exists": true,
+    "sha256": "7da7137af7285d900fd74a2dce96d213e7dd28747c194cee32f3eb041fb255c8",
+    "size_bytes": 132759
+  },
+  "artifacts/stage8_30/historical_sequence_audit.csv": {
+    "exists": true,
+    "sha256": "b2432151b18d809e4a63b7609562331f08ed984bf368b0031d7ed096d6368d4e",
+    "size_bytes": 22421
+  },
+  "artifacts/stage8_30/bootstrap_metrics.json": {
+    "exists": true,
+    "sha256": "958a4fa213992d4b87fe00cbf61e2cdf7a6ab2ab7468e8bb7a696acd52e129b0",
+    "size_bytes": 482
+  }
+}

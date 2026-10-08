@@ -1,0 +1,21 @@
+{
+  "stage": "8.28",
+  "model_architecture": "HierarchicalCausalClassifier",
+  "in_dim": 94,
+  "temporal_dim": 64,
+  "tabular_dim": 30,
+  "hidden_dim": 64,
+  "classes": [
+    "Industrial Fire",
+    "Forest Fire",
+    "Agricultural Fire",
+    "Other Thermal Source/Persistent Non-Biomass Thermal Source"
+  ],
+  "temporal_training_losses": {
+    "final_frp_loss": 451.5086364746094,
+    "final_dt_loss": 13550073.0,
+    "final_rep_loss": 1.7408297026122455e-09,
+    "final_total_loss": 1355458.875
+  },
+  "best_val_macro_f1": 0.8747323644097837
+}

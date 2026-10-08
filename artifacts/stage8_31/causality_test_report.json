@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "FUTURE_INJECTION_INVARIANT": "PASS",
+  "events_tested": 159,
+  "part_a_per_event_injections_per_event": 6,
+  "part_a_total_comparisons": 20511,
+  "part_a_identical_comparisons": 20511,
+  "part_a_violations": 0,
+  "part_b_global_future_records": 477,
+  "part_b_violations": 0,
+  "injection_horizons_tested": [
+    "+1h",
+    "+6h",
+    "+24h",
+    "+30d",
+    "+180d",
+    "+365d",
+    "Year 2027",
+    "Year 2028"
+  ],
+  "historical_cutoff_applied": "t0 - 7 days",
+  "h0_alert_cutoff_applied": "t0",
+  "conclusion": "Feature extraction and sequence generation are strictly causal and mathematically invariant to post-alert FIRMS records."
+}

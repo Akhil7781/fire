@@ -1,0 +1,46 @@
+{
+  "stage": "8.30",
+  "status": "REGISTRY_FREE_CAUSAL_4_CLASS_CONFIRMED",
+  "registry_used_in_primary_model": false,
+  "baseline_h0_accuracy": 0.7857,
+  "h0_accuracy": 0.8928571428571429,
+  "h0_correct": "25/28",
+  "macro_f1_h0": 0.8709207459207459,
+  "balanced_accuracy_h0": 0.875,
+  "f1_per_class": {
+    "industrial_fire": 0.923076923076923,
+    "forest_fire": 0.8333333333333334,
+    "agricultural_fire": 0.7272727272727272,
+    "persistent_thermal_source": 1.0
+  },
+  "validation_2025_holdout": {
+    "accuracy": 0.875,
+    "macro_f1": 0.8730769230769231,
+    "balanced_accuracy": 0.8928571428571429
+  },
+  "hard_negatives_count": 63,
+  "bootstrap_metrics": {
+    "n_events": 28,
+    "h0_accuracy": 0.8928571428571429,
+    "h0_correct": 25,
+    "macro_f1": 0.8709207459207459,
+    "balanced_accuracy": 0.875,
+    "accuracy_95ci_bootstrap": [
+      0.75,
+      1.0
+    ],
+    "macro_f1_95ci_bootstrap": [
+      0.6891479925303454,
+      1.0
+    ],
+    "discrete_count_mapping": {
+      "22/28": "78.57%",
+      "23/28": "82.14%",
+      "24/28": "85.71%",
+      "25/28": "89.29%",
+      "26/28": "92.86%",
+      "27/28": "96.43%",
+      "28/28": "100.00%"
+    }
+  }
+}

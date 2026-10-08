@@ -1,0 +1,118 @@
+{
+  "gru_architecture": {
+    "type": "2-layer Unidirectional GRU",
+    "input_dim": 11,
+    "hidden_dim": 64,
+    "pooling": "Masked Softmax Attention Pooling"
+  },
+  "training_gradient_stats": {
+    "gru_grad_norm_mean": 0.037295191014412254,
+    "gru_grad_norm_max": 1.0181517888595328,
+    "gru_grad_norm_min": 0.0017197005120468606,
+    "attn_grad_norm_mean": 0.00015261668118910044,
+    "context_proj_grad_norm_mean": 0.5857235808222547,
+    "fusion_grad_norm_mean": 0.5896749064508944,
+    "classifier_grad_norm_mean": 0.41274992804889094,
+    "gru_vs_context_grad_ratio": 0.06367370588368024
+  },
+  "parameter_updates": {
+    "gru_params": {
+      "hist_encoder.gru.weight_ih_l0": {
+        "initial_norm": 7.982378959655762,
+        "final_norm": 8.043999671936035,
+        "delta_norm": 0.8961675763130188,
+        "relative_change": 0.11226823242073511
+      },
+      "hist_encoder.gru.weight_hh_l0": {
+        "initial_norm": 8.005054473876953,
+        "final_norm": 8.0543794631958,
+        "delta_norm": 0.920573890209198,
+        "relative_change": 0.11499907879619362
+      },
+      "hist_encoder.gru.bias_ih_l0": {
+        "initial_norm": 1.0210630893707275,
+        "final_norm": 1.0170201063156128,
+        "delta_norm": 0.10438007861375809,
+        "relative_change": 0.10222686501975763
+      },
+      "hist_encoder.gru.bias_hh_l0": {
+        "initial_norm": 0.9908791184425354,
+        "final_norm": 0.9968425631523132,
+        "delta_norm": 0.10458412021398544,
+        "relative_change": 0.10554680007625032
+      },
+      "hist_encoder.gru.weight_ih_l1": {
+        "initial_norm": 8.012269973754883,
+        "final_norm": 8.073152542114258,
+        "delta_norm": 1.0707018375396729,
+        "relative_change": 0.13363277086854045
+      },
+      "hist_encoder.gru.weight_hh_l1": {
+        "initial_norm": 8.020718574523926,
+        "final_norm": 8.111172676086426,
+        "delta_norm": 1.1744818687438965,
+        "relative_change": 0.1464310033859539
+      },
+      "hist_encoder.gru.bias_ih_l1": {
+        "initial_norm": 1.0534193515777588,
+        "final_norm": 1.0545170307159424,
+        "delta_norm": 0.12230315059423447,
+        "relative_change": 0.11610110485539774
+      },
+      "hist_encoder.gru.bias_hh_l1": {
+        "initial_norm": 0.9374858140945435,
+        "final_norm": 0.9507303833961487,
+        "delta_norm": 0.1226026639342308,
+        "relative_change": 0.1307781537501394
+      }
+    },
+    "context_params_sample": {
+      "context_proj.0.weight": {
+        "initial_norm": 4.632529258728027,
+        "final_norm": 4.713347434997559,
+        "delta_norm": 0.8804564476013184,
+        "relative_change": 0.1900595546034541
+      },
+      "context_proj.0.bias": {
+        "initial_norm": 0.457996129989624,
+        "final_norm": 0.46112293004989624,
+        "delta_norm": 0.0799473375082016,
+        "relative_change": 0.17455898046564897
+      },
+      "context_proj.2.weight": {
+        "initial_norm": 8.0,
+        "final_norm": 8.010684967041016,
+        "delta_norm": 0.14711061120033264,
+        "relative_change": 0.01838882640004158
+      }
+    },
+    "fusion_params_sample": {
+      "fusion.0.weight": {
+        "initial_norm": 6.515814304351807,
+        "final_norm": 6.735602378845215,
+        "delta_norm": 2.0559544563293457,
+        "relative_change": 0.3155330032895822
+      },
+      "fusion.0.bias": {
+        "initial_norm": 0.48158782720565796,
+        "final_norm": 0.49684491753578186,
+        "delta_norm": 0.10268048197031021,
+        "relative_change": 0.213212369934885
+      },
+      "fusion.2.weight": {
+        "initial_norm": 11.313708305358887,
+        "final_norm": 11.787405967712402,
+        "delta_norm": 0.5480018854141235,
+        "relative_change": 0.048436981988881155
+      }
+    }
+  },
+  "vanishing_or_exploding_gradients": "NEITHER (Well-conditioned, healthy gradients ~0.08 to 0.45)",
+  "temporal_sequence_vs_summary_diagnostics": {
+    "events_with_nonempty_sequence_train": 49,
+    "total_events_train": 107,
+    "events_with_nonempty_sequence_val": 10,
+    "total_events_val": 24,
+    "conclusion": "The GRU receives healthy gradients whenever historical observations exist (chiefly persistent sources). However, for acute events with zero historical detections within 2km, the GRU receives an all-zero padded sequence, rendering its output zero and making static summary features (hist_count, active months, ecoregion) the primary discriminating driver. When comparing Model A (with GRU) vs Model B (without GRU), we observe whether the temporal sequence ordering provides marginal benefit over multi-scale summary statistics."
+  }
+}

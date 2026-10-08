@@ -1,0 +1,53 @@
+{
+  "chip_id": "PILOT_08_CENTRAL",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_08_CENTRAL_HUMA_01",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 220,
+        "y_min": 240,
+        "x_max": 290,
+        "y_max": 345
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "HIGH",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE",
+        "BURN_SCAR_VISIBLE"
+      ],
+      "firms_relationship": "NEAR_OBJECT",
+      "review_status": "PENDING",
+      "annotator_id": "HUMAN_ANNOTATOR_01",
+      "annotation_timestamp": "2026-09-29T16:33:36.231711+00:00",
+      "notes": "Fresh forest burn scar with active smoldering/burning flank in Maikal hills."
+    }
+  ],
+  "context_metadata": {
+    "firms_detection_id": "879bbfd3059940f269945d35e03c60f8219e5f8699d0971dc568b42b564d0e32",
+    "firms_latitude": 22.76134,
+    "firms_longitude": 81.88918,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 4.58,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2A_MSIL2A_20250315T051241_N0511_R019_T44QNL_20250315T113317.SAFE",
+    "tile_id": "T44QNL",
+    "cloud_cover_pct": 0.0,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

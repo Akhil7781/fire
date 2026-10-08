@@ -1,0 +1,92 @@
+{
+  "chip_id": "PILOT_03_NORTH",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "human_verified": true,
+  "annotation_start_timestamp": "2026-09-30T16:15:17.412Z",
+  "annotation_completion_timestamp": "2026-09-30T16:15:37.594Z",
+  "interaction_audit": {
+    "interface_version": "v1.0_manual",
+    "bbox_creation_actions": 2,
+    "bbox_edit_actions": 0,
+    "class_selection_actions": 3,
+    "save_events": 2
+  },
+  "annotations": [
+    {
+      "annotation_id": "PILOT_03_NORTH_ANN_01",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 223,
+        "y_min": 237,
+        "x_max": 291,
+        "y_max": 277
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "BURN_SCAR_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "PENDING",
+      "notes": "",
+      "annotator_id": "HUMAN_ANNOTATOR_02",
+      "annotation_timestamp": "2026-09-30T16:15:37.595733+00:00"
+    },
+    {
+      "annotation_id": "PILOT_03_NORTH_ANN_02",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 135,
+        "y_min": 301,
+        "x_max": 203,
+        "y_max": 360
+      },
+      "geometry_confidence": "MEDIUM",
+      "source_class_confidence": "MEDIUM",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "BURN_SCAR_VISIBLE",
+        "FOREST_CONTEXT_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "PENDING",
+      "notes": "",
+      "annotator_id": "HUMAN_ANNOTATOR_02",
+      "annotation_timestamp": "2026-09-30T16:15:37.595733+00:00"
+    }
+  ],
+  "context_metadata": {
+    "firms_context_disclaimer": "FIRMS CONTEXT \u2014 NOT GROUND TRUTH",
+    "firms_detection_id": "772e0726e362b0d26bda66e2ea8bc8931e81babe7f425cc18c14c3a36d50078c",
+    "firms_latitude": 27.19986,
+    "firms_longitude": 87.72781,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 8.67,
+    "firms_brightness_kelvin": null,
+    "firms_pixel_coord": {
+      "row": 256,
+      "col": 256
+    },
+    "product_id": "S2B_MSIL2A_20250329T043659_N0511_R033_T45RWL_20250329T072509.SAFE",
+    "tile_id": "T45RWL",
+    "cloud_cover_pct": 7.89,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  },
+  "task_status": "COMPLETED_HUMAN_ANNOTATION"
+}

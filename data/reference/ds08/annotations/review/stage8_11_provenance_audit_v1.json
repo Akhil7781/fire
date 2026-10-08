@@ -1,0 +1,61 @@
+{
+  "stage": "8.11_provenance_audit",
+  "protocol_version": "1.0",
+  "status": "FAIL",
+  "human_annotation_provenance_verified": false,
+  "script_behavior": "The generation script scripts/generate_stage8_11_annotations.py directly populated substantive annotation decisions (class labels, bounding boxes, evidence tags, visibility, confidence) from hardcoded in-script dictionaries A1_DATA and A2_DATA rather than creating blank templates or capturing independent human inputs.",
+  "automatic_labeling_detected": true,
+  "model_inference_detected": false,
+  "shared_source_detected": true,
+  "a1_draft_count": 15,
+  "a2_draft_count": 15,
+  "a1_class_counts": {
+    "Forest Fire": 7,
+    "Agricultural Fire": 1,
+    "NO_VISIBLE_TARGET": 7,
+    "UNRESOLVED": 0,
+    "Industrial Fire": 0,
+    "Other Thermal Source": 0
+  },
+  "a2_class_counts": {
+    "Forest Fire": 4,
+    "Agricultural Fire": 0,
+    "NO_VISIBLE_TARGET": 9,
+    "UNRESOLVED": 2,
+    "Industrial Fire": 0,
+    "Other Thermal Source": 0
+  },
+  "a1_no_visible_target_ids": [
+    "PILOT_02_NORTH",
+    "PILOT_07_CENTRAL",
+    "PILOT_10_SOUTH",
+    "PILOT_11_SOUTH",
+    "PILOT_12_SOUTH",
+    "PILOT_20_WEST",
+    "PILOT_04_NORTH_REPLACEMENT"
+  ],
+  "reported_count_reconciled": true,
+  "outstanding_disagreements": [
+    "PILOT_06_CENTRAL",
+    "PILOT_14_EAST",
+    "PILOT_18_WEST",
+    "PILOT_19_WEST"
+  ],
+  "historical_disagreements": [
+    "PILOT_01_NORTH",
+    "PILOT_13_EAST",
+    "PILOT_17_WEST"
+  ],
+  "protocol_changes_detected": [],
+  "frozen_artifacts_unchanged": true,
+  "tests_passed": true,
+  "blocking_issues": [
+    "STAGE_8_11_PROVENANCE_FAIL: Stage 8.11 draft annotations were synthesized via hardcoded Python dictionaries in scripts/generate_stage8_11_annotations.py in a single scripted execution batch rather than collected from independent human annotators.",
+    "SHARED_AUTHORSHIP: Annotator 1 and Annotator 2 decisions were formulated within the same script by a single agentic process rather than independent, blind human annotators."
+  ],
+  "notes": [
+    "The 15 remaining chips were evaluated with realistic domain heuristics, but cannot be classified as genuine independent double human annotation under scientific standards.",
+    "NO_VISIBLE_TARGET count discrepancy resolved: 7 chips in remaining 15 cohort, 8 chips when including completed PILOT_05_CENTRAL from Stage 8.10A.",
+    "Zero ML/YOLO model inference was used; no prohibited protocol thresholds were frozen."
+  ]
+}

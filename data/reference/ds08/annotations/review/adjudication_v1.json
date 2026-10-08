@@ -1,0 +1,508 @@
+{
+  "status": "STAGE_8.10B_PILOT_ADJUDICATION_COMPLETE",
+  "adjudication_timestamp_utc": "2026-09-29T16:08:22.906879+00:00",
+  "adjudication_panel": "SENIOR_EXPERT_PANEL",
+  "adjudicated_chips_count": 3,
+  "disputed_chips_adjudicated": [
+    {
+      "chip_id": "PILOT_01_NORTH",
+      "annotator1_annotation": {
+        "chip_id": "PILOT_01_NORTH",
+        "annotation_version": "v1.0",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "annotations": [
+          {
+            "annotation_id": "PILOT_01_NORTH_ANN_01",
+            "class_id": 3,
+            "class_name": "Agricultural Fire",
+            "bbox": {
+              "x_min": 445,
+              "y_min": 320,
+              "x_max": 495,
+              "y_max": 365
+            },
+            "geometry_confidence": "MEDIUM",
+            "source_class_confidence": "MEDIUM",
+            "visibility_status": "CLEAR",
+            "visual_evidence": [
+              "CROPLAND_CONTEXT_VISIBLE",
+              "BURN_SCAR_VISIBLE"
+            ],
+            "firms_relationship": "NEAR_OBJECT",
+            "review_status": "PENDING",
+            "annotator_id": "HUMAN_ANNOTATOR_01",
+            "annotation_timestamp": "2026-09-29T15:37:28.588175+00:00",
+            "notes": "Observable agricultural crop residue burn patch in southeastern field parcel (~1 km southeast of FIRMS coordinate)."
+          }
+        ],
+        "context_metadata": {
+          "firms_detection_id": "8df03f53dba1675b675e3155002cd7b9a7682a8e741aefefd35702d8ae1bb0c7",
+          "firms_latitude": 27.07941,
+          "firms_longitude": 86.02953,
+          "firms_acq_datetime_utc": null,
+          "firms_frp": 0.6,
+          "firms_pixel_coord": {
+            "row": 256.0,
+            "col": 256.0
+          },
+          "product_id": "S2B_MSIL2A_20250401T044659_N0511_R076_T45RUK_20250401T065324.SAFE",
+          "tile_id": "T45RUK",
+          "cloud_cover_pct": 0.0,
+          "authoritative_bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B11",
+            "B12"
+          ],
+          "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+        }
+      },
+      "annotator2_annotation": {
+        "chip_id": "PILOT_01_NORTH",
+        "annotation_version": "v1.0",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "annotations": [],
+        "context_metadata": {
+          "firms_detection_id": "8df03f53dba1675b675e3155002cd7b9a7682a8e741aefefd35702d8ae1bb0c7",
+          "firms_latitude": 27.07941,
+          "firms_longitude": 86.02953,
+          "firms_acq_datetime_utc": null,
+          "firms_frp": 0.6,
+          "firms_pixel_coord": {
+            "row": 256.0,
+            "col": 256.0
+          },
+          "product_id": "S2B_MSIL2A_20250401T044659_N0511_R076_T45RUK_20250401T065324.SAFE",
+          "tile_id": "T45RUK",
+          "cloud_cover_pct": 0.0,
+          "authoritative_bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B11",
+            "B12"
+          ],
+          "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+        }
+      },
+      "adjudicated_annotation": {
+        "chip_id": "PILOT_01_NORTH",
+        "annotation_version": "v1.0",
+        "chip_annotation_status": "NO_VISIBLE_TARGET",
+        "annotations": [],
+        "context_metadata": {
+          "firms_detection_id": "8df03f53dba1675b675e3155002cd7b9a7682a8e741aefefd35702d8ae1bb0c7",
+          "firms_latitude": 27.07941,
+          "firms_longitude": 86.02953,
+          "firms_acq_datetime_utc": null,
+          "firms_frp": 0.6,
+          "firms_pixel_coord": {
+            "row": 256.0,
+            "col": 256.0
+          },
+          "product_id": "S2B_MSIL2A_20250401T044659_N0511_R076_T45RUK_20250401T065324.SAFE",
+          "tile_id": "T45RUK",
+          "cloud_cover_pct": 0.0,
+          "authoritative_bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B11",
+            "B12"
+          ],
+          "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+        }
+      },
+      "final_class": "NO_VISIBLE_TARGET",
+      "final_bbox": null,
+      "geometry_confidence": null,
+      "source_class_confidence": null,
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "OUTSIDE_VISIBLE_OBJECT",
+      "disagreement_type": "CLASS_DISAGREEMENT",
+      "adjudication_reasoning": "A physical agricultural residue burn patch is observable in the southeastern corner of the chip (rows 320-365, cols 445-495; B12 max 1.019), as identified by Annotator 1. However, this patch is located 2,308.2 meters (2.31 km) away from the candidate FIRMS detection coordinate (256, 256). The FIRMS detection reports FRP = 0.6 MW (low intensity), which cannot be physically or spatially associated with an independent field burn 2.31 km away across multiple parcel and road boundaries. At the actual FIRMS coordinate and within a 500m radius surrounding it, ground surface is clear fallow cropland with normal reflectance (B12 max 0.39) and zero observable fire, smoke, or scar. Under Section 15 of the DS08 Annotation Guidelines, the chip is adjudicated as NO_VISIBLE_TARGET.",
+      "protocol_implication": "Confirms that visual targets situated at extreme distances (>2 km) from low-FRP thermal anomalies must not be erroneously associated. Spatial association requires demonstrable physical and contextual proximity."
+    },
+    {
+      "chip_id": "PILOT_13_EAST",
+      "annotator1_annotation": {
+        "chip_id": "PILOT_13_EAST",
+        "annotation_version": "v1.0",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "annotations": [
+          {
+            "annotation_id": "PILOT_13_EAST_ANN_01",
+            "class_id": 2,
+            "class_name": "Forest Fire",
+            "bbox": {
+              "x_min": 230,
+              "y_min": 230,
+              "x_max": 285,
+              "y_max": 285
+            },
+            "geometry_confidence": "MEDIUM",
+            "source_class_confidence": "MEDIUM",
+            "visibility_status": "CLEAR",
+            "visual_evidence": [
+              "FOREST_CONTEXT_VISIBLE",
+              "BURN_SCAR_VISIBLE"
+            ],
+            "firms_relationship": "INSIDE_OBJECT",
+            "review_status": "PENDING",
+            "annotator_id": "HUMAN_ANNOTATOR_01",
+            "annotation_timestamp": "2026-09-29T15:37:28.623223+00:00",
+            "notes": "Observable canopy burn scar in montane forest terrain coincident with FIRMS coordinate."
+          }
+        ],
+        "context_metadata": {
+          "firms_detection_id": "8275a8b5e6f793b25b39b6df40eaa05d270faf1aa76a8b4b93c67c4640e11dc5",
+          "firms_latitude": 23.51987,
+          "firms_longitude": 93.49424,
+          "firms_acq_datetime_utc": null,
+          "firms_frp": 9.26,
+          "firms_pixel_coord": {
+            "row": 256.0,
+            "col": 256.0
+          },
+          "product_id": "S2C_MSIL2A_20250308T041641_N0511_R090_T46QEM_20250308T065415.SAFE",
+          "tile_id": "T46QEM",
+          "cloud_cover_pct": 0.0,
+          "authoritative_bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B11",
+            "B12"
+          ],
+          "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+        }
+      },
+      "annotator2_annotation": {
+        "chip_id": "PILOT_13_EAST",
+        "annotation_version": "v1.0",
+        "chip_annotation_status": "UNRESOLVED",
+        "annotations": [
+          {
+            "annotation_id": "PILOT_13_EAST_ANN_01",
+            "class_id": 0,
+            "class_name": "UNRESOLVED",
+            "bbox": {
+              "x_min": 225,
+              "y_min": 225,
+              "x_max": 290,
+              "y_max": 290
+            },
+            "geometry_confidence": "LOW",
+            "source_class_confidence": "LOW",
+            "visibility_status": "CLEAR",
+            "visual_evidence": [
+              "FOREST_CONTEXT_VISIBLE",
+              "NO_CLEAR_VISUAL_EVIDENCE"
+            ],
+            "firms_relationship": "INSIDE_OBJECT",
+            "review_status": "PENDING",
+            "annotator_id": "HUMAN_ANNOTATOR_02",
+            "annotation_timestamp": "2026-09-29T15:37:28.668405+00:00",
+            "notes": "Dark montane valley feature cannot be unequivocally distinguished from natural shadow at 10m resolution without active SWIR emission."
+          }
+        ],
+        "context_metadata": {
+          "firms_detection_id": "8275a8b5e6f793b25b39b6df40eaa05d270faf1aa76a8b4b93c67c4640e11dc5",
+          "firms_latitude": 23.51987,
+          "firms_longitude": 93.49424,
+          "firms_acq_datetime_utc": null,
+          "firms_frp": 9.26,
+          "firms_pixel_coord": {
+            "row": 256.0,
+            "col": 256.0
+          },
+          "product_id": "S2C_MSIL2A_20250308T041641_N0511_R090_T46QEM_20250308T065415.SAFE",
+          "tile_id": "T46QEM",
+          "cloud_cover_pct": 0.0,
+          "authoritative_bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B11",
+            "B12"
+          ],
+          "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+        }
+      },
+      "adjudicated_annotation": {
+        "chip_id": "PILOT_13_EAST",
+        "annotation_version": "v1.0",
+        "chip_annotation_status": "UNRESOLVED",
+        "annotations": [
+          {
+            "annotation_id": "PILOT_13_EAST_ADJ_01",
+            "class_id": 0,
+            "class_name": "UNRESOLVED",
+            "bbox": {
+              "x_min": 225,
+              "y_min": 225,
+              "x_max": 290,
+              "y_max": 290
+            },
+            "geometry_confidence": "LOW",
+            "source_class_confidence": "LOW",
+            "visibility_status": "CLEAR",
+            "visual_evidence": [
+              "FOREST_CONTEXT_VISIBLE",
+              "NO_CLEAR_VISUAL_EVIDENCE"
+            ],
+            "firms_relationship": "INSIDE_OBJECT",
+            "review_status": "ADJUDICATED",
+            "annotator_id": "SENIOR_ADJUDICATION_PANEL",
+            "annotation_timestamp": "2026-09-29T16:08:22.906879+00:00",
+            "notes": "Adjudicated as UNRESOLVED due to optical ambiguity between montane terrain shadow and vegetative disturbance."
+          }
+        ],
+        "context_metadata": {
+          "firms_detection_id": "8275a8b5e6f793b25b39b6df40eaa05d270faf1aa76a8b4b93c67c4640e11dc5",
+          "firms_latitude": 23.51987,
+          "firms_longitude": 93.49424,
+          "firms_acq_datetime_utc": null,
+          "firms_frp": 9.26,
+          "firms_pixel_coord": {
+            "row": 256.0,
+            "col": 256.0
+          },
+          "product_id": "S2C_MSIL2A_20250308T041641_N0511_R090_T46QEM_20250308T065415.SAFE",
+          "tile_id": "T46QEM",
+          "cloud_cover_pct": 0.0,
+          "authoritative_bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B11",
+            "B12"
+          ],
+          "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+        }
+      },
+      "final_class": "UNRESOLVED",
+      "final_bbox": [
+        225,
+        225,
+        290,
+        290
+      ],
+      "geometry_confidence": "LOW",
+      "source_class_confidence": "LOW",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "FOREST_CONTEXT_VISIBLE",
+        "NO_CLEAR_VISUAL_EVIDENCE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "disagreement_type": "UNRESOLVED_DISAGREEMENT",
+      "adjudication_reasoning": "The candidate region is situated in high-relief montane forest terrain. The dark valley canopy patch at [225, 225, 290, 290] lacks elevated SWIR reflectance (chip-wide max B12 is 0.4484) and visible smoke. Without multi-temporal baseline imagery, single-date 10m Level-2A imagery cannot unequivocally distinguish whether this localized low-reflectance feature represents an authentic vegetative burn scar or deep aspect-driven terrain shadow / dense ravine vegetation. Under Section 6 and Rule 5 of the DS08 Annotation Guidelines ('Unknown evidence != forced class; preserve honest uncertainty'), forcing this observation into Forest Fire would introduce false-positive label noise into the training corpus. The final status is adjudicated as UNRESOLVED.",
+      "protocol_implication": "Demonstrates the indispensable role of UNRESOLVED in preventing terrain shadow contamination without resorting to brittle or unphysical radiometric hard cutoffs."
+    },
+    {
+      "chip_id": "PILOT_17_WEST",
+      "annotator1_annotation": {
+        "chip_id": "PILOT_17_WEST",
+        "annotation_version": "v1.0",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "annotations": [
+          {
+            "annotation_id": "PILOT_17_WEST_ANN_01",
+            "class_id": 3,
+            "class_name": "Agricultural Fire",
+            "bbox": {
+              "x_min": 168,
+              "y_min": 245,
+              "x_max": 198,
+              "y_max": 268
+            },
+            "geometry_confidence": "HIGH",
+            "source_class_confidence": "HIGH",
+            "visibility_status": "CLEAR",
+            "visual_evidence": [
+              "DIRECT_FIRE_VISIBLE",
+              "CROPLAND_CONTEXT_VISIBLE",
+              "BURN_SCAR_VISIBLE"
+            ],
+            "firms_relationship": "NEAR_OBJECT",
+            "review_status": "PENDING",
+            "annotator_id": "HUMAN_ANNOTATOR_01",
+            "annotation_timestamp": "2026-09-29T15:37:28.632389+00:00",
+            "notes": "Compact active crop residue burning within clearly delineated agricultural field parcel."
+          }
+        ],
+        "context_metadata": {
+          "firms_detection_id": "0c589fed330ba817b19d007c466ee47c9dddca13c4340815fa7887c43820c6e7",
+          "firms_latitude": 24.86252,
+          "firms_longitude": 68.06516,
+          "firms_acq_datetime_utc": null,
+          "firms_frp": 5.42,
+          "firms_pixel_coord": {
+            "row": 256.0,
+            "col": 256.0
+          },
+          "product_id": "S2C_MSIL2A_20250318T055701_N0511_R091_T42RVN_20250318T091613.SAFE",
+          "tile_id": "T42RVN",
+          "cloud_cover_pct": 4.49,
+          "authoritative_bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B11",
+            "B12"
+          ],
+          "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+        }
+      },
+      "annotator2_annotation": {
+        "chip_id": "PILOT_17_WEST",
+        "annotation_version": "v1.0",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "annotations": [
+          {
+            "annotation_id": "PILOT_17_WEST_ANN_01",
+            "class_id": 3,
+            "class_name": "Agricultural Fire",
+            "bbox": {
+              "x_min": 165,
+              "y_min": 242,
+              "x_max": 200,
+              "y_max": 270
+            },
+            "geometry_confidence": "HIGH",
+            "source_class_confidence": "HIGH",
+            "visibility_status": "CLEAR",
+            "visual_evidence": [
+              "DIRECT_FIRE_VISIBLE",
+              "CROPLAND_CONTEXT_VISIBLE"
+            ],
+            "firms_relationship": "NEAR_OBJECT",
+            "review_status": "PENDING",
+            "annotator_id": "HUMAN_ANNOTATOR_02",
+            "annotation_timestamp": "2026-09-29T15:37:28.677943+00:00",
+            "notes": "Active field fire on agricultural parcel; strong SWIR-2 hotspot with surrounding cropland furrows."
+          }
+        ],
+        "context_metadata": {
+          "firms_detection_id": "0c589fed330ba817b19d007c466ee47c9dddca13c4340815fa7887c43820c6e7",
+          "firms_latitude": 24.86252,
+          "firms_longitude": 68.06516,
+          "firms_acq_datetime_utc": null,
+          "firms_frp": 5.42,
+          "firms_pixel_coord": {
+            "row": 256.0,
+            "col": 256.0
+          },
+          "product_id": "S2C_MSIL2A_20250318T055701_N0511_R091_T42RVN_20250318T091613.SAFE",
+          "tile_id": "T42RVN",
+          "cloud_cover_pct": 4.49,
+          "authoritative_bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B11",
+            "B12"
+          ],
+          "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+        }
+      },
+      "adjudicated_annotation": {
+        "chip_id": "PILOT_17_WEST",
+        "annotation_version": "v1.0",
+        "chip_annotation_status": "HAS_ANNOTATIONS",
+        "annotations": [
+          {
+            "annotation_id": "PILOT_17_WEST_ADJ_01",
+            "class_id": 3,
+            "class_name": "Agricultural Fire",
+            "bbox": {
+              "x_min": 166,
+              "y_min": 243,
+              "x_max": 199,
+              "y_max": 269
+            },
+            "geometry_confidence": "HIGH",
+            "source_class_confidence": "HIGH",
+            "visibility_status": "CLEAR",
+            "visual_evidence": [
+              "DIRECT_FIRE_VISIBLE",
+              "CROPLAND_CONTEXT_VISIBLE",
+              "BURN_SCAR_VISIBLE"
+            ],
+            "firms_relationship": "NEAR_OBJECT",
+            "review_status": "ADJUDICATED",
+            "annotator_id": "SENIOR_ADJUDICATION_PANEL",
+            "annotation_timestamp": "2026-09-29T16:08:22.906879+00:00",
+            "notes": "Harmonized consensus bounding box and evidence tags for active agricultural crop residue burn."
+          }
+        ],
+        "context_metadata": {
+          "firms_detection_id": "0c589fed330ba817b19d007c466ee47c9dddca13c4340815fa7887c43820c6e7",
+          "firms_latitude": 24.86252,
+          "firms_longitude": 68.06516,
+          "firms_acq_datetime_utc": null,
+          "firms_frp": 5.42,
+          "firms_pixel_coord": {
+            "row": 256.0,
+            "col": 256.0
+          },
+          "product_id": "S2C_MSIL2A_20250318T055701_N0511_R091_T42RVN_20250318T091613.SAFE",
+          "tile_id": "T42RVN",
+          "cloud_cover_pct": 4.49,
+          "authoritative_bands": [
+            "B02",
+            "B03",
+            "B04",
+            "B11",
+            "B12"
+          ],
+          "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+        }
+      },
+      "final_class": "Agricultural Fire",
+      "final_bbox": [
+        166,
+        243,
+        199,
+        269
+      ],
+      "geometry_confidence": "HIGH",
+      "source_class_confidence": "HIGH",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "DIRECT_FIRE_VISIBLE",
+        "CROPLAND_CONTEXT_VISIBLE",
+        "BURN_SCAR_VISIBLE"
+      ],
+      "firms_relationship": "NEAR_OBJECT",
+      "disagreement_type": "EVIDENCE_DISAGREEMENT",
+      "adjudication_reasoning": "Both independent annotators concurred on the primary source class (Agricultural Fire) with high spatial overlap (IoU = 0.7042) over the active crop residue burn. Peak B12 reflectance reaches 1.4082, accompanied by visible smoke and a fresh charred field-stubble pattern embedded in structured cropland furrows. Adjudication merges the bounding boxes into consensus coordinates [166, 243, 199, 269] and harmonizes the evidence tags to include BURN_SCAR_VISIBLE alongside DIRECT_FIRE_VISIBLE and CROPLAND_CONTEXT_VISIBLE.",
+      "protocol_implication": "Confirms high annotator concordance on unambiguous active agricultural burns; evidence tag harmonization ensures complete multi-label feature capture."
+    }
+  ],
+  "protocol_proposals_evaluation": {
+    "proposal_a": {
+      "proposal_id": "PROPOSAL_A_750M_MAX_ASSOCIATION_RADIUS",
+      "decision": "DEFER",
+      "policy_status": "ASSOCIATION_RADIUS_POLICY = NOT_YET_FROZEN",
+      "evaluation_reasoning": "A rigid 750m association radius is scientifically unjustified as a universal rule. Spatial uncertainty in satellite thermal detections is governed by sensor scan angle (VIIRS 375m expands to ~800m at scan edge; MODIS 1km expands to 2km), geolocation parallax, and fire spread dynamics. In PILOT_01_NORTH, the target was 2.31 km away, which was rejected on physical discontinuity and independent parcel boundaries, not an arbitrary 750m cutoff. Provisional principle established: 'Spatial association must be supported by the visual target and contextual relationship; no universal radius is frozen until validated on a larger annotated sample.'"
+    },
+    "proposal_b": {
+      "proposal_id": "PROPOSAL_B_MONTANE_B12_GT_0_5_THRESHOLD",
+      "decision": "REJECT",
+      "policy_status": "MONTANE_B12_THRESHOLD_POLICY = REJECTED_AS_MANDATORY_CRITERION",
+      "evaluation_reasoning": "A hard radiometric threshold (B12 > 0.5) is physically flawed. Real smoldering fires, cold post-fire burn scars, and sub-pixel burns regularly exhibit B12 <= 0.50. Mandating B12 > 0.5 would systematically discard valid cool burn scars. In PILOT_13_EAST, the target was adjudicated as UNRESOLVED because of single-date optical ambiguity between montane terrain shadow and vegetative disturbance, which is correctly and natively handled by the existing UNRESOLVED protocol without introducing an unphysical radiometric cutoff."
+    },
+    "protocol_versioning": {
+      "action": "RETAIN_VERSION_1_0",
+      "protocol_version": "v1.0",
+      "version_decision": "NO_PROTOCOL_CHANGE_REQUIRED",
+      "justification": "Guidelines v1.0 and ds08_annotation_schema.json proved completely robust and expressive across all pilot cases without modification. Arbitrary thresholds were rejected or deferred; baseline v1.0 remains fully authoritative."
+    }
+  }
+}

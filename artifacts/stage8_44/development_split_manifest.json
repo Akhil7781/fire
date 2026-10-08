@@ -1,0 +1,661 @@
+{
+  "method": "Union events sharing incident_id or lying within 50 km using Stage 8.43 coordinates; assign connected groups by modal inherited split.",
+  "spatial_threshold_km": 50.0,
+  "groups": [
+    {
+      "spatial_source_component": "SRCSP_000",
+      "event_ids": [
+        "EVT_825_AGR_AGR_EVT_2016_PB_SANGRUR_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2017_HR_KARNAL_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2020_HR_KAITHAL_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2021_PB_BATHINDA_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2022_HR_FATEHABAD_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2022_PB_MANSA_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2023_HR_KURUKSHETRA_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2023_PB_PATIALA_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2024_HR_JIND_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2025_HR_KAITHAL_KHARIF_006",
+        "EVT_825_AGR_AGR_EVT_2025_HR_KARNAL_RABI_002",
+        "EVT_825_AGR_AGR_EVT_2025_PB_PATIALA_KHARIF_005",
+        "EVT_825_AGR_AGR_EVT_2025_PB_PATIALA_RABI_004",
+        "EVT_825_IND_IND_INC_2025_PANIPAT_TEXTILE"
+      ],
+      "member_count": 14,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_001",
+      "event_ids": [
+        "EVT_825_AGR_AGR_EVT_2018_PB_TARN_TARAN_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2019_PB_FIROZPUR_KHARIF",
+        "EVT_825_AGR_AGR_EVT_2021_PB_LUDHIANA_RABI",
+        "EVT_825_AGR_AGR_EVT_2024_PB_MOGA_KHARIF"
+      ],
+      "member_count": 4,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_002",
+      "event_ids": [
+        "EVT_825_AGR_AGR_EVT_2019_MP_SEHORE_RABI",
+        "EVT_825_AGR_AGR_EVT_2025_MP_SEHORE_RABI_003"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_003",
+      "event_ids": [
+        "EVT_825_AGR_AGR_EVT_2020_UP_PILIBHIT_KHARIF"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_004",
+      "event_ids": [
+        "EVT_825_AGR_AGR_EVT_2021_MP_HOSHANGABAD_RABI"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_005",
+      "event_ids": [
+        "EVT_825_AGR_AGR_EVT_2022_RJ_HANUMANGARH_KHARIF"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_006",
+      "event_ids": [
+        "EVT_825_AGR_AGR_EVT_2023_UP_SHAHJAHANPUR_KHARIF"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_007",
+      "event_ids": [
+        "EVT_825_AGR_AGR_EVT_2024_MP_RAISEN_RABI"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_008",
+      "event_ids": [
+        "EVT_825_AGR_AGR_EVT_2024_UP_MATHURA_RABI"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_009",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2016_HP_SHIMLA",
+        "EVT_825_FOR_FOR_EVT_2024_HP_SOLAN"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_010",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2016_UK_ALMORA",
+        "EVT_825_FOR_FOR_EVT_2021_UK_NAINITAL"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_011",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2018_TN_KURANGANI"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_012",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2019_KA_BANDIPUR",
+        "EVT_825_FOR_FOR_EVT_2025_TN_MUDUMALAI_006"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_013",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2019_OD_SIMILIPAL",
+        "EVT_825_FOR_FOR_EVT_2021_OD_SIMILIPAL_MEGA",
+        "EVT_825_FOR_FOR_EVT_2025_OD_SIMILIPAL_003"
+      ],
+      "member_count": 3,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_014",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2020_CG_BASTAR",
+        "EVT_825_FOR_FOR_EVT_2025_CG_BASTAR_007"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_015",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2020_MP_KANHA"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_016",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2021_RJ_SARISKA"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_017",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2022_MH_MELGHAT",
+        "EVT_825_FOR_FOR_EVT_2025_MH_MELGHAT_005"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_018",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2022_MP_BANDHAVGARH",
+        "EVT_825_FOR_FOR_EVT_2025_MP_BANDHAVGARH_004"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_019",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2022_UK_GARHWAL",
+        "EVT_825_FOR_FOR_EVT_2025_S2_CHIP_S3_001"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_020",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2023_MZ_AIZAWL"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_021",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2023_OD_KORAPUT"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_022",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2023_TG_AMRABAD"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_023",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2024_AP_SESHACHALAM"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_024",
+      "event_ids": [
+        "EVT_825_FOR_FOR_EVT_2024_JH_BETLA"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_025",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2016_DOMBIVLI_AMUDAN",
+        "EVT_825_IND_IND_INC_2018_BPCL_MAHUL",
+        "EVT_825_IND_IND_INC_2018_HIL_RASAYANI",
+        "EVT_825_IND_IND_INC_2019_ONGC_URAN",
+        "EVT_825_IND_IND_INC_2022_SUDARSHAN_ROHA",
+        "EVT_825_IND_IND_INC_2023_CENTURY_SHAHAD",
+        "EVT_825_IND_IND_INC_2025_ROHA_MIDC_S8"
+      ],
+      "member_count": 7,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_026",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2017_NTPC_UNCHAHAR"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_027",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2019_AARTI_JHAGADIA",
+        "EVT_825_IND_IND_INC_2021_UPL_JHAGADIA",
+        "EVT_825_IND_IND_INC_2023_GODREJ_VALIA"
+      ],
+      "member_count": 3,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_028",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2019_HALDIA_PETRO"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_029",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2020_ASIAN_PAINTS",
+        "EVT_825_PER_PER_SRC_51"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_030",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2020_BAGHJAN_OIL",
+        "EVT_825_PER_PER_SRC_07",
+        "EVT_825_PER_PER_SRC_30"
+      ],
+      "member_count": 3,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_031",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2020_IOCL_PARADIP"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_032",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2020_TARAPUR_CHEM"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_033",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2020_YASHASHVI_DAHEJ"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_034",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2021_IOCL_BARAUNI"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_035",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2021_SERUM_MANJARI"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_036",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2021_SIVAKASI_RAMBAN"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_037",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2021_SOVEREIGN_DAMAN"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_038",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2022_RAYALASEEMA_KURNOOL"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_039",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2023_JINDAL_IGATPURI"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_040",
+      "event_ids": [
+        "EVT_825_IND_IND_INC_2025_MANALI_PETRO"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "val"
+      ],
+      "proposed_group_split": "val"
+    },
+    {
+      "spatial_source_component": "SRCSP_041",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_04"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "val"
+      ],
+      "proposed_group_split": "val"
+    },
+    {
+      "spatial_source_component": "SRCSP_042",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_08",
+        "EVT_825_PER_PER_SRC_09",
+        "EVT_825_PER_PER_SRC_10",
+        "EVT_825_PER_PER_SRC_34"
+      ],
+      "member_count": 4,
+      "inherited_splits": [
+        "train",
+        "val"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_043",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_11",
+        "EVT_825_PER_PER_SRC_36",
+        "EVT_825_PER_PER_SRC_37"
+      ],
+      "member_count": 3,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_044",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_31"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "val"
+      ],
+      "proposed_group_split": "val"
+    },
+    {
+      "spatial_source_component": "SRCSP_045",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_32"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_046",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_33"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_047",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_35"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_048",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_38"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_049",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_39",
+        "EVT_825_PER_PER_SRC_48"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_050",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_40"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_051",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_43",
+        "EVT_825_PER_PER_SRC_44"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_052",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_45",
+        "EVT_825_PER_PER_SRC_46"
+      ],
+      "member_count": 2,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    },
+    {
+      "spatial_source_component": "SRCSP_053",
+      "event_ids": [
+        "EVT_825_PER_PER_SRC_50"
+      ],
+      "member_count": 1,
+      "inherited_splits": [
+        "train"
+      ],
+      "proposed_group_split": "train"
+    }
+  ],
+  "cross_split_pair_counts_after_grouping": {
+    "under_5km": 0,
+    "under_10km": 0,
+    "under_50km": 0
+  },
+  "note": "Proposed grouping plan only; distances use ledger coordinates and physical facilities need review."
+}

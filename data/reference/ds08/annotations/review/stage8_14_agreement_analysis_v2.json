@@ -1,0 +1,620 @@
+{
+  "stage": "STAGE_8.14",
+  "title": "A1 vs A2 Agreement Analysis & Genuine Human Double-Annotation Audit",
+  "version": "v2.0",
+  "timestamp_utc": "2026-09-30T16:28:49.289154+00:00",
+  "authoritative_dataset": {
+    "annotator_1_workspace": "data/reference/ds08/annotations/manual/annotator_1/",
+    "annotator_2_workspace": "data/reference/ds08/annotations/manual/annotator_2/",
+    "chips_count": 15
+  },
+  "provenance_validation": {
+    "annotator_1_completed": 15,
+    "annotator_2_completed": 15,
+    "annotator_1_pending": 0,
+    "annotator_2_pending": 0,
+    "independent_provenance_verified": true,
+    "quarantines_excluded": true
+  },
+  "observation_status_agreement": {
+    "total_chips": 15,
+    "agreement_count": 14,
+    "agreement_percentage": 93.33,
+    "disagreement_count": 1,
+    "disagreement_percentage": 6.67,
+    "confusion_matrix_3x3": {
+      "HAS_ANNOTATIONS": {
+        "HAS_ANNOTATIONS": 5,
+        "NO_VISIBLE_TARGET": 1,
+        "UNRESOLVED": 0
+      },
+      "NO_VISIBLE_TARGET": {
+        "HAS_ANNOTATIONS": 0,
+        "NO_VISIBLE_TARGET": 9,
+        "UNRESOLVED": 0
+      },
+      "UNRESOLVED": {
+        "HAS_ANNOTATIONS": 0,
+        "NO_VISIBLE_TARGET": 0,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "source_class_agreement": {
+    "matched_boxes_sample_size": 11,
+    "matched_boxes_class_agreement_count": 11,
+    "matched_boxes_class_agreement_pct": 100.0,
+    "matched_boxes_class_disagreement_count": 0,
+    "matched_boxes_classes_observed": [
+      "Forest Fire"
+    ],
+    "matched_boxes_cohens_kappa": 1.0,
+    "matched_boxes_kappa_note": "All 11 matched box pairs were concordantly classified as Forest Fire by both annotators.",
+    "chip_level_primary_agreement": {
+      "sample_size": 15,
+      "categories": [
+        "Agricultural Fire",
+        "Forest Fire",
+        "NO_VISIBLE_TARGET"
+      ],
+      "confusion_matrix": {
+        "Agricultural Fire": {
+          "Agricultural Fire": 0,
+          "Forest Fire": 0,
+          "NO_VISIBLE_TARGET": 1
+        },
+        "Forest Fire": {
+          "Agricultural Fire": 0,
+          "Forest Fire": 5,
+          "NO_VISIBLE_TARGET": 0
+        },
+        "NO_VISIBLE_TARGET": {
+          "Agricultural Fire": 0,
+          "Forest Fire": 0,
+          "NO_VISIBLE_TARGET": 9
+        }
+      },
+      "agreement_count": 14,
+      "agreement_pct": 93.33,
+      "po": 0.9333,
+      "pe": 0.5111,
+      "cohens_kappa": 0.8636
+    }
+  },
+  "bounding_box_agreement": {
+    "matching_strategy": "Deterministic greedy maximum IoU matching within each chip",
+    "matched_boxes_count": 11,
+    "mean_iou": 0.526,
+    "median_iou": 0.5846,
+    "min_iou": 0.1339,
+    "max_iou": 0.8663,
+    "count_iou_gte_0_50": 6,
+    "pct_iou_gte_0_50": 54.55,
+    "all_matched_ious": [
+      0.3709136630343671,
+      0.24944974321349964,
+      0.6385310517208229,
+      0.584631918323482,
+      0.8663470182798921,
+      0.6158378505774217,
+      0.46218487394957986,
+      0.797246850209986,
+      0.4274481772694782,
+      0.13393939393939394,
+      0.6394557823129252
+    ]
+  },
+  "evidence_agreement": {
+    "sample_size": 11,
+    "mean_jaccard": 0.8636,
+    "median_jaccard": 0.75,
+    "min_jaccard": 0.75,
+    "max_jaccard": 1.0,
+    "exact_agreement_count": 5,
+    "exact_agreement_pct": 45.45
+  },
+  "visibility_and_confidence_agreement": {
+    "matched_boxes_count": 11,
+    "visibility_agreement_count": 11,
+    "visibility_agreement_pct": 100.0,
+    "visibility_disagreement_count": 0,
+    "geometry_confidence_agreement_count": 11,
+    "geometry_confidence_agreement_pct": 100.0,
+    "geometry_confidence_disagreement_count": 0,
+    "source_class_confidence_agreement_count": 11,
+    "source_class_confidence_agreement_pct": 100.0,
+    "source_class_confidence_disagreement_count": 0
+  },
+  "chip_records": [
+    {
+      "chip_id": "PILOT_02_NORTH",
+      "a1_status": "NO_VISIBLE_TARGET",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [],
+      "a2_classes": [],
+      "a1_box_count": 0,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [],
+      "is_concordant": true
+    },
+    {
+      "chip_id": "PILOT_03_NORTH",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a1_box_count": 2,
+      "a2_box_count": 2,
+      "matched_boxes_count": 2,
+      "matched_ious": [
+        0.3709,
+        0.2494
+      ],
+      "mean_iou": 0.3102,
+      "mean_evidence_jaccard": 0.75,
+      "disagreements": [
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])",
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_06_CENTRAL",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a1_box_count": 2,
+      "a2_box_count": 2,
+      "matched_boxes_count": 2,
+      "matched_ious": [
+        0.6385,
+        0.5846
+      ],
+      "mean_iou": 0.6116,
+      "mean_evidence_jaccard": 0.75,
+      "disagreements": [
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])",
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_07_CENTRAL",
+      "a1_status": "NO_VISIBLE_TARGET",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [],
+      "a2_classes": [],
+      "a1_box_count": 0,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [],
+      "is_concordant": true
+    },
+    {
+      "chip_id": "PILOT_08_CENTRAL",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [
+        "Agricultural Fire"
+      ],
+      "a2_classes": [],
+      "a1_box_count": 1,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [
+        "OBSERVATION_STATUS_DISAGREEMENT (A1: HAS_ANNOTATIONS vs A2: NO_VISIBLE_TARGET)",
+        "BOX_COUNT_MISMATCH (A1: 1 vs A2: 0)",
+        "UNMATCHED_BOX_A1 (Agricultural Fire {'x_min': 218, 'y_min': 228, 'x_max': 269, 'y_max': 296})"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_10_SOUTH",
+      "a1_status": "NO_VISIBLE_TARGET",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [],
+      "a2_classes": [],
+      "a1_box_count": 0,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [],
+      "is_concordant": true
+    },
+    {
+      "chip_id": "PILOT_11_SOUTH",
+      "a1_status": "NO_VISIBLE_TARGET",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [],
+      "a2_classes": [],
+      "a1_box_count": 0,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [],
+      "is_concordant": true
+    },
+    {
+      "chip_id": "PILOT_12_SOUTH",
+      "a1_status": "NO_VISIBLE_TARGET",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [],
+      "a2_classes": [],
+      "a1_box_count": 0,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [],
+      "is_concordant": true
+    },
+    {
+      "chip_id": "PILOT_14_EAST",
+      "a1_status": "NO_VISIBLE_TARGET",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [],
+      "a2_classes": [],
+      "a1_box_count": 0,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [],
+      "is_concordant": true
+    },
+    {
+      "chip_id": "PILOT_15_EAST",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a1_box_count": 3,
+      "a2_box_count": 3,
+      "matched_boxes_count": 3,
+      "matched_ious": [
+        0.8663,
+        0.6158,
+        0.4622
+      ],
+      "mean_iou": 0.6481,
+      "mean_evidence_jaccard": 0.9167,
+      "disagreements": [
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_16_EAST",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a1_box_count": 3,
+      "a2_box_count": 4,
+      "matched_boxes_count": 3,
+      "matched_ious": [
+        0.7972,
+        0.4274,
+        0.1339
+      ],
+      "mean_iou": 0.4528,
+      "mean_evidence_jaccard": 1.0,
+      "disagreements": [
+        "BOX_COUNT_MISMATCH (A1: 3 vs A2: 4)",
+        "UNMATCHED_BOX_A2 (Forest Fire {'x_min': 313, 'y_min': 407, 'x_max': 344, 'y_max': 453})"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_18_WEST",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire"
+      ],
+      "a1_box_count": 1,
+      "a2_box_count": 1,
+      "matched_boxes_count": 1,
+      "matched_ious": [
+        0.6395
+      ],
+      "mean_iou": 0.6395,
+      "mean_evidence_jaccard": 0.75,
+      "disagreements": [
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_19_WEST",
+      "a1_status": "NO_VISIBLE_TARGET",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [],
+      "a2_classes": [],
+      "a1_box_count": 0,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [],
+      "is_concordant": true
+    },
+    {
+      "chip_id": "PILOT_20_WEST",
+      "a1_status": "NO_VISIBLE_TARGET",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [],
+      "a2_classes": [],
+      "a1_box_count": 0,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [],
+      "is_concordant": true
+    },
+    {
+      "chip_id": "PILOT_04_NORTH_REPLACEMENT",
+      "a1_status": "NO_VISIBLE_TARGET",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [],
+      "a2_classes": [],
+      "a1_box_count": 0,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [],
+      "is_concordant": true
+    }
+  ],
+  "disagreement_inventory": [
+    {
+      "chip_id": "PILOT_03_NORTH",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a1_box_count": 2,
+      "a2_box_count": 2,
+      "matched_boxes_count": 2,
+      "matched_ious": [
+        0.3709,
+        0.2494
+      ],
+      "mean_iou": 0.3102,
+      "mean_evidence_jaccard": 0.75,
+      "disagreements": [
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])",
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_06_CENTRAL",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a1_box_count": 2,
+      "a2_box_count": 2,
+      "matched_boxes_count": 2,
+      "matched_ious": [
+        0.6385,
+        0.5846
+      ],
+      "mean_iou": 0.6116,
+      "mean_evidence_jaccard": 0.75,
+      "disagreements": [
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])",
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_08_CENTRAL",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "NO_VISIBLE_TARGET",
+      "a1_classes": [
+        "Agricultural Fire"
+      ],
+      "a2_classes": [],
+      "a1_box_count": 1,
+      "a2_box_count": 0,
+      "matched_boxes_count": 0,
+      "matched_ious": [],
+      "mean_iou": null,
+      "mean_evidence_jaccard": null,
+      "disagreements": [
+        "OBSERVATION_STATUS_DISAGREEMENT (A1: HAS_ANNOTATIONS vs A2: NO_VISIBLE_TARGET)",
+        "BOX_COUNT_MISMATCH (A1: 1 vs A2: 0)",
+        "UNMATCHED_BOX_A1 (Agricultural Fire {'x_min': 218, 'y_min': 228, 'x_max': 269, 'y_max': 296})"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_15_EAST",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a1_box_count": 3,
+      "a2_box_count": 3,
+      "matched_boxes_count": 3,
+      "matched_ious": [
+        0.8663,
+        0.6158,
+        0.4622
+      ],
+      "mean_iou": 0.6481,
+      "mean_evidence_jaccard": 0.9167,
+      "disagreements": [
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_16_EAST",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire",
+        "Forest Fire"
+      ],
+      "a1_box_count": 3,
+      "a2_box_count": 4,
+      "matched_boxes_count": 3,
+      "matched_ious": [
+        0.7972,
+        0.4274,
+        0.1339
+      ],
+      "mean_iou": 0.4528,
+      "mean_evidence_jaccard": 1.0,
+      "disagreements": [
+        "BOX_COUNT_MISMATCH (A1: 3 vs A2: 4)",
+        "UNMATCHED_BOX_A2 (Forest Fire {'x_min': 313, 'y_min': 407, 'x_max': 344, 'y_max': 453})"
+      ],
+      "is_concordant": false
+    },
+    {
+      "chip_id": "PILOT_18_WEST",
+      "a1_status": "HAS_ANNOTATIONS",
+      "a2_status": "HAS_ANNOTATIONS",
+      "a1_classes": [
+        "Forest Fire"
+      ],
+      "a2_classes": [
+        "Forest Fire"
+      ],
+      "a1_box_count": 1,
+      "a2_box_count": 1,
+      "matched_boxes_count": 1,
+      "matched_ious": [
+        0.6395
+      ],
+      "mean_iou": 0.6395,
+      "mean_evidence_jaccard": 0.75,
+      "disagreements": [
+        "EVIDENCE_DISAGREEMENT (A1: ['DIRECT_FIRE_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'] vs A2: ['DIRECT_FIRE_VISIBLE', 'BURN_SCAR_VISIBLE', 'FOREST_CONTEXT_VISIBLE', 'NO_CLEAR_VISUAL_EVIDENCE'])"
+      ],
+      "is_concordant": false
+    }
+  ],
+  "pilot_limitations": {
+    "sample_size": 15,
+    "nature": "Small-scale human annotation pilot cohort",
+    "statistical_interpretation": "Descriptive statistics only; does not establish population-level annotation reliability.",
+    "operational_rule": "No threshold or model-training decisions should be frozen solely from this pilot."
+  },
+  "adjudication_status": {
+    "adjudication_executed": false,
+    "note": "No labels modified, no consensus created, zero adjudication in this stage. Deferred to Stage 8.15."
+  },
+  "frozen_predecessor_integrity": {
+    "models/tcn/best_tcn.pt": {
+      "expected": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+      "actual": "dfa2decb772cf71b65601a4cb83a12b73ee1706ff47e2acb23a9f53c84506f16",
+      "verified": true
+    },
+    "models/deep_sad/best_deep_sad.pt": {
+      "expected": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+      "actual": "a7f99f521cf56e3d651101259543f967eee535df82736aae3ae4271922947eaa",
+      "verified": true
+    },
+    "models/yolo/infrastructure/best_infrastructure.pt": {
+      "expected": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+      "actual": "bad5d3942f469b74a7778762696bb390174619cb0f403dbcc93be1066ba5dcf6",
+      "verified": true
+    },
+    "models/yolo/fire_smoke/best_fire_smoke.pt": {
+      "expected": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+      "actual": "29ab42eda1cd05d7141525927ab1c502c249082b5b2bbf5f2e0c9e8847c3d227",
+      "verified": true
+    },
+    "data/embeddings/fusion/india_2025_tcn_sad_aligned.parquet": {
+      "expected": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+      "actual": "49505cb4705516aef8d77af628debc485be894fae75dc19e3269b3ba6df7e931",
+      "verified": true
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "candidate_count": 24,
+  "unique_incident_ids": 24,
+  "unique_facility_names": 24,
+  "source_group_counts_by_facility_name": {},
+  "inherited_splits": {
+    "train": 21,
+    "val": 3
+  },
+  "closest_cross_split_distance_km": 6.342995091825298,
+  "cross_split_pairs_under_5km": 0,
+  "cross_split_pairs_under_10km": 1,
+  "cross_split_pairs_under_50km": 3,
+  "unique_regions": 3,
+  "unique_states": 10,
+  "events_by_year": {
+    "2024": 21,
+    "2025": 3
+  },
+  "sensor_distribution": {
+    "VIIRS_NOAA20_SP": 17
+  }
+}

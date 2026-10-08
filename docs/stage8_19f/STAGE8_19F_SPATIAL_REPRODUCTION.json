@@ -1,0 +1,176 @@
+{
+  "manifest_version": "v4",
+  "geometry_method": "Native UTM EPSG:326xx 5120m bounding box projected to WGS84 with Karney ellipsoidal geodesic distance",
+  "chip_size_m": 5120,
+  "cross_fold_pairs": 22090,
+  "violations_le_50km": 0,
+  "minimum_separation_km": 50.101722,
+  "minimum_margin_m": 101.72,
+  "closest_pair": [
+    "DS08_EXP_S3_004",
+    "DS08_EXP_S4_004"
+  ],
+  "mgrs_tile_splits": 0,
+  "incident_splits": 0,
+  "fold_counts": {
+    "Fold 1": 47,
+    "Fold 2": 47,
+    "Fold 3": 47,
+    "Fold 4": 47,
+    "Fold 5": 47
+  },
+  "benchmark_held_out_count": 15,
+  "pairs_below_55km_count": 13,
+  "pairs_below_55km": [
+    {
+      "pair": [
+        "DS08_EXP_S3_004",
+        "DS08_EXP_S4_004"
+      ],
+      "folds": [
+        "Fold 2",
+        "Fold 4"
+      ],
+      "distance_km": 50.101722
+    },
+    {
+      "pair": [
+        "DS08_EXP_S3_001",
+        "DS08_EXP_S6_004"
+      ],
+      "folds": [
+        "Fold 4",
+        "Fold 3"
+      ],
+      "distance_km": 51.176847
+    },
+    {
+      "pair": [
+        "DS08_EXP_S2_017",
+        "DS08_EXP_S6_019"
+      ],
+      "folds": [
+        "Fold 4",
+        "Fold 1"
+      ],
+      "distance_km": 51.50827
+    },
+    {
+      "pair": [
+        "DS08_EXP_S5_028",
+        "DS08_EXP_S6_026"
+      ],
+      "folds": [
+        "Fold 5",
+        "Fold 1"
+      ],
+      "distance_km": 51.572741
+    },
+    {
+      "pair": [
+        "DS08_EXP_S3_022",
+        "DS08_EXP_S6_010"
+      ],
+      "folds": [
+        "Fold 4",
+        "Fold 3"
+      ],
+      "distance_km": 52.394256
+    },
+    {
+      "pair": [
+        "DS08_EXP_S1_004",
+        "DS08_EXP_S3_053"
+      ],
+      "folds": [
+        "Fold 3",
+        "Fold 4"
+      ],
+      "distance_km": 52.713782
+    },
+    {
+      "pair": [
+        "DS08_EXP_S2_023",
+        "DS08_EXP_S3_034"
+      ],
+      "folds": [
+        "Fold 1",
+        "Fold 5"
+      ],
+      "distance_km": 52.737481
+    },
+    {
+      "pair": [
+        "DS08_EXP_S3_006",
+        "DS08_EXP_S4_011"
+      ],
+      "folds": [
+        "Fold 3",
+        "Fold 2"
+      ],
+      "distance_km": 53.555523
+    },
+    {
+      "pair": [
+        "DS08_EXP_S1_005",
+        "DS08_EXP_S4_001"
+      ],
+      "folds": [
+        "Fold 4",
+        "Fold 3"
+      ],
+      "distance_km": 53.646979
+    },
+    {
+      "pair": [
+        "DS08_EXP_S3_055",
+        "DS08_EXP_S5_036"
+      ],
+      "folds": [
+        "Fold 2",
+        "Fold 1"
+      ],
+      "distance_km": 53.976233
+    },
+    {
+      "pair": [
+        "DS08_EXP_S2_011",
+        "DS08_EXP_S5_010"
+      ],
+      "folds": [
+        "Fold 1",
+        "Fold 3"
+      ],
+      "distance_km": 54.105568
+    },
+    {
+      "pair": [
+        "DS08_EXP_S4_005",
+        "DS08_EXP_S6_008"
+      ],
+      "folds": [
+        "Fold 5",
+        "Fold 1"
+      ],
+      "distance_km": 54.668989
+    },
+    {
+      "pair": [
+        "DS08_EXP_S2_032",
+        "DS08_EXP_S5_038"
+      ],
+      "folds": [
+        "Fold 1",
+        "Fold 2"
+      ],
+      "distance_km": 54.686238
+    }
+  ],
+  "repaired_pair_check": {
+    "DS08_EXP_S4_018_fold": "Fold 3",
+    "DS08_EXP_S5_016_fold": "Fold 3",
+    "DS08_EXP_S4_043_fold": "Fold 4",
+    "co_located_same_fold": true
+  },
+  "status": "PROVEN"
+}

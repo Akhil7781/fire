@@ -1,0 +1,20 @@
+{
+  "model_architecture": "Deep SAD (3-Layer MLP)",
+  "in_features": 27,
+  "latent_dim": 32,
+  "total_parameters": 13696,
+  "best_epoch": 1,
+  "total_epochs_trained": 9,
+  "best_val_loss": 10.9379,
+  "final_train_loss": 0.0066,
+  "center_norm": 0.4069,
+  "training_runtime_seconds": 59.3,
+  "hardware": "CPU (PyTorch 2.14.0+cpu)",
+  "partition_counts": {
+    "train": 578465,
+    "val": 29409,
+    "heldout_spatial": 277395,
+    "test": 47881,
+    "test_seen_spatial": 91846
+  }
+}

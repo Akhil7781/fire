@@ -1,0 +1,147 @@
+{
+  "dataset_id": "DS_05_INDIA_HEAVY_INDUSTRY_SEBI",
+  "dataset_name": "India Industrial & Persistent Thermal Source Evidence Dataset",
+  "schema_version": "1.0_DS05_STAGE1",
+  "last_updated": "2026-09-24T19:30:00Z",
+  "execution_status": "COMPLETED_AUDITED",
+  "frozen_reference_immutability": {
+    "causal_features_2025_parquet_unmodified": true,
+    "split_ids_unmodified": true
+  },
+  "summary_metrics": {
+    "total_persistent_source_records": 18,
+    "total_industrial_incident_records": 14,
+    "total_candidates_evaluated": 39,
+    "total_firms_matches_evaluated": 39,
+    "total_valid_industrial_anchors": 2,
+    "total_rejected_candidates": 37,
+    "total_quarantined_confounders": 1870,
+    "valid_anchor_detection_ids": [
+      "be964232de1507731fd75bf1d2aa458ed4ab35e5cdfc92147f7fe0769e768ece",
+      "c2f0beeeee6deb19996c5f07208156d6fdf1cf2fb5cbf949677b5f73471f7c83"
+    ]
+  },
+  "sources_accessed": [
+    {
+      "name": "BSE & NSE Statutory Corporate Filings under SEBI LODR Regulation 30",
+      "authority": "Securities and Exchange Board of India / Bombay Stock Exchange / National Stock Exchange",
+      "url": "https://www.bseindia.com/corporates/ann.html",
+      "records_provided": 6,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "State Pollution Control Board Directions (MPCB & GPCB)",
+      "authority": "Maharashtra Pollution Control Board & Gujarat Pollution Control Board",
+      "url": "https://mpcb.gov.in/ & https://gpcb.gujarat.gov.in/",
+      "records_provided": 4,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "National Green Tribunal Principal & Zonal Benches",
+      "authority": "National Green Tribunal (Govt of India)",
+      "url": "https://greentribunal.gov.in/",
+      "records_provided": 1,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "Ministry of Defence Emergency Press Releases",
+      "authority": "Press Information Bureau / Ministry of Defence",
+      "url": "https://pib.gov.in/",
+      "records_provided": 1,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "Corroborated Regional Media & Fire Department Tender Logs",
+      "authority": "The Hindu / Times of India / Tribune / State Fire Services",
+      "url": "Public News Archives",
+      "records_provided": 2,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "Heavy Industrial Heat Sources in India Catalog (Ma et al. 2019)",
+      "authority": "ISPRS Int. J. Geo-Information / Chinese Academy of Sciences",
+      "url": "https://doi.org/10.3390/ijgi8110488",
+      "records_provided": 3,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "Central Electricity Authority CO2 Baseline Database v21.0 & GEM GCPT",
+      "authority": "Ministry of Power (CEA) & Global Energy Monitor",
+      "url": "https://cea.nic.in/cdm-co2-baseline-database/",
+      "records_provided": 3,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "World Bank Global Gas Flaring Reduction & VIIRS Nightfire",
+      "authority": "World Bank GGFR & Earth Observation Group (Payne Institute)",
+      "url": "https://www.worldbank.org/en/programs/gasflaringreduction/global-flaring-data",
+      "records_provided": 6,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "CMPDI & BCCL Coalfield Fire Delineation Catalog",
+      "authority": "Central Mine Planning and Design Institute / Coal India Ltd",
+      "url": "https://doi.org/10.6084/m9.figshare.15181143.v1",
+      "records_provided": 3,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "Smithsonian Global Volcanism Program & GSI Marine Division",
+      "authority": "Smithsonian Institution & Geological Survey of India",
+      "url": "https://volcano.si.edu/volcano.cfm?vn=260010",
+      "records_provided": 1,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    },
+    {
+      "name": "SentinelKilnDB South Asia Brick Kiln Benchmark",
+      "authority": "NeurIPS 2025 Benchmark / Mondal et al.",
+      "url": "https://github.com/rishabh-mondal/SENTINELKILNDB_NeurIPS_2025",
+      "records_provided": 2,
+      "access_status": "ACCESSED_AND_NORMALIZED"
+    }
+  ],
+  "sources_unavailable": [
+    {
+      "source_name": "Ministry of Labour - Directorate General Factory Advice Service & Labour Institutes (DGFASLI)",
+      "reason": "Annual industrial accident reports for calendar year 2025 are subject to statutory compilation latency and will not be published until Q3 2027.",
+      "mitigation": "Substituted with SEBI Regulation 30 mandatory 24-hour stock exchange corporate disclosures and SPCB immediate closure orders."
+    },
+    {
+      "source_name": "Commercial Insurer Loss Dossiers (Munich Re NatCat / Swiss Re / GIC Re)",
+      "reason": "Proprietary commercial insurance claim settlements are confidential and legally restricted under non-disclosure agreements.",
+      "mitigation": "Substituted with open regulatory dockets (NGT joint committee damage assessments) and statutory stock exchange material event filings."
+    }
+  ],
+  "spatial_distance_distribution": {
+    "valid_anchors_km": [2.6681, 2.8368],
+    "mean_valid_km": 2.7525,
+    "min_valid_km": 2.6681,
+    "max_valid_km": 2.8368,
+    "rejected_candidates_spatial_range_km": [0.3779, 14.3642]
+  },
+  "temporal_difference_distribution": {
+    "valid_anchors_hours": [0.0, 28.2667],
+    "mean_valid_hours": 14.1333,
+    "min_valid_hours": 0.0,
+    "max_valid_hours": 28.2667,
+    "rejected_candidates_temporal_range_hours": [0.0, 7840.55]
+  },
+  "output_artifacts": {
+    "reference_data": {
+      "persistent_sources_parquet": "data/reference/ds05/persistent_sources.parquet",
+      "persistent_sources_json": "data/reference/ds05/persistent_sources.json",
+      "industrial_incidents_parquet": "data/reference/ds05/industrial_incidents.parquet",
+      "industrial_incidents_json": "data/reference/ds05/industrial_incidents.json"
+    },
+    "labeling_data": {
+      "firms_matches_parquet": "data/labeling/ds05/ds05_firms_matches.parquet",
+      "firms_matches_json": "data/labeling/ds05/ds05_firms_matches.json",
+      "valid_industrial_anchors_parquet": "data/labeling/ds05/ds05_valid_industrial_anchors.parquet",
+      "valid_industrial_anchors_json": "data/labeling/ds05/ds05_valid_industrial_anchors.json",
+      "rejected_candidates_parquet": "data/labeling/ds05/ds05_rejected_candidates.parquet",
+      "rejected_candidates_json": "data/labeling/ds05/ds05_rejected_candidates.json",
+      "quarantined_confounders_parquet": "data/labeling/ds05/ds05_quarantined_confounders.parquet",
+      "quarantined_confounders_json": "data/labeling/ds05/ds05_quarantined_confounders.json"
+    }
+  }
+}

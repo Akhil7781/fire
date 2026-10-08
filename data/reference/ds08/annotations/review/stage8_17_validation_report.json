@@ -1,0 +1,106 @@
+{
+  "audit_timestamp_utc": "2026-10-02T06:48:49.277420+00:00",
+  "package_directory": "data\\reference\\ds08\\packages\\ds08_pilot_v1",
+  "checks": {
+    "CHECK_1_COHORT_MEMBERSHIP": {
+      "title": "Expected Cohort Membership & Duplicate Prevention",
+      "status": "PASS",
+      "details": {
+        "total_chips": 15,
+        "unique_chips": 15
+      },
+      "errors": []
+    },
+    "CHECK_2_IMAGE_ANNOTATION_MATCHING": {
+      "title": "Complete File Inventory & Image-to-Annotation Matching",
+      "status": "PASS",
+      "details": {
+        "verified_files": 75,
+        "chips_fully_matched": 15
+      },
+      "errors": []
+    },
+    "CHECK_3_SCHEMA_AND_CLASSES": {
+      "title": "Annotation Schema & Target Class Name Compliance",
+      "status": "PASS",
+      "details": {
+        "total_boxes_audited": 10,
+        "class_counts": {
+          "Forest Fire": 9,
+          "Agricultural Fire": 1
+        }
+      },
+      "errors": []
+    },
+    "CHECK_4_BBOX_GEOMETRY": {
+      "title": "Bounding Box Geometry, Bounds & Placeholder Detection",
+      "status": "PASS",
+      "details": {
+        "total_boxes": 10,
+        "min_width": 26,
+        "max_width": 165,
+        "min_height": 31,
+        "max_height": 114
+      },
+      "errors": []
+    },
+    "CHECK_5_EVIDENCE_CONSISTENCY": {
+      "title": "Visual Evidence Consistency & Contradiction Elimination",
+      "status": "PASS",
+      "details": {
+        "total_evidence_tags_audited": 29,
+        "contradictions_found": 0
+      },
+      "errors": []
+    },
+    "CHECK_6_DEFINITIVE_STATUS": {
+      "title": "Definitive Observation Status & Empty-Annotation Cases",
+      "status": "PASS",
+      "details": {
+        "status_counts": {
+          "NO_VISIBLE_TARGET": 9,
+          "HAS_ANNOTATIONS": 6
+        }
+      },
+      "errors": []
+    },
+    "CHECK_7_PROVENANCE_AND_SOURCE_HASHES": {
+      "title": "Authoritative Provenance & Cryptographic Source Hashes",
+      "status": "PASS",
+      "details": {
+        "unanimous_verified": 9,
+        "adjudicated_verified": 6
+      },
+      "errors": []
+    },
+    "CHECK_8_PACKAGE_MANIFEST_INTEGRITY": {
+      "title": "Package Manifest Internal Integrity & Bit-for-Bit Checksums",
+      "status": "PASS",
+      "details": {
+        "package_files_verified": 75
+      },
+      "errors": []
+    },
+    "CHECK_9_PREDECESSORS_AND_BASELINES": {
+      "title": "Baseline Annotations, Review Records & Predecessors Immutability",
+      "status": "PASS",
+      "details": {
+        "predecessors_audited": 5,
+        "baseline_files": 30
+      },
+      "errors": []
+    },
+    "CHECK_10_EXCLUSION_AND_QUARANTINE_ISOLATION": {
+      "title": "Screening Chip Exclusion & Quarantine Boundary Isolation",
+      "status": "PASS",
+      "details": {
+        "excluded_chips_verified": 5,
+        "quarantine_files_audited": 69
+      },
+      "errors": []
+    }
+  },
+  "overall_status": "PASSED",
+  "failures_count": 0,
+  "warnings_count": 0
+}

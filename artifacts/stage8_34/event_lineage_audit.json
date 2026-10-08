@@ -1,0 +1,118 @@
+{
+  "canonical_development_events_count": 131,
+  "target_linked_columns_audit": {
+    "associated_persistent_id": {
+      "present_in_firms_table": true,
+      "present_in_model_features": false,
+      "non_null_in_dev_detections": 252,
+      "sample_values_dev": [
+        "PER_SRC_04",
+        "PER_SRC_05",
+        "PER_SRC_07",
+        "PER_SRC_08",
+        "PER_SRC_09"
+      ],
+      "affects_event_construction": false,
+      "affects_labels": true,
+      "affects_historical_features": false,
+      "affects_split_construction": false,
+      "affects_model_features": false,
+      "affects_recurrence_features": false,
+      "runtime_data_flow_description": "Originates from reference source catalogs during multiyear ground-truth compilation in Stage 8.25. Confined strictly to labels/provenance; NEVER passed to model feature tensors.",
+      "leakage_risk_status": "SAFE (EXCLUDED FROM MODEL TENSORS)"
+    },
+    "associated_forest_id": {
+      "present_in_firms_table": true,
+      "present_in_model_features": false,
+      "non_null_in_dev_detections": 473,
+      "sample_values_dev": [
+        "FOR_EVT_2016_UK_ALMORA",
+        "FOR_EVT_2016_HP_SHIMLA",
+        "FOR_EVT_2018_TN_KURANGANI",
+        "FOR_EVT_2019_KA_BANDIPUR",
+        "FOR_EVT_2019_OD_SIMILIPAL"
+      ],
+      "affects_event_construction": false,
+      "affects_labels": true,
+      "affects_historical_features": false,
+      "affects_split_construction": false,
+      "affects_model_features": false,
+      "affects_recurrence_features": false,
+      "runtime_data_flow_description": "Originates from reference source catalogs during multiyear ground-truth compilation in Stage 8.25. Confined strictly to labels/provenance; NEVER passed to model feature tensors.",
+      "leakage_risk_status": "SAFE (EXCLUDED FROM MODEL TENSORS)"
+    },
+    "associated_agri_id": {
+      "present_in_firms_table": true,
+      "present_in_model_features": false,
+      "non_null_in_dev_detections": 470,
+      "sample_values_dev": [
+        "AGR_EVT_2016_PB_SANGRUR_KHARIF",
+        "AGR_EVT_2017_HR_KARNAL_KHARIF",
+        "AGR_EVT_2018_PB_TARN_TARAN_KHARIF",
+        "AGR_EVT_2019_MP_SEHORE_RABI",
+        "AGR_EVT_2019_PB_FIROZPUR_KHARIF"
+      ],
+      "affects_event_construction": false,
+      "affects_labels": true,
+      "affects_historical_features": false,
+      "affects_split_construction": false,
+      "affects_model_features": false,
+      "affects_recurrence_features": false,
+      "runtime_data_flow_description": "Originates from reference source catalogs during multiyear ground-truth compilation in Stage 8.25. Confined strictly to labels/provenance; NEVER passed to model feature tensors.",
+      "leakage_risk_status": "SAFE (EXCLUDED FROM MODEL TENSORS)"
+    },
+    "associated_incident_id": {
+      "present_in_firms_table": true,
+      "present_in_model_features": false,
+      "non_null_in_dev_detections": 67,
+      "sample_values_dev": [
+        "IND_INC_2016_DOMBIVLI_AMUDAN",
+        "IND_INC_2017_NTPC_UNCHAHAR",
+        "IND_INC_2018_BPCL_MAHUL",
+        "IND_INC_2018_HIL_RASAYANI",
+        "IND_INC_2019_ONGC_URAN"
+      ],
+      "affects_event_construction": true,
+      "affects_labels": true,
+      "affects_historical_features": false,
+      "affects_split_construction": false,
+      "affects_model_features": false,
+      "affects_recurrence_features": false,
+      "runtime_data_flow_description": "Used during dataset generation in Stage 8.25 to map raw FIRMS clusters to ground-truth statutory incident records (e.g. MPCB/DISH factory fire reports).",
+      "leakage_risk_status": "SAFE (EXCLUDED FROM MODEL TENSORS)"
+    },
+    "is_facility_baseline": {
+      "present_in_firms_table": true,
+      "present_in_model_features": false,
+      "non_null_in_dev_detections": 0,
+      "sample_values_dev": [],
+      "affects_event_construction": false,
+      "affects_labels": false,
+      "affects_historical_features": true,
+      "affects_split_construction": false,
+      "affects_model_features": false,
+      "affects_recurrence_features": false,
+      "runtime_data_flow_description": "Used exclusively to filter historical facility background FIRMS points strictly prior to t0. Target event detections are asserted to have zero overlap (len(target_overlap_fac) == 0).",
+      "leakage_risk_status": "SAFE (EXCLUDED FROM MODEL TENSORS)"
+    }
+  },
+  "master_table_schema": [
+    "event_id",
+    "incident_id",
+    "target_class",
+    "class_id",
+    "split",
+    "year",
+    "centroid_lat",
+    "centroid_lon",
+    "event_start_time",
+    "event_end_time",
+    "detection_count",
+    "source_detection_ids",
+    "evidence_source",
+    "evidence_strength",
+    "label_tier",
+    "state"
+  ],
+  "summary": "Audited all 5 target-linked columns. Verified that none of them participate in model feature sets. Event construction and labels depend on statutory provenance, but model features depend strictly on causally available satellite overpass fields."
+}

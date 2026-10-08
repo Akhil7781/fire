@@ -1,0 +1,52 @@
+{
+  "chip_id": "PILOT_19_WEST",
+  "annotation_version": "v1.0",
+  "chip_annotation_status": "HAS_ANNOTATIONS",
+  "annotations": [
+    {
+      "annotation_id": "PILOT_19_WEST_HUMA_01",
+      "class_id": 2,
+      "class_name": "Forest Fire",
+      "bbox": {
+        "x_min": 230,
+        "y_min": 230,
+        "x_max": 285,
+        "y_max": 285
+      },
+      "geometry_confidence": "LOW",
+      "source_class_confidence": "LOW",
+      "visibility_status": "CLEAR",
+      "visual_evidence": [
+        "FOREST_CONTEXT_VISIBLE",
+        "BURN_SCAR_VISIBLE"
+      ],
+      "firms_relationship": "INSIDE_OBJECT",
+      "review_status": "PENDING",
+      "annotator_id": "HUMAN_ANNOTATOR_01",
+      "annotation_timestamp": "2026-09-29T16:33:36.258237+00:00",
+      "notes": "Dark canopy patch in Western Ghats montane forest interpreted as vegetative burn scar."
+    }
+  ],
+  "context_metadata": {
+    "firms_detection_id": "bf2799fc5cba3c51d8afce18b3b632280ead9ce580bd7ca706f806719e0cfacf",
+    "firms_latitude": 16.98486,
+    "firms_longitude": 73.86073,
+    "firms_acq_datetime_utc": null,
+    "firms_frp": 5.89,
+    "firms_pixel_coord": {
+      "row": 256.0,
+      "col": 256.0
+    },
+    "product_id": "S2C_MSIL2A_20250319T052711_N0511_R105_T43QCU_20250319T104817.SAFE",
+    "tile_id": "T43QCU",
+    "cloud_cover_pct": 2.43,
+    "authoritative_bands": [
+      "B02",
+      "B03",
+      "B04",
+      "B11",
+      "B12"
+    ],
+    "data_provenance": "Copernicus Data Space Ecosystem (CDSE) Sentinel-2 L2A BOA Reflectance"
+  }
+}

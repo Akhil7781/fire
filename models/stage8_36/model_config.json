@@ -1,0 +1,30 @@
+{
+  "architecture_name": "Architecture1_StaticMLP",
+  "pure_deep_learning": true,
+  "cohort_size": 165,
+  "input_modalities": [
+    "thermal",
+    "industrial",
+    "ecoregion",
+    "historical"
+  ],
+  "total_tabular_features": 41,
+  "group_dimensions": {
+    "thermal": 14,
+    "industrial": 6,
+    "ecoregion": 3,
+    "historical": 18
+  },
+  "uses_raw_coordinates": false,
+  "selection_metric": "canonical_spatial_macro_f1",
+  "spatial_macro_f1": 0.7689,
+  "spatial_accuracy": 0.8,
+  "temporal_macro_f1": 0.6355,
+  "temporal_accuracy": 0.65,
+  "checkpoint_file": "final_neural_model.pt",
+  "preprocessing_file": "preprocessing.pt",
+  "stage": "8.36_final",
+  "checkpoint_sha256": "5bdbfbd503a3c0acbd50caefd2b1c88b5e0190a7176d70a517165814722bcff2",
+  "deep_learning_only": true,
+  "classical_ml_components": false
+}

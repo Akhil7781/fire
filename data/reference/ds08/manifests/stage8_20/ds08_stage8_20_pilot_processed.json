@@ -1,0 +1,1146 @@
+{
+  "manifest_name": "ds08_stage8_20_pilot_processed",
+  "stage": "8.20",
+  "version": "1.0.0",
+  "created_at_utc": "2026-10-03T08:10:59.605218+00:00",
+  "total_chips": 8,
+  "approved_cohort_count": 8,
+  "bands": [
+    "B02",
+    "B03",
+    "B04",
+    "B11",
+    "B12",
+    "SCL"
+  ],
+  "band_order_ml": [
+    "B02",
+    "B03",
+    "B04",
+    "B11",
+    "B12"
+  ],
+  "spectral_shape": [
+    5,
+    512,
+    512
+  ],
+  "scl_shape": [
+    512,
+    512
+  ],
+  "resolution_m": 10,
+  "chip_size_px": 512,
+  "chip_size_m": 5120,
+  "status_distribution": {
+    "PASS": 6,
+    "CONDITIONAL": 0,
+    "REJECT": 2
+  },
+  "records": [
+    {
+      "chip_id": "DS08_EXP_S1_003",
+      "source_product": "S2B_MSIL2A_20250413T052649_N0511_R105_T43RFN_20250413T074009.SAFE",
+      "cdse_uuid": null,
+      "mgrs_tile": "T43RFN",
+      "acquisition_datetime": null,
+      "crs": "EPSG:32643",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": null,
+      "cloud_scl_pct": 0.0,
+      "shadow_scl_pct": 0.0,
+      "central_1km_contamination_pct": 0.0,
+      "quality_status": "PASS",
+      "human_confirmed_label": null,
+      "expected_target_class": "Industrial Fire",
+      "candidate_stratum_id": "STR-1",
+      "candidate_lat": 29.3882,
+      "candidate_lon": 76.9924,
+      "projected_x": 693350.4455979276,
+      "projected_y": 3252646.225370005,
+      "chip_pixel_col": 256.045,
+      "chip_pixel_row": 256.377,
+      "chip_bounds_utm": {
+        "x_min": 690790.0,
+        "x_max": 695910.0,
+        "y_min": 3250090.0,
+        "y_max": 3255210.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 0,
+        "shadow_pixels": 0,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 0,
+        "clean_pixels": 262144,
+        "aoi_contamination_pct": 0.0,
+        "aoi_cloud_pct": 0.0,
+        "aoi_shadow_pct": 0.0,
+        "aoi_clean_pct": 100.0,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 0,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 0,
+        "central_1km_clean_pixels": 10000,
+        "central_1km_contamination_pct": 0.0,
+        "central_1km_cloud_pct": 0.0,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 100.0
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 0,
+          "max": 10696,
+          "mean": 1978.57,
+          "std": 518.55,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 834,
+          "max": 10080,
+          "mean": 2300.29,
+          "std": 474.73,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 710,
+          "max": 9600,
+          "mean": 2558.57,
+          "std": 569.95,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 1224,
+          "max": 9492,
+          "mean": 3664.52,
+          "std": 477.97,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 1208,
+          "max": 10128,
+          "mean": 3366.51,
+          "std": 475.65,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_003/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_003/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_003/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_003/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_003/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_003/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_003/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_003/candidate_overlay.png"
+      }
+    },
+    {
+      "chip_id": "DS08_EXP_S1_002",
+      "source_product": "S2B_MSIL2A_20250325T045659_N0511_R119_T44QQE_20250325T074633.SAFE",
+      "cdse_uuid": null,
+      "mgrs_tile": "T44QQE",
+      "acquisition_datetime": null,
+      "crs": "EPSG:32644",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": null,
+      "cloud_scl_pct": 49.7787,
+      "shadow_scl_pct": 3.5278,
+      "central_1km_contamination_pct": 100.0,
+      "quality_status": "REJECT",
+      "human_confirmed_label": null,
+      "expected_target_class": "Industrial Fire",
+      "candidate_stratum_id": "STR-1",
+      "candidate_lat": 17.5831,
+      "candidate_lon": 83.1054,
+      "projected_x": 723442.4191600088,
+      "projected_y": 1945302.9009776951,
+      "chip_pixel_col": 256.242,
+      "chip_pixel_row": 255.71,
+      "chip_bounds_utm": {
+        "x_min": 720880.0,
+        "x_max": 726000.0,
+        "y_min": 1942740.0,
+        "y_max": 1947860.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 130492,
+        "shadow_pixels": 9248,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 139740,
+        "clean_pixels": 122404,
+        "aoi_contamination_pct": 53.3066,
+        "aoi_cloud_pct": 49.7787,
+        "aoi_shadow_pct": 3.5278,
+        "aoi_clean_pct": 46.6934,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 10000,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 10000,
+        "central_1km_clean_pixels": 0,
+        "central_1km_contamination_pct": 100.0,
+        "central_1km_cloud_pct": 100.0,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 0.0
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 1514,
+          "max": 18336,
+          "mean": 4789.3,
+          "std": 3742.66,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 1591,
+          "max": 17104,
+          "mean": 4632.24,
+          "std": 3388.59,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 1444,
+          "max": 16360,
+          "mean": 4431.12,
+          "std": 3173.76,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 1312,
+          "max": 10946,
+          "mean": 4276.47,
+          "std": 2016.17,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 1182,
+          "max": 9176,
+          "mean": 3627.87,
+          "std": 1789.96,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_002/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_002/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_002/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_002/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_002/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_002/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_002/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_002/candidate_overlay.png"
+      }
+    },
+    {
+      "chip_id": "DS08_EXP_S1_004",
+      "source_product": "S2C_MSIL2A_20251028T053951_N0511_R005_T42QZH_20251028T084920.SAFE",
+      "cdse_uuid": null,
+      "mgrs_tile": "T42QZH",
+      "acquisition_datetime": null,
+      "crs": "EPSG:32642",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": null,
+      "cloud_scl_pct": 40.8287,
+      "shadow_scl_pct": 0.1251,
+      "central_1km_contamination_pct": 29.7,
+      "quality_status": "REJECT",
+      "human_confirmed_label": null,
+      "expected_target_class": "Industrial Fire",
+      "candidate_stratum_id": "STR-1",
+      "candidate_lat": 19.8214,
+      "candidate_lon": 72.7128,
+      "projected_x": 889025.531567471,
+      "projected_y": 2195995.897896681,
+      "chip_pixel_col": 255.553,
+      "chip_pixel_row": 256.41,
+      "chip_bounds_utm": {
+        "x_min": 886470.0,
+        "x_max": 891590.0,
+        "y_min": 2193440.0,
+        "y_max": 2198560.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 107030,
+        "shadow_pixels": 328,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 107358,
+        "clean_pixels": 154786,
+        "aoi_contamination_pct": 40.9538,
+        "aoi_cloud_pct": 40.8287,
+        "aoi_shadow_pct": 0.1251,
+        "aoi_clean_pct": 59.0462,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 2970,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 2970,
+        "central_1km_clean_pixels": 7030,
+        "central_1km_contamination_pct": 29.7,
+        "central_1km_cloud_pct": 29.7,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 70.3
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 1090,
+          "max": 6004,
+          "mean": 1482.7,
+          "std": 319.89,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 1214,
+          "max": 6368,
+          "mean": 1720.29,
+          "std": 289.11,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 1187,
+          "max": 5948,
+          "mean": 1623.49,
+          "std": 335.81,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 1245,
+          "max": 6107,
+          "mean": 2654.54,
+          "std": 324.93,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 1179,
+          "max": 6001,
+          "mean": 1939.24,
+          "std": 299.0,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_004/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_004/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_004/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S1_004/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_004/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_004/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_004/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S1_004/candidate_overlay.png"
+      }
+    },
+    {
+      "chip_id": "DS08_EXP_S2_001",
+      "source_product": "S2B_MSIL2A_20250608T054639_N0511_R048_T43SBS_20250608T074909.SAFE",
+      "cdse_uuid": null,
+      "mgrs_tile": "T43SBS",
+      "acquisition_datetime": null,
+      "crs": "EPSG:32643",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": null,
+      "cloud_scl_pct": 0.0,
+      "shadow_scl_pct": 0.0,
+      "central_1km_contamination_pct": 0.0,
+      "quality_status": "PASS",
+      "human_confirmed_label": null,
+      "expected_target_class": "Other Thermal Source",
+      "candidate_stratum_id": "STR-2",
+      "candidate_lat": 32.76166,
+      "candidate_lon": 72.62834,
+      "projected_x": 277829.1574821278,
+      "projected_y": 3627354.209957155,
+      "chip_pixel_col": 255.916,
+      "chip_pixel_row": 255.579,
+      "chip_bounds_utm": {
+        "x_min": 275270.0,
+        "x_max": 280390.0,
+        "y_min": 3624790.0,
+        "y_max": 3629910.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 0,
+        "shadow_pixels": 0,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 0,
+        "clean_pixels": 262144,
+        "aoi_contamination_pct": 0.0,
+        "aoi_cloud_pct": 0.0,
+        "aoi_shadow_pct": 0.0,
+        "aoi_clean_pct": 100.0,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 0,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 0,
+        "central_1km_clean_pixels": 10000,
+        "central_1km_contamination_pct": 0.0,
+        "central_1km_cloud_pct": 0.0,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 100.0
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 1249,
+          "max": 3978,
+          "mean": 1949.63,
+          "std": 247.35,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 1610,
+          "max": 4439,
+          "mean": 2274.8,
+          "std": 282.2,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 1531,
+          "max": 4872,
+          "mean": 2608.33,
+          "std": 403.15,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 3142,
+          "max": 5876,
+          "mean": 4007.9,
+          "std": 381.59,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 2385,
+          "max": 5286,
+          "mean": 3479.13,
+          "std": 402.92,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S2_001/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S2_001/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S2_001/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S2_001/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S2_001/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S2_001/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S2_001/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S2_001/candidate_overlay.png"
+      }
+    },
+    {
+      "chip_id": "DS08_EXP_S3_001",
+      "source_product": "S2B_MSIL2A_20250516T053639_N0511_R005_T43RDP_20250516T074822.SAFE",
+      "cdse_uuid": null,
+      "mgrs_tile": "T43RDP",
+      "acquisition_datetime": null,
+      "crs": "EPSG:32643",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": null,
+      "cloud_scl_pct": 0.0,
+      "shadow_scl_pct": 0.0,
+      "central_1km_contamination_pct": 0.0,
+      "quality_status": "PASS",
+      "human_confirmed_label": null,
+      "expected_target_class": "Forest Fire",
+      "candidate_stratum_id": "STR-3",
+      "candidate_lat": 30.30482,
+      "candidate_lon": 74.48767,
+      "projected_x": 450738.34336017957,
+      "projected_y": 3352673.799924105,
+      "chip_pixel_col": 255.834,
+      "chip_pixel_row": 255.62,
+      "chip_bounds_utm": {
+        "x_min": 448180.0,
+        "x_max": 453300.0,
+        "y_min": 3350110.0,
+        "y_max": 3355230.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 0,
+        "shadow_pixels": 0,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 0,
+        "clean_pixels": 262144,
+        "aoi_contamination_pct": 0.0,
+        "aoi_cloud_pct": 0.0,
+        "aoi_shadow_pct": 0.0,
+        "aoi_clean_pct": 100.0,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 0,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 0,
+        "central_1km_clean_pixels": 10000,
+        "central_1km_contamination_pct": 0.0,
+        "central_1km_cloud_pct": 0.0,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 100.0
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 1300,
+          "max": 4096,
+          "mean": 2177.39,
+          "std": 286.72,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 1425,
+          "max": 4868,
+          "mean": 2480.32,
+          "std": 364.22,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 1383,
+          "max": 6096,
+          "mean": 2830.68,
+          "std": 496.7,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 1704,
+          "max": 7311,
+          "mean": 4318.91,
+          "std": 591.04,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 1678,
+          "max": 15238,
+          "mean": 4231.8,
+          "std": 542.91,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S3_001/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S3_001/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S3_001/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S3_001/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S3_001/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S3_001/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S3_001/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S3_001/candidate_overlay.png"
+      }
+    },
+    {
+      "chip_id": "DS08_EXP_S4_001",
+      "source_product": "S2A_MSIL2A_20241023T053901_N0511_R005_T43RFP_20241023T090052.SAFE",
+      "cdse_uuid": null,
+      "mgrs_tile": "T43RFP",
+      "acquisition_datetime": null,
+      "crs": "EPSG:32643",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": null,
+      "cloud_scl_pct": 0.0,
+      "shadow_scl_pct": 0.0,
+      "central_1km_contamination_pct": 0.0,
+      "quality_status": "PASS",
+      "human_confirmed_label": null,
+      "expected_target_class": "Agricultural Fire",
+      "candidate_stratum_id": "STR-4",
+      "candidate_lat": 30.57704,
+      "candidate_lon": 76.33285,
+      "projected_x": 627805.6800769436,
+      "projected_y": 3383485.1621372798,
+      "chip_pixel_col": 255.568,
+      "chip_pixel_row": 256.484,
+      "chip_bounds_utm": {
+        "x_min": 625250.0,
+        "x_max": 630370.0,
+        "y_min": 3380930.0,
+        "y_max": 3386050.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 0,
+        "shadow_pixels": 0,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 0,
+        "clean_pixels": 262144,
+        "aoi_contamination_pct": 0.0,
+        "aoi_cloud_pct": 0.0,
+        "aoi_shadow_pct": 0.0,
+        "aoi_clean_pct": 100.0,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 0,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 0,
+        "central_1km_clean_pixels": 10000,
+        "central_1km_contamination_pct": 0.0,
+        "central_1km_cloud_pct": 0.0,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 100.0
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 0,
+          "max": 3436,
+          "mean": 1585.36,
+          "std": 219.02,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 1263,
+          "max": 3610,
+          "mean": 1943.25,
+          "std": 228.59,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 1319,
+          "max": 4244,
+          "mean": 2221.46,
+          "std": 401.2,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 1573,
+          "max": 5995,
+          "mean": 3685.6,
+          "std": 779.41,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 1347,
+          "max": 5160,
+          "mean": 2879.2,
+          "std": 604.9,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S4_001/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S4_001/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S4_001/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S4_001/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S4_001/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S4_001/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S4_001/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S4_001/candidate_overlay.png"
+      }
+    },
+    {
+      "chip_id": "DS08_EXP_S5_001",
+      "source_product": "S2C_MSIL2A_20250128T053131_N0511_R105_T43RGM_20250128T084454.SAFE",
+      "cdse_uuid": null,
+      "mgrs_tile": "T43RGM",
+      "acquisition_datetime": null,
+      "crs": "EPSG:32643",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": null,
+      "cloud_scl_pct": 0.0,
+      "shadow_scl_pct": 0.0,
+      "central_1km_contamination_pct": 0.0,
+      "quality_status": "PASS",
+      "human_confirmed_label": null,
+      "expected_target_class": "NO_VISIBLE_TARGET",
+      "candidate_stratum_id": "STR-5",
+      "candidate_lat": 28.38,
+      "candidate_lon": 77.24,
+      "projected_x": 719495.8776704548,
+      "projected_y": 3141338.167381698,
+      "chip_pixel_col": 255.588,
+      "chip_pixel_row": 256.183,
+      "chip_bounds_utm": {
+        "x_min": 716940.0,
+        "x_max": 722060.0,
+        "y_min": 3138780.0,
+        "y_max": 3143900.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 0,
+        "shadow_pixels": 0,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 0,
+        "clean_pixels": 262144,
+        "aoi_contamination_pct": 0.0,
+        "aoi_cloud_pct": 0.0,
+        "aoi_shadow_pct": 0.0,
+        "aoi_clean_pct": 100.0,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 0,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 0,
+        "central_1km_clean_pixels": 10000,
+        "central_1km_contamination_pct": 0.0,
+        "central_1km_cloud_pct": 0.0,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 100.0
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 0,
+          "max": 5816,
+          "mean": 1518.81,
+          "std": 464.12,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 983,
+          "max": 6044,
+          "mean": 1778.19,
+          "std": 488.6,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 997,
+          "max": 6192,
+          "mean": 1837.92,
+          "std": 617.77,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 1160,
+          "max": 6613,
+          "mean": 2886.47,
+          "std": 534.16,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 1129,
+          "max": 6486,
+          "mean": 2415.68,
+          "std": 612.58,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S5_001/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S5_001/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S5_001/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S5_001/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S5_001/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S5_001/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S5_001/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S5_001/candidate_overlay.png"
+      }
+    },
+    {
+      "chip_id": "DS08_EXP_S6_001",
+      "source_product": "S2B_MSIL2A_20250212T052839_N0511_R105_T44RKS_20250212T073606.SAFE",
+      "cdse_uuid": null,
+      "mgrs_tile": "T44RKS",
+      "acquisition_datetime": null,
+      "crs": "EPSG:32644",
+      "resolution_m": 10,
+      "chip_size_px": 512,
+      "chip_size_m": 5120,
+      "bands": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12",
+        "SCL"
+      ],
+      "band_order_ml": [
+        "B02",
+        "B03",
+        "B04",
+        "B11",
+        "B12"
+      ],
+      "spectral_shape": [
+        5,
+        512,
+        512
+      ],
+      "scl_shape": [
+        512,
+        512
+      ],
+      "cloud_metadata_pct": null,
+      "cloud_scl_pct": 0.0031,
+      "shadow_scl_pct": 0.0,
+      "central_1km_contamination_pct": 0.0,
+      "quality_status": "PASS",
+      "human_confirmed_label": null,
+      "expected_target_class": "NO_VISIBLE_TARGET",
+      "candidate_stratum_id": "STR-6",
+      "candidate_lat": 28.25,
+      "candidate_lon": 78.35,
+      "projected_x": 239997.59364065493,
+      "projected_y": 3127743.902213899,
+      "chip_pixel_col": 255.759,
+      "chip_pixel_row": 255.61,
+      "chip_bounds_utm": {
+        "x_min": 237440.0,
+        "x_max": 242560.0,
+        "y_min": 3125180.0,
+        "y_max": 3130300.0
+      },
+      "resampling_methods": {
+        "B02": "native_10m",
+        "B03": "native_10m",
+        "B04": "native_10m",
+        "B11": "bilinear_20m_to_10m",
+        "B12": "bilinear_20m_to_10m",
+        "SCL": "nearest_neighbour_20m_to_10m"
+      },
+      "normalization_applied": "DN / 10000.0, clipped to [0.0, 1.0]",
+      "scl_metrics": {
+        "total_pixels": 262144,
+        "cloud_pixels": 8,
+        "shadow_pixels": 0,
+        "invalid_pixels": 0,
+        "contaminated_pixels": 8,
+        "clean_pixels": 262136,
+        "aoi_contamination_pct": 0.0031,
+        "aoi_cloud_pct": 0.0031,
+        "aoi_shadow_pct": 0.0,
+        "aoi_clean_pct": 99.9969,
+        "central_1km_pixels": 10000,
+        "central_1km_cloud_pixels": 0,
+        "central_1km_shadow_pixels": 0,
+        "central_1km_invalid_pixels": 0,
+        "central_1km_contaminated_pixels": 0,
+        "central_1km_clean_pixels": 10000,
+        "central_1km_contamination_pct": 0.0,
+        "central_1km_cloud_pct": 0.0,
+        "central_1km_shadow_pct": 0.0,
+        "central_1km_clean_pct": 100.0
+      },
+      "spectral_stats": {
+        "B02": {
+          "min": 1270,
+          "max": 3338,
+          "mean": 1666.1,
+          "std": 305.43,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B03": {
+          "min": 1342,
+          "max": 3588,
+          "mean": 1864.2,
+          "std": 326.82,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B04": {
+          "min": 1211,
+          "max": 3778,
+          "mean": 1787.15,
+          "std": 452.97,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B11": {
+          "min": 1153,
+          "max": 4993,
+          "mean": 2645.2,
+          "std": 717.33,
+          "nan_count": 0,
+          "inf_count": 0
+        },
+        "B12": {
+          "min": 1113,
+          "max": 5162,
+          "mean": 2165.63,
+          "std": 752.82,
+          "nan_count": 0,
+          "inf_count": 0
+        }
+      },
+      "artifacts": {
+        "raw_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S6_001/spectral_raw.npy",
+        "normalized_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S6_001/spectral_normalized.npy",
+        "scl_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S6_001/scl.npy",
+        "metadata_path": "data/interim/ds08_stage8_20_pilot/pilot/DS08_EXP_S6_001/metadata.json",
+        "rgb_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S6_001/rgb_preview.png",
+        "swir_preview_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S6_001/swir_preview.png",
+        "scl_mask_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S6_001/scl_mask.png",
+        "candidate_overlay_path": "data/interim/ds08_stage8_20_pilot/previews/DS08_EXP_S6_001/candidate_overlay.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "status": "COMPLETED",
+  "checkpoint": "D:\\DATA PREPROCESSING\\models\\yolo\\infrastructure\\best_infrastructure.pt",
+  "metrics_by_split": {
+    "train": {
+      "precision": 0.9922,
+      "recall": 0.9965,
+      "mAP50": 0.9949,
+      "mAP50_95": 0.9255,
+      "per_class": {
+        "Storage_Tank": {
+          "mAP50": 0.9949,
+          "mAP50_95": 0.9468
+        },
+        "Chimney": {
+          "mAP50": 0.995,
+          "mAP50_95": 0.9041
+        }
+      }
+    },
+    "val": {
+      "precision": 0.9914,
+      "recall": 0.9817,
+      "mAP50": 0.9946,
+      "mAP50_95": 0.9243,
+      "per_class": {
+        "Storage_Tank": {
+          "mAP50": 0.9942,
+          "mAP50_95": 0.9509
+        },
+        "Chimney": {
+          "mAP50": 0.995,
+          "mAP50_95": 0.8977
+        }
+      }
+    },
+    "test": {
+      "precision": 0.9953,
+      "recall": 1.0,
+      "mAP50": 0.995,
+      "mAP50_95": 0.9236,
+      "per_class": {
+        "Storage_Tank": {
+          "mAP50": 0.995,
+          "mAP50_95": 0.9544
+        },
+        "Chimney": {
+          "mAP50": 0.995,
+          "mAP50_95": 0.8928
+        }
+      }
+    }
+  }
+}

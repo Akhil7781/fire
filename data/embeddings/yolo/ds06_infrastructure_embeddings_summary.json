@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETED",
+  "artifact_path": "D:\\DATA PREPROCESSING\\data\\embeddings\\yolo\\ds06_infrastructure_embeddings.parquet",
+  "file_size_mb": 0.15,
+  "total_images": 120,
+  "embedding_dimensions": 128,
+  "layer_index": 6,
+  "layer_type": "C2f (CSP Bottleneck with 2 convolutions, 128 channels)",
+  "pooling_method": "Global Average Pooling (native Ultralytics embed)",
+  "nan_inf_count": 0,
+  "partition_counts": {
+    "train": 80,
+    "val": 20,
+    "test": 20
+  }
+}
